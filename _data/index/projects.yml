@@ -1,22 +1,38 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
-  i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
-  img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+- name: Auxiliadora Predial - Site
+  i18n: auxiliadora
+  url: https://www.auxiliadorapredial.com.br
+  img: /static/assets/img/landing/ap.png
+  desc: Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.
 
-- name: Python
-  i18n: cpython
-  gh_user: python
-  repo: cpython
-  img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I use another request to get repo's information.
+- name: Mairo Vergara - Portal de estudos
+  i18n: mairo
+  url: http://portal-uat-web.azurewebsites.net/login
+  img: /static/assets/img/landing/mv.png
+  desc: Desenvolvimento da plataforma de estudos do Mairo Vergara.
 
-- name: Google
-  i18n: google
+- name: Turistur
+  i18n: turistur
   url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
+  img: /static/assets/img/landing/tt.png
+  desc: Desenvolvimento da arquitetura e implementação do aplicativo para iOS e Android desenvolvido para a empresa Turistur, usando Ionic e Cordova.
+
+- name: Unisuam
+  i18n: unisuam
+  url: https://play.google.com/store/apps/details?id=br.edu.unisuam.aluno.app&hl=pt
+  img: /static/assets/img/landing/un.png
+  desc: Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.
+
+- name: Tweet Bang
+  i18n: bang
+  url: 
+  img: /static/assets/img/landing/tb.png
+  desc: O projeto Tweet Bang foi desenvolvido para promover o lançamento do novo clipe e album da cantora Anitta. A ideia foi uma batalha de hashtags entre os estados, onde o vencedor assistiria a pre-estréia do video no cinema com a Artista.
+
+- name: Memories by David Guetta
+  i18n: guetta
+  url: 
+  img: /static/assets/img/landing/dg.png
+  desc: É um hotsite onde os usuários utilizam fotos das suas contas do instragram para montar um vídeo com um trecho de áudio de uma das músicas do Guetta, e pode compartilhar o vídeo no Instagram e facebook.
