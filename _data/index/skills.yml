@@ -1,6 +1,6 @@
 # skills section data
 
-label: Ability
+label: Habilidades
 id : cs
-aspects: GitHub, Motivation, HTML5, ReactJS, Machine Learing, Python, Sleeping
-percentage: 100, 35, 65, 80, 70, 90, 50
+aspects: CSS3/SASS/LESS, HTML5, Angular, JS/ES6, Task Runners, Sleeping
+percentage: 100, 100, 90, 80, 90, 90
