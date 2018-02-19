@@ -4,8 +4,8 @@ title:  "Auxiliadora Predia - site"
 date:   2017-01-31
 desc: "Auxiliadora Predia - site"
 keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular,Refatoração"
-categories: [HTML]
-tags: [Jalpc,Jekyll]
+categories: [Work]
+tags: [Angular,Refactoring,Responsive]
 icon: icon-html
 ---
 
