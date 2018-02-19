@@ -16,7 +16,8 @@
             labels: "{{ site.data.index.skills.aspects }}".split(","),
             datasets: [{
                 label: "{{ site.data.index.skills.label }}",
-                data: [{{ site.data.index.skills.percentage }}]
+                data: [{{ site.data.index.skills.percentage }}],
+                backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9"]
                 }]
         };
         var myRadarChart = new Chart(ctx, {
