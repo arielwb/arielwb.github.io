@@ -29,10 +29,10 @@
   i18n: bang
   url: 
   img: /static/assets/img/landing/tb.png
-  desc: O projeto Tweet Bang foi desenvolvido para promover o lançamento do novo clipe e album da cantora Anitta. A ideia foi uma batalha de hashtags entre os estados, onde o vencedor assistiria a pre-estréia do video no cinema com a Artista.
+  desc: Hotsite para promover o lançamento do clipe "Bang" da cantora Anitta.
 
 - name: Memories by David Guetta
   i18n: guetta
   url: 
   img: /static/assets/img/landing/dg.png
-  desc: É um hotsite onde os usuários utilizam fotos das suas contas do instragram para montar um vídeo com um trecho de áudio de uma das músicas do Guetta, e pode compartilhar o vídeo no Instagram e facebook.
+  desc: Hotsite para promover o lançamento do clipe "Dangerous" do artista David Guetta.
