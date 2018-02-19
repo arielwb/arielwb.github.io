@@ -3,36 +3,36 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: Auxiliadora Predial - Site
   i18n: auxiliadora
-  url: https://www.auxiliadorapredial.com.br
+  url: https://arielwb.github.io/work/2018/02/15/auxiliadora-predial-site.html
   img: /static/assets/img/landing/ap.png
   desc: Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.
 
 - name: Mairo Vergara - Portal de estudos
   i18n: mairo
-  url: http://portal-uat-web.azurewebsites.net/login
+  url: https://arielwb.github.io/work/2017/12/21/mairo-vergara-portal.html
   img: /static/assets/img/landing/mv.png
   desc: Desenvolvimento da plataforma de estudos do Mairo Vergara.
 
 - name: Turistur
   i18n: turistur
-  url: https://google.com
+  url: https://arielwb.github.io/work/2018/02/02/turistur.html
   img: /static/assets/img/landing/tt.png
   desc: Desenvolvimento da arquitetura e implementação do aplicativo para iOS e Android desenvolvido para a empresa Turistur, usando Ionic e Cordova.
 
 - name: Unisuam
   i18n: unisuam
-  url: https://play.google.com/store/apps/details?id=br.edu.unisuam.aluno.app&hl=pt
+  url: https://arielwb.github.io/work/2018/02/19/unisuam.html
   img: /static/assets/img/landing/un.png
   desc: Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.
 
 - name: Tweet Bang
   i18n: bang
-  url: 
+  url: https://arielwb.github.io/work/2015/11/05/tweet-bang.html
   img: /static/assets/img/landing/tb.png
   desc: Hotsite para promover o lançamento do clipe "Bang" da cantora Anitta.
 
 - name: Memories by David Guetta
   i18n: guetta
-  url: 
+  url: https://arielwb.github.io/work/2016/12/21/memories-guetta.html
   img: /static/assets/img/landing/dg.png
   desc: Hotsite para promover o lançamento do clipe "Dangerous" do artista David Guetta.
