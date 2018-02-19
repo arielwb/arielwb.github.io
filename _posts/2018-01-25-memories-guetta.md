@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Plataforma de Estudos Mairo Vergara"
+title:  "Memories by David Guetta"
 date:   2017-12-21
-desc: "Plataforma de Estudos Mairo Vergara"
-keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular"
+desc: "Memories by David Guetta"
+keywords: "Desenvolvimento,Responsivo,Hotsite,Campanha"
 categories: [Work]
 tags: [Hotsite,Campanha]
 icon: icon-html

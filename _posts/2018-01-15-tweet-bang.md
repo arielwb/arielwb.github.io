@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Plataforma de Estudos Mairo Vergara"
+title:  "Tweet Bang"
 date:   2017-12-21
-desc: "Plataforma de Estudos Mairo Vergara"
-keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular"
+desc: "Tweet Bang"
+keywords: "Desenvolvimento,Responsivo,Hotsite,Campanha"
 categories: [Work]
 tags: [Hotsite,Campanha]
 icon: icon-html
