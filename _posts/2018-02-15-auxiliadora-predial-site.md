@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Auxiliadora Predia - site"
+title:  "Auxiliadora Predial - site"
 date:   2018-02-15
-desc: "Auxiliadora Predia - site"
+desc: "Auxiliadora Predial - site"
 keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular,Refatoração"
 categories: [Work]
 tags: [Angular,Refactoring,Responsive]

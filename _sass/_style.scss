@@ -2813,6 +2813,11 @@ body {
 
 //custom styles
 
-.article img{
-    max-width: 100%;
+.article {
+    img{
+        max-width: 100%;
+    }
+    p{
+        text-align: center;
+    }
 }
