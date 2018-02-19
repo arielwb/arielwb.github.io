@@ -6,7 +6,7 @@ desc: "Plataforma de Estudos Mairo Vergara"
 keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular"
 categories: [Work]
 tags: [Angular,SPA]
-icon: icon-html
+icon: icon-angular
 ---
 
 A plataforma de estudos Mairo Vergara é um portal de ensino para pessoas interessadas em aprender inglês.

@@ -6,7 +6,7 @@ desc: "Auxiliadora Predia - site"
 keywords: "Desenvolvimento,Performance,Responsivo,UX,Angular,Refatoração"
 categories: [Work]
 tags: [Angular,Refactoring,Responsive]
-icon: icon-html
+icon: icon-angular
 ---
 
 A Auxiliadora Predial é uma das maiores imobiliária do Brasil, e seu site tem milhares de acessos diários. 
