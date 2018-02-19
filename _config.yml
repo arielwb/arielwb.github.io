@@ -24,13 +24,11 @@ author:  # change following line to your infomation.
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-git
-    - name: icon-grunt
-    - name: icon-gulp
     - name: icon-npm
   skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
+    - name: icon-grunt
+    - name: icon-gulp
+  desc: I´m a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I´m working on and my skills. Want to know more? Send me an e-mail ;)  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
