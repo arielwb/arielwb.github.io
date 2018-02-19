@@ -1,29 +1,30 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail: Cwi Software
+    i18n: cwi
   desc:
-    detail: I worked at Company A ...
+    detail: Na Cwi, trabalho com projetos de grande porte, e sou responsável pela arquitetura e desenvolvimento de aplicativos híbridos e SPAs performáticas e escaláveis, com grande foco em componentização, reuso e experiência do usuário em diferentes plataformas.
     i18n: company_a_desc
   date:
-    detail: Apr. 2016
+    detail: Dez. 2016
     i18n: company_a_date
   job:
-    detail: CTO
+    detail: Front-end Developer
     i18n: company_a_job
   icon: fa-plus-square
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: Simstim
+    i18n: simstim
   desc:
-    detail: I worked at Company B ...
+    detail: Como sócia fundadora e principal desenvolvedora Front-end da Simstim, tive oportunidade de trabalhar com diferentes projetos, como campanhas digitais de cobertura nacional, sites institucionais, e-commerces e aplicações web.
+Além do Front-end, exerci outras atividades como pesquisa, concepção e gerenciamento de projetos, defesa de ideias e atendimento ao cliente.
     i18n: company_b_desc
   date:
-    detail: Jun. 2015
+    detail: Mar. 2013
     i18n: company_b_date
   job:
-    detail: Full Stack Developer
+    detail: Front-end Developer | Founder
     i18n: company_b_job
   icon: fa-plus-square

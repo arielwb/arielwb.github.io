@@ -7,5 +7,5 @@
 
 - locale: en
   flag: /static/assets/img/flags/United-States.png
-- locale: pt-br
+- locale: pt-BR
   flag: /static/assets/img/flags/Brazil.png
