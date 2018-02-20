@@ -20,55 +20,90 @@
                     {
                         label: "CSS3/SASS",
                         color: "#0074D9",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "HTML5",
                         color: "#FF4136",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "Angular",
                         color: "#2ECC40",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "JS/ES6S",
                         color: "#FF851B",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "Task Runners",
                         color: "#7FDBFF",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "TypeScript",
                         color: "#B10DC9",
-                        data: 100
+                        data: "Avançado"
                     },
                     {
                         label: "NodeJs",
                         color: "#0074D9",
-                        data: 100
+                        data: "Intermediário"
                     },
+                    {
+                        label: "Docker",
+                        color: "#0074D9",
+                        data: "Básico"
+                    },
+                    {
+                        label: "Pipelines",
+                        color: "#0074D9",
+                        data: "Básico"
+                    }
                 ];
 
 
 
+
             var data = {
-                labels: skillset.map(skill => skill.label),
+                xLabels: skillset.map(skill => skill.label),
+                yLabels: ["Básico, Intermediário, Avançado"],
                 datasets: [{
-                    label: "Work",
+                    label: "{{ site.data.index.skills.label }}",
                     data: skillset.map(skill => skill.data),
                     backgroundColor: "#0074D9"
+                }
+            };
+
+            var funSkills = [
+                {
+                    label: "Dark Souls",
+                    color: "#0074D9",
+                    data: 100
                 },
                 {
-                    label: "Fun",
-                    data: skillset.map(skill => skill.data),
-                    backgroundColor: "#FF4136"
-                }]
-            };
+                    label: "Tocar isntrumentos",
+                    color: "#0074D9",
+                    data: 100
+                },
+                {
+                    label: "Assistir Netflix",
+                    color: "#0074D9",
+                    data: 100
+                },
+                {
+                    label: "Dormir",
+                    color: "#0074D9",
+                    data: 100
+                },
+                {
+                    label: "Acampar",
+                    color: "#0074D9",
+                    data: 100
+                },
+            ]
             var myRadarChart = new Chart(ctx, {
                 type: 'bar',
                 data: data,
@@ -76,10 +111,6 @@
                     responsive: true,
                     legend: {
                         position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: '{{ site.data.index.skills.label }}'
                     }
                 }
             });
