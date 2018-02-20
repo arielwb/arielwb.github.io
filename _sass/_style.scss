@@ -2657,6 +2657,9 @@ body {
     padding-bottom: 90px;
     background-color: $main;
     background-image: url(../assets/img/landing/avatar_all2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
   .contact {
     background-image: url(../assets/img/landing/word_map.png);
