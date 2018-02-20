@@ -1,12 +1,14 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Icon Picker Plugin
-  i18n_name: iconPickerName
-  i18n: iconPicker
+- name: 
+    display: Icon Picker Plugin
+    i18n: iconPickerName
   url: https://arielwb.github.io/demos/iconPickerPlugin/
   img: /static/assets/img/landing/jquery.png
-  desc: Gerador de sprite de icones e um plugin para seleção de ícones
+  desc: 
+    display: Gerador de sprite de icones e um plugin para seleção de ícones
+    i18n: iconPicker
   
 
 - name: Auxiliadora Predial - Site
