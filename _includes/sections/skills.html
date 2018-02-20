@@ -11,9 +11,33 @@
         <div class="wow zoomIn col-lg-6 col-lg-offset-3">
             <canvas id="{{ site.data.index.skills.id }}" height="500" width="500"></canvas>
         </div>
+        <div class="wow zoomIn col-lg-6 col-lg-offset-3">
+            <canvas id="test" height="500" width="500"></canvas>
+        </div>
         <div class="col-lg-1"></div>
         <script>
             var ctx = document.getElementById("{{ site.data.index.skills.id }}");
+            var htmlDoughnut = document.getElementById("test");
+
+            var jsData = [
+                {
+                    value: 90,
+                    color: "#74cfae"
+                },
+                {
+                    value: 10,
+                    color: "#f2f2f2"
+                }
+            ];
+
+
+            var myHTMLdoughnut = new Chart(htmlDoughnut, {
+                type: 'doughnut',
+                data: jsData,
+                options: {
+                    percentageInnerCutout: 80
+                }
+            });
 
             var skillset =
                 [
