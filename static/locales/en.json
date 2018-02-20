@@ -20,28 +20,23 @@
   },
   "projects":{
     "my_projects": "My Projects",
-    "auxiliadora": "This project is my project. I use javescript to get repo's information all my repos have only one request.",
-    "mairo": "This project is other's project. I use another request to get repo's information.",
-    "turistur": "This is another project."
+    "auxiliadora": "Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.",
+    "mairo": "Refactoring project, aiming to improve site performance and maintenance time.",
+    "turistur": "Hibrid iOS and Android application development for Turistur company, using Ionic and Cordova.",
+    "unisuam": "Development and maintenance of Unisuam´s hybrid application for iOS, Android and Windows Phone.",
+    "bang": "Hotsite to promote the release of the clip 'Bang' by singer Anitta.",
+    "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta."
   },
   "career":{
     "my_career": "My Career",
-    "nextcode": "Nextcode",
-    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
-    "nextcode_date": "Apr. 2016",
-    "nextcode_job": "Python Developer",
-    "netease": "Netease Game",
-    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
-    "netease_date": "Jun. 2015",
-    "netease_job": "Dev Ops",
-    "ucloud": "Ucloud",
-    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
-    "ucloud_date": "Sep. 2013",
-    "ucloud_job": "Dev Ops",
-    "college": "Graduation",
-    "college_des": "At July 2013,I graduated from college and started my IT technology tour.",
-    "college_date": "Jul. 2013",
-    "college_job": "Student"
+    "cwi": "Cwi Software",
+    "cwi_desc": "At Cwi, I work with large projects, and I´m responsible for the architecture and development of hybrid applications and robust, scalable SPAs with great focus on componentization, reuse and user experience over different platforms.",
+    "cwi_date": "Dez. 2016",
+    "cwi_job": "Senior Frontend Developer",
+    "simstim": "Simstim",
+    "simstim_desc": "As a founding partner and main Frontend developer at Simstim, I had the opportunity to work on different projects, such as national digital campaigns, institutional websites, e-commerce and web applications. In addition to Frontend development, I was responsible of other activities such as research, design, project management and customer service.",
+    "simstim_date": "Mar. 2013",
+    "simstim_job": "Senior Frontend Developer"
   },
   "blog":{
     "my_blog": "My Blog"
