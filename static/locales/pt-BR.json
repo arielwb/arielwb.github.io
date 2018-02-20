@@ -37,7 +37,11 @@
     "simstim": "Simstim",
     "simstim_desc": "Como sócia fundadora e principal desenvolvedora Front-end da Simstim, tive oportunidade de trabalhar com diferentes projetos, como campanhas digitais de cobertura nacional, sites institucionais, e-commerces e aplicações web.Além do Front-end, exerci outras atividades como pesquisa, concepção e gerenciamento de projetos, defesa de ideias e atendimento ao cliente.",
     "simstim_date": "Mar. 2013",
-    "simstim_job": "Senior Frontend Developer"
+    "simstim_job": "Senior Frontend Developer",
+    "education": "Educação",
+    "education_desc": "Ao longo dos anos, fiz alguns cursos de desenvolvimento web e iOS, e também cursei Análise e Desenvolvimento de Sistemas e Jogos Digitais na Unisinos.",
+    "education_date": "2010 a 2015",
+    "education_job": "Estudante"
   },
   "blog":{
     "my_blog": "Blog"

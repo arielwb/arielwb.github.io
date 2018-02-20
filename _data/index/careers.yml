@@ -27,3 +27,17 @@
     detail: Front-end Developer | Founder
     i18n: simstim_job
   icon: fa-plus-square
+
+- name:
+    detail: Educação
+    i18n: education
+  desc:
+    detail: Ao longo dos anos, fiz alguns cursos de desenvolvimento web e iOS, e também cursei Análise e Desenvolvimento de Sistemas e Jogos Digitais na Unisinos.
+    i18n: education_desc
+  date:
+    detail: 2010 a 2015
+    i18n: education_date
+  job:
+    detail: Estudante
+    i18n: education_job
+  icon: fa-graduation-cap

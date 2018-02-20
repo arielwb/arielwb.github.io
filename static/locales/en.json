@@ -37,7 +37,11 @@
     "simstim": "Simstim",
     "simstim_desc": "As a founding partner and main Frontend developer at Simstim, I had the opportunity to work on different projects, such as national digital campaigns, institutional websites, e-commerce and web applications. In addition to Frontend development, I was responsible of other activities such as research, design, project management and customer service.",
     "simstim_date": "Mar. 2013",
-    "simstim_job": "Senior Frontend Developer"
+    "simstim_job": "Senior Frontend Developer",
+    "education": "Education",
+    "education_desc": "Over the years, I have taken some courses in web and iOS development, and also studied System Analysis and Development and Digital Games at Unisinos",
+    "education_date": "2010 to 2015",
+    "education_job": "Student"
   },
   "blog":{
     "my_blog": "My Blog"
