@@ -63,18 +63,22 @@
                 datasets: [{
                     label: "{{ site.data.index.skills.label }}",
                     data: skillset.map(skill => skill.data),
-                    backgroundColor: skillset.map(skill => skill.color)
+                    backgroundColor: "#0074D9"
                 }]
             };
             var myRadarChart = new Chart(ctx, {
-                type: 'pie',
+                type: 'bar',
                 data: data,
                 options: {
-                    animation: {
-                        animateScale: true
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Bar Chart'
                     }
-                }
-            });
+                });
         </script>
     </div>
 </div>
