@@ -50,7 +50,7 @@
                     {
                         label: "NodeJs",
                         color: "#0074D9",
-                        data: "50"
+                        data: "70"
                     },
                     {
                         label: "Docker",
@@ -86,8 +86,14 @@
                     },
                     scales: {
                         yAxes: [{
-                            type: 'category',
-                            labels: ["Básico", "Intermediário", "Avançado"],
+                            ticks: {
+                                callback: function (value) {
+                                    if (value === 30) return "Básico";
+                                    if (value === 70) return "Intermediário";
+                                    if (value === 100) return "Avançado";
+                                    return "";
+                                }
+                            },
                         }]
                     }
                 }
