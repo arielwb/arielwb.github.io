@@ -19,21 +19,17 @@
             var ctx = document.getElementById("{{ site.data.index.skills.id }}");
             var htmlDoughnut = document.getElementById("test");
 
-            var jsData = [
-                {
-                    value: 90,
-                    color: "#74cfae"
-                },
-                {
-                    value: 10,
-                    color: "#f2f2f2"
-                }
-            ];
-
+            var data = {
+                datasets: [{
+                    data: [30],
+                    backgroundColor: "#0074D9"
+                }],
+                labels: ['JS']
+            };
 
             var myHTMLdoughnut = new Chart(htmlDoughnut, {
                 type: 'doughnut',
-                data: jsData,
+                data: data,
                 options: {
                     percentageInnerCutout: 80
                 }
