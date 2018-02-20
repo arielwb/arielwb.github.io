@@ -55,15 +55,18 @@
                 ];
 
 
-            var skillData = skillset.map(skill => skill.data);
-            console.log(skillData);
 
             var data = {
                 labels: skillset.map(skill => skill.label),
                 datasets: [{
-                    label: "{{ site.data.index.skills.label }}",
+                    label: "Work",
                     data: skillset.map(skill => skill.data),
                     backgroundColor: "#0074D9"
+                },
+                {
+                    label: "Fun",
+                    data: skillset.map(skill => skill.data),
+                    backgroundColor: "#FF4136"
                 }]
             };
             var myRadarChart = new Chart(ctx, {
@@ -76,9 +79,10 @@
                     },
                     title: {
                         display: true,
-                        text: 'Chart.js Bar Chart'
+                        text: '{{ site.data.index.skills.label }}'
                     }
-                });
+                }
+            });
         </script>
     </div>
 </div>
