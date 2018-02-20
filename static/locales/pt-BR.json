@@ -21,13 +21,19 @@
   "projects":{
     "my_projects": "Projetos",
     "auxiliadora": "Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.",
-    "mairo": " Desenvolvimento da plataforma de estudos do Mairo Vergara.",
+    "auxiliadoraName": "Auxiliadora Predial - Site",
+    "mairo": "Desenvolvimento da plataforma de estudos do Mairo Vergara.",
+    "mairoName": "Mairo Vergara - Portal de estudos",
     "turistur": "Desenvolvimento da arquitetura e implementação do aplicativo para iOS e Android desenvolvido para a empresa Turistur, usando Ionic e Cordova.",
+    "turisturName": "Turistur - App",
     "unisuam": "Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.",
+    "unisuamName": "Unisuam - App",
     "bang": "Hotsite para promover o lançamento do clipe 'Bang' da cantora Anitta.",
+    "bangName": "Tweet Bang",
     "guetta": "Hotsite para promover o lançamento do clipe 'Dangerous' do artista David Guetta.",
+    "guettaName": "Memories by David Guetta",
     "iconPicker": "Gerador de sprite de icones e um plugin para seleção de ícones",
-    "iconPickerName": "Icon picker test br"
+    "iconPickerName": "Icon picker"
   },
   "career":{
     "my_career": "Carreira",

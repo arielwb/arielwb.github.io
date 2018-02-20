@@ -20,14 +20,20 @@
   },
   "projects":{
     "my_projects": "My Projects",
-    "auxiliadora": "Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.",
-    "mairo": "Refactoring project, aiming to improve site performance and maintenance time.",
+    "auxiliadora": "Refactoring the project, seeking to improve the performance and maintenance time of the site.",
+    "auxiliadoraName": "Auxiliadora Predial - Site",
+    "mairo": "Development of Mairo Vergara's study platform.",
+    "mairoName": "Mairo Vergara - Study platform",
     "turistur": "Hibrid iOS and Android application development for Turistur company, using Ionic and Cordova.",
+    "turisturName": "Turistur - Mobile app",
     "unisuam": "Development and maintenance of Unisuam´s hybrid application for iOS, Android and Windows Phone.",
+    "unisuamName": "Unisuam - Mobile app",
     "bang": "Hotsite to promote the release of the clip 'Bang' by singer Anitta.",
+    "bangName": "Tweet Bang",
     "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta.",
+    "guettaName": "Memories by David Guetta",
     "iconPicker": "Svg icon sprite generator, and an iconPicker plugin",
-    "iconPickerName": "Icon picker test en"
+    "iconPickerName": "Icon picker"
   },
   "career":{
     "my_career": "My Career",
