@@ -2,7 +2,9 @@
     <div class="row">
         <div class="col-lg-12 text-center" id="i18_skills">
             <div class="navy-line"></div>
-            <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
+            <h1>
+                <span data-i18n="skills.my_skills">My Skills</span>
+            </h1>
         </div>
     </div>
     <div class="row features-block">
@@ -11,24 +13,67 @@
         </div>
         <div class="col-lg-1"></div>
         <script>
-        var ctx = document.getElementById("{{ site.data.index.skills.id }}");
-        var data = {
-            labels: "{{ site.data.index.skills.aspects }}".split(","),
-            datasets: [{
-                label: "{{ site.data.index.skills.label }}",
-                data: [{{ site.data.index.skills.percentage }}],
-                backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9"]
-                }]
+            var ctx = document.getElementById("{{ site.data.index.skills.id }}");
+
+            var skillset = [
+            {
+                label: "CSS3/SASS",
+                color: "#0074D9",
+                data: 100
+            },
+            {
+                label: "HTML5",
+                color: "#FF4136",
+                data: 100
+            },
+            {
+                label: "Angular",
+                color: "#2ECC40",
+                data: 100
+            },
+            {
+                label: "JS/ES6S",
+                color: "#FF851B",
+                data: 100
+            },
+            {
+                label: "Task Runners",
+                color: "#7FDBFF",
+                data: 100
+            },
+            {
+                label: "TypeScript",
+                color: "#B10DC9",
+                data: 100
+            },
+            {
+                label: "NodeJs",
+                color: "#0074D9",
+                data: 100
+            },
+        ]
+
+        // var skills = ["CSS3/SASS", "HTML5", "Angular", "JS/ES6", "Task", "Runners", "TypeScript", "NodeJs"]
+        // var colors = ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9"]
+        // var data = [100, 100, 90, 80, 90, 90]
+            
+            var data = {
+                labels: skillset.map(skill => skill.label),
+                datasets: [{
+                    label: "{{ site.data.index.skills.label }}",
+                    data: skillset.map(skill => skill.data),
+                backgroundColor : skillset.map(skill => skill.color)
+            }]
         };
-        var myRadarChart = new Chart(ctx, {
-            type: 'pie',
-            data: data,
-            options: {
-                animation:{
-                    animateScale: true
+            var myRadarChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    animation: {
+                        animateScale: true
+                    }
                 }
-            }
-        });
+            });
         </script>
     </div>
 </div>
