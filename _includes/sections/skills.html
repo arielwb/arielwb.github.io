@@ -68,8 +68,7 @@
 
 
             var data = {
-                xLabels: skillset.map(skill => skill.label),
-                yLabels: ["Básico", "Intermediário", "Avançado"],
+                labels: skillset.map(skill => skill.label),
                 datasets: [{
                     label: "{{ site.data.index.skills.label }}",
                     data: skillset.map(skill => skill.data),
@@ -84,6 +83,12 @@
                     responsive: true,
                     legend: {
                         position: 'top',
+                    },
+                    scales: {
+                        yAxes: [{
+                            type: 'category',
+                            labels: ["Básico", "Intermediário", "Avançado"],
+                        }]
                     }
                 }
             });
