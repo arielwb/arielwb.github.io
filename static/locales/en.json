@@ -25,7 +25,8 @@
     "turistur": "Hibrid iOS and Android application development for Turistur company, using Ionic and Cordova.",
     "unisuam": "Development and maintenance of Unisuam´s hybrid application for iOS, Android and Windows Phone.",
     "bang": "Hotsite to promote the release of the clip 'Bang' by singer Anitta.",
-    "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta."
+    "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta.",
+    "iconPicker": "Svg icon sprite generator, and an iconPicker plugin"
   },
   "career":{
     "my_career": "My Career",
