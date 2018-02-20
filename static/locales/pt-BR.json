@@ -26,7 +26,8 @@
     "unisuam": "Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.",
     "bang": "Hotsite para promover o lançamento do clipe 'Bang' da cantora Anitta.",
     "guetta": "Hotsite para promover o lançamento do clipe 'Dangerous' do artista David Guetta.",
-    "iconPicker": "Gerador de sprite de icones e um plugin para seleção de ícones"
+    "iconPicker": "Gerador de sprite de icones e um plugin para seleção de ícones",
+    "iconPickerName": "Icon picker test br"
   },
   "career":{
     "my_career": "Carreira",
