@@ -28,7 +28,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: icon-grunt
     - name: icon-gulp
-  desc: I´m a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I´m working on and my skills. Want to know more? Send me an e-mail ;)  # Describe yourself.
+  desc: I'm a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I'm working on and my skills. Want to know more? Send me an e-mail ;)  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.

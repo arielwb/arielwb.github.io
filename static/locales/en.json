@@ -13,7 +13,7 @@
   },
   "about_me":{
     "about_me": "About Me",
-    "des": "I´m a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I´m working on and my skills. Want to know more? Send me an e-mail ;)"
+    "des": "I'm a Brazilian Front-End Developer that loves coding and chalenges! Here you can find some info about the projects that I'm working on and my skills. Want to know more? Send me an e-mail ;)"
   },
   "skills":{
     "my_skills": "My Skills"
@@ -31,7 +31,7 @@
   "career":{
     "my_career": "My Career",
     "cwi": "Cwi Software",
-    "cwi_desc": "At Cwi, I work with large projects, and I´m responsible for the architecture and development of hybrid applications and robust, scalable SPAs with great focus on componentization, reuse and user experience over different platforms.",
+    "cwi_desc": "At Cwi, I work with large projects, and I'm responsible for the architecture and development of hybrid applications and robust, scalable SPAs with great focus on componentization, reuse and user experience over different platforms.",
     "cwi_date": "Dez. 2016",
     "cwi_job": "Senior Frontend Developer",
     "simstim": "Simstim",
