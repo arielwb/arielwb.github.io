@@ -21,5 +21,11 @@ Foi criado durante minha permanencia no projeto da Auxiliadora predial, para inf
 <iframe height='399' scrolling='no' title='SVG animate along path' src='//codepen.io/arielwb/embed/rJvgoZ/?height=399&theme-id=dark&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/rJvgoZ/'>SVG animate along path</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+## Simstim logo explosion
+
+Estava buscando criar uma experiência de navegação diferenciada no site da Simstim, e encontrei a solução em algumas animações.
+
+<iframe height='265' scrolling='no' title='GSAP Simstim Animations' src='//codepen.io/arielwb/embed/LQmKON/?height=265&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/LQmKON/'>GSAP Simstim Animations</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
