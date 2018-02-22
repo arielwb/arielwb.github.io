@@ -37,3 +37,5 @@ Estava buscando criar uma experiência de navegação diferenciada no site da Si
 <br><br>
 <iframe height='434' scrolling='no' title='zRayPK' src='//codepen.io/arielwb/embed/zRayPK/?height=434&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/zRayPK/'>zRayPK</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+<br><br>
+<p data-height="413" data-theme-id="dark" data-slug-hash="RQyzjV" data-default-tab="html,result" data-user="arielwb" data-embed-version="2" data-pen-title="GSAP Animations" class="codepen">See the Pen <a href="https://codepen.io/arielwb/pen/RQyzjV/">GSAP Animations</a> by ariel (<a href="https://codepen.io/arielwb">@arielwb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
