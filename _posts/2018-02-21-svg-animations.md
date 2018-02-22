@@ -31,4 +31,7 @@ Estava buscando criar uma experiência de navegação diferenciada no site da Si
 <br><br>
 <iframe height='298' scrolling='no' title='GSAP - Turn Table Animation' src='//codepen.io/arielwb/embed/XZYBWx/?height=298&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/XZYBWx/'>GSAP - Turn Table Animation</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+<br><br>
+<iframe height='471' scrolling='no' title='GSAP - Responsive Animation' src='//codepen.io/arielwb/embed/BYVqza/?height=471&theme-id=dark&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/BYVqza/'>GSAP - Responsive Animation</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
