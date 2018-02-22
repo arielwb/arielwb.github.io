@@ -33,7 +33,9 @@
     "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta.",
     "guettaName": "Memories by David Guetta",
     "iconPicker": "Svg icon sprite generator, and an iconPicker plugin",
-    "iconPickerName": "Icon picker"
+    "iconPickerName": "Icon picker",
+    "dashName": "Data visualization dashboard",
+    "dash": "Simple data visualization dashboard made using React."
   },
   "career":{
     "my_career": "My Career",

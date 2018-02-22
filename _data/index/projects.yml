@@ -4,11 +4,20 @@
 - name: 
     display: Icon Picker Plugin
     i18n: iconPickerName
-  url: https://arielwb.github.io/demos/iconPickerPlugin/
+  url: https://arielwb.github.io/demos/icon-picker-plugin/
   img: /static/assets/img/landing/jquery.png
   desc: 
     display: Gerador de sprite de icones e um plugin para seleção de ícones
     i18n: iconPicker
+
+- name: 
+    display: Dashboard para visualização de dados
+    i18n: dashName
+  url: https://arielwb.github.io/demos/react-dashboard/
+  img: /static/assets/img/landing/react.png
+  desc: 
+    display: Simples dashboard de visualização de dados feita com React.
+    i18n: dash
   
 
 - name: 
