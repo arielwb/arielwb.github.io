@@ -17,7 +17,7 @@ Abaixo, o resultado de algumas dessas aventuras.
 ## Tour 360 
 
 Foi criado durante minha permanencia no projeto da Auxiliadora predial, para informar que determinados imóveis possuem essa funcionalidade.
-<br>
+<br><br>
 <iframe height='399' scrolling='no' title='SVG animate along path' src='//codepen.io/arielwb/embed/rJvgoZ/?height=399&theme-id=dark&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/rJvgoZ/'>SVG animate along path</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -25,8 +25,10 @@ Foi criado durante minha permanencia no projeto da Auxiliadora predial, para inf
 ## Simstim logo explosion
 
 Estava buscando criar uma experiência de navegação diferenciada no site da Simstim, e encontrei a solução em algumas animações.
-<br>
+<br><br>
 <iframe height='548' scrolling='no' title='GSAP Simstim Animations' src='//codepen.io/arielwb/embed/LQmKON/?height=548&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/LQmKON/'>GSAP Simstim Animations</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
+<br><br>
+<iframe height='298' scrolling='no' title='GSAP - Turn Table Animation' src='//codepen.io/arielwb/embed/XZYBWx/?height=298&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/arielwb/pen/XZYBWx/'>GSAP - Turn Table Animation</a> by ariel (<a href='https://codepen.io/arielwb'>@arielwb</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
