@@ -1,38 +1,76 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Auxiliadora Predial - Site
-  i18n: auxiliadora
-  url: https://arielwb.github.io/work/2018/02/15/auxiliadora-predial-site.html
-  img: /static/assets/img/landing/ap.png
-  desc: Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.
+- name: 
+    display: Icon Picker Plugin
+    i18n: iconPickerName
+  url: https://arielwb.github.io/demos/icon-picker-plugin/
+  img: /static/assets/img/landing/jquery.png
+  desc: 
+    display: Gerador de sprite de icones e um plugin para seleção de ícones
+    i18n: iconPicker
 
-- name: Mairo Vergara - Portal de estudos
+- name: 
+    display: Dashboard para visualização de dados
+    i18n: dashName
+  url: https://arielwb.github.io/demos/react-dashboard/
+  img: /static/assets/img/landing/react.png
+  desc: 
+    display: Simples dashboard de visualização de dados feita com React.
+    i18n: dash
+  
+
+- name: 
+    display: Auxiliadora Predial - Site
+    i18n: auxiliadoraName
+  url: https://arielwb.github.io/work/2018/02/15/auxiliadora-predial-site.html
+  img: /static/assets/img/landing/angular.png
+  desc: 
+    display: Projeto de refatoração, buscando melhorar a perfomance e tempo de manutenção do site.
+    i18n: auxiliadora
+
+- name: 
+    display: Mairo Vergara - Portal de estudos
+    i18n: mairoName
   i18n: mairo
   url: https://arielwb.github.io/work/2017/12/21/mairo-vergara-portal.html
-  img: /static/assets/img/landing/mv.png
-  desc: Desenvolvimento da plataforma de estudos do Mairo Vergara.
+  img: /static/assets/img/landing/angular.png
+  desc: 
+    display: Desenvolvimento da plataforma de estudos do Mairo Vergara.
+    i18n: mairo
 
-- name: Turistur
-  i18n: turistur
+- name: 
+    display: Turistur - App
+    i18n: turisturName
   url: https://arielwb.github.io/work/2018/02/02/turistur.html
-  img: /static/assets/img/landing/tt.png
-  desc: Desenvolvimento da arquitetura e implementação do aplicativo para iOS e Android desenvolvido para a empresa Turistur, usando Ionic e Cordova.
+  img: /static/assets/img/landing/ts.png
+  desc: 
+    display: Desenvolvimento da arquitetura e implementação do aplicativo para iOS e Android desenvolvido para a empresa Turistur, usando Ionic e Cordova.
+    i18n: turistur
 
-- name: Unisuam
-  i18n: unisuam
+- name: 
+    display: Unisuam - App
+    i18n: unisuamName
   url: https://arielwb.github.io/work/2018/02/19/unisuam.html
-  img: /static/assets/img/landing/un.png
-  desc: Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.
+  img: /static/assets/img/landing/cordova.png
+  desc: 
+    display: Desenvolvimento e manutenção do aplicativo híbrido da Unisuam para iOS, Android e Windows Phone.
+    i18n: unisuam
 
-- name: Tweet Bang
-  i18n: bang
+- name: 
+    display: Tweet Bang
+    i18n: bangName
   url: https://arielwb.github.io/work/2015/11/05/tweet-bang.html
-  img: /static/assets/img/landing/tb.png
-  desc: Hotsite para promover o lançamento do clipe "Bang" da cantora Anitta.
+  img: /static/assets/img/landing/html.png
+  desc: 
+    display: Hotsite para promover o lançamento do clipe "Bang" da cantora Anitta.
+    i18n: bang
 
-- name: Memories by David Guetta
-  i18n: guetta
+- name: 
+    display: Memories by David Guetta
+    i18n: guettaName
   url: https://arielwb.github.io/work/2016/12/21/memories-guetta.html
-  img: /static/assets/img/landing/dg.png
-  desc: Hotsite para promover o lançamento do clipe "Dangerous" do artista David Guetta.
+  img: /static/assets/img/landing/html.png
+  desc: 
+    display: Hotsite para promover o lançamento do clipe "Dangerous" do artista David Guetta.
+    i18n: guetta

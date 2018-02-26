@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "Jack's blog"
+    "title": "Ariel Borges"
   },
   "nav":{
     "home": "Home",
@@ -13,35 +13,44 @@
   },
   "about_me":{
     "about_me": "About Me",
-    "des": "I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel."
+    "des": "I'm a Brazilian Front-End Developer that loves coding and chalenges! Here you can find some info about the projects that I'm working on and my skills. Want to know more? Send me an e-mail ;)"
   },
   "skills":{
     "my_skills": "My Skills"
   },
   "projects":{
     "my_projects": "My Projects",
-    "jalpc": "This project is my project. I use javescript to get repo's information all my repos have only one request.",
-    "cpython": "This project is other's project. I use another request to get repo's information.",
-    "familycode": "This is another project."
+    "auxiliadora": "Refactoring the project, seeking to improve the performance and maintenance time of the site.",
+    "auxiliadoraName": "Auxiliadora Predial - Site",
+    "mairo": "Development of Mairo Vergara's study platform.",
+    "mairoName": "Mairo Vergara - Study platform",
+    "turistur": "Hibrid iOS and Android application development for Turistur company, using Ionic and Cordova.",
+    "turisturName": "Turistur - Mobile app",
+    "unisuam": "Development and maintenance of Unisuam´s hybrid application for iOS, Android and Windows Phone.",
+    "unisuamName": "Unisuam - Mobile app",
+    "bang": "Hotsite to promote the release of the clip 'Bang' by singer Anitta.",
+    "bangName": "Tweet Bang",
+    "guetta": "Hotsite to promote the release of the clip 'Dangerous' by David Guetta.",
+    "guettaName": "Memories by David Guetta",
+    "iconPicker": "Svg icon sprite generator, and an iconPicker plugin",
+    "iconPickerName": "Icon picker",
+    "dashName": "Data visualization dashboard",
+    "dash": "Simple data visualization dashboard made using React."
   },
   "career":{
     "my_career": "My Career",
-    "nextcode": "Nextcode",
-    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
-    "nextcode_date": "Apr. 2016",
-    "nextcode_job": "Python Developer",
-    "netease": "Netease Game",
-    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
-    "netease_date": "Jun. 2015",
-    "netease_job": "Dev Ops",
-    "ucloud": "Ucloud",
-    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
-    "ucloud_date": "Sep. 2013",
-    "ucloud_job": "Dev Ops",
-    "college": "Graduation",
-    "college_des": "At July 2013,I graduated from college and started my IT technology tour.",
-    "college_date": "Jul. 2013",
-    "college_job": "Student"
+    "cwi": "Cwi Software",
+    "cwi_desc": "At Cwi, I work with large projects, and I'm responsible for the architecture and development of hybrid applications and robust, scalable SPAs with great focus on componentization, reuse and user experience over different platforms.",
+    "cwi_date": "Dez. 2016",
+    "cwi_job": "Senior Frontend Developer",
+    "simstim": "Simstim",
+    "simstim_desc": "As a founding partner and main Frontend developer at Simstim, I had the opportunity to work on different projects, such as national digital campaigns, institutional websites, e-commerce and web applications. In addition to Frontend development, I was responsible of other activities such as research, design, project management and customer service.",
+    "simstim_date": "Mar. 2013",
+    "simstim_job": "Senior Frontend Developer",
+    "education": "Education",
+    "education_desc": "Over the years, I have taken some courses in web and iOS development, and also studied System Analysis and Development and Digital Games at Unisinos",
+    "education_date": "2010 to 2015",
+    "education_job": "Student"
   },
   "blog":{
     "my_blog": "My Blog"

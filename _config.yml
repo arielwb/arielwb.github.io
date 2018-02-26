@@ -14,12 +14,12 @@ author:  # change following line to your infomation.
   name: Ariel Borges  # Be used at blog posts' author.
   first_name: Ariel  # Be used at index page about me section.
   last_name: Borges  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/avatar2.png  # upload your avatar at directory and edit it.
   github_username: arielwb  # Leave blank if you don't have now
-  linkedin_id:  # Leave blank if you don't have now
+  linkedin_id: ariel-flor-borges # Leave blank if you don't have now
   facebook_username:   # Leave blank if you don't have now
   twitter_username:   # Leave blank if you don't have now
-  email: arielwb@gmail.com.com  # Leave blank if you don't have now
+  email: arielwb@gmail.com  # Leave blank if you don't have now
   cv: https://arielwb.github.io/static/assets/curriculo.pdf  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
@@ -28,7 +28,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: icon-grunt
     - name: icon-gulp
-  desc: I´m a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I´m working on and my skills. Want to know more? Send me an e-mail ;)  # Describe yourself.
+  desc: I'm a Brazilian Front-End Developer that loves coding and chalenges!    Here you can find some info about the projects that I'm working on and my skills. Want to know more? Send me an e-mail ;)  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.

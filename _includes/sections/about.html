@@ -6,10 +6,10 @@
             <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
         </div>
     </div>
-    <div class="row">
+    <div class="row flex-row">
         <!-- first two icons -->
         {% for icon in site.author.skill_icon1 %}
-        <div class="col-xs-2 wow fadeInLeft">
+        <div class="hidden-xs col-sm-2 wow fadeInLeft">
             <div class="team-member">
                 <div class="vote-icon">
                     <i class="fa {{ icon.name }}"></i>
@@ -18,9 +18,9 @@
         </div>
         {% endfor %}
         <!-- avatar -->
-        <div class="col-xs-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="team-member wow zoomIn">
-                <img src="{{ site.author.avatar | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                <img src="{{ site.author.avatar | prepend: site.baseurl }}"  class="img-responsive " alt="">
                 <h4><span class="navy">{{ site.author.first_name }}</span> {{ site.author.last_name }}</h4>
                 <ul class="list-inline social-icon">
                     {% if site.author.github_username %}
@@ -47,7 +47,7 @@
         </div>
         <!-- second two icons -->
         {% for icon in site.author.skill_icon2 %}
-        <div class="col-xs-2 wow fadeInRight">
+        <div class="col-sm-2 hidden-xs wow fadeInRight">
             <div class="team-member">
                 <div class="vote-icon">
                     <i class="fa {{ icon.name }}"></i>

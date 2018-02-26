@@ -5,13 +5,13 @@
     i18n: cwi
   desc:
     detail: Na Cwi, trabalho com projetos de grande porte, e sou responsável pela arquitetura e desenvolvimento de aplicativos híbridos e SPAs performáticas e escaláveis, com grande foco em componentização, reuso e experiência do usuário em diferentes plataformas.
-    i18n: company_a_desc
+    i18n: cwi_desc
   date:
     detail: Dez. 2016
-    i18n: company_a_date
+    i18n: cwi_date
   job:
-    detail: Front-end Developer
-    i18n: company_a_job
+    detail: Senior Frontend Developer
+    i18n: cwi_job
   icon: fa-plus-square
 
 - name:
@@ -19,11 +19,25 @@
     i18n: simstim
   desc:
     detail: Como sócia fundadora e principal desenvolvedora Front-end da Simstim, tive oportunidade de trabalhar com diferentes projetos, como campanhas digitais de cobertura nacional, sites institucionais, e-commerces e aplicações web.Além do Front-end, exerci outras atividades como pesquisa, concepção e gerenciamento de projetos, defesa de ideias e atendimento ao cliente.
-    i18n: company_b_desc
+    i18n: simstim_desc
   date:
     detail: Mar. 2013
-    i18n: company_b_date
+    i18n: simstim_date
   job:
     detail: Front-end Developer | Founder
-    i18n: company_b_job
+    i18n: simstim_job
   icon: fa-plus-square
+
+- name:
+    detail: Educação
+    i18n: education
+  desc:
+    detail: Ao longo dos anos, fiz alguns cursos de desenvolvimento web e iOS, e também cursei Análise e Desenvolvimento de Sistemas e Jogos Digitais na Unisinos.
+    i18n: education_desc
+  date:
+    detail: 2010 a 2015
+    i18n: education_date
+  job:
+    detail: Estudante
+    i18n: education_job
+  icon: fa-graduation-cap
