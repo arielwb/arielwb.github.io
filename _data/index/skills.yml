@@ -2,5 +2,5 @@
 
 label: Habilidades
 id : cs
-aspects: CSS3/SASS, HTML5, Angular, JS/ES6, Task Runners, TypeScript, NodeJs
-percentage: 100, 100, 90, 80, 90, 90
+aspects: CSS3/SASS, HTML5, Angular, JS/ES6, Task Runners, TypeScript, NodeJs, MongDB
+percentage: 100, 98, 85, 88, 95, 90, 70, 60
