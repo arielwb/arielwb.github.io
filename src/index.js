@@ -10,8 +10,13 @@ const builtTabPage = (tab) => {
   <title>Tabs</title>
 </head>
 <style>
-  .notes {
-    display: flex
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
   }
 
   b {
