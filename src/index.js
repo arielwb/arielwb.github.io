@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import fs, { existsSync, mkdirSync } from "fs";
 
-const builtTabPage = (tab) => {
+const builtTabPage = (tab, artist, song) => {
   return `
   <html lang="en">
 <head>
@@ -29,6 +29,14 @@ const builtTabPage = (tab) => {
     font-size: 16px;
   }
 
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
 </style>
 <body>
 <label>
@@ -36,6 +44,14 @@ const builtTabPage = (tab) => {
 duas colunas
 </label>
 ${tab}
+<div>
+<b>Cavaco</b>
+<img src="../../static/${artist}-${song}.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-${artist}-${song}.png" />
+</div>
 </body>
 <script>
 const checkbox = document.getElementById("cols");
@@ -61,7 +77,7 @@ const downloadTab = async (artist, song, page) => {
   const outputPath = `tabs/${artist}`;
   const fileName = `${outputPath}/${song}.html`;
 
-  if (existsSync(fileName)) return;
+  // if (existsSync(fileName)) return;
 
   const url = `https://www.cifraclub.com.br/${artist}/${song}/#instrument=cavaco&tabs=false&columns=true`;
   await page.goto(url);
@@ -83,11 +99,32 @@ const downloadTab = async (artist, song, page) => {
     content += html;
   }
 
+  const chords = await page.waitForSelector(".cifra_acordes ul");
+  await chords.evaluate((el) => (el.style.display = "inline-block"));
+
+  await page.mouse.move(0, 0);
+
+  await chords.screenshot({
+    path: `static/${artist}-${song}.png`,
+    type: "png",
+  });
+
+  const ukuleleBtn = 'input[value="ukulele"]+label';
+  await page.waitForSelector(ukuleleBtn);
+  await page.click(ukuleleBtn);
+
+  await page.mouse.move(0, 0);
+
+  await chords.screenshot({
+    path: `static/ukulele-${artist}-${song}.png`,
+    type: "png",
+  });
+
   if (!existsSync(outputPath)) {
     mkdirSync(outputPath);
   }
 
-  fs.writeFileSync(fileName, builtTabPage(content));
+  fs.writeFileSync(fileName, builtTabPage(content, artist, song));
 };
 
 const buildIndex = (tabList) => {
