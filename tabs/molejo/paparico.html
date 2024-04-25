@@ -6,6 +6,11 @@
   <title>Tabs</title>
 </head>
 <style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+  
   .col1, .col2 {
     width: 50%;
     float: left;
@@ -19,8 +24,13 @@
     color: blueviolet;
     font-size: 16px;
   }
+
 </style>
 <body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
 <h1 class="t1">Paparico</h1><h2 class="t3"><a href="/molejo/">Molejo</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>A</b>  <b>Bm</b>  <b>E7</b>
         <b>A</b>  <b>Bm</b>  <b>E7</b>  <b>A7M</b>
 
@@ -76,5 +86,21 @@ Te ganhei no paparico, mas tô sem nenhum
 Por favor amor não pense que sou 171
 </pre>
 </body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
 </html>
   

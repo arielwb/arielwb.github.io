@@ -6,6 +6,11 @@
   <title>Tabs</title>
 </head>
 <style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+  
   .col1, .col2 {
     width: 50%;
     float: left;
@@ -19,8 +24,13 @@
     color: blueviolet;
     font-size: 16px;
   }
+
 </style>
 <body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
 <h1 class="t1">Maneiras</h1><h2 class="t3"><a href="/zeca-pagodinho/">Zeca Pagodinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Em</a> </span><pre class="col1">[Intro] <b>Am</b>  <b>F#m7</b>  <b>Em</b>  <b>F</b>  <b>Em</b>  <b>A7</b>
 
  <b>Em</b>                         <b>B7</b>
@@ -72,5 +82,21 @@ feia
 É gente que vive chorando de barriga cheia
 </pre>
 </body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
 </html>
   

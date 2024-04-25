@@ -10,6 +10,11 @@ const builtTabPage = (tab) => {
   <title>Tabs</title>
 </head>
 <style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
   .col1, .col2 {
     width: 50%;
     float: left;
@@ -23,10 +28,31 @@ const builtTabPage = (tab) => {
     color: blueviolet;
     font-size: 16px;
   }
+
 </style>
 <body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
 ${tab}
 </body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
 </html>
   `;
 };
@@ -81,22 +107,18 @@ const buildIndex = (tabList) => {
     color: blueviolet;
     font-size: 16px;
   }
-</style>
+  </style>
+  <link rel="stylesheet" href="index.css"></link>
 <body>
-<ul>
-${tabList
-  .map((tab) => {
-    return tab.songs
-      .map(
-        (song) =>
-          `<li>
-    <a href="./tabs/${tab.artist}/${song}">${tab.artist} - ${song}</a>
-    </li>`
-      )
-      .join("");
-  })
-  .join("")}
+<input type="search" id="search"/>
+<ul id="tabList">
+
+</ul>
 </body>
+<script>
+  var tabList = ${JSON.stringify(tabList)}
+</script>
+<script src="index.js"></script>
 </html>
   `;
 
@@ -132,7 +154,7 @@ const tabs = [
 (async () => {
   // Launch the browser and open a new blank page
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     executablePath:
       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     args: [
