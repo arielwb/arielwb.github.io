@@ -1,0 +1,124 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Fato Consumado</h1><h2 class="t3"><a href="/turma-do-pagode/">Turma do Pagode</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">Introdução:  <b>G7+</b> / <b>E7+</b> / <b>Am7/9</b> / <b>D7/9</b>
+Solo:(20 21 23.28,28,27,25,37,35)(20 21 
+23.28,28,27,25,37,35 35 35,45).
+
+ <b>G7+</b>           <b>E7+</b>        <b>Am7/9</b>
+Te guererê te guererê te guerê
+                 <b>D7/9</b>
+Te guererê te guererê rerererê
+<b>G7+</b>           <b>E7+</b>           <b>Am7/9</b>
+Te guererê te guererê te guerê
+                 <b>D7/9</b>
+Te guererê te guererê rerererê
+<b>G7+</b>              <b>E7+</b>     <b>Am7/9</b>      <b>D7/9</b>
+Te guê e guê e guê e guê e guê guererê oh oh 
+oh
+<b>G7+</b>              <b>E7+</b>    <b>Am7/9</b>      <b>D7/9</b>
+Te guê e guê e guê e guê e guê guererê oh oh 
+oh
+<b>G7+</b>          <b>E7+</b>            <b>Am7/9</b>
+Eu quero ver você mandar na razão
+                          <b>D7/9</b>
+Pra mim não é qualquer notícia que abala um 
+coração
+<b>G7+</b>          <b>E7+</b>            <b>Am7/9</b>
+Eu quero ver você mandar na razão
+                          <b>D7/9</b>
+Pra mim não é qualquer notícia que abala um 
+coração
+<b>G7+</b>            <b>E7</b>           <b>Am7/9</b>
+Se toda hora é hora de dar decisão,</pre><pre class="col2">          <b>D7/9</b>
+Eu falo agora
+<b>G7+</b>              <b>E7+</b>                 <b>Am7/9</b>
+No fundo eu julgo o mundo um fato consumado
+        <b>D7/9</b>
+E vou embora
+<b>G7+</b>                        <b>E7+</b>
+Não quero mais, de mais a mais,
+<b>Am7/9</b>                   <b>D7/9</b>
+Me aprofundar nessa história
+<b>G7+</b>             <b>E7+</b>           <b>Am7/9</b>
+Arreio os meus anseios, perco o veio
+            <b>F#m5-/7</b>  <b>B7</b>
+E vivo de memória
+<b>E7+</b>         <b>F#m7</b>     <b>G#m7</b>
+Eu quero é viver em paz
+<b>C#7(#9)</b>              <b>F7</b>
+Por favor me beije a boca
+    <b>B7/9</b>            <b>G#m7</b>^<b>C#7(#9)</b>^<b>F#m7</b>^<b>B7/9</b>
+Que louca, que louca!
+<b>E7+</b>         <b>F#m7</b>     <b>G#m7</b>
+Eu quero é viver em paz
+<b>C#7(#9)</b>              <b>F7</b>
+Por favor me beije a boca
+        <b>B7/9</b>        <b>G#m7</b>^<b>C#7(#9)</b>^<b>Am7</b>^<b>D7</b>
+Que louca, que louca!
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/turma-do-pagode-fato-consumado.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-turma-do-pagode-fato-consumado.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

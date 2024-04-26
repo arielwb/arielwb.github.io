@@ -1,0 +1,139 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Estranha Loucura</h1><h2 class="t3"><a href="/alcione/">Alcione</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Dm</b>  <b>Am</b>  (<b>Bb</b>  <b>Am7</b>  <b>Gm7</b>)  <b>Bb/C</b>
+
+                  <b>F7M</b> <b>F6</b>
+Minha estranha loucura
+                 <b>F7M</b>   <b>F6</b>            <b>Gm7</b>  
+É tentar te entender   e não ser entendida
+<b>Bb/C</b> <b>Gm7</b> <b>Bb/C</b>
+
+             <b>Gm7</b> <b>Bb/C</b>
+É ficar com você
+             <b>Gm7</b>     <b>Bb/C</b>                <b>F7M</b> 
+Procurando fazer            parte da tua vida
+<b>F6</b> <b>F7M</b> <b>F6</b>
+
+                 <b>Cm7</b>
+Minha estranha loucura
+               <b>Eb/F</b>                <b>Bb7M</b>  <b>Bb6</b> 
+É tentar desculpar     o que não tem desculpa
+<b>Bb7M</b> <b>Bb6</b>
+
+                <b>F/G</b>   <b>G7/9/11+</b>
+É fazer dos teus erros
+              <b>G7/11</b>          <b>G7/13</b>       
+Num motivo qualquer       a razão da minha  
+<b>Bb/C</b>    <b>E5+/C</b>
+culpa
+                  <b>F7M</b> <b>F6</b>
+Minha estranha loucura
+                    <b>F7M</b>  <b>F6</b>               
+É correr pros teus braços quando acaba uma 
+<b>Gm7</b>   <b>Bb/C</b> <b>Gm7</b> <b>Bb/C</b>
+briga
+               <b>Gm7</b>
+Te dar sempre razão
+              <b>A7</b>                <b>Dm</b>  <b>Cm7</b> <b>Eb/F</b>
+E assumir o papel de culpada bandida
+                  <b>Bb7M</b>
+Ver você    me humilhar</pre><pre class="col2">                  <b>Bbm6</b>               <b>Am7</b>    
+E eu num canto qualquer dependente total do 
+            <b>D7(4)</b> <b>E5+/D</b>
+teu jeito de ser
+                 <b>Gm7/9</b>
+Minha estranha loucura
+             <b>A#m</b>      <b>Bb/C</b>                
+É tentar descobrir         que o melhor é 
+   <b>F7M</b> <b>C/E</b>
+você
+   <b>Dm</b>                   <b>Am</b>
+Eu acho que já paguei o preço por te amar 
+demais
+  <b>Bb7M/9</b>                    <b>F7M</b>
+Enquanto pra você foi tanto fez ou tanto faz
+   <b>Gm</b>                       <b>Am7</b>
+Magoando pouco a pouco me perdendo sem saber
+  <b>Bb7M</b>           <b>G7/B</b>         <b>Bb/C</b>
+E quando eu for embora o que será que vai 
+fazer
+                    <b>Gm7</b> <b>Bb/C</b>
+Vai sentir falta de  mim
+           <b>F7M</b>    <b>F6</b>
+Sentir falta de mim
+                  <b>Gm7</b>               <b>Bb/C</b>
+Vai tentar se esconder coração vai doer
+          <b>F7M</b>     <b>F6</b>
+Sentir falta de mim    (2x)
+
+[Solo Sax] Bb7M  Bm7(b5)   E7  Am7  Abm7(b5) 
+ Gm7/9  Am7/9  Bb7M  Bb/C   Eb/F  F7(9-)
+
+"Vê você me humilhar"
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/alcione-estranha-loucura.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-alcione-estranha-loucura.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

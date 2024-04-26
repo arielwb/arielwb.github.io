@@ -1,0 +1,105 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ôa ôa canção do amor</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>A</b>  <b>Bm</b>  <b>Bb7(11)</b>  <b>A9</b>
+
+<b>A7M</b>         <b>A6</b>                  <b>B7</b>
+De repente deu uma vontade de te olhar
+  <b>Bm</b>    <b>E7(9)</b>     <b>A7M</b>   <b>E7(9)</b>
+Admirar, isto é o amor
+ <b>A7M</b>           <b>A6</b>                 <b>B7</b>
+A gente pensa que isto tudo pode acabar
+ <b>Bm</b>        <b>E7(9)</b>        <b>A7M</b>
+Sorte ou azar, isto é o amor
+
+  <b>G#m7(5-)</b>       <b>C#7(9+)</b> <b>C#7(9-)</b> <b>F#m</b>
+Ouvir uma linda canção só para relembrar
+        <b>D7M</b>         <b>E7</b>        <b>C#m</b>   <b>F#7</b>
+Que com você, mulher, bom é amar
+          <b>Bm</b>        <b>E7(9)</b>      <b>A7M</b>
+Que com você, mulher, bom é amar
+
+<b>D7M</b>  <b>C#m</b> <b>Bm</b> <b>A7M</b>
+Ôa   ôa, ôa ô
+</pre><pre class="col2">                      <b>D7M</b>
+O seu rosto, a imensidão
+             <b>A7M</b>
+O vento a soprar
+                  <b>D7M</b>
+E sentir que a emoção
+          <b>A7M</b>
+Vaga pelo ar
+<b>D7M</b>   <b>C#m</b>   <b>D7M</b>      <b>A7M</b>
+Vem, vem, vem desvendar
+<b>D7M</b>  <b>C#m</b>   <b>D7M</b>      <b>A7M</b>
+Vem, vem, vem desvendar
+            <b>F7M</b>   <b>E7</b>
+Alma florescer
+           <b>A7M</b>
+Viver é sonhar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-oa-oa-cancao-do-amor.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-oa-oa-cancao-do-amor.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

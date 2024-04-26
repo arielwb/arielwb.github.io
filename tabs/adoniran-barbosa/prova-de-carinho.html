@@ -1,0 +1,81 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Prova de Carinho</h1><h2 class="t3"><a href="/adoniran-barbosa/">Adoniran Barbosa</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>Dm</b> <b>Am</b> <b>F</b> <b>E7</b>
+            <b>Am</b>     <b>A7</b>      <b>Dm</b>
+Com a corda mi do meu cavaquinho
+             <b>E7</b>                    <b>Am</b>
+Fiz uma aliança pra ela prova de carinho
+            <b>A7</b>                    <b>Dm</b>
+Quantas serenatas eu tenho que perder
+            <b>G7</b>                       <b>C</b>
+Pois o cavaquinho já não pode mais gemer</pre><pre class="col2">             <b>Am</b>                 <b>Dm6</b>
+Quanto sacrifício eu tive que fazer
+           <b>F</b>          <b>E7</b>               <b>Am</b>
+Para dar a prova pra ela do meu bem querer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/adoniran-barbosa-prova-de-carinho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-adoniran-barbosa-prova-de-carinho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

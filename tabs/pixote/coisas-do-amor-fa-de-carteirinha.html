@@ -1,0 +1,126 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Coisas do amor "Fã de carteirinha"</h1><h2 class="t3"><a href="/pixote/">Grupo Pixote</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">Introdução: <b>A/B</b> / <b>D/A</b> / <b>G7+</b> / <b>F#m7</b> / <b>Em7</b> / <b>G7+</b> / <b>F#m7</b>
+
+ / <b>Em7</b> / <b>D7+</b> / <b>C7+</b> / <b>D7+</b> /
+
+<b>D7+</b>                     <b>Em7</b>
+Eu não sei se você sabe
+        <b>F#m7</b>                <b>A/B</b> ^ <b>D/A</b>
+Mas preciso tanto lhe dizer
+ <b>G7+</b>                    <b>D/F#</b>
+Tô parado aqui pensando
+     <b>Em7</b>           <b>A7/9</b>
+Onde é que anda você
+  <b>D7+</b>                    <b>Em7</b>
+Será que você tá na minha
+        <b>F#m7</b>             <b>A/B</b> ^ <b>D/A</b>
+Eu sei lá o que você quer
+ <b>G7+</b>                     <b>D/F#</b>
+Sou teu fã de carteirinha
+      <b>Em7</b>                       <b>C#m5-/7</b> ^ 
+Tudo bem, seja o que Deus quiser
+<b>F#7/9-</b>
+
+     <b>Bm7</b>                            <b>F#m7</b>
+Mas tanto que eu te falei, falei e nada
+        <b>G7+</b>                <b>E/G#</b>        <b>Em7/A</b>
+Tantas vezes que eu te pedi....pedi e nada
+<b>C#m5-/7</b> ^ <b>F#7</b>     <b>Bm7</b>                       
+.......E se pensa....que é dona da verdade, 
+       <b>F#m7</b>
+não é nada</pre><pre class="col2">    <b>G7+</b>                 <b>E/G#</b>         <b>Em7/A</b>
+E agora acha que é feliz....mas tá errada
+                       <b>G7+</b>           <b>F#m7</b>
+Pois quando a gente se ama é um show
+         <b>B7</b>           <b>Em7</b>           <b>Em7</b> ^ <b>Fm7</b>  
+Parece que o amor da gente recomeçou
+<b>F#m7</b>
+
+        <b>B7</b>        <b>Em7</b>
+A cada dia ele aumenta
+                   <b>Em7/A</b>
+E o coração não aguenta
+           <b>A7/9</b>      <b>D7+</b>  <b>D/F#</b>  <b>Am7</b>
+De tanto que te esperou
+          <b>C/D</b>     <b>G7+</b>           <b>F#m7</b>
+Mas de repente você me deixa só
+     <b>B7</b>       <b>Em7</b>          <b>Em7</b> ^ <b>Fm7</b>  <b>F#m7</b>
+Aí então a cabeça dá um nó
+           <b>B7</b>        <b>Em7</b>
+Assim não muda de assunto
+                       <b>Em7/A</b>
+Porque a gente não tá junto
+           <b>A7/9</b>
+Sei lá são coisas do amor..
+
+<b>D9</b> / <b>Em7</b> / <b>F#m7</b> / <b>A/B</b> ^ <b>B7</b> / <b>G7+</b> / <b>F#m7</b> / <b>Em7</b> / <b>G/A</b> /
+
+VOLTA AO INÍCIO
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pixote-coisas-do-amor-fa-de-carteirinha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pixote-coisas-do-amor-fa-de-carteirinha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

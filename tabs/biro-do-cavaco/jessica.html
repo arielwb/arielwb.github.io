@@ -1,0 +1,128 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Jéssica</h1><h2 class="t3"><a href="/biro-do-cavaco/">Biro do Cavaco</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro]  <b>A9</b>  <b>C#m7/-5</b>  <b>F#7</b>  <b>Bm7/-5</b>  <b>E7</b>  <b>A7+</b>  
+
+<b>D/E</b>  <b>A7+</b>  <b>D/E</b>  <b>A7+</b>  <b>D/E</b>
+
+<b>A</b>             <b>C#m</b>  <b>Bm</b>      <b>E7</b>         <b>A</b>   
+Sem a gente esperar nasce uma pequena flor
+<b>C#m</b>  <b>Bm</b>
+
+      <b>E7</b>        <b>A</b>   <b>C#m</b>  <b>Bm</b>
+Que terá muito amor
+      <b>E7</b>        <b>A</b>   <b>C#m</b>  <b>Bm</b>
+Que terá muito amor
+<b>A</b>          <b>C#m</b>  <b>Bm</b>       <b>E7</b>   <b>A</b>     <b>C#m</b>
+Nem bem nasceu   já começamos regá-la
+<b>Bm</b>         <b>E7</b>      <b>A</b>     <b>C#m</b>
+  Pra mais tarde colher
+<b>Bm</b>       <b>E7</b>       <b>A</b>      <b>C#m</b>
+  Uma porção de carinho
+<b>Bm</b>       <b>E7</b>       <b>A</b>      <b>C#m</b>
+  Uma porção de carinho
+<b>A</b>        <b>C#m</b>       <b>Bm</b>    <b>E7</b>
+  Toda flor que nasce
+<b>A</b>           <b>C#m</b>      <b>Bm</b>   <b>E7</b>
+  Nasce sem nome sem nada
+<b>A</b>       <b>C#m</b>    <b>Bm</b>  <b>E7</b>
+  Sem título algum
+<b>A</b>         <b>C#m</b>    <b>Bm</b>  <b>E7</b>
+  Nasce desemparada
+      <b>A</b>      <b>C#m</b>    <b>Bm</b>      <b>E7</b>        <b>A</b>   <b>C#m</b>
+Mas aqui é diferente temos amor e de tudo
+<b>Bm</b>         <b>E7</b>      <b>A</b>    <b>C#m</b>
+  Principalmente carinho</pre><pre class="col2"><b>Bm</b>          <b>E7</b>         <b>A</b>   <b>A7</b>  <b>D</b>
+  Pra enfrentar nosso mundo
+             <b>F°</b>          <b>F#m</b>        <b>Dm</b>
+  Pra enfrentar nosso mundo
+<b>Bm</b>         <b>E7</b>        <b>A</b>   <b>C#m</b>
+  Eu vou dizer pra vocês
+<b>Bm</b>         <b>E7</b>     <b>A</b>   <b>C#m</b>
+  Qual é o nome dela
+<b>Bm</b>         <b>E7</b>        <b>A</b>   <b>C#m</b>
+  Eu vou dizer pra vocês
+<b>Bm</b>         <b>E7</b>      <b>A</b>        <b>A7</b>      <b>D</b> 
+  O nome dela é Jéssica Jéssica Jéssica 
+     <b>E7</b>
+Jéssica
+<b>A</b>   <b>C#m</b>  <b>Bm</b>  <b>E7</b>
+Ôh  ôh   ôh  ôh
+<b>A</b>   <b>C#m</b>  <b>Bm</b>  <b>E7</b>
+Ôh  ôh   ôh  ôh
+<b>Bm</b>         <b>E7</b>      <b>A7+</b>   <b>D7+</b>
+  O nome dela é Jéssica
+           <b>C#m</b>     <b>Bm</b>
+  Eu já falei pra vocês
+         <b>F7</b>        <b>A7+</b>    <b>E7</b>
+  É a coisa mais linda
+                   <b>A7+</b>  <b>Bb7+</b>  <b>Eb</b>  <b>E7</b>  <b>F7</b>     
+  Que Deus pôde fazer
+      <b>Bb7+</b>
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/biro-do-cavaco-jessica.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-biro-do-cavaco-jessica.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

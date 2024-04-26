@@ -1,0 +1,146 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Percepção</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">(intro) <b>Am7/9</b> <b>G7</b> <b>F7+</b> <b>Am7/9</b> <b>F7+</b> <b>Dm</b> <b>E7/G#</b> <b>E7/G#</b>
+
+  <b>Am7/9</b> <b>Am7/9</b> <b>Am7/9</b> <b>Am7/9</b>
+
+         <b>Am7/9</b>
+ É .....linda essa relação
+       <b>Dm</b>
+Que envolve meu coração
+             <b>Bm5-/7</b>  <b>E7</b>
+Cansado já de sofrer
+   <b>Am7/9</b>                 <b>Bb7</b> <b>E7/G#</b>
+A ponto de enlouquecer
+
+<b>Am7/9</b>
+Pensei que voltar atrás
+     <b>Dm</b>
+Seria a solução
+         <b>Bm5-/7</b>               <b>E7/9</b>
+Por que fui me apaixonar
+ <b>Em5-/7</b>                <b>A7</b>
+Falhei na percepção
+
+    <b>Dm</b>                     <b>G7</b>
+Seu jeito judia de mim
+        <b>C</b>                                <b>Am</b>
+Dengosa como um querubim
+    <b>Bm5-/7</b>                           <b>E7</b>
+Com tantos delírios de amor
+         <b>A7/4</b>  <b>A7</b>
+É na vida
+
+    <b>Dm</b>                     <b>G7</b>
+Seu jeito judia de mim
+    <b>C</b>                                 <b>Am</b>
+Dengosa como um querubim
+      <b>Bm5-/7</b>                         <b>E7</b>
+Com tantos delírios de amor
+    <b>Am</b>
+Assim
+</pre><pre class="col2"><b>Am</b>  <b>G#m7</b> <b>Gm7</b>
+En.....tão     vem
+
+  <b>C7</b>      <b>C7/5+</b> <b>F7+</b>                         
+Vem pra me amar, vem pra me amar
+<b>F6</b>
+
+             <b>Fm6</b>                             
+Sem você não dá, sem você não dá
+    <b>Fm7</b>
+
+               <b>Em7</b> <b>Bb7</b> <b>A7</b>
+Pra viver feliiiiii....iii....iiiz
+
+          <b>D7</b>
+É como o ditado diz
+    <b>Am6</b>  <b>G7</b>    <b>C7+</b>
+Água em pedra pra furar
+                              <b>Am7</b>            
+Tem que insistir (que insistir, que insistir,
+     <b>Am7+</b>         <b>A7sus</b>   <b>C7/D#</b>
+ que insistir)
+
+   <b>F7+</b>                         <b>F6</b>
+Vem pra me amar, vem pra me amar
+             <b>Fm6</b>                             
+Sem você não dá, sem você não dá
+    <b>Fm7</b>
+
+               <b>Em7</b> <b>Bb7</b> <b>A7</b>
+Pra viver feliiiiii....iii....iiiz
+
+      <b>D7</b>
+É como o ditado diz
+    <b>Am6</b>    <b>G7</b>     <b>C7+</b>
+Água em pedra pra furar
+  <b>Am7</b>     <b>Gm7</b> <b>C7</b>
+Tem que insistir
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-percepcao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-percepcao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

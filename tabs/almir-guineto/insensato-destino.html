@@ -1,0 +1,102 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Insensato Destino</h1><h2 class="t3"><a href="/almir-guineto/">Almir Guineto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>G</b>             <b>F#m7(5-)</b>         <b>B7</b>
+Óh insensato destino pra que
+<b>Em7</b>                 <b>Dm</b>       <b>G7</b>
+Tanta desilusão no meu viver
+<b>C</b>         <b>D7</b>         <b>Bm</b>
+Eu quero apenas ser feliz
+             <b>E7</b>
+Ao menos uma vez
+       <b>A7</b>         <b>Cm6</b>       <b>D7</b>   <b>G7</b>
+E conseguir o acalanto da paixão
+<b>C</b>         <b>D7</b>         <b>Bm</b>
+Fui desprezado e magoado
+        <b>E7</b>        <b>Am</b>  <b>D7</b>        <b>Dm</b> <b>E7</b>
+Por alguem que abordou meu coração
+<b>C</b>        <b>D7</b>         <b>Bm</b>
+Fui desprezado e magoado
+        <b>E7</b>        <b>Am</b>  <b>D7</b>         <b>G</b>
+Por alguem que abordou meu coração</pre><pre class="col2"><b>Gm</b>                 <b>Cm9</b>
+Destino porque fazes assim
+              <b>F7</b>
+Tenha pena de mim
+                <b>Bb7M</b>
+Veja bem não mereço sofrer
+<b>Bb6</b>            <b>Am7(5-)</b>
+Quero apenas um dia poder
+<b>D7</b>                <b>Gm</b>
+Viver num mar de felicidade
+<b>Gm7</b>               <b>A7</b>  <b>D7</b>   <b>Gm</b>
+Com alguém que me ame de verdade
+<b>Gm7</b>               <b>A7</b>  <b>D7</b>   <b>Gm</b>
+Com alguém que me ame de verdade
+<b>Gm7</b>               <b>A7</b>  <b>D7</b>   <b>Gm</b>
+Com alguém que me ame de verdade
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/almir-guineto-insensato-destino.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-almir-guineto-insensato-destino.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

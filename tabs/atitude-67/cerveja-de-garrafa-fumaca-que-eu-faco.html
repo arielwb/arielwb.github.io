@@ -1,0 +1,184 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Cerveja de Garrafa (Fumaça Que Eu Faço)</h1><h2 class="t3"><a href="/atitude-67/">Atitude 67</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro] <b>E9</b>  <b>A9</b>  <b>E9</b>  <b>A9</b>
+
+[Primeira Parte]
+
+        <b>E9</b>
+Bacana como tá legal aqui
+        <b>A9</b>
+Você é sempre um bom motivo pra eu querer ser
+ feliz
+          <b>E9</b>
+Me dá um gole dessa sua paz
+            <b>A9</b>
+Hoje eu te vi trocando a roupa e tá bonito 
+demais
+   <b>E9</b>                    <b>A9</b>
+É doce, cê tem um jeito doce
+            <b>E9</b>         <b>A9</b>
+O seu olhar é doce, é doce
+
+[Pré-Refrão]
+
+         <b>E7M</b>
+E aí me leva pra qualquer lugar
+           <b>A7M</b>
+Porque se for ideia sua acho que eu devo 
+gostar
+        <b>E7M</b>
+Independente do que acontecer
+          <b>A7M</b>
+O teu sorriso volta e meia vai permanecer
+ <b>E9</b>                    <b>A9</b>
+Doce, cê tem um jeito doce
+               <b>E9</b>      <b>A9</b>
+O seu olhar é doce, é doce
+
+[Refrão]
+
+<b>E7M</b>                                  
+   Mas gosta de boteco e de cerveja de 
+      <b>F#m</b>
+garrafa
+           <b>B7</b>             <b>E7M</b>
+E nunca ligou pra toda fumaça que eu faço
+E toda vez que eu relaxo
+       <b>F#m</b>                      <b>B7</b>
+Eu imagino um mundo belo assim com você do 
+lado
+
+<b>E7M</b>                                    <b>F#m</b>
+   Gosta de boteco e de cerveja de garrafa
+           <b>B7</b>             <b>E7M</b>
+E nunca ligou pra toda fumaça que eu faço
+E toda vez que eu relaxo
+       <b>F#m</b>                      <b>B7</b>
+Eu imagino um mundo belo assim com você do 
+lado
+
+[Primeira Parte]
+</pre><pre class="col2"> <b>E9</b>
+Bacana como tá legal aqui
+        <b>A9</b>
+Você é sempre um bom motivo pra eu querer ser
+ feliz
+          <b>E9</b>
+Me dá um gole dessa sua paz
+            <b>A9</b>
+Hoje eu te vi trocando a roupa e tá bonito 
+demais
+   <b>E9</b>                    <b>A9</b>
+É doce, cê tem um jeito doce
+            <b>E9</b>         <b>A9</b>
+O seu olhar é doce, é doce
+
+[Pré-Refrão]
+
+         <b>E7M</b>
+E aí me leva pra qualquer lugar
+           <b>A7M</b>
+Porque se for ideia sua acho que eu devo 
+gostar
+        <b>E7M</b>
+Independente do que acontecer
+          <b>A7M</b>
+O teu sorriso volta e meia vai permanecer
+ <b>E9</b>                    <b>A9</b>
+Doce, cê tem um jeito doce
+               <b>E9</b>      <b>A9</b>
+O seu olhar é doce, é doce
+
+[Refrão]
+
+<b>E7M</b>                                  
+   Mas gosta de boteco e de cerveja de 
+      <b>F#m</b>
+garrafa
+           <b>B7</b>             <b>E7M</b>
+E nunca ligou pra toda fumaça que eu faço
+E toda vez que eu relaxo
+       <b>F#m</b>                      <b>B7</b>
+Eu imagino um mundo belo assim com você do 
+lado
+
+<b>E7M</b>                                    <b>F#m</b>
+   Gosta de boteco e de cerveja de garrafa
+           <b>B7</b>             <b>E7M</b>
+E nunca ligou pra toda fumaça que eu faço
+E toda vez que eu relaxo
+       <b>F#m</b>                      <b>B7</b>
+Eu imagino um mundo belo assim com você do 
+lado
+
+ <b>E9</b>                    <b>A9</b>
+Doce, cê tem um jeito doce
+               <b>E9</b>    <b>A9</b>   <b>E9</b>
+O seu olhar é doce, doce
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/atitude-67-cerveja-de-garrafa-fumaca-que-eu-faco.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-atitude-67-cerveja-de-garrafa-fumaca-que-eu-faco.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

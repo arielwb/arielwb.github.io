@@ -1,0 +1,113 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Encaixe Perfeito</h1><h2 class="t3"><a href="/swing-e-simpatia/">Swing &amp; Simpatia</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>A7M</b>  <b>C#m</b>  <b>C#7</b>  <b>D7M</b>  <b>Em</b>  <b>A7</b>  <b>D</b>  <b>E7</b>  
+
+<b>C#m</b>  <b>F#7</b>  <b>Bm</b>  <b>E7</b>
+
+  <b>A7M</b>              <b>A6</b>                   
+ Toda vez que eu venho a sonhar com 
+<b>G#m5-/7</b>  <b>C#7</b>
+você, linda
+ <b>F#m</b>                   <b>Em7</b>  <b>A7</b>
+ Eu acordo suado de tanto prazer
+ <b>D7M</b>               <b>Dm6</b>
+ Só não consigo esquecer de uma vez
+ <b>C#m</b>                  <b>F#7</b>
+ O amor gostoso que agente faz
+   <b>Bm7</b>                              <b>Bm5-/7</b>  
+ É o bastante pra me envolver com você cada 
+       <b>E7</b>
+vez mais
+ <b>Am7</b>
+ Só não me faça esquecer seu perfume
+ <b>Dm7</b>                <b>G7</b>
+ E teu beijo marcante demais
+  <b>C7M</b>            <b>F7+</b>
+ Essa forte paixão que nos une</pre><pre class="col2"> <b>Bm5-/7</b>              <b>E7</b>
+ É o desejo que me satisfaz
+ <b>Am7</b>
+ Fecho os olhos e vejo teu rosto
+ <b>Dm7</b>                <b>G7</b>
+ Ainda sinto o teu corpo no meu
+  <b>C7M</b>           <b>F7+</b>              <b>Bm5-/7</b>    
+ Assim como a unha e a carne, somos você e 
+<b>E7/9</b>
+eu
+ <b>A7M</b>             <b>A6</b>     <b>G#m5-/7</b>  <b>C#7</b>
+ Como o encontro do vinho e a taça
+ <b>F#m</b>                <b>Em7</b>    <b>A7</b>
+ Encaixe perfeito, medida exata
+  <b>D7M</b>         <b>Dm6</b>     <b>C#m</b>    <b>F#7</b>
+ Assim o teu beijo embreagador
+ <b>Bm</b>     <b>Bm5-/7</b>             <b>E7</b>             <b>A7M</b>
+ Me fez escravo desse teu amor
+
+( <b>A7+</b>  <b>A6</b>  <b>A7+</b>  <b>A6</b>  <b>D7+</b>  <b>A/C#</b>  <b>Bm7</b>  <b>E/7/11</b>  
+<b>E7</b> )
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/swing-e-simpatia-encaixe-perfeito.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-swing-e-simpatia-encaixe-perfeito.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

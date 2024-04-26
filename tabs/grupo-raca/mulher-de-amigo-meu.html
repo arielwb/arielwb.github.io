@@ -1,0 +1,118 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Mulher de Amigo Meu</h1><h2 class="t3"><a href="/grupo-raca/">Grupo Raça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1"><b>Gm</b>                 <b>Am7(5-)</b>
+Do jeito que eu te amei
+             <b>D7</b>      <b>Gm</b>
+Nunca mais amei ninguém
+<b>Gm</b>                  <b>Cm</b>
+Do jeito que eu te amei
+            <b>D7</b>      <b>Gm</b>
+Nunca mais amei ninguém
+         <b>G7</b>    <b>Cm</b>
+Você não me amou
+      <b>F7</b>     <b>Bb</b>
+Você me iludiu
+        <b>Gm</b>      <b>Am7(5-)</b>
+Aquele amor passou
+<b>D7</b>  <b>Gm</b>
+Sumiu
+               <b>G7</b>                   <b>Cm</b>
+Dá pra ver que sua vida precisa de luz
+            <b>F7</b>                  <b>Bb</b>
+Está desiludida com seu grande amor
+                <b>Gm</b>            <b>Am7(5-)</b>
+Não tá conseguindo levar sua cruz
+                     <b>D7</b>                <b>G7(4)</b>
+Hoje a sua é de madeira, a minha de isopor
+                <b>G7</b>                <b>Cm</b>
+Sua vida emocional não anda nada bem</pre><pre class="col2">                <b>F7</b>                    <b>Bb</b>
+Toda noite ele sai, te deixa sem ninguém
+             <b>Gm</b>             <b>Am7(5-)</b>
+Aí você me liga, tira minha paz
+          <b>D7</b>                        <b>Gm</b>
+O que passou, passou não te quero mais
+            <b>G7</b>      <b>Cm</b>
+Esqueça que eu existo
+ <b>F7</b>                   <b>Bb</b>
+Não fale mais o meu nome
+     <b>Gm</b>           <b>Am7(5-)</b>
+Aquele amor já morreu
+                 <b>D7</b>
+Mulher de amigo meu
+            <b>Gm</b>
+Pra mim é homem
+          <b>G7</b>       <b>Cm</b>
+Sai tentação, me deixa
+                 <b>F7</b>       <b>Bb</b>
+Não sei porque você não some
+     <b>Gm</b>              <b>Am7(5-)</b>
+Aquele nosso amor, morreu
+                 <b>D7</b>              <b>Gm</b>
+Mulher de amigo meu, pra mim é homem
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-raca-mulher-de-amigo-meu.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-raca-mulher-de-amigo-meu.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

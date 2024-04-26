@@ -1,0 +1,181 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Quebrando Protocolo</h1><h2 class="t3"><a href="/gusttavo-lima/">Gusttavo Lima</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C#m</a> </span><pre class="col1">[Intro] <b>Cm</b>  <b>G#</b> <b>D#</b> <b>Gm</b>
+        <b>Cm</b>  <b>G#</b> <b>D#</b> <b>Gm</b>
+
+[Primeira Parte]
+
+     <b>Cm</b>
+Seis horas da manhã
+  <b>G#</b>
+Saindo aqui de casa
+    <b>D#</b>
+Pro povo 'cê fala "não volto"
+    <b>A#</b>
+Pra mim você pede "não para"
+
+[Pré-Refrão]
+
+<b>Cm</b>                                   <b>G#</b>
+Me chama de safado, de cachorro e pegador
+                                        <b>D#</b>
+Mas em quatro paredes o meu vulgo é seu amor
+Pra mim manda mensagem, pros outros diz que 
+  <b>A#</b>
+acabou
+Quebrando o protocolo de quem diz que superou
+ <b>A#</b>
+
+
+[Refrão]
+
+               <b>Cm</b>                  <b>G#</b>
+Eu sei que cê sofre, eu sei que cê sofre
+        <b>D#</b>                               
+Seu perfil é visita frequente vendo meus 
+ <b>A#</b>
+stories
+              <b>Cm</b>                   <b>G#</b>
+Eu sei que cê sofre, eu sei que cê sofre
+       <b>D#</b>                                 
+Cê me chama na rua, de lixo, e na cama, de 
+<b>A#</b>
+love
+
+               <b>Cm</b>                      <b>G#</b>
+Eu sei que 'cê sofre, eu sei que 'cê sofre
+        <b>D#</b>                               
+Seu perfil é visita frequente vendo meus 
+ <b>A#</b>
+stories
+              <b>Cm</b>                     <b>G#</b>
+Eu sei que cê sofre, eu sei que 'cê sofre
+       <b>D#</b>                                 
+Cê me chama na rua, de lixo, e na cama, de 
+<b>A#</b>
+love
+
+( <b>Cm</b>  <b>G#</b> <b>D#</b> <b>Gm</b> )
+
+[Primeira Parte]
+</pre><pre class="col2">     <b>Cm</b>
+Seis horas da manhã
+  <b>G#</b>
+Saindo aqui de casa
+    <b>D#</b>
+Pro povo 'cê fala "não volto"
+    <b>A#</b>
+Pra mim você pede "não para"
+
+[Pré-Refrão]
+
+<b>Cm</b>                                   <b>G#</b>
+Me chama de safado, de cachorro e pegador
+                                        <b>D#</b>
+Mas em quatro paredes o meu vulgo é seu amor
+Pra mim manda mensagem, pros outros diz que 
+  <b>A#</b>
+acabou
+Quebrando o protocolo de quem diz que superou
+ <b>A#</b>
+
+
+[Refrão]
+
+               <b>Cm</b>                  <b>G#</b>
+Eu sei que cê sofre, eu sei que cê sofre
+        <b>D#</b>                               
+Seu perfil é visita frequente vendo meus 
+ <b>A#</b>
+stories
+              <b>Cm</b>                   <b>G#</b>
+Eu sei que cê sofre, eu sei que cê sofre
+       <b>D#</b>                                 
+Cê me chama na rua, de lixo, e na cama, de 
+<b>A#</b>
+love
+
+               <b>Cm</b>                      <b>G#</b>
+Eu sei que 'cê sofre, eu sei que 'cê sofre
+        <b>D#</b>                               
+Seu perfil é visita frequente vendo meus 
+ <b>A#</b>
+stories
+              <b>Cm</b>                     <b>G#</b>
+Eu sei que cê sofre, eu sei que 'cê sofre
+       <b>D#</b>                                 
+Cê me chama na rua, de lixo, e na cama, de 
+<b>A#</b>
+love
+
+<b>Cm</b>                                   <b>G#</b>
+Me chama de safado, de cachorro e pegador
+                                        <b>D#</b>
+Mas em quatro paredes eu sou seu embaixador
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/gusttavo-lima-quebrando-protocolo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-gusttavo-lima-quebrando-protocolo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

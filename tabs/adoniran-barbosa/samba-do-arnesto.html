@@ -1,0 +1,98 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Samba do Arnesto</h1><h2 class="t3"><a href="/adoniran-barbosa/">Adoniran Barbosa</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro]  <b>Bb</b> - <b>Eb7/G</b> - <b>Am7</b> - <b>D7</b> - <b>G7</b> - <b>C7</b> - <b>F</b> - <b>C7</b>
+
+     <b>F</b>             <b>Bb</b>
+O Arnesto nos convidô
+     <b>F</b>                  <b>Bb</b>
+prum samba, ele mora no Brás
+     <b>F</b>                <b>D</b>        <b>Gm</b>   <b>D7</b>
+Nóis fumo e não encontremos ninguém
+        <b>Gm</b>        <b>C7</b>         <b>F</b>   <b>E7</b> <b>D#7</b> <b>D7</b>
+Nóis vortemo cuma baita duma reiva
+          <b>G7</b>    <b>C7</b>           <b>F</b>
+Da outra veiz nóis num vai mais
+                 <b>C7</b>
+Nóis não semos tatu!
+
+         <b>C7</b>                     <b>F</b>
+No outro dia encontremo com o Arnesto</pre><pre class="col2">              <b>Gm</b>         <b>C7</b>           <b>F</b>
+Que pediu descurpa mais nóis não aceitemos
+<b>D7</b>          <b>Gm</b>            <b>C7</b>         <b>F</b>
+Isso não se faz Arnesto, nós num se importa
+<b>D7</b>             <b>Gm</b>                   <b>C7</b>
+   Mais você devia ter ponhado um recado na
+<b>F</b>
+porta. Um recado assim ói
+
+"Ói, turma, num deu prá esperá, aduvido que 
+isso num faz má, num tem importância.
+Assinado em cruz porque não sei escrever, 
+Arnesto"
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/adoniran-barbosa-samba-do-arnesto.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-adoniran-barbosa-samba-do-arnesto.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

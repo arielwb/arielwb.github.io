@@ -1,0 +1,124 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Maravilha te Amar</h1><h2 class="t3"><a href="/os-travessos/">Os Travessos</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">      <b>G7M</b>
+Por que você não larga de bobeira
+                  <b>Am7</b>  <b>D7</b>
+E vem me dar uma beijo
+    <b>G7M</b>
+Por que você não larga de bobeira
+                  <b>Am7</b>  <b>D7</b>
+E vem me dar um beijo
+     <b>Bm7</b>                <b>Em7</b>
+Se é isso que você mais quer
+     <b>C7M</b>               <b>D7</b>
+Se é isso que a gente quer
+     <b>Bm7</b>                <b>Em7</b>
+Se é isso que você mais quer
+     <b>C7M</b>               <b>D7</b>
+Se é isso que a gente quer
+     <b>G7M</b>               <b>Bm7</b>
+Maravilha é poder te amar
+    <b>Am7</b>       <b>D7</b>
+Gostoso assim
+     <b>G7M</b>                <b>Bm7</b>
+Maravilha é poder ter você
+   <b>Am7</b>       <b>D7</b>
+Perto de mim
+         <b>Bm7</b>               <b>Em7</b>
+Se a distância só nos separou
+        <b>C7M</b>
+E o passado não foi tão ruim
+        <b>Bm7</b>             <b>Em7</b>
+Nosso amor o destino selou</pre><pre class="col2">         <b>C7M</b>          <b>D7</b>
+Vem prá mim, vem prá mim
+<b>G7M</b>                     <b>Bm7</b>
+Beija minha boca, tira minha roupa
+               <b>Am7</b>   <b>D7</b>           <b>G7M</b>
+Tira o meu sossego, que eu tô querendo
+                             <b>Bm7</b>       
+Ai, que coisa louca, esta garota tá me 
+         <b>Am7</b>
+enlouquecendo
+  <b>D7</b>
+Que eu tô querendo
+<b>G7M</b>                      <b>Bm7</b>
+Beija minha boca, tira minha roupa
+               <b>Am7</b>   <b>D7</b>           <b>G7M</b>
+Tira o meu sossego, que eu tô querendo
+                             <b>Bm7</b>       
+Ai, que coisa louca, esta garota tá me 
+         <b>Am7</b>
+enlouquecendo
+  <b>D7</b>          <b>G7M</b>
+Que eu tô querendo
+              <b>Am7</b>    <b>D7</b>           <b>G7M</b>
+Que eu tô querendo, que eu tô querendo
+              <b>Am7</b>   <b>D7</b>  <b>G7M</b>
+Que eu tô querendo
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-travessos-maravilha-te-amar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-travessos-maravilha-te-amar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

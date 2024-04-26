@@ -1,0 +1,157 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Maldivas</h1><h2 class="t3"><a href="/ludmilla/">LUDMILLA</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Em</a> </span><pre class="col1">[Intro] <b>C</b>  <b>D#º</b>  <b>Em7</b>  <b>Dm7</b>
+
+<b>C7M</b>             <b>D#º</b>                <b>Em</b>
+É a minha de fé, minha preferida
+     <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+<b>C7M</b>           <b>D#º</b>                <b>Em</b>
+É a minha de fé, minha preferida
+    <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+
+<b>C7M</b>      <b>D#º</b>               <b>Em</b>
+Ah, aquele mar azul bebê
+                        <b>G7</b>
+Em falar nisso, quero fazer uns três com você
+<b>C</b>        <b>D#º</b>                           <b>Em</b>
+Só imagina eu por baixo e tu por cima
+   <b>Dm7</b>                          <b>G7</b>
+Aquela adrenalina, você toda possuída
+<b>C7M</b>                <b>D#º</b>
+Me puxa pela camisa
+                        <b>Em</b>
+Me pede, me bate Ludmilla
+ <b>Dm7</b>                 <b>G7</b>
+Calma que eu não sei lutar
+                       <b>C7M</b>
+Mas eu sou a melhor DJ
+                           <b>D#º</b>
+Posso tocar a noite inteira e você pode me 
+pedir replay
+<b>Em</b>            <b>Dm7</b>                          <b>G7</b>
+Se você cansar eu paro só para você descansar
+<b>C7M</b>                             <b>D#º</b>
+Mas só tem 3 minutinhos porque a festa vai 
+continuar
+
+<b>C7M</b>             <b>D#º</b>                <b>Em</b>
+É a minha de fé, minha preferida
+     <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+<b>C7M</b>            <b>D#º</b>                <b>Em</b>
+É a minha de fé, minha preferida
+     <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+</pre><pre class="col2"><b>C7M</b>                  <b>D#º</b>
+Maldivas, Maldivas
+                           <b>Em</b>
+Eu por baixo e tu por cima
+     <b>Dm7</b>                          <b>G7</b>
+Aquela adrenalina, você toda possuída
+<b>C7M</b>                   <b>D#º</b>
+Me puxa pela camisa
+                          <b>Em</b>
+Me pede, me bate Ludmilla
+    <b>Dm7</b>                  <b>G7</b>
+Calma que eu não sei lutar
+                       <b>C7M</b>
+Mas eu sou a melhor DJ
+                           <b>D#º</b>
+Posso tocar a noite inteira e você pode me 
+pedir replay
+<b>Em</b>                  <b>Dm7</b>                     
+Se você cansar eu paro só para você 
+<b>G7</b>
+descansar
+<b>C7M</b>                             <b>D#º</b>
+Mas só tem 3 minutinhos porque a festa vai 
+continuar
+
+<b>C7M</b>             <b>D#º</b>                 <b>Em</b>
+É a minha de fé, minha preferida
+     <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+<b>C7M</b>            <b>D#º</b>                <b>Em</b>
+É a minha de fé, minha preferida
+    <b>Dm7</b>                          <b>G7</b>
+Eu, eu caso com essa mulher, vou parar lá em 
+Maldivas
+
+<b>C7M</b>   <b>D#º</b>     <b>Em</b>
+  Maldivas
+ <b>Dm7</b>            <b>G7</b>             <b>C7M</b>
+Mais tarde tô chegando aí com ela.
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ludmilla-maldivas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ludmilla-maldivas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

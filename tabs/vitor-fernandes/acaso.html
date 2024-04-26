@@ -1,0 +1,184 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Acaso</h1><h2 class="t3"><a href="/vitor-fernandes/">Vitor Fernandes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Cm</a> </span><pre class="col1">[Intro] <b>Ab</b>  <b>Cm</b>  <b>Gm</b>  <b>Bb</b>
+        <b>Ab</b>  <b>Cm</b>  <b>Gm</b>  <b>Bb</b>
+
+[Primeira Parte]
+
+   <b>Ab</b>
+E tá tudo bem
+           <b>Cm</b>
+Que pena que você tá indo embora
+              <b>Gm</b>
+Eu sei que é tarde, me desculpe a hora
+            <b>Bb</b>
+Não vou dormir enquanto eu não dizer
+    <b>Ab</b>
+Que eu não tô bem
+          <b>Cm</b>
+Não tô legal com toda essa história
+           <b>Gm</b>
+Eu fiz de tudo
+                     <b>Bb</b>
+Jurei o mundo pra a gente
+                 <b>Eb/G</b>    <b>Ab</b>  <b>Bb</b>
+E dessa não vai ser diferen_te
+
+[Pré-Refrão]
+
+<b>Eb/G</b>  <b>Ab</b>
+         Vai ver que um dia
+              <b>Cm</b>
+A gente se encontra
+                          <b>Gm</b>
+Vai deixar o acaso tomar conta
+                              <b>Bb</b>
+Vai ver que só não era nossa hora
+                                <b>Ab</b>
+Minha menina, eu te peço então volta
+                                 <b>Cm</b>
+Vai ver que um dia a gente se encontra
+                          <b>Gm</b>
+Vai deixar o acaso tomar conta
+                              <b>Bb</b>
+Vai ver que só não era nossa hora
+                               <b>Ab</b>  <b>Bb</b>
+Minha menina eu te peço então vol_ta
+
+[Refrão]
+
+                  <b>Ab</b>
+Eu te peço então volta
+                  <b>Cm</b>
+Eu te peço então volta
+                  <b>Gm</b>   <b>Bb</b>
+Eu te peço então volta
+                  <b>Ab</b>
+Eu te peço então volta
+                  <b>Cm</b>
+Eu te peço então volta
+                  <b>Gm</b>   <b>Bb</b>
+Eu te peço então volta
+</pre><pre class="col2">[Primeira Parte]
+
+   <b>Ab</b>
+E tá tudo bem
+           <b>Cm</b>
+Que pena que você tá indo embora
+              <b>Gm</b>
+Eu sei que é tarde, me desculpe a hora
+            <b>Bb</b>
+Não vou dormir enquanto eu não dizer
+    <b>Ab</b>
+Que eu não tô bem
+          <b>Cm</b>
+Não tô legal com toda essa história
+           <b>Gm</b>
+Eu fiz de tudo
+                     <b>Bb</b>
+Jurei o mundo pra a gente
+                         <b>Ab</b>  <b>Bb</b>
+E dessa não vai ser diferen_te
+
+[Pré-Refrão]
+
+<b>Eb/G</b>  <b>Ab</b>
+         Vai ver que um dia
+              <b>Cm</b>
+A gente se encontra
+                          <b>Gm</b>
+Vai deixar o acaso tomar conta
+                              <b>Bb</b>
+Vai ver que só não era nossa hora
+                                <b>Ab</b>
+Minha menina, eu te peço então volta
+                                 <b>Cm</b>
+Vai ver que um dia a gente se encontra
+                          <b>Gm</b>
+Vai deixar o acaso tomar conta
+                              <b>Bb</b>
+Vai ver que só não era nossa hora
+                               <b>Ab</b>  <b>Bb</b>
+Minha menina eu te peço então vol_ta
+
+[Refrão Final]
+
+                  <b>Ab</b>
+Eu te peço então volta
+                  <b>Cm</b>
+Eu te peço então volta
+                  <b>Gm</b>   <b>Bb</b>
+Eu te peço então volta
+                  <b>Ab</b>
+Eu te peço então volta
+                  <b>Cm</b>
+Eu te peço então volta
+                  <b>Gm</b>   <b>Bb</b>  <b>Ab</b>
+Eu te peço então volta
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/vitor-fernandes-acaso.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-vitor-fernandes-acaso.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

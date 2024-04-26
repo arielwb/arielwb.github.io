@@ -1,0 +1,159 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Eu Já Tava Bem</h1><h2 class="t3"><a href="/wesley-safadao/">Wesley Safadão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Em</a> </span><pre class="col1"><b>Em</b>          <b>D</b>              <b>Am</b>
+Não tinha porque você me ligar
+              <b>C</b>                 <b>Em</b>
+Não tinha razão pra gente se encontrar
+           <b>D</b>               <b>Am</b>
+Se tudo acabou Tava tudo certo
+               <b>C</b>                     <b>Em</b>
+Pra que mexer num coração que tá quieto?
+      <b>D</b>         <b>Am</b>    <b>C</b>
+Pra brincar? Pra usar?
+
+<b>Em</b>     <b>D</b>     <b>Am</b>           <b>C</b>               <b>Em</b>
+Eu já tava bem Na minha cabeça não tinha você
+       <b>D</b>                 <b>Am</b>
+Aí me beijou E falou de amor
+       <b>C</b>                        <b>Em</b>
+E só sossegou Quando me viu sofrer
+
+<b>Em</b>     <b>D</b>     <b>Am</b>           <b>C</b>               <b>Em</b>
+Eu já tava bem Na minha cabeça não tinha você
+       <b>D</b>                 <b>Am</b>
+Aí me beijou E falou de amor
+       <b>C</b>                        <b>Em</b>
+E só sossegou Quando me viu sofrer
+
+<b>Em</b>          <b>D</b>              <b>Am</b>
+Olha, Não tinha porque você me ligar
+              <b>C</b>                 <b>Em</b>
+Não tinha razão pra gente se encontrar
+           <b>D</b>               <b>Am</b>
+Se tudo acabou Tava tudo certo
+               <b>C</b>                     <b>Em</b>
+Pra que mexer num coração que tá quieto?
+      <b>D</b>         <b>Am</b>     <b>C</b>
+Pra brincar? Pra usar?
+
+<b>Em</b>     <b>D</b>     <b>Am</b>           <b>C</b>               
+E eu já tava bem Na minha cabeça não tinha 
+<b>Em</b>
+você
+       <b>D</b>                 <b>Am</b>
+Aí me beijou E falou de amor
+       <b>C</b>                        <b>Em</b>
+E só sossegou Quando me viu sofrer
+
+<b>Em</b>     <b>D</b>     <b>Am</b>           <b>C</b>               <b>Em</b>
+Eu já tava bem Na minha cabeça não tinha você</pre><pre class="col2">       <b>D</b>                 <b>Am</b>
+Aí me beijou E falou de amor
+       <b>C</b>                        <b>Em</b>
+E só sossegou Quando me viu sofrer
+
+( <b>C</b>  <b>D</b>  <b>Bm</b>  <b>Em</b> )
+
+<b>Em</b>
+E todo mundo
+           <b>D</b>
+Tá desconfiando
+                             <b>Am</b>
+Que a gente se encontra em segredo
+                        <b>C</b>
+Só porque eu tô te encarando
+                         <b>Em</b>
+Só porque você fica sem jeito
+               <b>D</b>
+Se alguém perguntar
+               <b>Am</b>
+Eu nego até a morte
+                   <b>C</b>
+Que é pra não dar azar
+
+Se é escondido
+                <b>D</b>
+É que tá dando sorte
+
+<b>C</b>              <b>D</b>
+Deixa confidencial
+         <b>Bm</b>
+E fica comigo
+       <b>Em</b>
+Fica comigo
+<b>C</b>            <b>D</b>
+Deixa confidencial
+         <b>Bm</b>
+E fica comigo
+        <b>Em</b>
+Fica comigo
+                  <b>C</b>
+Ninguém precisa saber
+<b>D</b>                  <b>Em</b>
+Amor só tem que ser vivido
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/wesley-safadao-eu-ja-tava-bem.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-wesley-safadao-eu-ja-tava-bem.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,101 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Nem de Graça</h1><h2 class="t3"><a href="/pixote/">Grupo Pixote</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1">[Intro] <b>Eb9</b>  <b>F11</b>  <b>Gm11</b>  <b>Bb/D</b>
+
+       <b>Eb9</b>                            <b>F/A</b>
+É que não sobrou espaço pra outro alguém
+                                <b>Gm11</b>       
+Minha Saudade só cabe no teu abraço, no de 
+          <b>F</b>
+mais ninguém
+ <b>Eb9</b>                           <b>F/A</b>
+Tenho dó de quem me conhecer agora
+                             <b>Dm7</b>
+Que todo amor eu tô jogando fora
+                                      <b>Gm7</b>
+E qualquer um que bate aqui nesse meu coração
+     <b>Bb/D</b>  <b>Gm7</b>  <b>F</b>  <b>Eb9</b>  <b>F11</b>  <b>Gm11</b>  <b>F11</b>
+Não passa nem... dá......por.........ta
+
+ <b>F</b>       <b>Fm7</b>          <b>Bb7(4/9)</b>  <b>Eb9</b>
+Se essa boca não beijasse tão  bem</pre><pre class="col2">                              <b>F</b>
+Se esse abraço não fosse tão massa
+                                   <b>Dm7</b>
+Se quer saber se eu quero outro alguém
+                       <b>Gm7</b>  <b>Gm7/F</b>
+Nem de graça, nem de graça
+
+          <b>C7(9)</b>
+Leva mal não
+    <b>Eb9</b>             <b>Ebm6</b>
+Só tem espaço pra você no coração
+
+[Solo] <b>Eb9</b>  <b>F11</b>  <b>Gm11</b>
+       <b>F11</b>  <b>Gm11</b>  <b>G4</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pixote-nem-de-graca.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pixote-nem-de-graca.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,134 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Verdade</h1><h2 class="t3"><a href="/zeca-pagodinho/">Zeca Pagodinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1"><b>F</b>               <b>Gm7</b>      <b>Am7</b> <b>Gm7</b>
+Descobri que te amo demais
+ <b>F</b>            <b>Gm7</b>        <b>Am7</b>   <b>F/D#</b>
+Descobri em você minha paz
+<b>Bb/D</b>            <b>C/E</b>       <b>F</b>
+Descobri sem querer a vida
+   <b>Dm</b>   <b>C7</b>
+Verdade
+<b>F</b>               <b>Bb</b>          <b>F</b>
+Pra ganhar seu amor fiz mandinga
+<b>F</b>                  <b>Bb</b>       <b>F</b>
+Fui a ginga de um bom capoeira
+<b>C/E</b>               <b>Bb/D</b>     <b>F</b>
+Dei rasteira na sua emoção
+ <b>Dm7</b>           <b>G7</b>         <b>C7</b>
+Com o seu coração fiz zoeira
+<b>F</b>                  <b>Bb</b>      <b>F</b>
+Fui a beira de um rio e você
+<b>F</b>              <b>Bb</b>            <b>F</b>
+Uma ceia com pão vinho e flor
+ <b>C</b>            <b>Bb</b>           <b>F</b>
+Uma luz para guiar sua estrada
+<b>G7(9)</b>         <b>C7</b>           <b>F</b>
+A entrega perfeita do amor
+     <b>C7</b>
+Verdade
+<b>F</b>               <b>Gm7</b>      <b>Am7</b> <b>Gm7</b>
+Descobri que te amo demais
+ <b>F</b>            <b>Gm7</b>        <b>Am7</b>   <b>F/D#</b>
+Descobri em você minha paz
+<b>Bb/D</b>            <b>C7</b>       <b>F</b>
+Descobri sem querer a vida
+   <b>Dm</b>   <b>C7</b>
+Verdade</pre><pre class="col2"> <b>F</b>            <b>Gm7</b>     <b>Am7</b>     <b>Gm7</b>
+Como negar essa linda emoção
+ <b>F</b>           <b>Gm7</b>             <b>Am7</b>  <b>F/D#</b>
+Que tanto bem fez pro meu coração
+     <b>Bb</b>      <b>Bb/C</b>       <b>F/A</b>  <b>Gm7</b>  <b>C7</b>
+E a minha paixão adormecida
+<b>F</b>             <b>Bb</b>        <b>F</b>
+Teu amor meu amor incendeia
+<b>F</b>            <b>Bb</b>       <b>F</b>
+Nossa cama parece uma teia
+<b>C</b>            <b>Bb</b>            <b>F</b>    <b>Dm</b>
+Teu olhar uma luz que clareia
+<b>G7</b>                         <b>C7</b>
+Meu caminho tal qual lua cheia
+<b>F</b>             <b>Bb</b>           <b>F</b>
+Eu nem posso pensar te perder
+<b>F</b>              <b>Bb</b>          <b>F</b>
+Ai de mim esse amor terminar
+ <b>C</b>              <b>Bb</b>      <b>F</b>
+Sem você minha felicidade
+  <b>G7(9)</b>       <b>C7</b>        <b>F</b>
+Morreria de tanto penar
+     <b>C7</b>
+Verdade
+<b>F</b>               <b>Gm7</b>      <b>Am7</b> <b>Gm7</b>
+Descobri que te amo demais
+ <b>F</b>            <b>Gm7</b>        <b>Am7</b>   <b>F/D#</b>
+Descobri em você minha paz
+<b>Bb/D</b>            <b>C7</b>        <b>F</b>
+Descobri sem querer a vida
+   <b>Dm</b>   <b>C7</b>
+Verdade
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/zeca-pagodinho-verdade.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-zeca-pagodinho-verdade.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

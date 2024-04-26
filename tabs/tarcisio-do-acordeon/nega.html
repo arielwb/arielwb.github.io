@@ -1,0 +1,217 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Nêga</h1><h2 class="t3"><a href="/tarcisio-do-acordeon/">Tarcísio do Acordeon</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Am</a> </span><pre class="col1">[Intro] <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b>
+        <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b>
+
+[Primeira Parte]
+
+     <b>F</b>
+Não dá
+
+Quanto mais eu lembro, mais eu quero
+    <b>Am</b>
+Chorar
+                                <b>G</b>
+Fico na esperança de você me ligar
+
+Estou louco de saudade, eu queria
+    <b>D</b>
+Voltar
+     <b>F</b>
+Te amar
+                                    <b>Am</b>
+Te juro meu amor, eu só queria te amar
+                                       <b>G</b>
+Prometo pra você que nunca vou te enganar
+                                       <b>D</b>
+É só uma fase ruim, sei que já vai passar
+
+[Segunda Parte]
+
+     <b>Am</b>
+Mais eu
+                                   <b>F</b>
+Já vi que não consigo viver sem você
+                                    <b>C</b>
+É o fim da minha vida, eu posso prever
+                                <b>G</b>
+Tô precisando tanto ter o seu amor
+     <b>Am</b>
+Porque
+                                  <b>F</b>
+Você não larga tudo, e corre pra mim
+                                    <b>C</b>
+E dessa vez eu sei que vamos ser feliz
+                                    <b>G</b>
+Me dê mais uma chance pra eu te provar
+
+[Refrão]
+
+             <b>F</b>
+Nêga eu te quero
+           <b>Am</b>
+E me desespero
+              <b>G</b>
+Eu vou me acabar
+              <b>D</b>
+Dentro desse bar
+               <b>F</b>
+Isso é tão profundo
+           <b>Am</b>
+E o meu futuro
+            <b>G</b>
+É seguir você
+              <b>D</b>
+Até o fim do mundo
+                     <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b>
+Por favor volta pra mim
+
+( <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b> )
+
+[Primeira Parte]
+
+     <b>F</b>
+Não dá
+
+Quanto mais eu lembro, mais eu quero
+    <b>Am</b>
+Chorar</pre><pre class="col2">                                <b>G</b>
+Fico na esperança de você me ligar
+
+Estou louco de saudade, eu queria
+    <b>D</b>
+Voltar
+     <b>F</b>
+Te amar
+                                    <b>Am</b>
+Te juro meu amor, eu só queria te amar
+                                       <b>G</b>
+Prometo pra você que nunca vou te enganar
+                                       <b>D</b>
+É só uma fase ruim, sei que já vai passar
+
+[Segunda Parte]
+
+     <b>Am</b>
+Mais eu
+                                   <b>F</b>
+Já vi que não consigo viver sem você
+                                    <b>C</b>
+É o fim da minha vida, eu posso prever
+                                <b>G</b>
+Tô precisando tanto ter o seu amor
+     <b>Am</b>
+Porque
+                                  <b>F</b>
+Você não larga tudo, e corre pra mim
+                                    <b>C</b>
+E dessa vez eu sei que vamos ser feliz
+                                    <b>G</b>
+Me dê mais uma chance pra eu te provar
+
+[Refrão]
+
+             <b>F</b>
+Nêga eu te quero
+           <b>Am</b>
+E me desespero
+              <b>G</b>
+Eu vou me acabar
+              <b>D</b>
+Dentro desse bar
+               <b>F</b>
+Isso é tão profundo
+           <b>Am</b>
+E o meu futuro
+            <b>G</b>
+É seguir você
+              <b>D</b>
+Até o fim do mundo
+
+             <b>F</b>
+Nêga eu te quero
+           <b>Am</b>
+E me desespero
+              <b>G</b>
+Eu vou me acabar
+              <b>D</b>
+Dentro desse bar
+               <b>F</b>
+Isso é tão profundo
+           <b>Am</b>
+E o meu futuro
+            <b>G</b>
+É seguir você
+              <b>D</b>
+Até o fim do mundo
+                     <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b>
+Por favor volta pra mim
+
+[Final] <b>F</b>  <b>Am</b>  <b>G</b>  <b>D</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/tarcisio-do-acordeon-nega.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-tarcisio-do-acordeon-nega.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

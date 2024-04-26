@@ -1,0 +1,130 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Futuro Prometido</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro]  <b>C</b>  <b>G/B</b>  <b>Am</b>
+
+<b>G7+</b>                <b>D/F#</b>   <b>Em7</b>
+ A lua que prometi esta ali
+                <b>C9</b>
+E o sol só amanhã
+     <b>G/B</b>       <b>C/D</b>  <b>D7/b9</b>
+E a terra aos seus pés
+<b>G7+</b>                       <b>D/F#</b>  <b>Em7</b>
+ A flor que eu te prometi esta  ali
+                 <b>C9</b>    <b>G/B</b>          <b>Am</b>   <b>C7+</b> 
+Guardada pra te dar e você nem sei não  vi
+ <b>Am7</b>
+
+<b>C7+</b>                             <b>G/B</b>
+   E o futuro prometido eu vim cobrar
+              <b>Am7</b>              <b>C/D</b>
+Você jurou me amar e me fazer feliz
+             <b>C9</b>           <b>G/B</b>        <b>Am7</b>
+Rasguei os planos, foi engano, eu me envolver
+ <b>Am</b>  <b>G/B</b>           <b>C9</b>      <b>G/B</b>          <b>Am7</b>
+Por  um coração cigano, leviano que me fez 
+    <b>C/D</b>
+sofrer
+
+<b>G7+</b>                   <b>D/F#</b>   <b>Em7</b>           
+A casa que eu prometi está ali esperando o 
+     <b>C9</b>
+amanhã
+                     <b>C/D</b>
+Minha vida aos seus pés
+<b>G7+</b>                   <b>D/F#</b>   <b>Em7</b>
+O anel que eu prometi esta ali</pre><pre class="col2">                 <b>C9</b>
+Guardado pra te dar
+        <b>G/B</b>  <b>Am</b>  <b>D7</b>
+E você nem  sei não vi
+<b>C7+</b>                                <b>G/B</b>
+   E o futuro prometido eu vim cobrar
+              <b>Am7</b>              <b>C/D</b>  <b>D4/7</b>  <b>D7</b>
+Você jurou me amar e me fazer feliz
+
+             <b>C9</b>           <b>G/B</b>        <b>Am7</b>
+Rasguei os planos, foi engano, eu me envolver
+ <b>Am</b>     <b>G/B</b>       <b>C9</b>      <b>G/B</b>          <b>Am7</b>
+Por um coração cigano, leviano que me fez 
+sofrer
+             <b>C9</b>           <b>G/B</b>        <b>Am7</b>
+Rasguei os planos, foi engano, eu me envolver
+ <b>Am</b>     <b>Bm</b>      <b>C9</b>      <b>G/B</b>         <b>Am7</b>   
+Por um coração cigano, leviano que me fez 
+ <b>D4/7</b>  <b>D7</b>
+sofrer
+
+        <b>C9</b>              <b>G/B</b>
+Sem magoas seguirei em paz
+                                    <b>Am7</b>
+Mas não vou dizer não amarei nunca mais
+                                <b>D4/7</b>    <b>D7</b>   
+Porque o coração, ele é sempre capaz de amar
+<b>E7</b>
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-futuro-prometido.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-futuro-prometido.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,100 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Gostoso Veneno</h1><h2 class="t3"><a href="/alcione/">Alcione</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>Em</b>    <b>A7</b>    <b>D7M</b>   <b>G7</b>    <b>C</b>    <b>F#7</b>  <b>B7</b>
+Lá lairá lairá lairá    lá laia laia laia
+<b>Em</b>    <b>A7</b>    <b>D7M</b>   <b>G7</b>    <b>C</b>    <b>F#7</b>  <b>Bm</b>   <b>C</b>   
+Lá lairá lairá lairá    lá laia laia
+<b>F#7</b>
+
+
+<b>Bm7</b>               <b>A7</b>
+Esse amor me envenena
+<b>G7</b>           <b>Em</b>             <b>Bm</b>
+Mas todo amor sempre vale a pena
+<b>Bm7</b>              <b>Bm7/A</b>  <b>G#m7/11</b> <b>C#7</b>
+Desfalecer de prazer morrer de dor
+      <b>C#m7(b5)</b>        <b>F#7(b13)</b> <b>Bm7</b> ( <b>C7</b>  
+Tanto faz eu quero é mais amor
+<b>F#7(b13)</b> )
+
+</pre><pre class="col2"><b>A7</b>                       <b>D9M</b>      <b>D7M</b>
+Agua da fonte bebida na palma da mao
+<b>C#m</b>         <b>F#7</b>            <b>Bm</b>         <b>B7</b>
+Rosas se abrindo se despetalando no chão
+<b>Em7(9)</b>    <b>A7(13)</b> <b>D7M</b>    <b>G7</b>  <b>C</b>     <b>F#7</b>
+Quem não viu e nem provou não viveu
+<b>B7</b>              <b>Em7</b>          <b>F#9-</b>
+Nunca amou      se a vida é curta
+               <b>Bm7</b>
+E o mundo é pequeno
+       <b>G7</b>                  <b>C7M</b>
+Vou vivendo, morrendo de amor
+            <b>F#7</b>  <b>F#7(b13)</b>  <b>Bm7</b>  <b>C</b>  <b>F#7</b>
+Ai       gostoso        veneno
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/alcione-gostoso-veneno.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-alcione-gostoso-veneno.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

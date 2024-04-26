@@ -1,0 +1,119 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">De Garrafa a Pior</h1><h2 class="t3"><a href="/henrique-e-juliano/">Henrique e Juliano</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Db</a> </span><pre class="col1">[Intro] <b>C#</b> <b>G#</b> <b>F#</b> <b>C#</b> <b>G#</b> <b>F#</b>
+
+<b>F#</b>                           <b>C#</b>
+Se eu pudesse, esquecia você
+                            <b>G#</b>
+Só pra eu não ter que saber
+                          <b>F#</b>
+Que você tá beijando uma boca ou mais
+
+                            <b>C#</b>
+Parece que faz pra aparecer
+                              <b>G#</b>
+Parece que quer me ver sofrer
+                           <b>F#</b>
+Parece que quer tirar toda minha paz
+
+<b>A#m</b>                        <b>G#</b>
+Não bastou tudo que cê já levou?
+     <b>F#</b>                  <b>C#</b>
+O que mais que pretende fazer?
+<b>A#m</b>                          <b>G#</b>
+Vai ser preciso eu pedir por favor
+                 <b>F#</b>
+Pra me deixar viver?
+
+<b>F#</b>
+É que eu tô indo de garrafa</pre><pre class="col2">    <b>C#</b>     <b>G#</b>     <b>F#</b>
+A pior num grau violento
+                           <b>C#</b>
+E você indo de solteira a melhor
+     <b>G#</b>           <b>F#</b>
+Sem mim cem por cento
+
+<b>F#</b>
+É que eu tô indo de garrafa
+    <b>C#</b>     <b>G#</b>     <b>F#</b>
+A pior num grau violento
+                           <b>C#</b>
+E você indo de solteira a melhor
+     <b>G#</b>           <b>F#</b>
+Sem mim cem por cento
+
+            <b>C#</b>
+Beijando de boa
+<b>G#</b>                    <b>F#</b>
+E eu pensando em abrir outra
+      <b>C#</b>
+De boa
+<b>G#</b>                    <b>F#</b>
+E eu pensando em abrir outra
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/henrique-e-juliano-de-garrafa-a-pior.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-henrique-e-juliano-de-garrafa-a-pior.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

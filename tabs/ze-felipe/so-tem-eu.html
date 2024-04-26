@@ -1,0 +1,173 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Só Tem Eu</h1><h2 class="t3"><a href="/ze-felipe/">Zé Felipe</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>F</b>  <b>G</b>  <b>C</b>
+        <b>F</b>  <b>G</b>  <b>C</b>  <b>G</b>
+
+[Primeira Parte]
+
+                   <b>C</b>
+Cê tá achando que vai
+ <b>F</b>                    <b>G</b>
+Não vai me esquecer não
+            <b>C</b>
+Eu ainda tô aí
+ <b>F</b>               <b>G</b>
+Dentro do seu coração
+
+[Pré-Refrão]
+
+    <b>F</b>           <b>G</b>
+Na foto que cê não apagou
+      <b>Am</b>          <b>C</b>
+Na legenda que falava de amor
+   <b>F</b>            <b>G</b>
+Escuta teu coração, por favor
+
+[Refrão]
+
+                         <b>C</b>
+Se não sou eu, vai ser quem
+  <b>F</b>       <b>G</b>
+O amor teu?
+                  <b>C</b>
+Só você não percebeu
+     <b>F</b>       <b>G</b>
+Que só tem eu
+                         <b>C</b>
+Se não sou eu, vai ser quem
+  <b>F</b>      <b>G</b>
+O amor teu?
+                  <b>C</b>
+Só você não percebeu
+     <b>F</b>      <b>G</b>
+Que só tem eu
+ <b>G</b>                     <b>C</b>
+Volta, pelo amor de Deus
+
+[Solo]
+
+[Pré-Refrão]
+
+    <b>F#</b>          <b>G#</b>
+Na foto que cê não apagou
+      <b>A#m</b>         <b>C#</b>
+Na legenda que falava dе amor
+   <b>F#</b>                      <b>G#</b>
+Escuta seu coração, por favor
+</pre><pre class="col2">[Refrão]
+
+                         <b>C#</b>
+Se não sou eu, vai sеr quem
+    <b>F#</b>      <b>G#</b>
+O amor teu?
+                  <b>C#</b>
+Só você não percebeu
+     <b>F#</b>       <b>G#</b>
+Que só tem eu
+                        <b>C#</b>
+Se não sou eu, vai ser quem
+    <b>F#</b>     <b>G#</b>
+O amor teu?
+                  <b>C#</b>
+Só você não percebeu
+     <b>F#</b>       <b>G#</b>
+Que só tem eu
+                      <b>C#</b>
+Volta, pelo amor de Deus
+
+[Refrão]
+
+                    <b>F#</b>
+Você sabe que eu te amo
+                       <b>G#</b>
+Ninguém te ama mais que eu
+
+Pode tentar me esquecer
+                     <b>C#</b>
+Mas o teu coração é meu
+                     <b>F#</b>
+Nem o brilho das estrelas
+                  <b>G#</b>
+Nem a Lua, nem o mar
+
+Nada disso se compara
+                    <b>C#</b>
+Ao amor que sei te dar
+
+( <b>C#</b>  <b>F#</b>  <b>G#</b> )
+( <b>C#</b>  <b>F#</b>  <b>G#</b> )
+
+[Final]
+
+E no toque do beat
+
+É o Rafinha RSQ
+                      <b>C#</b>
+Volta, pelo amor de Deus
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ze-felipe-so-tem-eu.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ze-felipe-so-tem-eu.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

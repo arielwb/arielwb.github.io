@@ -1,0 +1,111 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Fica Combinado Assim</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"> <b>A#</b>                           <b>Gm</b>
+Fico pensando um jeito de te falar
+             <b>Eb</b>
+Mas sem te magoar
+                      <b>F</b>
+Que o nosso amor já deu
+<b>A#</b>                          <b>Gm</b>
+É muito chato a hora de terminar
+                        <b>Eb</b>
+Mas sempre alguém vai chorar
+                    <b>F</b>
+É tão ruim dizer adeus
+ <b>Gm</b>                               <b>Dm</b>
+Já não quero mais esse ficar por ficar
+                           <b>Eb</b>
+Empurrando com a barriga não dá
+
+<b>Gm</b>                               <b>Dm</b>
+Eu tô num momento da minha vida sei lá
+                                 <b>Eb</b>
+Eu quero mais ficar sozinho e pensar
+             <b>Cm</b>           <b>F</b>
+O melhor agora é te esquecer</pre><pre class="col2">    <b>Eb</b>                 <b>F</b>
+Então fica combinado assim
+      <b>Dm</b>                   <b>Gm</b>
+É coisa minha, é nada com você
+        <b>Eb</b>                   <b>F</b>
+Nosso amor foi tão legal pra mim
+       <b>Dm</b>                     <b>Gm</b>
+Não fica triste, tenta me entender
+    <b>Eb</b>                <b>F</b>
+Então fica combinado assim
+       <b>Dm</b>                 <b>Gm</b>
+Talvez um dia volte a acontecer
+          <b>Eb</b>                    <b>F</b>
+Mas hoje eu tô pensando mais em mim
+        <b>Dm</b>                       <b>Gm</b>
+Mas não se esqueça que isso pode crer
+         <b>Eb</b>     <b>F</b>      <b>Dm</b>
+Eu só te quero  bem, tão bem
+ <b>Gm</b>        <b>Eb</b>      <b>F</b>     <b>Dm</b> <b>Gm</b>
+Eu só te quero  bem, tão bem
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-fica-combinado-assim.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-fica-combinado-assim.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

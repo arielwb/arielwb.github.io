@@ -1,0 +1,104 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Retalhos de Cetim</h1><h2 class="t3"><a href="/benito-di-paula/">Benito Di Paula</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Am</b>
+
+<b>Am7</b>                   <b>Em7</b>
+  Ensaiei meu samba o ano inteiro
+<b>Am7</b>                     <b>Em7</b>
+  Comprei surdo e tamborim
+<b>Am7</b>                    <b>C7M</b>
+  Gastei tudo em fantasia
+                   <b>F7M</b>
+Era só o que eu queria
+      <b>F#º</b>        <b>E7</b>
+E ela jurou desfilar pra mim
+
+<b>Am7</b>                    <b>Em7</b>
+  Minha escola estava tão bonita
+<b>Am7</b>                     <b>Em7</b>
+  Era tudo o que eu queria ver
+<b>Am7</b>                 <b>C7M</b>
+  Em retalhos de cetim</pre><pre class="col2">                 <b>F7M</b>
+Eu dormi o ano inteiro
+      <b>F#º</b>        <b>E7</b>
+E ela jurou desfilar pra mim
+
+[Refrão]
+
+       <b>A7M</b>  <b>E/G#</b>      <b>Em/G</b>  <b>F#7</b>
+Mas chegou... o carnaval
+      <b>Bm7</b>   <b>F7</b>       <b>E7</b>
+E ela não... desfilou
+      <b>Am7</b>        <b>C/G</b>          <b>F7M</b>
+Eu chorei na avenida, eu chorei
+                 <b>Dm</b>
+Não pensei que mentia
+    <b>E7</b>             <b>Am</b>         <b>E7</b>
+A cabrocha, que eu tanto amei
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/benito-di-paula-retalhos-de-cetim.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-benito-di-paula-retalhos-de-cetim.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,108 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Coração Deserto</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>Am7</b>  <b>Bm7</b>  <b>Cm7</b>  <b>C/D</b>  <b>C/D</b>  <b>C/D</b>  
+<b>Db7(9/11)</b>  <b>C7M</b>
+                           <b>G7M</b>
+O meu coração está deserto
+ <b>C7M</b>                  <b>G7M</b>     <b>D/F#</b>
+Sem o seu amor aqui bem perto
+<b>Em7</b>             <b>Bm7</b>
+Eu não nego que você marcou
+<b>Em7</b>                  <b>Bm7</b>
+    E me apego ao que você deixou
+<b>C7M</b>                <b>D7#4</b>
+ Eu odeio me sentir sozinho
+<b>Bm7(5-)</b>            <b>E7(9-)</b>
+E queria te pedir carinho
+<b>Am7(9)</b>        <b>Bm7</b>           <b>C7M</b>
+Quando a boca sente a falta do teu beijo
+<b>Am7(9)</b>      <b>Bm7</b>         <b>C7M</b>    <b>D7#4</b>
+E o corpo incendeia de desejo
+
+      <b>G7M</b>  <b>Bm7</b>       <b>C7M</b>                  
+É a saudade           que bate machucando 
+       <b>D7(4)</b>          <b>G7M</b>
+aqui no fundo do meu peito</pre><pre class="col2"><b>Bm7</b>     <b>C7M</b>                       <b>D7(4)</b>    
+       Eu tento te expulsar da minha vida e
+          <b>G7M</b>    <b>Bm7</b>
+ não tem jeito
+    <b>C7M</b>                  <b>D7(4)</b>         <b>G6(9)</b> 
+Jamais vou conseguir tirar você do coração
+  <b>Bm7</b>  <b>C7M</b>  <b>D7(4)</b> ( <b>C7M</b> )
+
+Final
+    <b>C7M</b>                    <b>D7(4)</b>       <b>G6(9)</b>
+Jamais vou conseguir tirar você do coração
+ <b>Bm7</b>  <b>C7M</b>  <b>D7(4)</b> <b>Am7</b>  <b>Bm7</b>  <b>Cm7</b>  <b>C/D</b> <b>C/D</b> <b>C/D</b> 
+Eu não, eu não
+<b>Db7(9/11)</b> <b>C7M</b>
+
+                   <b>G7M</b>
+O meu coração está deserto
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-coracao-deserto.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-coracao-deserto.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

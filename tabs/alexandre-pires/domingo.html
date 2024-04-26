@@ -1,0 +1,105 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Domingo</h1><h2 class="t3"><a href="/alexandre-pires/">Alexandre Pires</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">     <b>C</b>        <b>C7M</b>
+Domingo quero te encontrar
+     <b>Gm6</b>      <b>A7</b>           <b>Dm</b>
+E desabafar,todo o meu sofrer
+              <b>Bbm/Db</b>       <b>Cm7/Eb</b>    <b>F</b>  <b>D7</b>
+Estar ao teu lado, esquecer de tudo
+            <b>Gm7</b>           <b>C7</b>       <b>G5+</b>
+Tudo que o amor até hoje nos fez sofrer
+
+             <b>C</b>           <b>C7M</b>
+Esquecer a briga que deixou ferida
+        <b>Gm6</b>    <b>A7</b>           <b>Dm</b>
+E que até hoje não cicatrizou
+        <b>Bbm/Db</b>     <b>Cm7/Eb</b>      <b>F</b>    <b>D7</b>
+Te amar de novo fazer parte da vida
+          <b>Gm7</b>          <b>Bb</b>       <b>C7</b>
+Abre o coração! Tudo tem sentido e tem razão
+
+[Refrão]
+</pre><pre class="col2">  <b>F</b>
+Cola teu rosto no meu
+  <b>F7M</b>
+Chega mais perto de mim
+  <b>F7</b>           <b>D7</b>          <b>Gm</b>
+Faça de conta que eu sou teu namorado
+  <b>Bb</b>           <b>Bbm/Db</b>
+Amar você é bom demais
+  <b>F</b>                  <b>D7</b>
+É tudo que eu posso querer
+       <b>Gm7</b>
+Se tudo você tem melhor
+  <b>Bb</b>        <b>C7</b>
+Pior é te perder, amor
+
+ <b>Bb</b>   <b>Bbm/Db</b>     <b>F7M</b>
+Amor, amor, domingo
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/alexandre-pires-domingo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-alexandre-pires-domingo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

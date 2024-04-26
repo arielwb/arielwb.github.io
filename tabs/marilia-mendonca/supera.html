@@ -1,0 +1,155 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Supera</h1><h2 class="t3"><a href="/marilia-mendonca/">Marília Mendonça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro] <b>E9</b>
+
+[Primeira Parte]
+
+       <b>E9</b>
+Tá de novo com essa pessoa
+              <b>B9</b>
+Não tô acreditando
+                                 <b>C#m7</b>
+Vai fazer papel de trouxa outra vez
+                <b>A9</b>
+Cê não aprende mesmo, hein
+
+[Pré-Refrão]
+
+       <b>B9</b>
+Pra você isso é amor
+                      <b>F#m7(11)</b>
+Mas pra ele isso não passa de um plano B
+                         <b>C#m7</b>
+Se não pegar ninguém da lista, liga pra você
+               <b>B9</b>
+Te usa e joga fora
+
+[Refrão]
+
+ <b>E9</b>
+Para de insistir, chega de se iludir
+    <b>B4</b>
+O que cê tá passando, eu já passei e eu 
+sobrevivi
+<b>C#m7</b>
+     Se ele não te quer, supera
+<b>A9</b>
+   Se ele não te quer, supera
+
+<b>E</b>
+Ele tá fazendo de tapete o seu coração
+  <b>B4</b>
+Promete pra mim que dessa vez você vai falar 
+não
+<b>C#m7</b>
+     De mulher pra mulher, supera
+<b>A9</b>
+   De mulher pra mulher, supera
+</pre><pre class="col2">( <b>E</b>  <b>B4</b>  <b>C#m7</b>  <b>A9</b> )
+
+[Pré-Refrão]
+
+       <b>B9</b>
+Pra você isso é amor
+                      <b>F#m7(11)</b>
+Mas pra ele isso não passa de um plano B
+                         <b>C#m7</b>
+Se não pegar ninguém da lista, liga pra você
+               <b>B9</b>
+Te usa e joga fora
+
+[Refrão]
+
+ <b>E</b>
+Para de insistir, chega de se iludir
+    <b>B9</b>
+O que cê tá passando, eu já passei e eu 
+sobrevivi
+<b>C#m7</b>
+    Se ele não te quer, supera
+<b>A9</b>
+  Se ele não te quer, supera
+
+<b>E</b>
+Ele tá fazendo de tapete o seu coração
+  <b>B9</b>
+Promete pra mim que dessa vez você vai falar 
+não
+<b>C#m7</b>
+    De mulher pra mulher, supera
+<b>A9</b>
+  De mulher pra mulher, supera
+
+( <b>E</b>  <b>B9</b> )
+
+<b>C#m7</b>
+     Se ele não te quer
+<b>A9</b>                            <b>E</b>
+   De mulher pra mulher, supera
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/marilia-mendonca-supera.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-marilia-mendonca-supera.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

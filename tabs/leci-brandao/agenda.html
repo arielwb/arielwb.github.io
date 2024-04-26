@@ -1,0 +1,108 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Agenda</h1><h2 class="t3"><a href="/leci-brandao/">Leci Brandão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1">INTRODUÇÃO: <b>Bb°</b>... <b>Dm</b>  <b>Gm7</b>  <b>Cm</b>  <b>F7</b>  <b>Dm</b>  <b>Dbm</b>  
+
+<b>Cm</b>  <b>F7</b>  <b>Bb7+</b>  <b>F7</b>
+
+<b>Bb7+</b> <b>Bb6</b> <b>Bb7+</b>     <b>Dm5-/7</b>    <b>G7</b>        <b>Cm</b>   <b>G7</b>
+Marque   um dia, em sua agenda para mim
+<b>Cm</b>      <b>Dm</b> <b>Eb7+</b>
+Já estive bem triste
+<b>F7</b>             <b>F7/9</b>         <b>Dm</b> <b>Dbm</b> <b>Cm</b> <b>F7</b>
+Mas não tão triste assim ( Por favor me liga)
+<b>Bb7+</b> <b>Bb6</b>  <b>Bb7+</b> <b>Bb6</b>
+Me liga,  me instiga
+<b>Bb7</b>             <b>Eb</b> <b>Eb5+</b> <b>Eb6</b> <b>Eb7</b>
+Me convida pra sair
+<b>Eb7+</b>       <b>F7</b> <b>F7/9</b>     <b>Dm</b>    <b>Ab7</b>     <b>G7</b>
+Prometo....o      que dei............xo
+               <b>C7</b>
+Há eu dou um jeito,
+            <b>Dm</b>             <b>Eb7+</b>
+Eu dou um jeito, dou um jeitinho
+     <b>F7</b>              <b>Dm5-/7</b>        <b>G7</b>
+De sair pra te encontrar sem ela ver</pre><pre class="col2">     <b>Eb7+</b>       <b>F7</b>    <b>F7/9</b>            <b>Dm</b>
+A gana..........a,  de deitar na sua cama
+         <b>Ab7</b>       <b>G7</b>
+(Na sua ca.........ma)
+                        <b>C7</b>
+E acabar de vez com o drama
+           <b>Cm</b> <b>Ebm</b>          <b>F7</b>       <b>Dm</b>       
+Pois quem ama........ não sabe suportar (sem 
+    <b>G7</b>
+ela ver)
+ <b>Eb7+</b>           <b>F7</b>   <b>F7/9</b>            <b>Dm</b>
+A gana..........a, de deitar na sua cama
+         <b>Ab7</b>     <b>G7</b>
+(Na sua ca........ma)
+                        <b>C7</b>
+E acabar de vez com o drama
+           <b>Cm</b> <b>Ebm</b>     <b>F7</b>     <b>Bb°</b>
+Pois quem ama......... não suporta
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/leci-brandao-agenda.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-leci-brandao-agenda.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

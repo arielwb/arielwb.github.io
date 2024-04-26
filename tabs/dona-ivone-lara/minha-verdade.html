@@ -1,0 +1,107 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Minha Verdade</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>D7M</b>   <b>Dm6</b>         <b>D7M</b>
+Eu tenho a minha verdade
+               <b>G7</b>                <b>F#7</b>
+Fruto de tanta maldade que já conheci
+    <b>Em7</b>    <b>F#7</b>       <b>Bm7</b>
+Me deixa caminhar a minha vida
+
+Livremente
+ <b>Em7/9</b>         <b>Em7</b>
+O que desejo é pouco
+         <b>A7</b>
+Pois não duro eternamente
+<b>Am7</b>     <b>D7</b>          <b>G</b>           <b>Gm6</b>
+Nada poderá me afastar do que eu sou
+<b>A7</b>              <b>D7M</b>
+Amor, é o meu ambiente
+<b>Am7</b>     <b>D7</b>          <b>G</b>           <b>Gm6</b>
+Nada poderá me afastar do que eu sou
+<b>D</b>   <b>B7</b>  <b>Em</b>   <b>A7</b>   <b>D</b>
+Me deixa, por favor
+</pre><pre class="col2"><b>B7</b>                  <b>Em7</b>
+Do bom samba sou escravo
+     <b>A7</b>             <b>D</b>
+Seu fascínio me apertou
+                      <b>Am7</b>
+Traçou-me este destino
+            <b>D7</b>                   <b>G7+</b>
+E meu sonho menino se concretizou
+               <b>C7/9</b>
+Deixe-me agora sonhar
+                        <b>F#m</b>
+Seguir sem pensar numa desilusão
+<b>B7</b>               <b>Em7/9</b>
+Que o amor simplesmente
+           <b>A7</b>              <b>D</b>
+Se faça presente no meu coração
+      <b>A7</b>
+Eu tenho
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-minha-verdade.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-minha-verdade.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

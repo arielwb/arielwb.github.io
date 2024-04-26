@@ -1,0 +1,102 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Beijo Geladinho</h1><h2 class="t3"><a href="/negritude-junior/">Negritude Junior</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">Introdução: (<b>C</b> <b>G7</b> <b>C</b> <b>G7</b> <b>C</b> <b>G7</b>)
+
+<b>C</b>
+... Tô te vendo ... tô sentindo
+<b>Em7</b>
+Tô chorando, to sorrindo
+<b>F</b>        <b>G7</b>             <b>C</b>    <b>G7</b>
+Eu tô a fim de te encontrar
+<b>C</b>
+... Um cinema ... um chopinho
+<b>Em7</b>
+Um abraço no escurinho
+<b>F</b>          <b>G7</b>         <b>C</b>   <b>Gm7</b>  <b>C79</b>
+Me dá um beijo pra somar
+<b>F</b>             <b>Fm7</b>          <b>Em7</b>
+... Geladinho ... saboroso
+             <b>A5+7</b>        <b>Dm</b>
+Do seu jeito tão gostoso</pre><pre class="col2">       <b>G7</b>         <b>Gm7</b>  <b>C79</b>
+Que me faz delirar
+<b>F</b>             <b>Fm7</b>          <b>Em7</b>
+... Geladinho ... saboroso
+             <b>A5+7</b>        <b>Dm</b>
+Do seu jeito tão gostoso
+       <b>G7</b>       <b>C7+</b>
+Que me faz delirar
+           <b>F7+</b>       <b>G7</b>     <b>Em7</b>
+Eu quero é mais ... amar você
+     <b>A5+7</b>    <b>Dm</b>       <b>G7</b>    <b>Gm7</b>
+Pra nunca mais ... te esquecer
+    <b>C79</b>      <b>F7+</b>     <b>G7</b>     <b>Em7</b>
+Eu quero é mais ... amar você
+     <b>A5+7</b>    <b>Dm</b>       <b>G7</b>     <b>C</b>  (<b>G7</b>)
+Pra nunca mais ... te esquecer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/negritude-junior-beijo-geladinho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-negritude-junior-beijo-geladinho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

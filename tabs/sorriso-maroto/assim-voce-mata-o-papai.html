@@ -1,0 +1,113 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Assim Você Mata o Papai</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">Intro 2x: <b>A</b>  <b>E</b>  <b>F#m7</b>  <b>D</b>
+
+      <b>A</b>
+Essa mina tá me olhando
+   <b>E</b>
+Acho que tá dando mole
+     <b>F#m7</b>                <b>D5(9)</b>   <b>A</b>
+Ela tá me provocando já faz tempo
+      <b>E</b>           <b>F#m7</b>      <b>D5(9)</b>
+Isso não vai presta... não vai!!!!!
+    <b>A</b>
+Ela é maravilhosa
+    <b>E</b>
+Tem um sorriso maroto
+    <b>F#m7</b>                <b>D5(9)</b>   <b>A</b>
+O que será que ela tá querendo?
+        <b>E</b>          <b>F#m7</b>
+Vou chamar pra dançar
+     <b>E7</b>
+Vem cá mulher
+     <b>A</b>      <b>E</b>
+Vem cá, dançar
+   <b>F#m7</b>       <b>D5(9)</b>
+Comigo agarradinho,</pre><pre class="col2">     <b>A</b>         <b>E</b>         <b>F#m7</b>       <b>D5(9)</b>
+Vem cá, que você vai gostar,  ah, vai,!!!
+         <b>A</b>            <b>E</b>
+Isso assim, vem pra mim
+       <b>F#m7</b>         <b>D5(9)</b>  <b>A</b>
+Que delicia , tá gostoso demais
+      <b>E</b>           <b>F#m7</b>
+Isso não vai prestar
+           <b>E7</b>
+Beija minha bocaaaa !
+
+<b>A</b>      <b>E</b>      <b>F#m7</b>       <b>D5(9)</b>
+Ai ai aiaiaiaiai assim você mata o papai
+<b>A</b>     <b>E</b>  <b>F#m7</b>          <b>D5(9)</b>
+Ai aiaiai que boca gostosa eu quero mais
+<b>A</b>      <b>E</b>      <b>F#m7</b>       <b>D5(9)</b>
+Ai ai aiaiaiai assim você mata o papai
+<b>A</b>      <b>E</b>  <b>F#m7</b>           <b>D5(9)</b>
+Ai aiaiai     você tá cheirosa demais
+
+( <b>A</b>  <b>E</b>  <b>F#m7</b>  <b>D</b> )
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-assim-voce-mata-o-papai.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-assim-voce-mata-o-papai.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

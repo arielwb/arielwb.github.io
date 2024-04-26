@@ -1,0 +1,182 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Arranhão</h1><h2 class="t3"><a href="/henrique-e-juliano/">Henrique e Juliano</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ebm</a> </span><pre class="col1">[Intro] <b>D#m</b>
+
+[Primeira Parte]
+
+   <b>D#m</b>
+Parece que cê sente cheiro de bebida de longe
+<b>B</b>
+  Sabe que eu tô fraco
+                  <b>C#</b>
+Aí que entra seu nome na tela do celular
+          <b>A#7</b>
+Me perguntando: aonde você tá?
+
+[Pré-Refrão]
+
+                          <b>B</b>
+Sabe onde minha saudade aperta
+Quando seu dedo aperta na palavra que me 
+  <b>C#</b>
+acerta
+
+E deixa minha raiva cega
+                <b>D#m</b>          <b>C#/F</b>  <b>F#</b>
+Cê sabe que eu sou incapaz e a    falta que 
+faz
+
+[Refrão]
+
+                 <b>B2</b>
+Aí que mora o perigo
+
+Aí que eu caio lindo
+                         <b>C#2</b>
+Aí que eu sei das consequências
+
+Mesmo assim vou indo
+              <b>A#m</b>
+É que vale a pena
+
+Vale a cama, vale o risco
+                 <b>D#m</b>
+O que é um arranhão pra quem já tá fudido?
+
+                 <b>B2</b>
+Aí que mora o perigo
+
+Aí que eu caio lindo
+                         <b>C#2</b>
+Aí que eu sei das consequências
+
+Mesmo assim vou indo
+              <b>A#m</b>
+É que vale a pena
+
+Vale a cama, vale o risco
+                 <b>D#m</b>
+O que é um arranhão pra quem já tá fudido?
+</pre><pre class="col2">     <b>B2</b>  <b>C#2</b>  <b>A#m</b>  <b>D#m</b>
+Ohh, ohh ohh
+
+[Pré-Refrão]
+
+                          <b>B2</b>
+Sabe onde minha saudade aperta
+Quando seu dedo aperta na palavra que me 
+  <b>C#2</b>
+acerta
+
+E deixa minha raiva cega
+                <b>D#m</b>          <b>C#/F</b>  <b>F#</b>
+Cê sabe que eu sou incapaz e a    falta que 
+faz
+
+[Refrão Final]
+
+                 <b>B2</b>
+Aí que mora o perigo
+
+Aí que eu caio lindo
+                         <b>C#2</b>
+Aí que eu sei das consequências
+
+Mesmo assim vou indo
+              <b>A#m</b>
+É que vale a pena
+
+Vale a cama, vale o risco
+                 <b>D#m</b>
+O que é um arranhão pra quem já tá fudido?
+
+                 <b>B2</b>
+Aí que mora o perigo
+
+Aí que eu caio lindo
+                         <b>C#2</b>
+Aí que eu sei das consequências
+
+Mesmo assim vou indo
+              <b>A#m</b>
+É que vale a pena
+
+Vale a cama, vale o risco
+                 <b>D#m</b>
+O que é um arranhão pra quem já tá fudido?
+
+     <b>B2</b>  <b>C#2</b>
+Ohh, ohh ohh
+              <b>A#m</b>
+É que vale a pena
+
+Vale a cama, vale o risco
+                 <b>D#m</b>
+O que é um arranhão pra quem já tá fudido?
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/henrique-e-juliano-arranhao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-henrique-e-juliano-arranhao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

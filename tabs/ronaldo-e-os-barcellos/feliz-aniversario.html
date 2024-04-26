@@ -1,0 +1,113 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Feliz Aniversário</h1><h2 class="t3"><a href="/ronaldo-e-os-barcellos/">Ronaldo e os Barcellos</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ebm</a> </span><pre class="col1">[Intro] <b>B7M</b>  <b>C#7</b>  <b>F#7M</b>  <b>F#7</b>
+
+            <b>B7M</b>             <b>C#7</b>
+Feliz aniversário, meu amor
+             <b>A#m</b>               <b>D#m</b>
+Espero que você esteja muito feliz
+    <b>B</b>               <b>C#7</b>                  
+Que pena, amor, não posso fazer o que eu 
+<b>F#7M</b>       <b>F#7</b>
+sempre fiz
+                <b>B7M</b>             <b>C#7</b>
+Queria estar contigo, meu amor
+             <b>A#m</b>                    <b>D#m</b>
+Passar aí de noite, te levar pra jantar
+       <b>B</b>             <b>C#7</b>           <b>F#7M</b>
+Te dar uma flor e um beijo gostoso pra 
+         <b>F#7</b>
+celebrar
+
+               <b>B7M</b>                  <b>C#7</b>
+Mas acho que você não pensa mais em mim
+                 <b>A#m</b>                <b>D#m</b>
+Eu sei que nossa festa já chegou ao fim
+       <b>B</b>                <b>C#7</b>              
+Já não sou mais eu quem hoje você tem no 
+<b>F#7M</b>       <b>F#7</b>
+coração
+</pre><pre class="col2">              <b>A#7</b>
+Talvez à meia-noite eu ligue pra você
+                <b>D#m</b>
+Talvez não diga nada pra quem atender
+                   <b>B</b>                <b>C#7</b>
+Talvez mande um presente pra você saber
+           <b>F#7M</b>       <b>F#7</b>
+Que eu nunca te esqueci
+
+                    <b>B7M</b>              <b>C#7</b>
+Quem sabe as coisas mudem no ano que vem
+               <b>A#m</b>                  <b>D#m</b>
+Teu coração descubra que eu sou teu bem
+     <b>B</b>           <b>C#7</b>              <b>F#7M</b>       
+Seja como for, você vai ser sempre meu grande
+  <b>F#7</b>
+ amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ronaldo-e-os-barcellos-feliz-aniversario.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ronaldo-e-os-barcellos-feliz-aniversario.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

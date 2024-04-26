@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Passatempo</h1><h2 class="t3"><a href="/wesley-safadao/">Wesley Safadão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bb</a> </span><pre class="col1">           <b>Cm</b>
+Olha, pra quem era só esqueminha
+     <b>D#</b>
+Um lance de fim de semana
+     <b>Gm</b>
+Por que na minha cama
+                      <b>F</b>
+Tu tá falando que me ama, me ama, me ama?
+     <b>Cm</b>
+Me esconde pra suas amigas
+    <b>D#</b>
+Só quer me amar no sigilo
+  <b>Gm</b>
+Olha, tá trocando a noite de farra
+             <b>F</b>
+Pra dormir comigo, comigo, comigo
+     <b>Cm</b>   <b>D#</b>            <b>F</b>
+Se ferrou, tu se apaixonou!
+
+<b>Cm</b>
+Diz que eu sou seu passatempo
+              <b>D#</b>
+Passatempo é porra!
+</pre><pre class="col2">Eu passo a mão, eu passo a língua
+            <b>A#</b>
+Eu passo a boca
+
+Eu passo a mão, eu passo a língua
+    <b>F</b>
+Eu passo a boca
+
+ <b>Cm</b>
+Diz que eu sou seu passatempo
+              <b>D#</b>
+Passatempo é porra!
+
+Eu passo a mão, eu passo a língua
+            <b>A#</b>
+Eu passo a boca
+
+Eu passo a mão, eu passo a língua
+    <b>F</b>
+Eu passo a boca
+         <b>Cm</b>     <b>D#</b>    <b>A#</b>
+E vou passar a vida toda
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/wesley-safadao-passatempo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-wesley-safadao-passatempo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

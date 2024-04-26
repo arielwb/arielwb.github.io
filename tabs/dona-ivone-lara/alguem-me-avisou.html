@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Alguém Me Avisou</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G</b>  <b>D7</b>  <b>G</b>  <b>D7</b>
+
+             <b>G</b>    <b>D7</b>
+Foram me chamar
+            <b>G</b>                      <b>D7</b>
+Eu estou aqui, o que é que há
+             <b>G</b>    <b>D7</b>
+Foram me chamar
+            <b>G</b>                      <b>D7</b>
+Eu estou aqui, o que é que há
+
+           <b>G</b>             <b>C</b>        <b>Bm</b>    <b>Am</b>
+Eu vim de lá, eu vim de lá pequenininho
+      <b>G</b>        <b>C</b>         <b>Bm</b>
+Mas, eu vim de lá pequinininho
+   <b>E7</b>          <b>A7</b>                  <b>D7</b> 
+Alguém me avisou pra pisar nesse chão 
+        <b>G</b>
+devagarinho
+   <b>E7</b>          <b>A7</b>                  <b>D7</b> 
+Alguém me avisou pra pisar nesse chão 
+        <b>G</b>
+devagarinho
+</pre><pre class="col2">        <b>E7</b>       <b>Am</b>
+Sempre fui obediente
+         <b>D7</b>        <b>G</b>
+Mas não pude resistir
+<b>E7</b>                 <b>Am</b>
+Foi numa roda de samba
+                       <b>D7</b>               <b>G</b>
+Que eu juntei-me aos bambas pra me distrair
+           <b>E7</b>           <b>Am</b>
+Quando eu voltar pra Bahia
+      <b>D7</b>              <b>G</b>
+Terei muito o que contar
+     <b>E7</b>            <b>Am</b>
+Óh padrinho não se zangue
+                 <b>D7</b>
+Que eu nasci no samba
+             <b>G</b>   <b>D7</b>
+Não posso parar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-alguem-me-avisou.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-alguem-me-avisou.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

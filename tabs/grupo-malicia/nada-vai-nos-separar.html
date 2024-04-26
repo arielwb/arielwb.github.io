@@ -1,0 +1,101 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Nada Vai Nos Separar</h1><h2 class="t3"><a href="/grupo-malicia/">Grupo Malícia</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro]  <b>C7+</b> <b>Bm7</b> <b>Bb7</b> <b>Am7</b> <b>D7</b>
+
+<b>G7+</b>
+  Quando a gente ama
+<b>D/F#</b>                <b>B7</b>  <b>Em7</b>
+  A chama envolve o coração
+<b>Bm7</b>
+Doce paixão que atrai
+    <b>C7+</b>       <b>D7/9</b>  <b>G7+</b>
+Nos faz sentir o    mel
+<b>G6</b>             <b>D</b> <b>F</b>
+Quando a gente quer
+<b>B7</b>        <b>Em7</b>
+Tudo satisfaz
+          <b>Am7</b>
+O amor ser mais
+    <b>D7/9</b>  <b>D#º</b>  <b>Em7</b>
+Bem ma....a....ais</pre><pre class="col2">                          <b>Bm7</b>
+E quando o sonho assim desperta
+<b>C7+</b>                   <b>Bm7</b>     <b>E7/9-</b>
+Feliz, paixão que nos liberta
+               <b>Am7</b>     <b>D7/9</b>   <b>Dm7/9</b> <b>F/G</b> <b>F/G</b> 
+E a vida nos entrega, a paixão
+<b>B7+</b> <b>C7+</b>
+
+Nada vai nos separar
+<b>Bm7</b>
+ Nada vai nos superar
+<b>G7+</b>      <b>Bm7</b>        <b>Bm7/5-</b> <b>E7/9-</b>
+ Nada vai, nada vai conter
+<b>A7/13</b>           <b>D7</b>             <b>G7+</b>     <b>D7/9</b>
+ Você sem mim é nada e eu nada sem você
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-malicia-nada-vai-nos-separar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-malicia-nada-vai-nos-separar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

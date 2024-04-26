@@ -1,0 +1,127 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tendência</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">B</a> </span><pre class="col1"><b>B</b>                  <b>C#7</b>
+Não, pra que lamentar
+                <b>Em</b>       <b>F#7</b>      <b>B</b>  <b>B7</b>
+Se o que aconteceu, era de esperar
+                 <b>E7M</b>  <b>Em</b>               <b>D#m</b>  
+Se eu lhe dei a mâo,   foi por me enganar
+<b>G#7</b>
+
+             <b>C#7</b>                  <b>Em</b>   <b>F#7</b>   
+Foi sem entender, que o amor nâo pode haaaver
+<b>B</b>
+
+            <b>C#7</b>         <b>Em</b>  <b>F#7</b>           
+Sem compreensão, a desunião, tende 
+<b>F#m7</b>  <b>B7</b>
+aparecer
+       <b>E7M</b>  <b>Em</b>        <b>D#m</b>  <b>G#7</b>
+E aí esta,   o que aconteceu
+             <b>C#7</b>  <b>F#7</b>           <b>B</b>        <b>F#7</b>
+Você destruiu, o que era seu (veja só!)
+
+  <b>B</b>
+Você entrou na minha vida
+              <b>D#7</b>
+Usou e abusou, fez o que quis
+   <b>D#m7(5-)</b>       <b>G#7</b>               <b>E7M</b>
+E agora se desespera, dizendo que é infeliz
+<b>Em</b>                   <b>A7</b>     <b>D#m</b>            
+Não foi surpresa pra mim, você começou pelo
+   <b>G#7</b>
+ fim</pre><pre class="col2"><b>C#7</b>                                  <b>C#m</b>   
+Não me comove o pranto de quem é ruim e 
+    <b>F#7</b>
+assim
+
+      <b>B</b>                                    
+Quem sabe essa magoa passando você venha a 
+<b>D#7</b>
+se redimir
+     <b>D#m7(5-)</b>               <b>G#7</b>
+Dos erros -que tanto insistiu por prazer
+<b>E7M</b>
+ Prá vingar-se de mim
+<b>Em</b>                    <b>A7</b>    <b>D#m</b>            
+Diz que é carente de amor, então você tem 
+      <b>G#7</b>
+que mudar
+   <b>C#7</b>                 <b>F#7</b>  <b>B</b>
+Se precisar, pode me procurar
+<b>G#7</b>   <b>C#m</b>                <b>F#7</b>   <b>B</b>
+Se precisar, pode me procurar
+
+       <b>C#7</b>          <b>Em</b>  <b>F#7</b>        <b>B</b>  <b>B7</b>
+Lalaia laia lalaia laia  lalaia laia
+         <b>E7M</b>  <b>Em</b>        <b>D#m</b>  <b>G#7</b>        
+Lalaia laia     lalaia laia lalaia laia   
+<b>C#7</b>  <b>F#7</b>      <b>B</b>
+lalaia laia
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-tendencia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-tendencia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,188 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tá Rocheda</h1><h2 class="t3"><a href="/os-baroes-da-pisadinha/">Os Barões da Pisadinha</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F#m</a> </span><pre class="col1">[Intro] <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b>
+        <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b>
+
+[Primeira Parte]
+
+               <b>F#m</b>
+Entrei na rua dela
+
+Com meu carro rebaixado
+              <b>A</b>
+No meu porta-mala
+
+Escutando forró pesado
+              <b>E</b>
+Eu logo percebi
+
+Quando ela olhou pra mim
+                 <b>Bm</b>
+Dei a volta por cima
+
+E chamei ela pra sair
+
+                  <b>F#m</b>
+Ela aceitou o convite
+
+A gente foi cair na farra
+                  <b>A</b>
+Duas garrafas de vinho
+
+Ficou mal intencionada
+           <b>E</b>
+Foi no banheiro, do nada ela sumiu
+                 <b>Bm</b>
+Quando fui procurar
+
+Com outro cara ela sumiu
+
+[Refrão]
+
+       <b>F#m</b>  (pausa) <b>A</b>
+Tá rocheda, tô nem vendo
+       <b>E</b>                   <b>Bm</b>
+Pode crê, você merece um prêmio
+       <b>F#m</b>          <b>A</b>
+Tá rocheda, tô nem vendo
+       <b>E</b>                   <b>Bm</b>
+Pode crê, você merece um prêmio
+
+                            <b>F#m</b>
+Que mulher mais bandida do mundo
+                     <b>A</b>             <b>E</b>  <b>Bm</b>
+O coração que é vagabundo, vagabundo
+                           <b>F#m</b>
+De mulher mais bandida do mundo
+                     <b>A</b>             <b>E</b>  <b>Bm</b>
+O coração que é vagabundo, vagabundo
+
+( <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b> )
+( <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b> )
+
+[Solo]
+</pre><pre class="col2">[Primeira Parte]
+
+               <b>F#m</b>
+Entrei na rua dela
+
+Com meu carro rebaixado
+              <b>A</b>
+No meu porta-mala
+
+Escutando forró pesado
+              <b>E</b>
+Eu logo percebi
+
+Quando ela olhou pra mim
+                 <b>Bm</b>
+Dei a volta por cima
+
+E chamei ela pra sair
+
+                  <b>F#m</b>
+Ela aceitou o convite
+
+A gente foi cair na farra
+                  <b>A</b>
+Duas garrafas de vinho
+
+Ficou mal intencionada
+           <b>E</b>
+Foi no banheiro, do nada ela sumiu
+                 <b>Bm</b>
+Quando fui procurar
+
+Com outro cara ela sumiu
+
+[Refrão]
+
+       <b>F#m</b> (pausa)  <b>A</b>
+Tá rocheda, tô nem vendo
+       <b>E</b>                   <b>Bm</b>
+Pode crê, você merece um prêmio
+       <b>F#m</b>          <b>A</b>
+Tá rocheda, tô nem vendo
+       <b>E</b>                   <b>Bm</b>
+Pode crê, você merece um prêmio
+
+                            <b>F#m</b>
+Que mulher mais bandida do mundo
+                     <b>A</b>             <b>E</b>  <b>Bm</b>
+O coração que é vagabundo, vagabundo
+                           <b>F#m</b>
+De mulher mais bandida do mundo
+                     <b>A</b>             <b>E</b>  <b>Bm</b>
+O coração que é vagabundo, vagabundo
+
+[Final] <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b>
+        <b>F#m</b>  <b>A</b>  <b>E</b>  <b>Bm</b>  <b>F#m</b>
+
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-baroes-da-pisadinha-ta-rocheda.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-baroes-da-pisadinha-ta-rocheda.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

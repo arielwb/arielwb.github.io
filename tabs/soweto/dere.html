@@ -1,0 +1,108 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Derê</h1><h2 class="t3"><a href="/soweto/">Soweto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"> <b>Cm7(9)</b> <b>E7</b>      <b>Am</b>      <b>G7</b>       <b>C</b>
+ Derê   derêrere  dererererê
+   <b>E7</b>      <b>Am</b>      <b>G7</b>    <b>C</b>
+Derê   derêrere  dererererê
+   <b>E7</b>      <b>Am</b>      <b>G7</b>    <b>C</b>  <b>G7(13)</b>
+Derê   derêrere  dererererê
+
+<b>Cm7(9)</b>        <b>Cm7/G</b>
+ Quero você
+             <b>Fm7</b>           <b>G7</b>
+Pra sentir tamanha emoção
+             <b>Cm7(9)</b>            <b>Cm7/G</b>
+Só o amor poderá dar o fim
+               <b>Fm</b>            <b>G7</b>
+Na tristeza do meu coração,  ah
+
+<b>Cm7(9)</b>              <b>Cm7/Bb</b>                  
+ Vem pra ficar   que  a porta está aberta 
+<b>Fm</b>           <b>G7</b>
+meu bem
+          <b>Cm7(9)</b>             <b>Cm7/G</b>       <b>Fm</b>  
+É desejo demais é paixão, jamais vou esquecer
+        <b>G7</b>
+ de voce
+</pre><pre class="col2">     <b>C7M</b>        <b>E7</b>                <b>Am</b>
+ Eu sei, te desejo te quero te amo
+    <b>Gm</b>               <b>F7M</b>     <b>F6</b>              
+E assumo que é pra valer, quero a paz em meu 
+  <b>Bm7(5-)</b>
+interior
+       <b>G7</b>              <b>C7M</b>
+Tenho amor para lhe oferecer
+
+   <b>E7</b>      <b>Am</b>      <b>G7</b>    <b>C7M</b>
+Derê   derêrere  dererererê
+   <b>E7</b>      <b>Am</b>      <b>G7</b>    <b>C7M</b>
+Derê   derêrere  dererererê
+   <b>E7</b>      <b>Am</b>      <b>G7</b>    <b>C7M</b> <b>G7(13)</b>
+Derê   derêrere  dererererê
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/soweto-dere.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-soweto-dere.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

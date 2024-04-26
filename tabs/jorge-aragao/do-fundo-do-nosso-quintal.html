@@ -1,0 +1,127 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Do fundo do nosso quintal</h1><h2 class="t3"><a href="/jorge-aragao/">Jorge Aragão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Intro] <b>F6</b>
+
+       <b>C7</b>               <b>F6</b>
+Mais um pouco e vai clarear  (ê vai clarear)
+                  <b>A7</b>
+Nos encontraremos outra vez
+                    <b>Dm</b>
+Com certeza nada apagará
+                <b>F7</b>
+Esse brilho de vocês (vocês, vocês)
+             <b>Bb7M</b>           <b>Eb7</b>
+O carinho dedicado a nós
+                  <b>Ab</b>
+Derramamos pela nossa voz
+       <b>Gm7(5-)</b>           <b>C7</b>           <b>F6</b>
+Cantando alegria de não estarmos sós
+
+       <b>C7</b>               <b>F6</b>
+Mais um pouco e vai clarear  (ê vai clarear)
+                  <b>A7</b>
+Nos encontraremos outra vez
+                    <b>Dm</b>
+Com certeza nada apagará
+                <b>F7</b>
+Esse brilho de vocês (vocês, vocês)
+             <b>Bb7M</b>           <b>Eb7</b>
+O carinho dedicado a nós
+                  <b>G#</b>
+Derramamos pela nossa voz
+       <b>Gm7(5-)</b>           <b>C7</b>           <b>F6</b>
+Cantando alegria de não estarmos sós
+</pre><pre class="col2">Boa noite, boa noite
+                           <b>Am</b>
+Pra quem se encontrou no amor
+Boa noite, boa noite
+                     <b>Cm</b>
+Pra quem não desencantou
+                <b>F7</b>
+Boa noite, boa noite
+                   <b>Bb7M</b>
+Pra quem veio só sambar
+Boa noite, boa noite
+                           <b>Bbm</b>
+Pra quem diz no pé e na palma da mão
+                <b>Eb7</b>
+Boa noite, boa noite
+                   <b>F6</b>          <b>D7</b>
+Pra quem só sentiu saudade afinal
+   <b>Gm</b>               <b>C7</b>          <b>F6</b>
+Obrigado do fundo do nosso quintal
+
+Obrigado
+     <b>Gm</b>              <b>C7</b>        <b>F6</b>
+Obrigado do fundo do nosso quintal
+
+Obrigado
+        <b>C7</b>               <b>F</b>
+Mais um pouco e vai clarear
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jorge-aragao-do-fundo-do-nosso-quintal.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jorge-aragao-do-fundo-do-nosso-quintal.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

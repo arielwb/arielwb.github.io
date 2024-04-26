@@ -1,0 +1,103 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Eternamente Feliz</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1"><b>D7M</b>                           <b>A</b>
+Quando você passa, eu só vejo você
+                       <b>F#7</b>        <b>Bm7</b>
+Se a lua brilha em seu rosto, sou eu
+         <b>Em7</b>   <b>A7</b>
+Seu pretendente
+<b>D7M</b>                             <b>A</b>
+Se as subidas não te cansam, sou eu
+                 <b>F#7</b>         <b>Bm7</b>
+Que te carrego sem você perceber
+         <b>Em7</b>   <b>A7</b>
+Constantemente
+<b>D7M</b>                         <b>A</b>
+Eu te mostro a verdade do mundo
+                 <b>F#7</b>        <b>Bm7</b>
+Mas você não é capaz de aceitar
+    <b>Em7</b>     <b>A7</b>
+A felicidade
+   <b>D</b>     <b>D7</b>     <b>G</b>
+Eu sei, vai te tocar</pre><pre class="col2">  <b>A7</b>      <b>Bb</b>  <b>A7</b>
+A luz do amor
+<b>D</b>                     <b>G</b>               <b>A7</b>
+Mas se a vida te der alguém melhor que eu
+<b>D</b>                  <b>G</b>         <b>C#m7(5-)</b> <b>F#7</b>
+E se o amor vencer todos os preconceitos
+  <b>Bm7</b>                <b>F#m7</b>       <b>G</b>   <b>F#m7</b>
+Que você seja feliz, feliz seja feliz
+ <b>Em7</b>  <b>F#m7</b>  <b>G</b>  <b>A7</b>  <b>D</b>
+Eter_na____mente
+
+[Refrão]
+
+<b>Em7</b>   <b>F#7</b>  <b>G</b>  <b>A7</b>  <b>D</b>
+Eternamente feliz
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-eternamente-feliz.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-eternamente-feliz.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

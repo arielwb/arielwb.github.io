@@ -1,0 +1,101 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Deixa a Baiana Sambar</h1><h2 class="t3"><a href="/os-tincoas/">Os Tincoãs</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">Intro: <b>Bm7</b> <b>A</b> <b>D</b> <b>A</b>
+
+    <b>A</b>              <b>Bm7</b>
+A baiana entrou no samba
+<b>E</b>         <b>E7</b>         <b>A</b>
+Deixa a baiana sambar!
+<b>A</b>         <b>E</b>         <b>Bm</b>
+Deixa a baiana sambar!
+<b>E</b>         <b>E7</b>         <b>A</b>
+Deixa a baiana sambar!
+
+    <b>A</b>              <b>Bm7</b>
+A baiana entrou no samba, olha aí!
+<b>E</b>         <b>E7</b>         <b>A</b>
+Deixa a baiana sambar!
+<b>A</b>         <b>E</b>         <b>Bm</b>
+Deixa a baiana sambar!
+<b>E</b>         <b>E7</b>         <b>A</b>
+Deixa a baiana sambar!
+</pre><pre class="col2">     <b>A</b>               <b>D</b>
+A baiana está sambando
+      <b>E</b>      <b>E7</b>     <b>F#m</b>
+E o povo vibrando assim:
+         <b>Bm</b>
+Salve a bahia,
+
+<b>E</b>         <b>E7</b>          <b>A</b>
+Salve o senhor do bonfim!
+<b>A</b>                       <b>D</b>
+Salve o senhor do bonfim!
+<b>E</b>         <b>E7</b>          <b>A</b>
+Salve o senhor do bonfim!
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-tincoas-deixa-a-baiana-sambar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-tincoas-deixa-a-baiana-sambar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

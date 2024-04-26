@@ -1,0 +1,127 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Estrela da Paz</h1><h2 class="t3"><a href="/soweto/">Soweto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>Am7</b>  <b>D7</b>  <b>G6</b>  <b>E7(5-)</b>  <b>Am7</b>  <b>D7</b>  <b>G6</b>  
+
+<b>E7(5-/9)</b>
+
+[Refrão]
+
+            <b>Am</b>     <b>D7</b>             <b>G</b>     <b>E7</b>
+Teu amor é demais,   faz ficar tudo azul
+               <b>Am</b>   <b>D7</b>                 <b>G</b>
+Minha estrela da paz, meu Cruzeiro do Sul
+                 <b>E7</b>
+Vem brilhar por favor que eu
+           <b>Am</b>   <b>D7</b>              <b>G</b> <b>E7</b>
+Não posso viver, longe do teu amor
+                <b>Am</b>  <b>D7</b>            <b>G</b>
+Que eu não posso viver, longe do teu amor
+
+[Primeira Parte]
+
+  <b>E7</b>                  <b>Am</b>
+Pra gente fugir da rotina, encontro
+    <b>D7</b>                    <b>G</b>
+Marcado, te espero na esquina
+             <b>E7</b>             <b>Am</b>
+Lá do outro lado que nem namorado
+            <b>D7</b>                    <b>G</b>
+No primeiro encontro te dou uma flor
+<b>E7</b>                       <b>Am</b>
+Eu posso lutar contra o tempo
+       <b>D7</b>                 <b>Bm</b>
+Eu posso soprar contra o vento</pre><pre class="col2">    <b>E7</b>              <b>Am</b>
+Eu posso fazer o que for, só
+         <b>D7</b>               <b>G</b>
+Não posso viver longe do teu amor
+
+[Refrão]
+
+            <b>Am</b>     <b>D7</b>             <b>G</b>     <b>E7</b>
+Teu amor é demais,   faz ficar tudo azul
+               <b>Am</b>   <b>D7</b>                 <b>G</b>
+Minha estrela da paz, meu Cruzeiro do Sul
+                 <b>E7</b>
+Vem brilhar por favor que eu
+           <b>Am</b>   <b>D7</b>              <b>G</b> <b>E7</b>
+Não posso viver, longe do teu amor
+                <b>Am</b>  <b>D7</b>            <b>G</b>
+Que eu não posso viver, longe do teu amor
+
+            <b>Am</b>     <b>D7</b>             <b>G</b>     <b>E7</b>
+Teu amor é demais,   faz ficar tudo azul
+               <b>Am</b>   <b>D7</b>                 <b>G</b>
+Minha estrela da paz, meu Cruzeiro do Sul
+                 <b>E7</b>
+Vem brilhar por favor que eu
+           <b>Am</b>   <b>D7</b>              <b>G</b> <b>E7</b>
+Não posso viver, longe do teu amor
+                <b>Am</b>  <b>D7</b>            <b>G</b>
+Que eu não posso viver, longe do teu amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/soweto-estrela-da-paz.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-soweto-estrela-da-paz.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

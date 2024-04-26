@@ -1,0 +1,96 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Voz do Morro</h1><h2 class="t3"><a href="/ze-keti/">Zé Keti</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>A7+</b>  <b>D7+</b>  <b>Bm7</b>  <b>E7/9</b>  <b>A7+</b>
+
+<b>A7+</b>  <b>D7/9</b>  <b>F#7</b>  <b>D#m5-/7</b>
+Eu - sou - o - samba
+<b>Dm6</b>                   <b>C#m7</b>
+A voz do morro sou eu mesmo sim senhor
+<b>Cº</b>                      <b>Bm7</b>
+Quero mostrar ao mundo que tenho valor
+<b>E7/9</b>     <b>D6/9</b>     <b>A7+</b>
+Eu sou o rei dos terreiros
+<b>A7+</b>  <b>D7/9</b>  <b>F#7</b>  <b>D#m5-/7</b>
+Eu - sou - o - samba
+<b>Dm6</b>                  <b>C#m7</b>
+Sou natural daqui do Rio de Janeiro
+<b>Cº</b>                  <b>Bm7</b>
+Sou eu quem levo a alegria</pre><pre class="col2">             <b>Bm7</b>  <b>Cm7</b>  <b>C#m7</b>  <b>Dm7</b>      
+Para milhões                  de corações 
+<b>E7/9b</b>       <b>A7+</b>    <b>A6</b>
+brasileiros
+         <b>D#m5-/7</b>  <b>Dm6</b>       <b>C#m7</b>
+Mais um samba,    queremos samba
+<b>Cº</b>           <b>Bm7</b>      <b>E7/9</b>    <b>A7+</b>        <b>A6</b>
+Quem está pedindo é a voz do povo de um país
+         <b>D#m5-/7</b>  <b>Dm6</b>      <b>C#m7</b>
+Viva o samba,     vamos cantando
+<b>Cº</b>       <b>Bm7</b>          <b>E7/9</b>   <b>A7+</b>
+Essa melodia de um Brasil feliz
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ze-keti-a-voz-do-morro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ze-keti-a-voz-do-morro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

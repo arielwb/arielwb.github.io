@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">O Canto da Razão</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ab</a> </span><pre class="col1">Intro: <b>Fm</b>
+
+<b>Fm</b>      <b>F7</b>      <b>Bbm</b>            <b>C7</b>         <b>Fm</b>
+Lalaia, lalaia, lalaia lalaia lalaia la
+<b>F7</b>           <b>Bbm</b>    <b>C7</b>        <b>Fm</b>
+Êh laiala, laiala laiala laia la
+<b>F7</b>       <b>Bbm</b>            <b>C7</b>         <b>Fm</b>
+Lalaia, lalaia, lalaia lalaia lalaia la
+<b>F7</b>           <b>Bbm</b>    <b>C7</b>        <b>Fm</b>
+Êh laiala, laiala laiala laia la
+
+             <b>Eb</b>
+Quantas mal dormidas
+   <b>Db7</b>   <b>C7</b>    <b>Fm</b>  <b>C7</b>
+Em claro eu passei
+<b>Fm</b>                  <b>Eb</b>
+Tentando achar a saída
+ <b>Db7</b> <b>C7</b>    <b>Fm</b>   <b>F7</b>
+Mas como eu lutei
+
+   <b>Bbm</b>         <b>Eb</b>
+A mágoa sofrida</pre><pre class="col2">  <b>Ab7</b>          <b>Db</b>
+Retratos da vida
+   <b>G7</b>          <b>C7</b>   <b>Fm</b>
+Paixão recolhida porém
+
+<b>F7</b>    <b>Bbm</b>       <b>Eb</b>
+Foi dura a missão
+<b>Ab7</b>     <b>Db</b>
+A voz da razão
+ <b>G7</b>       <b>C7</b>      <b>Fm</b>
+O canto que finda o sofrer
+          <b>F7</b>          <b>Bbm</b>
+Ouvindo o som dos tantans
+           <b>C7</b>         <b>Fm</b>
+Sentindo os balangandans
+         <b>F7</b>               <b>Bbm</b>
+Repique pandeiro cavaco e viola
+    <b>C7</b>         <b>Fm</b>
+A tristeza vai embora
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-o-canto-da-razao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-o-canto-da-razao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

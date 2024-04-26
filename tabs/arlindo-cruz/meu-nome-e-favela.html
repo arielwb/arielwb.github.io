@@ -1,0 +1,149 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Meu Nome É Favela</h1><h2 class="t3"><a href="/arlindo-cruz/">Arlindo Cruz</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>E</b>  <b>F#7</b>  <b>F#m</b>  <b>B7</b>  <b>E</b>  <b>B7(4/9)</b>
+
+                    <b>E7M</b>
+Eu sempre fui assim mesmo
+                              <b>F#7(9)</b>
+Firmeza total e pureza no coração
+                    <b>F#m7(9)</b>
+Eu sempre fui assim mesmo
+           <b>B7(4/9)</b>              <b>E7M</b>          
+Parceiro fiel que não deixa na mão
+<b>B7(4/9)</b>
+
+                  <b>E7M</b>
+É o meu jeito de ser
+                                <b>F#7(9)</b>
+Falar com geral e ir a qualquer lugar
+                    <b>F#m7(9)</b>
+É tão normal de me ver
+           <b>B7(4/9)</b>               <b>E7M</b>        
+Tomando cerveja calçando chinelo no bar
+<b>E7</b>
+
+              <b>A7M</b>
+Não dá pra evitar bate papo informal
+                            <b>F#m7</b>  <b>B7(4/9)</b>
+Quando saio pra comprar um pão
+             <b>G#m7</b>
+Falar de futebol
+                                <b>C#7(9-)</b>  <b>C#7</b>
+E do que tá rolando de novo na televisão
+          <b>F#7</b>
+Suburbano nato
+             <b>F#m7</b>    <b>B7(4/9)</b>
+Com muito orgulho
+             <b>E7M</b>
+Mostro no sorriso
+            <b>Bm7</b>        <b>E7</b>
+Nosso clima de subúrbio
+                <b>A7M</b>
+Eu gosto de fritada
+                              <b>F#m7</b>  <b>B7(4/9)</b>
+E jogar um pelada domingo de sol</pre><pre class="col2">                <b>G#m7</b>
+E fazer churrasquinho
+                                  <b>C#7(9-)</b>   
+Com a linha esticada no poste passando cerol
+<b>C#7</b>
+
+              <b>F#7</b>
+Canta partido alto
+               <b>F#m7</b>    <b>B7(4/9)</b>
+Do morro no asfalto
+              <b>E7M</b>    <b>E7</b>
+Sem discriminação
+             <b>Bbm7(5-)</b>
+Meu nome é favela
+      <b>Am6</b>
+É do povo do gueto a minha raiz
+ <b>G#m7</b>
+Becos e vielas
+        <b>C#7(9-)</b>
+Eu encanto e canto uma história feliz
+<b>F#m7</b>          <b>G#m7</b>        <b>A7M</b>      
+ De humildade verdadeira gente simples de 
+<b>B7(4/9)</b>          <b>E7M</b>
+primeira
+ <b>Bm7</b>  <b>E7</b>
+
+Salve ela meu nome qual é
+             <b>Bbm7(5-)</b>
+Meu nome é favela
+     <b>Am6</b>
+É do povo do gueto a minha raiz
+          <b>G#m7</b>
+Becos e vielas
+        <b>C#7(9-)</b>                  <b>C#7</b>
+Eu encanto e canto uma história feliz
+<b>F#m7</b>          <b>G#m7</b>        <b>A7M</b>      
+ De humildade verdadeira gente simples de 
+<b>B7(4/9)</b>          <b>E7M</b>
+primeira
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/arlindo-cruz-meu-nome-e-favela.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-arlindo-cruz-meu-nome-e-favela.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

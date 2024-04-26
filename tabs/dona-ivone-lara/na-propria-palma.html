@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Na Própria Palma</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">(intro)  <b>D7M</b>  <b>D6</b>  <b>E7/9</b>  <b>Em7</b>  <b>A7</b>  <b>D7M</b>   <b>A7</b>
+
+<b>D7M</b>                  <b>B7</b>      <b>Em7</b> <b>Em7/D</b>
+A palma que marca na própia palma
+<b>A7</b>  <b>C#</b>                    <b>A7</b>         <b>D7M</b> <b>D6</b>
+Esquenta o terreiro e encendeia a alma
+<b>D7M</b>               <b>B7</b>            <b>Em7</b> <b>Em7/D</b>
+O samba rasgado embala o meu sorriso
+<b>A7</b>  <b>C#</b>            <b>A7</b>        <b>D7M</b>   <b>A7</b>
+Desata o laço e afasta o meu penar
+<b>D7M</b>                <b>B7</b>      <b>Em7</b> <b>Em7/D</b>
+O brinde selado no copo estala
+<b>A7</b>  <b>C#</b>             <b>A7</b>       <b>D7M</b> <b>A/C#</b>
+Apura o sabor e tempera a fala
+<b>Am6/C</b>                 <b>B7</b>        <b>Em7</b> <b>Em7/D</b>
+A palma que marca na própia palma
+<b>A7</b> <b>C#</b>            <b>A7</b>        <b>D7M</b>
+Esquenta o terreiro encendeia alma
+
+<b>A7</b>        <b>D7M</b>       <b>Fº</b>         <b>Em7</b>
+O amor em forma de canção se espalha
+       <b>A4/7/9</b>       <b>A7/9</b>     <b>D7M</b> <b>D6</b>
+Numa corrente de emoção desagua</pre><pre class="col2">       <b>D7M</b>        <b>B7</b>          <b>Em7</b>
+A mão percorre o violão a desenhar
+         <b>A4/7/9</b>    <b>A7/9</b>   <b>D7M</b>
+Acordes lindos de se admirar
+<b>A7</b>    <b>D7M</b>        <b>B7</b>      <b>Em7</b> <b>Em7/D</b>
+E na batida firme do cavaco
+<b>C#7m(b5)</b>           <b>F#7/G#</b>        <b>Bm7</b>
+Esqueço a dor que mora ali ao lado
+ <b>D7</b>          <b>G7M</b>         <b>G#º</b>     <b>F#m7</b>
+E o povo em volta forma uma aliança
+<b>B7</b>        <b>Em7</b>       <b>A7/13</b>      <b>D7M</b> <b>A7</b>
+ É tão sublime o coro a cantarolar
+
+<b>D7M</b>   <b>D6</b>      <b>E7/9</b>       <b>Em7</b>       <b>A7</b>     
+La lalaia      laia      laia laiala 
+<b>D7M</b>   <b>A7</b>
+lalaia laia
+<b>D7M</b>   <b>D6</b>     <b>E7/9</b>     <b>Em7</b>       <b>A7</b>    <b>D7M</b>
+La lalaia laia laia laiala lalaia laia
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-na-propria-palma.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-na-propria-palma.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Morango do Nordeste</h1><h2 class="t3"><a href="/karametade/">Karametade</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C</b>  <b>G</b>  <b>Dm</b>  <b>Am</b>  <b>G</b>
+
+<b>C</b>                                    <b>G</b>
+Estava tão tristonho quando ela apareceu
+<b>Dm</b>                                   <b>Am</b>    
+Seus olhos, que fascínio, logo me 
+<b>F</b>  <b>G</b>
+estremeceu
+<b>C</b>                                 <b>G</b>
+Os meus amigos falam que eu sou demais
+<b>Dm</b>                            <b>Am</b>  <b>F</b>  <b>G</b>
+Mas é somente ela que me satisfaz
+
+<b>C</b>                         <b>G</b>
+É somente ela que me satisfaz
+<b>Dm</b>                        <b>Am</b>  <b>F</b>  <b>G</b>
+É somente ela que me satisfaz
+<b>C</b>                            <b>G</b>
+Você só colheu o que você plantou
+<b>Dm</b>                                   <b>Am</b>     
+Por isso que eles falam que eu sou sonhador
+<b>F</b>  <b>G</b>
+
+
+<b>C</b>                              <b>G</b>
+E digo o que ela significa pra mim</pre><pre class="col2"><b>C</b>                           <b>G</b>
+Ela é um morango aqui do Nordeste
+<b>C</b>                                 <b>G</b>
+Tu sabes não existe sou cabra da peste
+<b>C</b>                              <b>G</b>
+Apesar de colher as batatas da terra
+<b>Dm</b>                               <b>Am</b>   <b>F</b>   <b>G</b>
+Com essa mulher eu vou até pra guerra (vou)
+
+<b>C</b>      <b>G</b>
+Ai, é amor
+      <b>Dm</b>
+Ai é amor
+   <b>Am</b>  <b>F</b>  <b>G</b>
+É amor
+<b>C</b>      <b>G</b>
+Ai, é amor
+              <b>Dm</b>
+Ai, ai, ai é amor
+   <b>Am</b>  <b>F</b>  <b>G</b>
+É amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/karametade-morango-do-nordeste.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-karametade-morango-do-nordeste.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,127 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sequestraram minha sogra</h1><h2 class="t3"><a href="/bezerra-da-silva/">Bezerra da Silva</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>G</b>                                <b>E</b>    
+Seqüestraram minha sogra, bem feito pro 
+            <b>Am</b>
+seqüestrador
+                       <b>D</b>                     
+ao invés de pagar o resgate, foi ele quem me 
+   <b>G</b>
+pagou (2x)
+
+      <b>Am</b>              <b>D</b>                    
+Ele pagou, o preço da mala que ele que ele 
+      <b>G</b>
+carregou
+      <b>Am</b>             <b>D</b>                   <b>G</b>
+Ele pagou, a paga da praga que ele seqüestrou
+      <b>Am</b>              <b>D</b>                    
+Ele pagou, a mala sem alça que ele que ele 
+     <b>Bm</b>
+carregou,
+      <b>Em</b>
+ele pagou
+      <b>Am</b>             <b>D</b>                   <b>G</b>
+Ele pagou, a paga da praga que ele seqüestrou
+
+<b>G</b>                             <b>E</b>            
+O telefone tocou uma voz cavernosa pedindo 
+       <b>Am</b>
+um milhão
+                   <b>D</b>                         
+pra libertar minha sogra que não vale nenhum 
+   <b>G</b>
+tostão</pre><pre class="col2">       <b>C</b>                           <b>D</b>
+ela zuou no cativeiro, mordeu a mordaça e a 
+algema
+   <b>Bm</b>
+quebrou
+        <b>Em</b>            <b>Am</b>                 <b>D</b>
+e até a bala do meu revólver a capeta da sua 
+sogra
+   <b>G</b>
+chupou, ele pagou...
+
+<b>G</b>                                       <b>E</b>  
+Olha ai, novamente toca o telefone 
+           <b>Am</b>
+invertendo a situação
+                               <b>D</b>             
+se eu recebesse a megera de volta ele me dava
+                     <b>G</b>
+ o dobro da grana na mão
+     <b>C</b>                                    
+Já paguei por todos meus pecados me disse 
+   <b>D</b>                <b>Bm</b>
+chorando o seqüestrador
+<b>Em</b>                  <b>Am</b>               <b>D</b>     
+Vou me entregar a polícia e quando sair 
+              <b>G</b>
+serei mais um pastor, ele pagou..
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bezerra-da-silva-sequestraram-minha-sogra.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bezerra-da-silva-sequestraram-minha-sogra.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

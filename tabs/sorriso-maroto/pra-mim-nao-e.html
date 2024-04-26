@@ -1,0 +1,142 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Pra Mim Não É</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">Intro: <b>G#/F#</b> <b>G#m7</b> <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+
+<b>E7M</b>                <b>E6/9</b>                   
+Do meu jeito louco diferente pra falar de 
+<b>G#/F#</b>
+amor
+         <b>G#m7</b> <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+Eu to aqui . . .
+<b>E7M</b>           <b>E6/9</b>                         
+Serenata, violão na mão peito aberto eu vou
+<b>G#/F#</b>
+
+             <b>G#m7</b>  <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+Tente me ouvir . . .
+<b>E7M</b>              <b>E9</b>                      
+Céu a lua e as estrelas testemunham ao meu 
+   <b>F#/G#</b>
+favor
+            <b>G#m7</b> <b>D#m7</b>  <b>F7M</b>   <b>E7M</b>
+Como eu sofri . . .
+<b>E7M</b>             <b>E9</b>                         
+Pode parecer bobagem, sendo otário ou coisa
+   <b>F#/G#</b>
+ assim
+       <b>G#m7</b> <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+To nem ai . . .
+<b>E7M</b>
+Se pra você o nosso amor não ta com nada
+<b>B7M</b>                   <b>F7/11+</b>
+Se pra você todo esse sonho é palhaçada
+<b>E7M</b>
+Se pra você tudo o que fiz foi dá mancada
+   <b>B7M</b>                                     ( 62
+Pra mim não é, Pra mim não é, Pra mim não é !
+ 52 54 54 )
+
+<b>E7M</b>
+Se pra você não tem saída no fim da estrada</pre><pre class="col2"><b>B7M</b>                         <b>F7/11+</b>
+Se pra você ontem foi tudo,hoje sou nada
+<b>E7M</b>
+Se pra você sou passatempo ou madrugada
+<b>B7M</b>                   <b>A/B</b>
+Pra mim não é, eu vou provar por que não é
+
+Refrão:
+<b>E7M</b>                   <b>E/F#</b>
+Por que te amo e não sei viver sem teu calor
+<b>B7M</b>                     <b>B7/4</b>          <b>A/B</b>
+Por que te amo basta olhar pra ver como eu 
+estou
+<b>E7M</b>                    <b>E/F#</b>
+Por que te amo com saudades fiz essa canção
+<b>F#/G#</b>              <b>F7/11+</b>
+Se não me ama fala logo ou quebro o violão
+
+<b>E7M</b>                   <b>E/F#</b>
+Por que te amo e não sei viver sem teu calor
+<b>B7M</b>                    <b>B7/4</b>           <b>A/B</b>
+Por que te amo basta olhar pra ver como eu 
+estou
+<b>E7M</b>                    <b>E/F#</b>
+Por que te amo com saudades fiz essa canção
+<b>F#/G#</b>
+Se não me ama fala logo ou quebro o violão
+
+<b>E7M</b>                 <b>E6/9</b>
+Pra mim não é, pra mim não é, pra mim não é
+<b>F#/G#</b>            <b>G#m7</b>       <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+Pra mim não é, seja o que deus quiser
+<b>E7M</b>                 <b>E6/9</b>
+Pra mim não é, pra mim não é, pra mim não é
+<b>F#/G#</b>                  <b>G#m7</b>  <b>D#m7</b> <b>F7M</b> <b>E7M</b>
+Pra mim não é, pode falar o que quiser
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-pra-mim-nao-e.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-pra-mim-nao-e.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

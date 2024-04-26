@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Eu Mereço Ser Feliz</h1><h2 class="t3"><a href="/mumuzinho/">Mumuzinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>C9</b>  <b>C9/Bb</b>  <b>F7M/A</b>  <b>Fm6/Ab</b>  <b>G7/4</b>
+E lalaia e lalaia e lalaia
+
+<b>C</b>               <b>C6/9</b>                   <b>C7/4</b>
+O dia tava tão lindo fiz uma selfie sorrindo
+               <b>F#7/11+</b>
+Botei na estante só pra me lembrar
+<b>F7M</b>                <b>F6</b>                    
+Que essa pessoa sou eu melhor presente é a 
+<b>G7/4</b>
+vida
+               <b>G7(b9)</b>
+Melhor que a vida, não há
+<b>C</b>               <b>C6/9</b>                   <b>C7/4</b>
+E se você não se ama é que não ama ninguém
+          <b>C9/E</b>      <b>F7M</b>            <b>F6</b>
+E quem vai te amar? E viva cada momento
+                <b>Eb6/9</b>             <b>G7/4</b>
+Como se fosse acabar não vale a pena esperar
+<b>C9</b>                       <b>C9/Bb</b>
+O tempo ta passando na velocidade
+            <b>F7M/A</b>
+Acorda pra vida</pre><pre class="col2">                                <b>Fm6/Ab</b>
+Não pode faltar tempo pra felicidade
+      <b>G7/4</b>
+Acorda pra vida
+<b>C9</b>                              <b>C9/Bb</b>
+Não deixe pra amanhã que pode ficar tarde
+            <b>F7M/A</b>
+Acorda pra vida
+                                <b>Fm6/Ab</b>
+Depois não vai chorar no bloco da saudade
+       <b>G7/4</b>
+Acorda pra vida
+
+<b>C9</b>
+Bate no peito, grita bem alto
+         <b>C7/4</b>          <b>F#7/11+</b>
+Abre o sorriso, canta e diz
+<b>F7M</b>                     <b>Fm6</b>       <b>G7/4</b>
+Eu mereço ser feliz eu mereço ser feliz
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/mumuzinho-eu-mereco-ser-feliz.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-mumuzinho-eu-mereco-ser-feliz.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

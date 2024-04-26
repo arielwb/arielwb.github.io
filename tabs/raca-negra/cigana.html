@@ -1,0 +1,111 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Cigana</h1><h2 class="t3"><a href="/raca-negra/">Raça Negra</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro]  <b>C</b>  <b>E7</b>  <b>Am</b>  <b>C7</b>
+         <b>F</b>  <b>C</b>  <b>Dm</b>  <b>G7</b>
+
+ <b>C</b>                    <b>E7</b>      <b>Am</b>     <b>Gm</b>  <b>C7</b>
+Não deixe o tempo acabar com nosso amor
+<b>F</b>                <b>G7</b>                 <b>C</b>   
+Eu faço tudo e o impossível e você não dá 
+        <b>C7</b>
+valor
+ <b>F</b>              <b>G7</b>
+Te amo como um louco
+<b>Em</b>                  <b>Am</b>
+Estou morrendo aos poucos
+ <b>Dm</b>            <b>G7</b>
+Você parece estar feliz
+ <b>Gm</b>            <b>C7</b>
+Pisando sobre mim
+ <b>F</b>          <b>G7</b>   <b>Em</b>
+Desesperadamente
+              <b>Am</b>
+Eu choro por você
+ <b>Dm</b>            <b>G7</b>      <b>C</b>            <b>G7</b>
+Meu coração carece do seu amor (do seu amor)</pre><pre class="col2">       <b>C</b>
+Então vem (então vem)
+             <b>E7</b>
+Maltrata de vez (maltrata de vez)
+              <b>F</b>              <b>G7</b>          
+Estou com saudade e a sua maldade me faz 
+    <b>C</b>
+delirar
+       <b>G7</b>
+Te perder
+       <b>C</b>
+Te perder
+                 <b>E7</b>
+Eu não vou resistir (eu não vou resistir)
+            <b>F</b>                <b>G7</b>              
+Eu vivo sofrendo estou te querendo nasci prá 
+   <b>C</b>
+você
+   <b>G7</b>
+Cigana
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/raca-negra-cigana.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-raca-negra-cigana.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

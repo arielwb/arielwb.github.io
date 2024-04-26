@@ -1,0 +1,106 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Pimpolho</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>G</b>                           <b>D</b>
+ O pimpolho é um cara bem legar
+                         <b>Em</b>
+Pena que não pode ver mulher
+                           <b>Am</b>                
+Na dança ele já pede pra baixar, já pede pra 
+   <b>D</b>
+baixar
+                        <b>Gm</b>
+Ela quer parar ele não quer
+
+                                   <b>D</b>
+Ela tá dançando e o pimpolho tá de oio
+                             <b>Gm</b>
+Cuidado com a cabeça do pimpolho
+                                    <b>D</b>
+Ela tá dançando e o pimpolho tá de oio
+
+Cuidado com o pimpolho
+</pre><pre class="col2">          <b>Gm</b>
+Eu sou pimpolho
+
+Sou o rei da mulherada
+
+Beijo todas sem parar
+
+Ve se para de me olhar
+
+E abaixa logo devagar
+
+Porque meu folego tá acabando
+
+Não consigo mais falar
+
+Vai caindo, vai caindo
+                 <b>D</b>
+Agora pode levantar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-pimpolho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-pimpolho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

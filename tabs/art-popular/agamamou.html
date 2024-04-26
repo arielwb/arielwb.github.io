@@ -1,0 +1,129 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Agamamou</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">(intro) <b>A7</b> <b>D7/9</b>
+
+           <b>A7</b>                         
+E a galera lá do Morro do Salgueiro e 
+   <b>D7/9</b>                  <b>A7</b>
+Vidigal, tá querendo balançar
+A torcida do Corinthians e Flamengo tá 
+  <b>D7/9</b>                   <b>A7</b>
+também, tá querendo balançar
+E o povo do Nordeste no chanchado quer o 
+ <b>D7/9</b>                  <b>A7</b>
+quê?, tá querendo balançar
+A Bahia do batuque, da mandinga e coisa e 
+ <b>D7/9</b>                 <b>A7</b>
+tal, tá querendo balançar
+                       <b>D7/9</b>                 
+Brasileiro vive na raça, o pagode é o canto 
+     <b>A7</b>
+da massa
+                          <b>D7/9</b>               
+Tá plantando até bananeira, é José, é João, é
+    <b>A7</b>
+ Ferreira
+                                        <b>D7/9</b>
+Mas ninguém me reconhece como grande cidadão
+                            <b>A7</b>
+È cidadão, é cidadão, é cidadão
+                                    <b>D7/9</b>
+Ninguém me reconhece como grande cidadão
+                           <b>A7</b>
+È cidadão, é cidadão, é cidadão
+                                     <b>D7/9</b>
+Ninguém me reconhece como grande cidadão</pre><pre class="col2">                            <b>A7</b>
+È cidadão, é cidadão, é cidadão
+                                      <b>D7/9</b>
+Ninguém me reconhece como grande cidadão
+                            <b>E7/9</b>        <b>D7/9</b> 
+É cidadão, é cidadão, é cidadããããããão   Ah   
+   <b>D7/9</b>       <b>D7/9</b>   <b>D7/9</b>
+    Ah      Eh    Kedjendjen
+<b>A7</b>                           <b>D7/9</b>          
+ Requebra de cá, requebra de lá, tá 
+        <b>A7</b>
+querendo balançar
+                         <b>D7/9</b>            
+Um olho daqui e outro acolá, tá querendo 
+     <b>A7</b>
+balançar
+                              <b>D7/9</b>     
+Na palma da mão pro povo esquentar, tá 
+              <b>A7</b>
+querendo balançar
+                              <b>D7/9</b>           
+E blá, blá, blá, e blá, blá, blá, tá querendo
+      <b>A7</b>
+ balançar
+     <b>D7/9</b>              <b>A7</b>
+Agamamou, love, love, love, jou, jou
+      <b>D7/9</b>              <b>A7</b>
+Agamamou, love, love, love, jou, jou
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-agamamou.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-agamamou.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

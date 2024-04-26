@@ -1,0 +1,161 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Último Beijo (part. Wesley Safadão)</h1><h2 class="t3"><a href="/bruno-e-marrone/">Bruno e Marrone</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Intro] <b>Dm</b>  <b>Dm/C</b>  <b>Bb</b>  <b>F9</b>  <b>Am</b>
+
+[Primeira Parte]
+
+    <b>Dm</b>
+Eu sei o que você
+
+Deve estar pensando agora
+     <b>Bb</b>
+Seu celular vibrando assim a essa hora
+    <b>F9</b>                           <b>Am</b>
+Na sua tela tá escrito ex, não atender
+
+[Pré-Refrão]
+
+                   <b>Dm</b>
+Se eu tô bebendo agora? Eu tô!
+                  <b>Bb</b>
+Se eu tô te esquecendo? Eu tô!
+                   <b>F</b>
+E foram tantas recaídas, idas e vindas
+        <b>Am</b>
+Atende aí a minha despedida
+
+[Refrão]
+
+  <b>Dm</b>              <b>Bb</b>
+Alô, meu último amor
+         <b>F</b>                      <b>Am</b>
+Só tô ligando pra dizer que acabou
+  <b>Dm</b>            <b>Bb</b>
+Alô meu último beijo
+    <b>F</b>
+Eu misturei bebida e sentimento
+    <b>Am</b>
+Eu não queria mais tô te querendo
+
+  <b>Dm</b>              <b>Bb</b>
+Alô, meu último amor
+         <b>F</b>                      <b>Am</b>
+Só tô ligando pra dizer que acabou
+  <b>Dm</b>            <b>Bb</b>
+Alô meu último beijo
+    <b>F</b>
+Eu misturei bebida e sentimento
+    <b>Am</b>
+Eu não queria mais tô te querendo
+  <b>Dm</b>
+Alô
+</pre><pre class="col2">( <b>Bb</b>  <b>F</b>  <b>Am</b> )
+
+[Pré-Refrão]
+
+                   <b>Dm</b>
+Se eu tô bebendo agora? Eu tô!
+                  <b>Bb</b>
+Se eu tô te esquecendo? Eu tô!
+                   <b>F</b>
+E foram tantas recaídas, idas e vindas
+        <b>Am</b>
+Atende aí a minha despedida
+
+[Refrão]
+
+  <b>Dm</b>              <b>Bb</b>
+Alô, meu último amor
+         <b>F</b>                      <b>Am</b>
+Só tô ligando pra dizer que acabou
+  <b>Dm</b>            <b>Bb</b>
+Alô meu último beijo
+    <b>F</b>
+Eu misturei bebida e sentimento
+    <b>Am</b>
+Eu não queria mais tô te querendo
+
+  <b>Dm</b>              <b>Bb</b>
+Alô, meu último amor
+         <b>F</b>                      <b>Am</b>
+Só tô ligando pra dizer que acabou
+  <b>Dm</b>            <b>Bb</b>
+Alô meu último beijo
+    <b>F</b>
+Eu misturei bebida e sentimento
+    <b>Am</b>
+Eu não queria mais tô te querendo
+  <b>Dm</b>
+Alô
+
+[Final] <b>Bb</b>  <b>F</b>  <b>Am</b>
+
+  <b>Dm</b>
+Alô
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bruno-e-marrone-ultimo-beijo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bruno-e-marrone-ultimo-beijo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

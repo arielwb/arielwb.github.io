@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Utopia</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G</b>  <b>Cm</b>  <b>G</b>  <b>Cm</b>  <b>D7/13</b>
+
+    <b>G7+</b>  <b>G6</b>
+Pra se dizer
+            <b>F#m5-/7</b>  <b>B7</b>       <b>Em7+</b>        <b>Em7</b>
+Que a emoção          vem depois da razão
+    <b>Bm</b>          <b>C7+</b>           <b>D7</b>
+Faz o coração morrer de paixão
+  <b>G</b>  <b>D/F#</b>    <b>Em</b>  <b>D</b>  <b>A7/9</b>           <b>Am7/9</b>  <b>D7</b>
+Renunci.i.i.iar alguém só traz a dor
+
+         <b>G7+</b>    <b>G6</b>
+Somada a solidão
+          <b>F#m5-/7</b>    <b>B7</b>
+Se tornar mais veloz
+           <b>Em7+</b>    <b>Em7</b>
+Pro sorriso apagar
+<b>Bm</b>                   <b>C7+</b>             <b>D7</b>
+ Minha mente tornar abismo de criar
+   <b>G</b>  <b>D/F#</b>      <b>Em</b>    <b>D</b>  <b>A7/9</b>        <b>Am7/9</b>  
+Amar a.a.a.amando o amor assim, sei lá
+<b>D5+/7</b>
+
+</pre><pre class="col2"><b>G7+</b>       <b>G6</b>         <b>D7</b>   <b>C#7/9</b>  <b>C7+</b>
+  Poder dizer que o amor    é       uma 
+certeza
+<b>Cm6</b>  <b>F7/9</b>  <b>Bm</b>
+Realidade enfim
+<b>F7</b>  <b>E7</b>                   <b>A7/9</b>
+      Se perde num canto calado
+               <b>Am7/9</b>  <b>D7/13</b>     <b>G7+</b>    <b>Cm</b>
+A procura de outro         por fi.i.i.im
+
+                              <b>G7+</b>        <b>Cm</b>
+É esperar por alguém que não vem, laia laia
+                     <b>G7+</b>           <b>Cm</b>
+E sentir-se como outro gen, laia laia
+                        <b>G</b>  <b>E7</b>
+Será utopia ou realidade
+            <b>A7/9</b>       <b>Am7/9</b>   <b>D5+/7</b>  <b>G7+</b>
+Querer estar com alguém que se ama   assim
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-utopia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-utopia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

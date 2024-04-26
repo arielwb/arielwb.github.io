@@ -1,0 +1,134 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Só Você</h1><h2 class="t3"><a href="/mc-rogerinho/">MC Rogerinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Primeira Parte]
+
+ <b>Dm</b>             <b>Am</b>
+Quando você vai embora
+             <b>Gm</b>
+Minha vida chora
+             <b>C</b>
+Querendo te ver, ê
+ <b>Dm</b>                <b>Am</b>
+Fica mais um pouco aqui
+             <b>Gm</b>
+Não precisa dormir
+
+Fica mais um segundo
+ <b>C</b>
+Só pra gente amar
+ <b>Dm</b>             <b>Am</b>
+Sua melhor posição
+          <b>Gm</b>
+Dá muito tesão
+
+Se envolve, nega
+<b>C</b>
+E não para
+ <b>Dm</b>            <b>Am</b>
+Hoje eu vou te encontrar
+            <b>Gm</b>
+Fazer você ficar daquele
+             <b>C</b>
+Jeito que a gente se amava
+
+[Pré-Refrão]
+
+ <b>Dm</b>           <b>Am</b>
+Vem, rebola, vem, rebola</pre><pre class="col2"> <b>Gm</b>
+Vou te machucar daquele
+ <b>C</b>
+Jeito que tu gosta
+ <b>Dm</b>           <b>Am</b>
+Vem, rebola, vem, rebola
+ <b>Gm</b>
+Vou te machucar daquele
+ <b>C</b>
+Jeito, então
+
+[Refrão]
+
+ <b>Dm</b>             <b>Am</b>         <b>Gm</b>
+Gatinha, só você sabe rebolar
+               <b>C</b>
+Fazer qualquer um se apaixonar
+   <b>Dm</b>          <b>Am</b>             <b>Gm</b>
+Gatinha, só você tem meu coração
+            <b>C</b>
+Vem me dar tesão devagar
+ <b>Dm</b>            <b>Am</b>          <b>Gm</b>
+Gatinha, só você sabe rebolar
+               <b>C</b>
+Fazer qualquer um se apaixonar
+   <b>Dm</b>          <b>Am</b>             <b>Gm</b>
+Gatinha, só você tem meu coração
+            <b>C</b>
+Vem me dar tesão devagar
+
+[Solo] <b>Dm</b>  <b>Am</b>  <b>Gm</b>  <b>C</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/mc-rogerinho-so-voce.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-mc-rogerinho-so-voce.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

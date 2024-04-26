@@ -1,0 +1,211 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ficamento</h1><h2 class="t3"><a href="/henrique-e-juliano/">Henrique e Juliano</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>Am</b>  <b>G</b>  <b>D</b>
+
+[Primeira Parte]
+
+<b>Am</b>                <b>G</b>
+   Eu tô falando sério
+                    <b>D</b>
+Eu não quero te iludir
+
+Mas eu preciso te falar uma coisa
+
+   <b>Am</b>               <b>G</b>
+Você já viu na sua vida
+                    <b>D</b>
+Um solteiro livre, desimpedido
+
+Querer beijar só uma boca
+
+[Pré-Refrão]
+
+  <b>Am</b>
+Sair pro mesmo lugar
+       <b>G</b>
+Que você é complicado
+   <b>D</b>
+É cada beijinho no rosto
+
+É cada folgado
+    <b>Am</b>
+O quê que é nós dois?
+           <b>G</b>
+Tão perguntando o tempo todo
+  <b>D</b>
+Acima do esquema
+
+E um pouco abaixo do namoro
+
+[Refrão]
+
+                    <b>Am</b>
+O nome disso é ficamento
+             <b>G</b>
+Quando tá ficando
+            <b>D</b>
+E tem sentimento
+                    <b>Am</b>
+O nome disso é ficamento
+                  <b>G</b>
+Tá ficando, tem ciúme
+            <b>D</b>
+E tem sentimento
+
+É uma sensação de tá solteiro
+       <b>Am</b>                <b>G</b>
+E namorando ao mesmo tempo
+       <b>D</b>
+É ficamento
+
+É uma sensação de tá curtindo
+         <b>Am</b>                <b>G</b>
+E tá sofrendo ao mesmo tempo
+       <b>D</b>
+É ficamento
+
+                    <b>Am</b>
+O nome disso é ficamento
+
+( <b>G</b>  <b>D</b> )
+( <b>Am</b>  <b>G</b>  <b>D</b> )
+
+[Pré-Refrão]
+
+  <b>Am</b>
+Sair pro mesmo lugar</pre><pre class="col2">       <b>G</b>
+Que você é complicado
+   <b>D</b>
+É cada beijinho no rosto
+
+É cada folgado
+    <b>Am</b>
+O quê que é nós dois?
+           <b>G</b>
+Tão perguntando o tempo todo
+  <b>D</b>
+Acima do esquema
+
+E um pouco abaixo do namoro
+
+[Refrão]
+
+                    <b>Am</b>
+O nome disso é ficamento
+             <b>G</b>
+Quando tá ficando
+            <b>D</b>
+E tem sentimento
+                    <b>Am</b>
+O nome disso é ficamento
+                  <b>G</b>
+Tá ficando, tem ciúme
+            <b>D</b>
+E tem sentimento
+
+É uma sensação de tá solteiro
+       <b>Am</b>                <b>G</b>
+E namorando ao mesmo tempo
+       <b>D</b>
+É ficamento
+
+É uma sensação de tá curtindo
+         <b>Am</b>                <b>G</b>
+E tá sofrendo ao mesmo tempo
+       <b>D</b>
+É ficamento
+
+                    <b>Am</b>
+O nome disso é ficamento
+             <b>G</b>
+Quando tá ficando
+            <b>D</b>
+E tem sentimento
+                    <b>Am</b>
+O nome disso é ficamento
+                  <b>G</b>
+Tá ficando, tem ciúme
+            <b>D</b>
+E tem sentimento
+
+É uma sensação de tá solteiro
+       <b>Am</b>                <b>G</b>
+E namorando ao mesmo tempo
+       <b>D</b>
+É ficamento
+
+É uma sensação de tá curtindo
+         <b>Am</b>                <b>G</b>
+E tá sofrendo ao mesmo tempo
+
+É ficamento
+
+                    <b>Am</b>
+O nome disso é ficamento
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/henrique-e-juliano-ficamento.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-henrique-e-juliano-ficamento.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

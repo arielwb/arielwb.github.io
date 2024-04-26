@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Marrom BomBom</h1><h2 class="t3"><a href="/os-morenos/">Os Morenos</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">Intro:  <b>G7+</b> <b>Bm7</b> <b>Am7</b> <b>D7</b> <b>G7+</b> <b>Bm7</b> <b>Am7</b> <b>D7</b>
+
+ <b>G7+</b>           <b>Bm7</b>               <b>Am7</b>
+   A gente tem tudo pra dar certo
+<b>D7</b>
+Fica comigo
+<b>G7+</b>             <b>Bm7</b>               <b>Am7</b>
+   Com você por perto tudo é tão bonito
+<b>D7</b>
+Fica comigo
+
+<b>G7+</b>            <b>Bm7</b>                   <b>Am7</b>
+   Na beira da praia de frente pro mar
+<b>D7</b>
+Fica comigo
+<b>G7+</b>           <b>Bm7</b>                <b>Am7</b>
+   Menina é gostoso demais te amar
+<b>D7/9</b>
+Eu te preciso
+
+<b>G7+</b>                        <b>Bm7</b>
+Tira a calça jeans, bota o fio dental</pre><pre class="col2">  <b>Am7</b>         <b>D7</b>
+Morena você é tão sensual
+<b>G7+</b>                        <b>Bm7</b>
+Tira a calça jeans, bota o fio dental
+  <b>Am7</b>         <b>D7</b>       <b>Eb°</b>
+Morena você é tão sensual
+
+<b>Em</b>    <b>Bm7</b>        <b>Am7</b>
+   Na areia nosso amor
+    <b>D7</b>      <b>Eb°</b>    <b>Em</b>
+No rádio o nosso som
+      <b>Bm7</b>      <b>C7+</b> <b>Bm7</b>
+Tem magia nossa cor
+<b>Am7</b>   <b>D7</b>      <b>G7+</b>
+Nossa cor marrom
+
+          <b>Bm7</b>           <b>Am7</b>
+Marrom bombom, marrom bombom
+<b>D7</b>           <b>G7+</b>
+Nossa cor marrom
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-morenos-marrom-bombom.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-morenos-marrom-bombom.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

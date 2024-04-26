@@ -1,0 +1,100 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Enlouqueci</h1><h2 class="t3"><a href="/os-originais-do-samba/">Os Originais do Samba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Cm</a> </span><pre class="col1"><b>Cm7</b>     <b>Cm7M</b>           <b>Am5+</b>
+Sinto    uma dor no meu peito
+<b>G7</b>        <b>Fm7</b>         <b>Cm7</b>  <b>F7</b>
+Só você poderia dar jeito
+
+<b>Cm7</b>     <b>Cm7M</b>           <b>Am5+</b>
+Sinto    uma dor no meu peito
+<b>G7</b>        <b>Fm7</b>         <b>Cm7</b>  <b>Am5+</b>
+Só você poderia dar jeito
+
+<b>Cm7</b>
+Enlouqueci
+<b>F7</b>                 <b>Cm7</b>
+      Desde que te vi
+<b>Cm7</b>
+Enlouqueci
+<b>F7</b>          <b>Cm7</b>
+Desde que te vi</pre><pre class="col2">     <b>Am5+</b>
+No amor
+     <b>F7</b>
+Não tem
+     <b>Am5+</b>    <b>Cm7</b>
+Como consolar
+     <b>Cm7M</b>
+Minha vida é tão vazia
+      <b>Am5+</b>           <b>G#6(9)</b>
+Estou cansado de sofrer
+      <b>G7</b>          <b>Cm7</b>   <b>F7</b>
+Não posso mais amar
+
+[Final] <b>Cm7M</b>  <b>Am5+</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-originais-do-samba-enlouqueci.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-originais-do-samba-enlouqueci.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

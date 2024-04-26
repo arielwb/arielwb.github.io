@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Conselho</h1><h2 class="t3"><a href="/almir-guineto/">Almir Guineto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">          <b>D7M(9)</b>
+Deixe de lado esse baixo astral
+         <b>F#m7</b>
+Erga a cabeça enfrente o mal
+             <b>Am6</b>        <b>D7(9)</b>          
+Que agindo assim será vital para o seu 
+<b>G7M</b>
+coração
+
+          <b>Gm7</b>       <b>C7(9)</b>        <b>C#m7</b> <b>Bm7</b>
+É que em cada experiência se aprende uma 
+ <b>B7(9)</b>
+lição
+         <b>E7(9)</b>          <b>A7(13-)</b>
+Eu já sofri por amar assim
+        <b>A7(4)</b>                <b>A7</b>
+Me dediquei mas foi tudo em vão
+
+     <b>D7M</b>       <b>F#m7</b>
+Pra que se lamentar
+          <b>Am6</b> <b>D7(9)</b>         <b>G7M</b>
+Se em sua vida pode encontrar
+        <b>Gm6</b>  <b>C7(9)</b>    <b>Gm7</b>  <b>F#m7</b>  <b>B7(9-)</b>
+Quem te ame com toda força e ardor</pre><pre class="col2">   <b>E7(9)</b>   <b>A7(4)</b>   <b>A7</b>    <b>D</b>              <b>A7</b>
+Assim sucumbirá a dor  (tem que lutar)
+
+           <b>D7M</b>
+Tem que lutar
+        <b>F#m7</b>
+Não se abater
+     <b>Am6</b>     <b>D7(9)</b>
+Só se entregar
+              <b>G7M</b>
+A quem te merecer
+
+           <b>Gm7</b>       <b>C7(9)</b>
+Não estou dando nem vendendo
+   <b>C#m7</b> <b>Bm7</b> <b>B7(9)</b>
+É como o ditado diz
+         <b>E7(9)</b>       <b>A7(13-)</b>     <b>D</b>
+O meu conselho é pra te ver feliz
+      <b>E7(9)</b>       <b>A7(13-)</b> <b>D7(9)</b> <b>Eb6(9)</b>
+O meu conselho é pra te ver feliz
+      <b>E7(9)</b>       <b>A7(13-)</b>     <b>D6(9)</b>
+O meu conselho é pra te ver feliz
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/almir-guineto-conselho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-almir-guineto-conselho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,198 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Seu Doutor</h1><h2 class="t3"><a href="/luan-santana/">Luan Santana</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C</b>  <b>F</b>  <b>C</b>  <b>F</b>
+
+Tab - Solo Intro
+
+[Primeira Parte]
+
+      <b>C</b>                       <b>F</b>
+Até quando vai me usar de desculpa
+                 <b>C</b>
+Pra aliviar seu tesão
+                   <b>F</b>
+Porque ele não da conta
+
+[Pré-Refrão]
+
+    <b>C</b>
+Pra ele eu já fui seu dentista
+     <b>F</b>
+Suas idas ao cabeleireiro
+   <b>C</b>
+O contato melhor amiga
+   <b>F</b>
+Já era eu o tempo inteiro
+   <b>Am</b>
+E aí você vai deixar ele meter
+     <b>F</b>
+Um anel no seu dedo
+
+[Refrão]
+
+Quando que cê vai falar pra ele
+            <b>C</b>
+Que cê tá zoando
+      <b>F</b>
+Que transa de olho fechado
+         <b>C</b>
+Me imaginando
+    <b>F</b>
+E quando abre os olhos
+                   <b>Am</b>
+E vê que não rolou amor
+      <b>F</b>
+Se arruma e vem pra consulta
+                 <b>C</b>
+Aqui com seu doutor
+
+Seu doutor, né?
+
+  <b>F</b>
+Quando que cê vai falar pra ele
+            <b>C</b>
+Que cê tá zoando
+      <b>F</b>
+Que transa de olho fechado
+         <b>C</b>
+Me imaginando
+    <b>F</b>
+E quando abre os olhos
+                     <b>Am</b>
+E vê que não rolou amor
+      <b>F</b>
+Se arruma e vem pra consulta
+                 <b>C</b>
+Aqui com seu doutor
+        <b>F</b>
+Seu doutor, né?</pre><pre class="col2">        <b>C</b>
+Seu doutor
+
+( <b>Am</b>  <b>G</b>  <b>F</b> )
+
+[Pré-Refrão]
+
+    <b>C</b>
+Pra ele eu já fui seu dentista
+     <b>F</b>
+Suas idas ao cabeleireiro
+   <b>C</b>
+O contato melhor amiga
+   <b>F</b>
+Já era eu o tempo inteiro
+   <b>Am</b>
+E aí você vai deixar ele meter
+     <b>F</b>
+Um anel no seu dedo
+
+[Refrão]
+
+Quando que cê vai falar pra ele
+            <b>C</b>
+Que cê tá zoando
+      <b>F</b>
+Que transa de olho fechado
+         <b>C</b>
+Me imaginando
+    <b>F</b>
+E quando abre os olhos
+                   <b>Am</b>
+E vê que não rolou amor
+      <b>F</b>
+Se arruma e vem pra consulta
+                 <b>C</b>
+Aqui com seu doutor
+
+Seu doutor, né?
+
+[Refrão Final]
+
+  <b>G</b>
+Quando que cê vai falar pra ele
+            <b>Am</b>
+Que cê tá zoando
+      <b>F</b>
+Que transa de olho fechado
+     <b>C</b>
+Me imaginando
+    <b>Em</b>
+E quando abre os olhos
+                     <b>Am</b>
+E vê que não rolou amor
+      <b>F</b>
+Se arruma e vem pra consulta
+                 <b>C</b>
+Aqui com seu doutor
+        <b>F</b>
+Seu doutor, né?
+        <b>C</b>
+Seu doutor
+
+[Final] <b>F</b>  <b>G</b>  <b>C</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/luan-santana-seu-doutor.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-luan-santana-seu-doutor.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

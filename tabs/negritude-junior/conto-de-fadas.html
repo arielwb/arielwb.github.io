@@ -1,0 +1,134 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Conto De Fadas</h1><h2 class="t3"><a href="/negritude-junior/">Negritude Junior</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G</b>  <b>C</b>  <b>D</b>  <b>Em</b>  <b>C</b>
+
+        <b>G</b>              <b>D</b>
+Não posso negar que você
+             <b>Em</b>
+É meu conto de fadas
+      <b>C</b>
+É meu mundo, é meu tudo
+        <b>Am</b>
+É meu chão, é meu céu
+      <b>D7</b>
+Minha estrada
+      <b>G</b>                  <b>D</b>
+Adoro ouvir quando diz  vem
+           <b>Em</b>
+Pra mim, me deseja
+      <b>C</b>                   <b>A7</b>
+E me olha nos olhos me abraça
+   <b>Am</b>                <b>D7</b>    <b>Bm</b>  <b>Bbm</b>  <b>Am</b>
+Me agarra, e me beija
+ <b>Am</b>             <b>D7</b>       <b>Bm</b>
+A gente sempre se entendeu
+            <b>E7</b>
+E tudo que é seu, é meu
+ <b>Am</b>                 <b>A7</b>
+É real, é gostoso demais o que
+         <b>D7</b>      <b>D7</b>  <b>D</b>  <b>C</b>  <b>Bm</b>  <b>Bbm</b>  <b>Am</b>
+Existe entre nós
+<b>Am</b>             <b>D7</b>           <b>Bm</b>
+Escute o que meu peito diz
+            <b>E7</b>
+Você é que me faz feliz
+ <b>Am</b>                    <b>A7</b>
+É o sol que aquece, é o amor</pre><pre class="col2">               <b>D7</b>
+Que eu tanto sonhava
+
+     <b>G</b>
+Não tenho mais palavras
+<b>B7</b>          <b>Em</b>
+Pra dizer te amo
+      <b>Am</b>
+E não deixo você nesse mundo
+    <b>C</b>  <b>Bm</b>   <b>Bm</b>  <b>Am</b>
+Por nada,  nada
+
+<b>D7</b>   <b>G</b>   <b>D7</b>
+ Por nada
+      <b>G</b>          <b>B7</b>
+Laiá Laiá Laiá Laiá Laiá
+  <b>Em</b>
+Te Amo
+      <b>Am</b>
+E não deixo você nesse mundo
+  <b>C</b>  <b>Bm</b>   <b>Bm</b>  <b>Am</b>
+Por nada,  nada
+  <b>G</b>          <b>B7</b>
+Laiá Laiá Laiá Laiá Laiá
+ <b>Em</b>
+Te Amo
+ <b>Am</b>
+E não deixo você nesse mundo
+<b>D7</b>   <b>G</b>
+ Por nada
+
+[Final] <b>G</b>  <b>C</b>  <b>D</b>  <b>Em</b>  <b>C</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/negritude-junior-conto-de-fadas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-negritude-junior-conto-de-fadas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

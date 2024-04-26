@@ -1,0 +1,123 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Preá Comeu</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>F</b>  <b>C7</b>  <b>F</b>  <b>C7</b>
+
+       <b>C7</b>           <b>F</b>  <b>C7</b>
+Eu queria ir lá no céu
+            <b>F</b>
+Falar com Deus
+        <b>D7</b>           <b>Gm</b>   <b>C7</b>
+Que a folha do meu feijão
+       <b>F</b>
+Preá comeu
+
+       <b>C7</b>          <b>F</b>   <b>D7</b>
+Preá comeu, preá comeu
+       <b>Gm</b>   <b>C7</b>        <b>F</b>
+Preá comeu,    preá comeu
+
+      <b>C7</b>           <b>Gm</b>
+Meu dinheiro era pouco
+               <b>F</b>
+Eu quis aproveitar
+                <b>C7</b>
+Fiz a minha plantação
+                      <b>F</b>
+Pensando colher de montão
+       <b>D7</b>         <b>Gm7</b>
+Mas fiquei desesperado
+           <b>C7</b>       <b>F</b>
+Quando a praga apareceu
+       <b>D7</b>         <b>Gm7</b>
+Comeu todo meu feijão</pre><pre class="col2">     <b>C7</b>               <b>F</b>
+Que tanto trabalho me deu
+
+       <b>C7</b>           <b>F</b>
+Preá comeu, preá comeu
+
+                <b>C7</b>
+Mediante o prejuízo
+                 <b>F</b>
+Fiz promessa e oração
+                 <b>C7</b>
+Pedi à Nossa Senhora
+                  <b>F</b>
+Que me desse proteção
+       <b>D7</b>         <b>Gm7</b>
+Mas a praga insistente
+     <b>C7</b>           <b>F</b>
+No roçado se escondeu
+      <b>D7</b>        <b>Gm7</b>
+E a minha plantação
+  <b>C7</b>           <b>F</b>
+Menino, preá comeu
+
+                   <b>C7</b>
+Preá comeu, preá comeu
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-prea-comeu.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-prea-comeu.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

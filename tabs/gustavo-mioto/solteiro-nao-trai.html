@@ -1,0 +1,183 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Solteiro Não Trai</h1><h2 class="t3"><a href="/gustavo-mioto/">Gustavo Mioto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F#</a> </span><pre class="col1">[Intro] <b>G#</b> <b>A#</b>
+
+[Primeira Parte]
+
+         <b>A#/D</b>  <b>D#9</b>
+Já é a quinta vez
+                        <b>F</b>
+Que você liga assim do nada
+                       <b>Dm7</b>
+Que dorme em cama separada
+                            <b>Gm</b>
+A quinta vez que você terminou
+               <b>D#9</b>
+Mas é a primeira vez
+                         <b>F</b>
+Que eu conheço outra pessoa
+                          <b>Dm7</b>
+Que eu to beijando outra boca
+                         <b>Gm</b>
+Depois que eu conheci você
+
+[Pré-Refrão]
+
+           <b>D#9</b>
+Então diz porque
+                               <b>F9</b>
+Tá me ligando com essa voz de raiva
+                              <b>Dm7</b>
+Se entre nós não existe mais nada
+                            <b>Gm</b>
+Foi esse fim que você escolheu
+
+[Refrão]
+
+                           <b>D#9</b>
+Para de dizer que eu te traí
+                       <b>F9</b>
+Meu coração não te pertence mais
+               <b>Dm7</b>
+Solteiro não trai
+               <b>Gm</b>
+Solteiro não trai
+
+                           <b>D#9</b>
+Para de dizer que eu te traí
+                       <b>F9</b>
+Meu coração não te pertence mais
+               <b>Dm7</b>
+Solteiro não trai
+               <b>Gm</b>
+Solteiro não trai
+
+( <b>D#9</b> <b>F</b>  <b>Dm7</b>  <b>Gm</b> )
+( <b>D#9</b> <b>F</b>  <b>Dm7</b>  <b>Gm</b> )
+
+[Primeira Parte]
+
+               <b>D#9</b>
+Já é a quinta vez</pre><pre class="col2">                        <b>F</b>
+Que você liga assim do nada
+                       <b>Dm7</b>
+Que dorme em cama separada
+                            <b>Gm</b>
+A quinta vez que você terminou
+               <b>D#9</b>
+Mas é a primeira vez
+                         <b>F</b>
+Que eu conheço outra pessoa
+                          <b>Dm7</b>
+Que eu to beijando outra boca
+                         <b>Gm</b>
+Depois que eu conheci você
+
+[Pré-Refrão]
+
+           <b>D#9</b>
+Então diz porque
+                               <b>F9</b>
+Tá me ligando com essa voz de raiva
+                              <b>Dm7</b>
+Se entre nós não existe mais nada
+                            <b>Gm</b>
+Foi esse fim que você escolheu
+
+[Refrão]
+
+                           <b>D#9</b>
+Para de dizer que eu te traí
+                       <b>F9</b>
+Meu coração não te pertence mais
+               <b>Dm7</b>
+Solteiro não trai
+               <b>Gm</b>
+Solteiro não trai
+
+                           <b>D#9</b>
+Para de dizer que eu te traí
+                       <b>F9</b>
+Meu coração não te pertence mais
+               <b>Dm7</b>
+Solteiro não trai
+               <b>Gm</b>
+Solteiro não trai
+
+                           <b>D#9</b>
+Para de dizer que eu te traí
+                       <b>F9</b>
+Meu coração não te pertence mais
+               <b>Dm7</b>
+Solteiro não trai
+               <b>Gm</b>
+Solteiro não trai
+
+[Final] <b>D#9</b> <b>F9</b>  <b>Gm</b>  <b>F9</b>  <b>Gm</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/gustavo-mioto-solteiro-nao-trai.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-gustavo-mioto-solteiro-nao-trai.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

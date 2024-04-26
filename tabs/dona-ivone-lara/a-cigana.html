@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Cigana</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>E7</b>  <b>Am</b>  <b>D7</b>  <b>G</b>
+
+<b>G</b>                    <b>D7</b>
+Você diz que está chorando
+    <b>C7</b>          <b>G</b>
+Por amor, por amor
+    <b>E7</b>           <b>Am</b>
+Oia lá! Toma cuidado
+      <b>D7</b>               <b>G</b>
+Pra cigana não te castigar
+
+<b>G</b>                    <b>D7</b>
+Você diz que está chorando
+    <b>C7</b>          <b>G</b>
+Por amor, por amor
+    <b>E7</b>           <b>Am</b>
+Oia lá! Toma cuidado
+      <b>D7</b>               <b>G</b>
+Pra cigana não te castigar
+
+   <b>E7</b>              <b>A7</b>        <b>D7</b>         <b>G</b>
+O amor é igual à flor que é delicada demais
+     <b>G6</b>         <b>G7</b>                        <b>C</b>
+Um forte vento qualquer a flor logo se desfaz
+              <b>D/C</b>                      
+Você precisa zelar se entregar com tal 
+  <b>Bm</b>
+carinho</pre><pre class="col2">    <b>E7</b>           <b>A7</b>         <b>D7</b>             
+Fazer do teu coração o aconchego melhor do 
+       <b>G</b>
+que o ninho
+
+Você diz que está chorando
+
+<b>E7</b>               <b>A7</b>       <b>D7</b>          <b>G</b>
+Você que faz o amor uma feliz brincadeira
+                    <b>G7</b>                     
+Que não sentiu o amargor do amor pela vida 
+ <b>C</b>
+inteira
+               <b>D/C</b>                       <b>Bm</b>
+Oia lá! Que a cigana quando olha pra tua mão
+        <b>E7</b>            <b>A7</b>            <b>D7</b>     
+Vai mostrar todos os enganos que habitam o 
+        <b>G</b>
+teu coração
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-a-cigana.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-a-cigana.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

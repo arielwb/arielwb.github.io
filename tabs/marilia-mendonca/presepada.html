@@ -1,0 +1,181 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Presepada</h1><h2 class="t3"><a href="/marilia-mendonca/">Marília Mendonça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C#m</a> </span><pre class="col1"><b>E</b>                      <b>F#</b>
+  Vem cá E se eu te dissesse que você tá 
+perdendo o amor da sua vida?
+<b>A</b>                             <b>Am</b>
+  Você ainda beberia mais uma?
+
+[Verse 1]
+    <b>E</b>
+Pra você é só mais um rolê, só mais uma 
+ressaca
+    <b>F#</b>
+Pra ela, outra mágoa, outro gatilho, outro 
+trauma
+  <b>A</b>
+Enquanto finaliza a saideira
+   <b>Am</b>
+Destrói o sonho de uma vida inteira
+  <b>E</b>
+Você curtindo o auge dos seus trinta e poucos
+ anos
+  <b>F#</b>
+E ela te esperando acordada, fazendo planos
+  <b>A</b>
+Você não vai ganhar nada com isso
+    <b>Am</b>
+Não tem ninguém achando isso bonito
+
+[Pre-Chorus]
+  <b>C#m</b>                <b>B</b>
+Cadê sua responsabilidade?
+   <b>A</b>                        <b>E</b>
+No seu lugar eu teria vergonha
+    <b>C#m</b>                   <b>B</b>
+Por mim, ela teria te deixado
+                      <b>A</b>                    
+Fazer o quê se ela te ama? Então aproveita 
+            <b>Am</b>
+que ela nem sonha quem você é
+
+[Chorus]
+  <b>E</b>                        <b>Bm</b>
+É hora de parar com a presepada
+                 <b>A</b>                         
+Respeita sua namorada Agarra essa mulher e 
+<b>Am</b>
+casa, agarra ela e casa
+<b>E</b>                    <b>Bm</b>
+Vive numa busca incessante
+                        <b>A</b>                  
+Pra achar alguém interessante Sem enxergar 
+              <b>Am</b>
+que ela é brilhante, que ela é rara
+  <b>E</b>                        <b>Bm</b>
+É hora de parar com a presepada
+                 <b>A</b>                         
+Respeita sua namorada Agarra essa mulher e 
+<b>Am</b>
+casa, agarra ela e casa</pre><pre class="col2"><b>E</b>                   <b>Bm</b>
+Essa sua busca incessante
+                        <b>A</b>                   
+Pra achar alguém interessante Terminaria se 
+     <b>Am</b>                       (<b>E</b>)
+enxergasse o que tem dentro de casa
+
+[Interlude]
+| <b>E</b>          | <b>F#</b>         | <b>A</b>          | <b>Am</b>        
+
+ |
+
+[Pre-Chorus]
+    <b>C#m</b>                   <b>B</b>
+Por mim, ela teria te deixado
+                      <b>A</b>                    
+Fazer o quê se ela te ama? Então aproveita 
+            <b>Am</b>
+que ela nem sonha quem você é
+
+[Chorus]
+<b>E</b>*                                      
+  Imagina ela beijando outro agora na sua 
+         <b>Bm</b>*
+frente Doeu, né?
+                 <b>A</b>                         
+Respeita sua namorada Agarra essa mulher e 
+<b>Am</b>
+casa, agarra ela e casa.
+<b>E</b>                    <b>Bm</b>
+Vive numa busca incessante Pra achar alguém
+       <b>A</b>                            
+interessante Sem enxergar que ela é 
+    <b>Am</b>
+brilhante, que ela é rara
+  <b>E</b>                        <b>Bm</b>
+É hora de parar com a presepada
+                 <b>A</b>                         
+Respeita sua namorada Agarra essa mulher e 
+<b>Am</b>
+casa, agarra ela e casa
+<b>E</b>                   <b>Bm</b>
+Essa sua busca incessante Pra achar alguém
+       <b>A</b>                        <b>Am</b>          
+interessante Terminaria se enxergasse o que 
+             (<b>E</b>)
+tem dentro de casa
+
+[Outro]
+<b>E</b>      <b>F#</b>
+  Sabe aquela pessoa fantástica, diferente
+  <b>A</b>                                  <b>Am</b>
+Especial, incomparável, acima da média?
+                  <b>E</b>*
+Tá aí do seu lado
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/marilia-mendonca-presepada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-marilia-mendonca-presepada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

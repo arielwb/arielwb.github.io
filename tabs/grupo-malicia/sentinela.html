@@ -1,0 +1,107 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sentinela</h1><h2 class="t3"><a href="/grupo-malicia/">Grupo Malícia</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1">[Intro] <b>Gm7</b> <b>Eb7M</b> <b>Am7(5-)</b>
+        <b>D7</b> <b>Gm7</b> <b>Am7(5-)</b> <b>D7</b>
+
+ <b>Gm7</b>              <b>Cm7</b>
+Na janela....do meu quarto
+     <b>Am7</b>  <b>D7(9-)</b>    <b>Gm7</b>  <b>Bb7</b>  <b>A7</b>  <b>Ab7</b>
+Uma imagem....uma dor
+  <b>Gm7</b>            <b>Cm7</b>
+Sentinela....sentimento
+    <b>Am7</b>  <b>D7(9-)</b>     <b>G7/4</b>  <b>G7</b>
+Arco-íris....incolor
+    <b>Cm</b>    <b>F7(4)</b>  <b>F7</b>   <b>Bb7M</b>
+Nossa cama.....edredom
+    <b>Am7</b>  <b>D7(9-)</b>     <b>G7/4</b>  <b>G7</b>
+Minha boca.....teu sabor
+    <b>Cm</b>    <b>F7(4)</b>  <b>F7</b>   <b>Bb7M</b>
+Na varanda.....todo céu
+      <b>Am7(5-)</b>  <b>D7</b>
+Faz meu corpo....sentir
+    <b>G7M</b>     <b>Bm7</b>                <b>Dm7</b>
+Você...ê, chegar....sorrindo pra mim</pre><pre class="col2">   <b>G7/9</b>           <b>C7M</b>
+Dizendo que voltou pra ficar
+      <b>Cm9</b>                           <b>Gm7</b>
+Me abraça, tirando sua roupa a me seduzir
+                              <b>Am7(5-)</b>
+Eu tento, não luto, não vou conseguir
+                 <b>D7</b>
+Me esquivar do amor que vai me possuir
+<b>G7M</b>        <b>Bm7</b>                 <b>Dm7</b>
+Você...ê, chegar....sorrindo pra mim
+   <b>G7/9</b>           <b>C7M</b>
+Dizendo que voltou pra ficar
+     <b>Cm9</b>                           <b>Gm7</b>
+Me abraça, tirando sua roupa a me seduzir
+                              <b>Am7(5-)</b>
+Eu tento, não luto, não vou conseguir
+                <b>D7</b>
+Me esquivar do amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-malicia-sentinela.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-malicia-sentinela.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

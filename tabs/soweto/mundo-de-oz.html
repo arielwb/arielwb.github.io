@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Mundo de Oz</h1><h2 class="t3"><a href="/soweto/">Soweto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>B7+</b>  <b>C7+</b>
+
+<b>Dm7</b>           <b>Em7</b>      <b>F7+</b>
+   Alegria brilhou no olhar
+           <b>Em7</b>
+Logo que o sol se pôs
+<b>Dm7</b>           <b>Em7</b>      <b>Dm7</b>
+   Espalhou sorriso no ar
+      <b>F7+</b>     <b>G7/13</b>    <b>C7+</b>
+Ah ah ah,     eu    te amo
+
+<b>Dm7</b>              <b>Em7</b>       <b>F7+</b>
+   Não importa o mal que viveu
+                    <b>Em7</b>
+Só que é bom que se deve lembrar
+<b>Dm7</b>               <b>Em7</b>      <b>Dm7</b>
+   Quantas vezes agente se deu
+      <b>F7+</b>     <b>G7/13</b>    <b>C7+</b>
+Ah ah ah,     eu    te amo
+
+<b>F7+</b>                      <b>Em7</b>
+Vou de carro vento que sopra
+<b>F7+</b>                     <b>Em7</b>
+Quero te ver vontade sufoca</pre><pre class="col2"><b>F7+</b>                  <b>Em7</b>             <b>Dm7</b>
+Te vejo nas vitrines da cidade em outdoor
+             <b>G7/4</b>
+Meu mundo de Oz
+
+<b>Dm7</b>                 <b>Em7</b>      <b>F7+</b>
+   Ainda trago a marca de  batom
+              <b>Em7</b>
+No radio a canção de Marley
+<b>Dm7</b>              <b>Em7</b>      <b>Dm7</b>
+   O gostinho da nossa paixão
+      <b>F7+</b>   <b>G7/13</b>   <b>C7+</b>              <b>F7+</b>
+Uh uh uh,   eu      te amo  te amo,  te amo
+
+      <b>C7+</b>                <b>Am7</b>
+Uma cidade amanheceu na América
+        <b>F7+</b>            <b>Em7</b>         <b>Dm7</b>   <b>G7</b>
+Em teus parques pairam sonhos de luar
+    <b>C7+</b>                   <b>Am7</b>
+A felicidade é um bem que você faz
+     <b>Dm7+</b>         <b>Dm7</b>          <b>F7+</b>   <b>G7/4</b>
+Se estamos juntos tudo é bom demais
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/soweto-mundo-de-oz.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-soweto-mundo-de-oz.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,140 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Coração Cachorro</h1><h2 class="t3"><a href="/avine-vinny/">Ávine Vinny</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Am</a> </span><pre class="col1"><b>C</b>  <b>Am</b>
+
+[Primeira Parte]
+ <b>C</b>
+Logo hoje que eu tava bem
+
+Sem nenhuma saudade de você
+  <b>Am</b>
+Aceitei aquele convite pra beber
+            <b>F</b>               <b>Fm</b>
+Deu tudo errado, olhei pro lado
+
+[Pré-Refrão]
+<b>Am</b>                 <b>G</b>           <b>F</b>
+Era você na outra mesa acompanhada
+      <b>Am</b>
+Esse coração cachorro
+       <b>G</b>
+Apaixonado por você
+            <b>F</b>
+Quando ele te vê faz
+
+[Refrão]
+<b>C</b>
+  Aú, late coração cachorro
+ <b>G</b>        <b>Am</b>
+Late coração
+
+Aú, late coração cachorro
+ <b>G</b>        <b>F</b>
+Late coração
+
+Aú, late coração cachorro
+                <b>C</b>
+Solta aquele uivão
+
+ <b>C</b>  <b>G</b>  <b>Am</b>  <b>G</b>  <b>F</b>
+</pre><pre class="col2">[Primeira Parte]
+ <b>C</b>
+Logo hoje que eu tava bem
+
+Sem nenhuma saudade de você
+  <b>Am</b>
+Aceitei aquele convite pra beber
+            <b>F</b>               <b>Fm</b>
+Deu tudo errado, olhei pro lado
+
+[Pré-Refrão]
+<b>Am</b>                 <b>G</b>           <b>F</b>
+Era você na outra mesa acompanhada
+      <b>Am</b>
+Esse coração cachorro
+       <b>G</b>
+Apaixonado por você
+            <b>F</b>
+Quando ele te vê faz
+
+[Refrão]
+<b>C</b>
+  Aú, late coração cachorro
+ <b>G</b>        <b>Am</b>
+Late coração
+
+Aú, late coração cachorro
+ <b>G</b>        <b>F</b>
+Late coração
+
+Aú, late coração cachorro
+                <b>C</b>
+Solta aquele uivão
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/avine-vinny-coracao-cachorro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-avine-vinny-coracao-cachorro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

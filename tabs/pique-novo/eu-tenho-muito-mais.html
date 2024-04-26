@@ -1,0 +1,122 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Eu Tenho Muito Mais</h1><h2 class="t3"><a href="/pique-novo/">Pique Novo</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">Intro: <b>C#7/4</b> | % | <b>B7/4</b> | % | <b>C#7/4</b> | % | <b>B7/4</b> | % |...
+
+ <b>E7+</b>                          <b>G#m7</b>           
+Existem muitas coisas que é melhor não ver...
+         <b>A7+</b>    <b>B7</b>
+ quando a gente ama
+    <b>E7+</b>                    <b>G#m7</b>            
+E outras que só tem coragem de dizer quando
+<b>A7+</b>          <b>B7</b>
+ está na cama
+           <b>A7+</b>           <b>B7</b>
+Eu me apaixonei... faço tudo por amor
+         <b>G#m7</b>       <b>C#m7</b>
+Mas só que nada acontece
+          <b>A7+</b>              <b>B7</b>
+Todo mundo diz... que é melhor eu esquecer
+        <b>G#m7</b>  <b>C#m7</b>   <b>F#m7</b>  <b>B7</b>
+Porque você não me merece
+      <b>E7+</b>                  <b>G#m7</b>            
+E sempre me procura quando te convém... eu 
+  <b>A7+</b>       <b>B7</b>
+não nego, aceito
+    <b>E7+</b>                  <b>G#m7</b>                
+Eu vivo me enganando que tá tudo bem, não tem
+<b>A7+</b>      <b>B7</b>
+ outro jeito
+            <b>A7+</b>         <b>B7</b>
+O que eu vou fazer se o medo de perder</pre><pre class="col2">      <b>G#m7</b>            <b>C#m7</b>
+E esse amor já me sufoca
+          <b>A7+</b>         <b>B7</b>
+Se pra eu viver só preciso do prazer
+         <b>C#m7</b>  <b>A7+</b>        <b>B7</b>
+De quando você vem... me toca
+             <b>E7+</b>                  <b>G#m7</b>
+Eu tenho muito mais guardado pra você
+                <b>A7+</b>                  <b>B7</b>
+Aqui, bem num lugar que ninguém pode ver
+            <b>G#m7</b>                    <b>C#m7</b>
+Tá no meu coração esperando uma atenção
+             <b>A7+</b>               <b>B7</b>
+Que pena que você parece não querer
+              <b>E7+</b>               <b>G#m7</b>
+Eu tenho muito mais guardado pra você
+           <b>A7+</b>                 <b>B7</b>
+E cada dia mais aumenta o meu amor
+            <b>G#m7</b>                   <b>C#m7</b>
+Tá no meu coração esperando uma atenção
+               <b>A7+</b>                 <b>B7</b>
+Que pena que você não dá nenhum valor
+ <b>C#7/4</b>               <b>C#7</b>   <b>B7/4</b> | <b>B7</b> |...     
+Não dá, não dá... não dá...               
+ <b>E7+</b>
+...E sempre me procura...
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pique-novo-eu-tenho-muito-mais.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pique-novo-eu-tenho-muito-mais.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

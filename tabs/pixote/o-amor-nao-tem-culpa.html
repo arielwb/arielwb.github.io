@@ -1,0 +1,120 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">O Amor Não Tem Culpa</h1><h2 class="t3"><a href="/pixote/">Grupo Pixote</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bb</a> </span><pre class="col1">Introdução: <b>Eb7+</b> <b>Dm7</b> <b>Cm7</b> <b>Bb7+</b> <b>Eb7+</b> <b>Dm7</b> <b>Cm7</b> 
+<b>F7/9</b>
+ <b>Bb7+</b>
+Se um dia eu te encontrar de repente
+                <b>Gm7</b>
+Não fique sem graça
+                   <b>Eb7+</b>   <b>Dm7</b>
+Da um beijo e me abraça
+          <b>Cm7</b>     <b>F7/9</b>
+Pra vida ficar melhor
+<b>Bb7+</b>
+Se houve um problema entre a gente
+                  <b>Gm7</b>
+Deixa lá que isso passa
+                       <b>Eb7+</b>   <b>Dm7</b>
+Dá um beijo e me abraça
+         <b>Cm7</b>            <b>F7/9</b>
+Que o resto eu sei de cor
+<b>Gm7</b>
+Assim é melhor não brigar
+                  <b>Dm7</b>
+Nem esquentar a cabeça
+      <b>Cm7</b>                   <b>F7/9</b>
+Que o tempo se encarrega logo
+                   <b>Bb7+</b>  <b>F/A</b>
+De resolver a questão
+  <b>Gm7</b>
+Por isso anota ai na agenda</pre><pre class="col2">                     <b>Dm7</b>
+E por favor não se esqueça
+   <b>Cm7</b>              <b>F7/9</b>
+Prefiro um carinho seu
+                   <b>Eb7+</b>
+Do que amor sem paixão
+                        <b>Dm7</b>
+Assim a gente não fica triste
+ <b>G7</b>             <b>Eb7+</b>
+E nem se machuca
+                         <b>Dm7</b>
+Assim a gente não fica triste
+      <b>G7</b>  <b>Cm7</b> <b>Dm7</b>  <b>Eb7+</b>
+E o amor não tem culpa
+                        <b>Dm7</b>
+Assim a gente não fica triste
+ <b>G7</b>             <b>Eb7+</b>
+E nem se machuca
+                        <b>Dm7</b>
+Assim a gente não fica triste
+     <b>G7</b>   <b>Cm7</b>  <b>Dm7</b>     <b>Eb7+</b> %  <b>Dm7</b>  %  <b>Cm7</b>  <b>F7/9</b> 
+E o amor não tem  ....culpa...
+(45 43)
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pixote-o-amor-nao-tem-culpa.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pixote-o-amor-nao-tem-culpa.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

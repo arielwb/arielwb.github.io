@@ -1,0 +1,94 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ousadia E Alegria</h1><h2 class="t3"><a href="/thiaguinho/">Thiaguinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>G</b>               <b>C</b>
+Chego chegando, beijo no canto da boca
+<b>G</b>             <b>C</b>
+Tumultuando, ai meu deus que coisa louca
+<b>G</b>              <b>C</b>
+Se der espaço, eu pedalo e vou pra cima
+<b>G</b>                 <b>C</b>
+Corro pro abraço, vacilo entro no clima.
+
+<b>G</b>                              <b>D</b>
+O nosso lema é Ousadia e Alegria
+<b>A7</b>                           <b>D</b>
+A nossa cara é pagode todo dia
+<b>G</b>                                       <b>D</b>
+Cheio de stilo na pressão eu vou com tudo</pre><pre class="col2"><b>A7</b>                               <b>D</b>
+Só espalhando ousadia pelo o mundo.
+
+<b>G</b>                 <b>D</b>
+Lê lêlê, lêlê, lêlê
+<b>A7</b>                <b>D</b>
+Ousadia pra vencerr
+<b>G</b>                 <b>D</b>
+Lê lêlê, lêlê, lêlê
+<b>A7</b>              <b>D</b>
+Alegria pra viver.
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/thiaguinho-ousadia-e-alegria.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-thiaguinho-ousadia-e-alegria.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

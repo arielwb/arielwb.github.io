@@ -1,0 +1,139 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Canto das Três Raças</h1><h2 class="t3"><a href="/clara-nunes/">Clara Nunes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bm</a> </span><pre class="col1">[Primeira Parte]
+
+     <b>Bm7</b>
+Ninguém ouviu
+<b>C#m7(5-)</b>   <b>F#7</b>         <b>Bm</b>     <b>G7</b>         <b>F#7</b>
+        Um soluçar de dor no canto do Brasil
+<b>Em7</b>         <b>Bm7</b>
+Um lamento triste sempre ecoou
+ <b>G7</b>
+Desde que o índio guerreiro
+             <b>F#7</b>              <b>Bm7</b>
+Foi pro cativeiro e de lá cantou
+ <b>Em</b>   <b>F#7</b>  <b>Bm</b>
+Negro entoou
+    <b>C#m7(5-)</b>   <b>F#7</b>        <b>Bm/D</b>
+Um canto de revolta pelos ares
+       <b>Em7</b>          <b>Bm/F#</b>       <b>G7</b>      <b>F#7</b>
+No Quilombo dos Palmares, onde se refugiou
+<b>Em7</b>                        <b>Bm7</b>
+   Fora a luta dos Inconfidentes
+       <b>C#m7(5-)</b>     <b>Bm/D</b>    <b>G7</b>
+Pela quebra das correntes
+          <b>F#7</b>
+Nada adiantou
+<b>Em7</b>                             <b>Bm</b>
+E de guerra em paz, de paz em guerra
+        <b>C#m7(5-)</b>   <b>Bm/D</b>                 <b>G7</b>
+Todo o povo desta terra quando pode cantar
+<b>F#7</b>          <b>Bm7</b>  <b>F#7</b>
+   Canta de dor
+
+[Refrão]
+
+<b>Bm7</b>   <b>F#7/C#</b>   <b>Bm7</b>
+Ôh ôh ôh ôh ôh ôh
+<b>F#7</b>    <b>Bm7</b>   <b>F#7/C#</b>
+Ôh ôh  ôh ôh ôh ôh ôh</pre><pre class="col2"><b>Bm7</b>   <b>F#7</b>
+Ôh ôh ôh
+<b>Bm7</b>   <b>F#7/C#</b>   <b>Bm7</b>
+Ôh ôh ôh ôh ôh ôh
+<b>F#7</b>    <b>Bm7</b>   <b>F#7/C#</b>
+Ôh ôh  ôh ôh ôh ôh ôh
+<b>Bm7</b>
+Ôh ôh ôh
+
+    <b>Em7</b>            <b>Bm7</b>         <b>F#7</b>
+E ecoa noite e dia é ensurdecedor
+<b>Em6</b>              <b>Bm7</b>  <b>Bm/D</b>    <b>G7</b>         <b>F#7</b>
+Ai,  mas que agonia   o canto do trabalhador
+<b>Em7</b>              <b>Bm7</b>        <b>C#m7(5-)</b> 
+Esse canto que devia ser um canto   de 
+     <b>Bm/D</b>  <b>Bm/A</b>
+alegria
+     <b>G7</b>            <b>F#7</b>        <b>Bm7</b>  <b>F#7</b>
+Soa apenas como um soluçar de dor
+
+[Refrão]
+
+<b>Bm7</b>   <b>F#7/C#</b>   <b>Bm7</b>
+Ôh ôh ôh ôh ôh ôh
+<b>F#7</b>   <b>Bm7</b>    <b>F#7/C#</b>
+Ôh ôh  ôh ôh ôh ôh ôh
+<b>Bm7</b>   <b>F#7</b>
+Ôh ôh ôh
+<b>Bm7</b>   <b>F#7/C#</b>   <b>Bm7</b>
+Ôh ôh ôh ôh ôh ôh
+<b>F#7</b>    <b>Bm7</b>   <b>F#7/C#</b>
+Ôh ôh  ôh ôh ôh ôh ôh
+<b>Bm7</b>
+Ôh ôh ôh
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clara-nunes-canto-das-tres-racas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clara-nunes-canto-das-tres-racas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

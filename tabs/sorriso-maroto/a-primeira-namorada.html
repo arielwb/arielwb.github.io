@@ -1,0 +1,128 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Primeira Namorada</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G9</b>  <b>Em</b>  <b>Bm7</b>
+        <b>C9</b>  <b>Am7</b>  <b>C7M</b>  <b>D7</b>
+
+[Primeira Parte]
+
+<b>G9</b>                <b>Em9</b>            <b>Em7/D</b>
+Eu não sei se vale a pena, aceitar esse teu 
+jeito
+ <b>C7M(9)</b>      <b>G/B</b>
+Todo mundo tem defeitos
+         <b>Cm7</b>           <b>D7/9</b>
+Por favor não tô querendo te julgar
+ <b>G9</b>            <b>Em9</b>             <b>Em7/D</b>
+Somos muito diferentes e por mais que a gente
+ tente
+<b>C7M(9)</b>        <b>G/B</b>        <b>Cm7</b>           
+A cabeça dá um nó, e vai ficar pior se a 
+    <b>Dsus4</b>
+gente não parar
+
+[Segunda Parte]
+
+    <b>Bm7</b>       <b>Em7</b>             <b>C9</b>
+Vai doer, mas não tem jeito fácil de terminar
+  <b>Bm7</b>        <b>Em7</b>           <b>C9</b>    <b>C9</b>   
+Vou sofrer, mas te amo e não quero te 
+<b>Cm7</b>
+machucar
+
+[Pré-Refrão]
+</pre><pre class="col2"> <b>F7</b>    <b>Bb7M</b>
+Não fique assim
+  <b>Gm</b>           <b>Eb7M</b>       <b>Cm7</b>
+Eu também to tentando ser forte e não chorar
+<b>F7</b>     <b>Bb7M</b>
+Olha pra mim
+   <b>Gm</b>                <b>Am</b>   <b>Bm7</b>   <b>C7M</b>  <b>Dsus4</b>
+Vai ficar tudo bem quando a dor passar
+
+[Refrão]
+
+         <b>G9</b>          <b>G9(4)</b>  <b>G9</b>
+Vai ser sempre a primeira namorada
+   <b>Em</b>                  <b>Em7/D</b>
+Esse amor não vai sair de mim por nada
+    <b>C7M</b>            <b>G/B</b>
+E nem pense em se afastar de mim
+         <b>Cm7</b>               <b>Dsus4</b>
+Vai ser muito ruim se eu não puder te ver
+      <b>G9</b>              <b>G9(4)</b> <b>G9</b>
+É normal que agente tenha se enganado
+     <b>Em</b>                 <b>Em7/D</b>
+Nossa história aconteceu no tempo errado
+  <b>C7M</b>            <b>G/B</b>
+Eu não sou bom em me despedir
+           <b>Cm7</b>             <b>Dsus4</b>
+Vai ser melhor eu ir pra não me arrepender
+      <b>C</b>  <b>G</b>  <b>Bb</b>  <b>C</b>  <b>A</b>
+Tente entender
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-a-primeira-namorada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-a-primeira-namorada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

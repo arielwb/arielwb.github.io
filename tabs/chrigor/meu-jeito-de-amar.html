@@ -1,0 +1,104 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Meu Jeito de Amar</h1><h2 class="t3"><a href="/chrigor/">Chrigor</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C7M</b>  <b>F7M</b>  <b>C7M</b>
+        <b>F7M</b>  <b>A#7M</b>  <b>D#7M</b>
+        <b>C#7M</b>  <b>Dm7</b>  <b>G7</b>
+
+<b>C7M</b>
+Nada que você venha falar
+<b>Am</b>                 <b>C7</b>
+Vai curar o mal me causou
+<b>F7M</b>                   <b>Em7</b>
+ Nada que você possa fazer
+<b>Dm7</b>                  <b>G7</b>
+Vai aliviar a minha dor
+ <b>C7M</b>
+Com certeza eu vou te perdoar
+<b>Am</b>                 <b>C7</b>
+Pois eu gosto muito de você
+<b>F7M</b>                       <b>Em7</b>
+Tudo vai voltar pro seu lugar
+<b>Dm7</b>                       <b>G7</b>
+Quando resolver me entender</pre><pre class="col2">        <b>F7M</b>               <b>Em7</b>
+O meu jeito de amar é assim
+     <b>F7M</b>                   <b>Em7</b>
+Eu não sou de deixar perceber
+       <b>F7M</b>                 <b>Em7</b>
+Eu não sou de ligar, de bajular
+ <b>Dm7</b>                   <b>Gm7</b>  <b>C7</b>
+ O que é que eu posso fazer?
+  <b>F7M</b>                       <b>Em7</b>
+Eu preciso de um tempo pra mim
+      <b>F7M</b>            <b>Em7</b>       <b>F7M</b>
+Então pára de me sufocar, eu aposto em você
+<b>Em</b>              <b>Dm</b>               <b>G7</b>
+Tem nada haver, basta querer confiar
+
+[Final] <b>C7M</b>  <b>F7M</b>  <b>A#7M</b>  <b>D#7M</b>  <b>D7M</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/chrigor-meu-jeito-de-amar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-chrigor-meu-jeito-de-amar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

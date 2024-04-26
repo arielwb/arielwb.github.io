@@ -1,0 +1,138 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Figurinha</h1><h2 class="t3"><a href="/douglas-e-vinicius/">Douglas e Vinicius</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Em</a> </span><pre class="col1"><b>C</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Será que da pra consertar aquele erro que eu 
+&nbsp; &nbsp; &nbsp; &nbsp;<b>D</b>&nbsp; &nbsp; &nbsp; 
+cometi
+&nbsp; &nbsp; &nbsp;<b>Em</b>
+
+<b>C</b>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+Desculpe se eu te fiz chorar, minha
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>D</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<b>Em</b>
+intenção é só te ver sorrir
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>C</b>&nbsp; 
+Eu preciso sofrer pra parar de ser besta
+&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+&nbsp; &nbsp;<b>D</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+De querer te ver só de segunda a sexta
+&nbsp;&nbsp;<b>Em</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Pra no final de semana, eu te dar perdido e
+&nbsp; &nbsp;<b>C</b>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>D</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+os contatinho me chamar
+&nbsp;&nbsp;&nbsp;<b>Em</b>
+
+
+[Verse]
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<b>C</b>
+Mas o idiota aqui,</pre><pre class="col2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Nunca ta contente com o que tem na mão
+<b>D</b>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 
+
+&nbsp;<b>Em</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+Mas quando te vi partir,
+&nbsp; &nbsp;<b>C</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+Levou um pedaço do meu coração
+<b>D</b>&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <b>Em</b>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>C</b>&nbsp; 
+Ficar sem você minha figurinha,
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<b>D</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;<b>Bm</b>&nbsp; 
+Que completa o álbum da minha vida
+&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;<b>Em</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+É ganhar na loteria,
+<b>C</b>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+Ficar milionário e perder tudo no outro dia
+&nbsp;<b>D</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+&nbsp; &nbsp;    &nbsp;<b>Em</b>
+
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/douglas-e-vinicius-figurinha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-douglas-e-vinicius-figurinha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

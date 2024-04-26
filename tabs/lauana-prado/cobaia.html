@@ -1,0 +1,179 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Cobaia (part. Maiara e Maraisa)</h1><h2 class="t3"><a href="/lauana-prado/">Lauana Prado</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Fm</a> </span><pre class="col1">[Intro] <b>Fm</b>  <b>C#9</b> <b>D#</b>
+        <b>Fm</b>  <b>C#9</b> <b>D#</b>
+
+[Primeira Parte]
+
+<b>G#</b>
+ Você tem
+                <b>Fm</b>
+Um emprego pra mim
+Olha ai
+                 <b>D#</b>
+Qualquer coisa que
+     <b>C#</b>          <b>G#</b>         <b>D#</b>
+Que me mantenha perto de você
+Posso fazer
+
+<b>G#</b>
+ Cafuné no cabelo
+                       <b>Fm</b>
+Vigio o seu sono, sei lá
+Até provo o seu beijo
+                                <b>D#</b>
+Pra ver se a barba vai me arranhar
+    <b>C#9</b>          <b>G#</b>           <b>D#</b>
+Eu posso ser fiscal do seu olhar
+Nem precisa pagar
+
+[Pré-Refrão]
+
+<b>A#m</b>             <b>C#</b>
+  Pego sua toalha
+                         <b>G#</b>   <b>D#</b>
+Pra quando você sair do banho
+<b>A#m</b>                 <b>C#</b>
+  Posso ser a cobaia
+                             <b>G#</b>    <b>D#</b>
+Pra quando você fizer seus planos
+
+[Refrão]
+
+                       <b>Fm</b>
+Quando for beijar alguém
+ <b>C#9</b>                 <b>D#</b>
+Testa esse beijo em mim
+                   <b>Fm</b>
+Antes de amar meu bem
+ <b>C#9</b>                <b>D#</b>
+Testa esse amor em mim
+                      <b>Fm</b>
+Quando for beijar alguém
+ <b>C#9</b>                 <b>D#</b>
+Testa esse beijo em mim
+                   <b>Fm</b>
+Antes de amar meu bem
+ <b>C#9</b>                <b>D#</b>
+Testa esse amor em mim
+</pre><pre class="col2">                            <b>C#</b>
+Me prenda, me abraça e não saia
+  <b>G#</b>                      <b>D#</b>
+Aceito esse emprego de cobaia
+                            <b>C#</b>
+Me prenda, me abraça e não saia
+  <b>G#</b>                      <b>D#</b>
+Aceito esse emprego de cobaia
+
+[Solo] <b>Fm</b>  <b>C#9</b> <b>D#</b>
+       <b>Fm</b>  <b>C#9</b> <b>D#</b>
+
+[Pré-Refrão]
+
+<b>A#m</b>             <b>C#</b>
+  Pego sua toalha
+                         <b>G#</b>   <b>D#</b>
+Pra quando você sair do banho
+<b>A#m</b>                 <b>C#</b>
+  Posso ser a cobaia
+                             <b>G#</b>    <b>D#</b>
+Pra quando você fizer seus planos
+
+[Refrão]
+
+                       <b>Fm</b>
+Quando for beijar alguém
+ <b>C#</b>                  <b>D#</b>
+Testa esse beijo em mim
+                   <b>Fm</b>
+Antes de amar meu bem
+ <b>C#</b>                 <b>D#</b>
+Testa esse amor em mim
+                      <b>Fm</b>
+Quando for beijar alguém
+ <b>C#</b>                  <b>D#</b>
+Testa esse beijo em mim
+                   <b>Fm</b>
+Antes de amar meu bem
+ <b>C#</b>                 <b>D#</b>
+Testa esse amor em mim
+
+                            <b>C#</b>
+Me prenda, me abraça e não saia
+  <b>G#</b>                      <b>D#</b>
+Aceito esse emprego de cobaia
+                            <b>C#</b>
+Me prenda, me abraça e não saia
+  <b>G#</b>                      <b>D#</b>
+Aceito esse emprego de cobaia
+
+[Final] <b>Fm</b>  <b>C#9</b> <b>D#</b> <b>Fm</b>
+
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/lauana-prado-cobaia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-lauana-prado-cobaia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

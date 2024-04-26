@@ -1,0 +1,200 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sigilo</h1><h2 class="t3"><a href="/guilherme-e-benuto/">Guilherme e Benuto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1">[Intro] <b>Cm7</b>  <b>Eb</b>  <b>Gm</b>  <b>F</b>
+        <b>Cm7</b>  <b>Eb</b>  <b>Gm</b>  <b>F</b>
+        <b>Cm7</b>  <b>Eb</b>  <b>Gm</b>  <b>F</b>
+
+[Primeira Parte]
+
+              <b>Cm7</b>
+Roubou meu olhar
+           <b>Eb</b>
+Minha atenção
+                   <b>Gm</b>
+Depois de um esbarrão
+                   <b>F</b>
+Uma desculpa, foi nada não
+
+          <b>Cm7</b>
+Virou conversa
+           <b>Eb</b>
+Esse esbarrão
+                <b>Gm</b>
+Nós dois nessa festa
+                              <b>F</b>
+Minha boca querendo borrar o seu batom
+
+[Pré-Refrão]
+
+         <b>Cm7</b>
+A minha mente mandou avisar
+       <b>Eb</b>
+Que se o seu beijo virar vicio
+         <b>Gm</b>
+Vai ser foda
+                 <b>F</b>               <b>D7</b>
+Vou querer todo dia uma dose disso
+
+[Refrão]
+
+              <b>Gm</b>
+Então foge comigo
+                 <b>F</b>
+Tô querendo seu corpo
+               <b>Cm7</b>
+Pode ser no sigilo
+               <b>D7</b>
+Vamos meter o louco
+
+              <b>Gm</b>
+E sair dessa festa
+                <b>F</b>
+Já que o tempo voa
+                 <b>Cm7</b>
+Fazer amor sem pressa
+               <b>D7</b>
+E acordar sem roupa
+
+              <b>Gm</b>
+Então foge comigo
+                 <b>F</b>
+Tô querendo seu corpo
+               <b>Cm7</b>
+Pode ser no sigilo
+               <b>D7</b>
+Vamos meter o louco
+
+        <b>Gm</b>
+E sair dessa festa
+                <b>F</b>
+Já que o tempo voa</pre><pre class="col2">                 <b>Cm7</b>
+Fazer amor sem pressa
+               <b>D7</b>
+E acordar sem roupa
+
+              <b>Cm7</b>
+Então foge comigo
+
+[Solo] <b>Eb</b>  <b>Gm</b>  <b>F</b>
+       <b>Cm7</b>  <b>Eb</b>  <b>Gm</b>  <b>F</b>
+
+[Pré-Refrão]
+
+         <b>Cm7</b>
+A minha mente mandou avisar
+       <b>Eb</b>
+Que se o seu beijo virar vicio
+         <b>Gm</b>
+Vai ser foda
+                 <b>F</b>               <b>D7</b>
+Vou querer todo dia uma dose disso
+
+[Refrão]
+
+              <b>Gm</b>
+Então foge comigo
+                 <b>F</b>
+Tô querendo seu corpo
+               <b>Cm7</b>
+Pode ser no sigilo
+               <b>D7</b>
+Vamos meter o louco
+
+              <b>Gm</b>
+E sair dessa festa
+                <b>F</b>
+Já que o tempo voa
+                 <b>Cm7</b>
+Fazer amor sem pressa
+               <b>D7</b>
+E acordar sem roupa
+
+              <b>Gm</b>
+Então foge comigo
+                 <b>F</b>
+Tô querendo seu corpo
+               <b>Cm7</b>
+Pode ser no sigilo
+               <b>D7</b>
+Vamos meter o louco
+
+        <b>Gm</b>
+E sair dessa festa
+                <b>F</b>
+Já que o tempo voa
+                 <b>Cm7</b>
+Fazer amor sem pressa
+               <b>D7</b>
+E acordar sem roupa
+
+         <b>Gm</b>
+Então foge comigo
+
+[Final] <b>F</b>  <b>Cm7</b>  <b>D7</b>  <b>Gm</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/guilherme-e-benuto-sigilo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-guilherme-e-benuto-sigilo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

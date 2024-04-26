@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Pra Te Conquistar</h1><h2 class="t3"><a href="/pique-novo/">Pique Novo</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>A7+</b>                               <b>F#m7</b>
+       Já não sei mais o que faço
+<b>A7+</b>                               <b>F#m7</b>
+        Já tentei de tudo um pouco
+<b>Em7</b>                 <b>A7</b>             <b>D</b>
+         Mandei flores, telegramas
+                <b>A</b>                   <b>F#m</b>    <b>A</b> 
+Feito um louco fui te procurar
+   <b>Bm7</b>
+
+            <b>E7</b>                 <b>A</b>   <b>A7</b>
+Pra poder te conquistar
+                <b>F#m</b>                   <b>A</b>      
+Mandei recado, em forma de canção
+   <b>A7</b>
+
+           <b>F#m</b>                   <b>Em7</b>         
+Apaixonado, te entreguei meu coração
+     <b>A7</b>
+
+<b>D</b>  <b>E/D</b>     <b>C#m7</b>  <b>F#m</b>              <b>Bm7</b>   
+Não           , não        , não me deixe 
+                  <b>E7</b>              <b>A</b>          
+viver condenado à solidão, solidão
+  <b>A7</b>
+</pre><pre class="col2"><b>D</b>  <b>E/D</b>     <b>C#m7</b>  <b>F#m</b>                <b>Bm7</b>    
+Não           , não          , não me deixe
+                 <b>E7</b>              <b>A</b>           
+ viver condenado à solidão, porque
+ <b>A7</b>
+
+             <b>F#m</b>        <b>C#m7</b>      <b>F#m</b>      
+Porque você não vem, pra gente conversar
+<b>C#m7</b>
+
+              <b>Bm7</b>     <b>C#m7</b>
+Me dê uma chance vem
+           <b>Em7</b>      <b>A7</b>
+Me deixa te mostrar
+              <b>F#m</b>        <b>C#m7</b>    <b>F#m</b>      
+Como é gostoso amar, eu quero ser teu bem
+<b>C#m7</b>
+
+                     <b>Bm7</b>     <b>C#m7</b>
+Se eu não te conquistar
+                <b>F#m</b> <b>C#m7</b> <b>Bm7</b> <b>E7</b> <b>A</b>
+Não quero mais amar ninguém
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pique-novo-pra-te-conquistar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pique-novo-pra-te-conquistar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

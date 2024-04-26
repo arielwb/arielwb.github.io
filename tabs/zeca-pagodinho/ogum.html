@@ -1,0 +1,123 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ogum</h1><h2 class="t3"><a href="/zeca-pagodinho/">Zeca Pagodinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>A7M</b>  <b>D7M</b>  <b>B7(9)</b>  <b>Bm7</b>
+        <b>A7M</b>  <b>D7M</b>  <b>B7(9)</b>  <b>Bm7</b>
+
+<b>A7M</b> <b>F#m7</b>                 <b>Bm7M</b>            
+Eu sou descendente zulu, sou um soldado de 
+   <b>Bm7</b>
+ogum
+                     <b>E7(9)</b>
+Devoto nessa imensa legião de jorge
+<b>A7M</b> <b>F#m7</b>              <b>Bm7M</b>             <b>Bm7</b>
+Eu sincretizado na fé sou carregado de axé
+                     <b>E7(9)</b>
+E protegido por um cavaleiro nobre
+
+<b>Em7</b>        <b>A7(9)</b>                   <b>Eb7(5-)</b>
+Se vou na igreja festejar meu protetor
+                                  <b>Ebm7(5-)</b>
+E agradecer por eu ser mais um vencedor
+    <b>Dm6</b>
+Nas lutas nas batalhas
+<b>Em7</b>         <b>A7(9)</b>                     <b>Eb7(5-)</b>
+Se vou no terreiro pra bater o meu tambor
+                              <b>Ebm7(5-)</b>
+Bato cabeça firmo ponto sim senhor
+    <b>Dm6</b>       <b>D/E</b>
+Eu canto pra ogum
+
+ <b>Bm7</b>
+Ogum</pre><pre class="col2">Um guerreiro valente que cuida da gente que 
+sofre demais
+<b>E7(9)</b>
+Ogum
+ <b>A7M</b>
+Ele vem de aruanda ele vence demanda de gente
+ que faz
+ <b>Bm7</b>
+Ogum
+Cavaleiro do céu escudeiro fiel mensageiro da
+      <b>A7M</b>
+ paz, ogum
+ <b>Bm7</b>
+Ogum
+Ele nunca balança ele pega na lança ele mata 
+o dragão
+ <b>A7M</b>
+Ogum
+É quem da confiança pra uma criança virar um 
+leão
+ <b>Bm7</b>
+Ogum
+É um mar de esperança que traz abonança pro 
+meu coração
+ <b>A7M</b>
+Ogum
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/zeca-pagodinho-ogum.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-zeca-pagodinho-ogum.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,111 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Na Linha do Mar</h1><h2 class="t3"><a href="/clementina-de-jesus/">Clementina de Jesus</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">Intro: <b>A7+</b>  <b>A#dim</b>  <b>E7</b>  <b>C#7</b>  <b>F#m7</b>  <b>B7</b>  <b>E</b> <b>E7</b>
+
+<b>B7</b>         <b>E</b>
+  Galo cantou!
+
+  Galo cantou às quatro
+         <b>A6</b>
+  Da manhã
+
+  Céu azulou na linha
+          <b>E</b>    <b>E7</b>
+  Do mar
+
+<b>A7+</b>        <b>A#dim</b>
+  Vou me embora desse
+<b>E7</b>              <b>C#7</b>
+  Mundo de ilusão
+                  <b>F#m</b>
+  Quem me vê sorrir,
+     <b>B7</b>
+  Não há de me ver
+      E    E7 (em todas menos na última)  BIS
+  Chorar
+</pre><pre class="col2"><b>E</b>
+  Flechas sorrateiras,
+
+  Cheias de veneno
+             <b>E7</b>
+  Querem atingir o meu
+       <b>A6</b>
+  Coração
+                   <b>A#dim</b>
+  Mas o meu amor sempre
+         <b>E7</b>
+  Tão sereno
+<b>C#7</b>          <b>F#m7</b>
+  Serve de escudo pra
+      <b>B7</b>           <b>E</b>
+  Qualquer ingratidão
+
+  Lá laiá laiá laiá laiá laiá
+  Lá lá lá laiá
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clementina-de-jesus-na-linha-do-mar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clementina-de-jesus-na-linha-do-mar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

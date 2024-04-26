@@ -1,0 +1,158 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Recairei</h1><h2 class="t3"><a href="/os-baroes-da-pisadinha/">Os Barões da Pisadinha</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bb</a> </span><pre class="col1">[Intro] <b>Eb</b>  <b>Bb</b>  <b>F</b>
+
+[Primeira Parte]
+
+<b>Eb</b>                       <b>Bb</b>
+   Já faz uma semana que eu to limpo de você!
+<b>F</b>
+  Iê iê, iê iê ê
+<b>Eb</b>                      <b>Bb</b>           
+   E de olhar os seus storys não sinto 
+        <b>F</b>
+saudade!
+
+Zero curtida,zero vontade
+       <b>Eb</b>
+De te ver!
+       <b>Bb</b>                <b>F</b>          <b>Gm</b>
+De beijar sua boca e dormir de conchinha
+               <b>Eb</b>      <b>Bb</b>
+Sem roupa e fazer: um love
+            <b>F</b>
+Love com você!
+
+[Refrão]
+
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+
+( <b>Cm</b>  <b>Eb</b>  <b>Bb</b>  <b>F</b> )
+
+[Primeira Parte]
+
+<b>Eb</b>                       <b>Bb</b>
+   Já faz uma semana que eu to limpo de você!
+<b>F</b>
+  Iê iê, iê iê ê</pre><pre class="col2"><b>Eb</b>                      <b>Bb</b>           
+   E de olhar os seus storys não sinto 
+        <b>F</b>
+saudade!
+
+Zero curtida,zero vontade
+       <b>Eb</b>
+De te ver!
+       <b>Bb</b>                <b>F</b>          <b>Gm</b>
+De beijar sua boca e dormir de conchinha
+               <b>Eb</b>      <b>Bb</b>
+Sem roupa e fazer: um love
+            <b>F</b>
+Love com você!
+
+[Refrão]
+
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+              <b>Cm</b>                  <b>Eb</b>
+Eu já te superei! Certeza eu superei!
+                  <b>Bb</b>
+Mas não manda mensagem outra vez!
+            <b>F</b>
+Senão recairei!
+
+[Final] <b>Cm</b>  <b>Eb</b>  <b>Bb</b>  <b>F</b>  <b>Bb</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-baroes-da-pisadinha-recairei.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-baroes-da-pisadinha-recairei.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

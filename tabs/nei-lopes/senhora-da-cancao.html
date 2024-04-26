@@ -1,0 +1,121 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Senhora da Canção</h1><h2 class="t3"><a href="/nei-lopes/">Nei Lopes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Bb7M</b>  <b>Bbm7</b>  <b>Am7</b>  <b>D7(9-)</b>  <b>Gm7</b>  <b>C7(9)</b>  
+
+<b>F7M</b>
+
+<b>F7M</b>             <b>Gm7</b>             <b>F7M</b>  
+ Lá vou eu que bom subindo outra vez
+<b>Gm9(11)</b>  <b>Gm11</b>
+
+<b>F7M</b>                <b>F#º</b>             <b>Gm7</b>  
+ O domingo está tinindo e assim eu sei
+<b>D7(9-)</b>
+
+  <b>Gm7</b>     <b>Gm7M/F#</b>            <b>D11-/Bb</b>
+Que os canários, tangaras e os rouxinóis
+<b>Em7(5-)</b>          <b>Gm7</b>
+ Já afinaram os gogos
+        <b>C7(9)</b>       <b>Am7</b>  <b>D7(9-)</b> <b>G7(13)</b>  <b>C7(9)</b>
+Só falta minha voz somando
+<b>F7M</b>             <b>Gm7</b>             <b>F7M</b>
+ Lá vou eu pra onde o samba manda ver
+
+<b>Cm7</b>          <b>F7(13)</b>         <b>Bb7M</b>
+Sem confeito bem do jeito que deus fez
+        <b>Bbm7</b>
+Ouvir reais melodias
+<b>Am7</b>             <b>D7(9-)</b>
+ Imperiais harmonias
+<b>Gm7</b>             <b>C7(9)</b>   <b>Am7(5-)</b>  <b>F7(13)</b>
+ Dissonâncias não têm vez</pre><pre class="col2"><b>Bm7(5-)</b>            <b>Bbm7</b>
+Beber de um gole a poesia
+<b>Am7</b>                  <b>D7(9-)</b> <b>Am6</b>
+ Me embriagar de alegria
+<b>Gm7</b>          <b>C7(9)</b>    <b>F7M</b>  <b>D7(9-)</b>
+ Na mais pura lucidez
+      <b>Gm7</b>   <b>D7(9-)</b>     <b>Gm7</b>  <b>C7(9)</b>
+Ivone lara ra ra ra ra ra
+<b>F7M</b>     <b>Gm7</b>                <b>F/A</b>  <b>F7M</b>
+Pérola rara no compor e no cantar
+<b>Cm7</b>          <b>F7(13)</b>         <b>Bb7M</b>
+ Senhora da canção doce instrumento
+<b>Dm7</b>             <b>G7(13)</b>     <b>Gm7</b>  <b>D7(9-)</b>
+ Pastora da emoção, do sentimento
+      <b>Gm7</b>   <b>D7(9-)</b>  <b>Gm7</b>  <b>C7(9)</b>
+Ivone lara ra ra Ra
+   <b>F7M</b>         <b>Gm7</b>          <b>F/A</b>  <b>F7M</b>
+Tudo se aclara sobre a luz do teu luar
+<b>Cm7</b>          <b>F7(13)</b>
+ Lavando a nossa alma
+    <b>Bb7M</b>                <b>Bbm7</b>
+Com a mais fina inspiração
+<b>Am7</b>    <b>D7(9)</b>    <b>Gm7</b>     <b>C7(9)</b>   <b>F7M</b>  <b>D7(9-)</b>
+Meu samba Te pega na palma e beija tua mão
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/nei-lopes-senhora-da-cancao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-nei-lopes-senhora-da-cancao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

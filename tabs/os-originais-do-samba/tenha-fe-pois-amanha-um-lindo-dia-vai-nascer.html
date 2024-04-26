@@ -1,0 +1,119 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tenha Fé Pois Amanhã Um Lindo Dia Vai Nascer</h1><h2 class="t3"><a href="/os-originais-do-samba/">Os Originais do Samba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro 16x] <b>Gm</b>
+
+            <b>Gm</b>
+Nunca tenha medo do seu inimigo
+Quando não é você que começa a brigar
+Também nunca ande de cabeça baixa e bem 
+danado
+         <b>Cm</b>              <b>D7(9)</b>    <b>Gm</b>
+Pois nem tudo que cai do céu é sagrado.  (2x)
+
+                   <b>Gm</b>
+Maré que enche e vaza, deixa a praia 
+descoberta
+Uma onda vai, outra onda vem
+          <b>Cm</b>               <b>D7(9)</b>         <b>Gm</b>
+Não fique triste que seu amor pode ficar bem.
+ (2x)
+
+      <b>Cm</b>               <b>Bb</b>              <b>Am</b>  
+Aí então você vai me dizer se tenho razão, 
+       <b>Gm</b>
+sim ou não
+       <b>Cm</b>               <b>Bb</b>                 <b>Am</b>
+Pois é por experiência própria que eu perdoei
+            <b>Gm</b>
+ o meu coração
+</pre><pre class="col2">           <b>Gm</b>
+Infeliz no jogo, feliz no amor
+Saúde e felicidade, pra dar e vender
+Se a reza é forte, você vai ver
+        <b>Cm</b>          <b>D7(9)</b>      <b>Gm</b>
+Que amanhã um lindo dia vai nascer (2x)
+
+      <b>Cm</b>               <b>Bb</b>             <b>Am</b>   
+Aí então você vai me dizer se tenho razão, 
+       <b>Gm</b>
+sim ou não
+       <b>Cm</b>               <b>Bb</b>               <b>Am</b>  
+Pois é por experiência própria que eu perdoei
+           <b>Gm</b>
+ o meu coração
+
+           <b>Gm</b>
+Infeliz no jogo, feliz no amor
+Saúde e felicidade, pra dar e vender
+Se a reza é forte, você vai ver
+        <b>Cm</b>          <b>D7(9)</b>      <b>Gm</b>
+Que amanhã um lindo dia vai nascer (2x)
+
+Pa PA PA PA PA, PA PA PA PA
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-originais-do-samba-tenha-fe-pois-amanha-um-lindo-dia-vai-nascer.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-originais-do-samba-tenha-fe-pois-amanha-um-lindo-dia-vai-nascer.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

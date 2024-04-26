@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import fs, { existsSync, mkdirSync } from "fs";
+import { songList } from "./song-list.js";
 
 const builtTabPage = (tab, artist, song) => {
   return `
@@ -77,16 +78,21 @@ const downloadTab = async (artist, song, page) => {
   const outputPath = `tabs/${artist}`;
   const fileName = `${outputPath}/${song}.html`;
 
-  // if (existsSync(fileName)) return;
+  if (existsSync(fileName)) return;
 
   const url = `https://www.cifraclub.com.br/${artist}/${song}/#instrument=cavaco&tabs=false&columns=true`;
   await page.goto(url);
 
-  await page.waitForSelector("#side-exibir");
-  await page.click("#side-exibir");
-  const twoCol = 'label[for="exib1"]';
-  await page.waitForSelector(twoCol);
-  await page.click(twoCol);
+  try {
+    await page.waitForSelector("#side-exibir", { timeout: 500 });
+    await page.click("#side-exibir");
+    const twoCol = 'label[for="exib1"]';
+    await page.waitForSelector(twoCol);
+    await page.click(twoCol);
+  } catch (error) {
+    console.log(`failed ${url}`);
+    return;
+  }
 
   let content = "";
 
@@ -162,53 +168,76 @@ const buildIndex = (tabList) => {
   fs.writeFileSync(`index.html`, index);
 };
 
-const tabs = [
-  {
-    artist: "molejo",
-    songs: [
-      "cilada",
-      "danca-da-vassoura",
-      "brincadeira-de-crianca",
-      "paparico",
-    ],
-  },
-  {
-    artist: "so-pra-contrariar",
-    songs: [
-      "essa-tal-liberdade",
-      "a-barata",
-      "que-se-chama-amor",
-      "mineirinho",
-      "sai-da-minha-aba",
-    ],
-  },
-  {
-    artist: "zeca-pagodinho",
-    songs: ["deixa-vida-me-levar", "vai-vadiar", "maneiras", "vacilao"],
-  },
-];
+// const tabs2 = [
+//   {
+//     artist: "molejo",
+//     songs: [
+//       "cilada",
+//       "danca-da-vassoura",
+//       "brincadeira-de-crianca",
+//       "paparico",
+//     ],
+//   },
+//   {
+//     artist: "so-pra-contrariar",
+//     songs: [
+//       "essa-tal-liberdade",
+//       "a-barata",
+//       "que-se-chama-amor",
+//       "mineirinho",
+//       "sai-da-minha-aba",
+//     ],
+//   },
+//   {
+//     artist: "zeca-pagodinho",
+//     songs: ["deixa-vida-me-levar", "vai-vadiar", "maneiras", "vacilao"],
+//   },
+// ];
 
-(async () => {
-  // Launch the browser and open a new blank page
-  const browser = await puppeteer.launch({
-    headless: true,
-    executablePath:
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-    args: [
-      "--user-data-dir=/Users/arielflor/Library/Application Support/Google/Chrome/Default",
-    ],
-  });
-  const page = await browser.newPage();
+// const tabs = songList.map(song => {
+//   const artist = replaceAccents(song.artist)
+//   const songs = song.songs.map(replaceAccents)
+//   return {
+//     artist, songs
+//   }
+// })
 
-  await page.setViewport({ width: 1080, height: 1024 });
+// console.log(tabs)
 
-  for await (const tab of tabs) {
-    for await (const song of tab.songs) {
-      await downloadTab(tab.artist, song, page);
-    }
-  }
+// (async () => {
+//   // Launch the browser and open a new blank page
+//   const browser = await puppeteer.launch({
+//     headless: true,
+//     executablePath:
+//       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+//     args: [
+//       "--user-data-dir=/Users/arielflor/Library/Application Support/Google/Chrome/Default",
+//     ],
+//   });
+//   const page = await browser.newPage();
 
-  buildIndex(tabs);
+//   await page.setViewport({ width: 1080, height: 1024 });
 
-  await browser.close();
-})();
+//   // page.on("response", (response) => {
+//   //   const status = response.status();
+//   //   if (status >= 300 && status <= 399) {
+//   //     console.log(
+//   //       "Redirect from",
+//   //       response.url(),
+//   //       "to",
+//   //       response.headers()["location"]
+//   //     );
+//   //   }
+//   // });
+
+//   for await (const tab of songList) {
+//     for await (const song of tab.songs) {
+//       await downloadTab(tab.artist, song, page);
+//     }
+//   }
+
+  
+//   await browser.close();
+// })();
+
+buildIndex(songList);

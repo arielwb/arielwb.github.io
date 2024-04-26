@@ -1,0 +1,103 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Juízo Final</h1><h2 class="t3"><a href="/nelson-cavaquinho/">Nelson Cavaquinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1">   <b>Gm</b>      <b>Ab7</b>                        <b>D7</b>
+O sol..........há de brilhar mais uma vez
+   <b>Cm</b>      <b>Eb</b>                       <b>D7</b>
+A luz..........há de chegar aos corações
+   <b>Gm</b>   <b>Ab7</b>                   <b>D7</b>
+Do mal........será queimada a semente
+   <b>Cm</b>      <b>D7</b>                 <b>Gm</b>    <b>G7</b>
+O amor........será eterno novamente
+
+<b>Cm</b>          <b>D7</b>        <b>Eb7</b>               <b>D7</b>
+É o juízo final, a história do bem e do mal
+<b>Cm</b>                  <b>D7</b>        <b>Eb7</b>
+Quero ter olhos pra ver, a maldade 
+          <b>D7</b>
+desaparecer
+
+<b>Cm</b>          <b>D7</b>        <b>Eb7</b>               <b>D7</b>
+É o juízo final, a história do bem e do mal
+<b>Cm</b>                  <b>D7</b>        <b>Eb7</b>
+Quero ter olhos pra ver, a maldade 
+          <b>D7</b>
+desaparecer
+</pre><pre class="col2">   <b>Gm</b>      <b>Ab7</b>                        <b>D7</b>
+O sol..........há de brilhar mais uma vez
+   <b>Cm</b>      <b>Eb</b>                       <b>D7</b>
+A luz..........há de chegar aos corações
+   <b>Gm</b>      <b>Ab7</b>                  <b>D7</b>
+Do mal........será queimada a semente
+  <b>Cm</b>       <b>D7</b>                 <b>Gm</b>
+O amor........será eterno novamente
+  <b>Eb</b>       <b>D7</b>                <b>Gm</b>
+O amor.......será eterno novamente
+  <b>Eb</b>       <b>D7</b>                <b>Gm</b>
+O amor.......será eterno novamente
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/nelson-cavaquinho-juizo-final.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-nelson-cavaquinho-juizo-final.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

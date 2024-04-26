@@ -1,0 +1,96 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Roendo As Unhas</h1><h2 class="t3"><a href="/paulinho-da-viola/">Paulinho da Viola</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Db</a> </span><pre class="col1">    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>             <b>G°</b>
+Meu samba não se importa que eu esteja numa
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>         <b>G°</b>
+De andar roendo as unhas pela madrugada
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>         <b>G°</b>
+De sentar no meio fio não querendo nada
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>             <b>G°</b>
+De cheirar pelas esquinas minha flor nenhuma
+
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>              <b>G°</b>
+Meu samba não se importa se eu não faço rima
+   <b>Bbm6</b>       <b>Ab6</b>     <b>Db7</b>      <b>G°</b>
+Se pego na viola e ela desafi -na
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>             <b>G°</b>
+Meu samba não se importa se eu não tenho amor</pre><pre class="col2">    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>         <b>G°</b>
+Se dou meu coração assim sem disciplina
+
+     <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>         <b>G°</b>
+Meu samba não se importa se desapareço
+    <b>Bbm6</b>         <b>Ab6</b>        <b>Db7</b>         <b>G°</b>
+Se desapareço, se desapareço, se desapareço
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>      <b>G°</b>
+Se digo uma mentira sem me arrepender
+    <b>Bbm6</b>         <b>Ab6</b>     <b>Db7</b>      <b>G°</b>
+Quando entro numa boa ele vem comigo
+    <b>Bbm6</b>        <b>Ab6</b>    <b>Db7</b>        <b>G°</b>
+E fica desse jeito se eu entristecer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/paulinho-da-viola-roendo-as-unhas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-paulinho-da-viola-roendo-as-unhas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

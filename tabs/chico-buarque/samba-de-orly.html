@@ -1,0 +1,99 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Samba de Orly</h1><h2 class="t3"><a href="/chico-buarque/">Chico Buarque</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>C7M(9)</b>   <b>C6/9</b>  <b>F#m7</b>    <b>B7</b>           <b>Em7</b>  <b>A7</b>
+Vai,     meu  irmão    pega esse avião   
+         <b>Gm7</b>
+você tem razão
+<b>C7/9</b>          <b>F7M</b>       <b>Fm6</b>
+De correr assim desse   fri__o
+    <b>C/E</b>              <b>Am7</b>        <b>D7(9)</b>
+Mas bei____ja o meu rio de janei___ro
+                    <b>Fm/Ab</b>         <b>G7(13)</b>
+Antes que um aventureiro   lance mão
+
+<b>C7M(9)</b>  <b>C6/9</b>    <b>F#m7</b>   <b>B7</b>       <b>Em7</b>  <b>A7</b>    
+Pe______de  perdão     pela duração  dessa 
+      <b>Gm7</b>
+temporada
+         <b>C7(9)</b>     <b>F#m7(b5)</b>
+Mas não di___ga   nada
+</pre><pre class="col2">        <b>Fm6</b>   <b>E7(13)</b>  <b>E7(13-)</b>  <b>A7(13-)</b> <b>Dm7(9)</b>
+Que me viu chorando   e pros   da      pesada
+            <b>G7(13)</b>   <b>Gm7</b>
+Diz que eu vou    levando
+
+       <b>C7(9)</b>    <b>F#m7(b5)</b>       <b>Fm6</b>        
+Vê como é   que anda    aquela vi___da à 
+<b>E7(13)</b>
+toa
+  <b>E7(13-)</b>  <b>A7(13-)</b>     <b>Dm7(9)</b>    
+E se       puder    me manda Uma 
+  <b>G7(13)</b>       <b>C7M(9)</b>   <b>C6/9</b>
+notí_______cia bo________a
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/chico-buarque-samba-de-orly.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-chico-buarque-samba-de-orly.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

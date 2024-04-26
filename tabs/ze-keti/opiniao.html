@@ -1,0 +1,105 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Opinião</h1><h2 class="t3"><a href="/ze-keti/">Zé Keti</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>Em</b>
+
+<b>Em</b>
+Podem me prender
+<b>Am</b>                <b>Em</b>
+Podem me bater
+       <b>Am</b>           <b>B7</b>    <b>Em</b>
+Podem até deixar-me sem comer
+          <b>Am</b>        <b>B7</b>  <b>Em</b>
+Que eu não mudo de opinião
+
+         <b>Am</b>            <b>B7</b>   <b>Em</b>
+Daqui do morro eu não saio não
+         <b>Am</b>            <b>B7</b>   <b>Em</b>
+Daqui do morro eu não saio não
+
+           <b>Am</b>   <b>B7</b>          <b>Em</b>
+Se não tem água eu furo um poço
+           <b>Am</b>  <b>B7</b>            <b>Em</b>
+Se não tem carne eu compro um osso</pre><pre class="col2">                   <b>B7</b>
+E ponho na sopa
+                <b>Em</b>
+E deixo andar
+    <b>B7</b>          <b>Em</b>
+E deixo andar
+<b>B7</b>          <b>Em</b>
+E deixo andar
+
+<b>E7</b>                 <b>A7</b>
+Fale de mim quem quiser falar
+<b>D7</b>                    <b>G</b>    <b>B7</b>
+Aqui eu não pago aluguel
+<b>Em</b>               <b>Am</b>
+Se eu morrer amanhã seu doutor
+<b>B7</b>                <b>Em</b>
+Estou pertinho do céu
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ze-keti-opiniao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ze-keti-opiniao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

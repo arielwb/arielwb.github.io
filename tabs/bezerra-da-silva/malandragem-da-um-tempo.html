@@ -1,0 +1,140 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Malandragem dá um Tempo</h1><h2 class="t3"><a href="/bezerra-da-silva/">Bezerra da Silva</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>A</b>        <b>Bm7</b>           <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+            <b>Bm7</b>         <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+           <b>Bm7</b>              <b>E7</b>             
+Se segura malandro, pra fazer a cabeça tem 
+    <b>A</b>
+hora
+           <b>Bm7</b>             <b>E7</b>              
+Se segura malandro, pra fazer a cabeça tem 
+  <b>A</b>
+hora
+
+      <b>F#7</b>            <b>Bm7</b>
+É que você não está vendo
+               <b>E7</b>          <b>A</b>
+Que a boca tá assim de corujão
+         <b>F#7</b>          <b>Bm7</b>
+Tem dedo de seta adoidado
+            <b>E7</b>                     <b>A</b>
+Todos eles afim de entregar os irmãos
+                  <b>Bm7</b>
+Malandragem dá um tempo
+           <b>E7</b>                <b>A</b>
+Deixa essa pá de sujeira ir embora
+      <b>F#7</b>             <b>Bm7</b>              <b>E7</b>  
+É por isso que eu vou apertar, mas não vou 
+         <b>A</b>
+acender agora
+
+<b>A</b>        <b>Bm7</b>           <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+            <b>Bm7</b>         <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+           <b>Bm7</b>              <b>E7</b>             
+Se segura malandro, pra fazer a cabeça tem 
+    <b>A</b>
+hora</pre><pre class="col2">           <b>Bm7</b>             <b>E7</b>              
+Se segura malandro, pra fazer a cabeça tem 
+  <b>A</b>
+hora
+
+       <b>F#7</b>           <b>Bm7</b>
+É que o 281 foi afastado
+         <b>E7</b>             <b>A</b>
+O 16 e o 12 no lugar ficou
+        <b>F#7</b>                 <b>Bm7</b>
+E uma muvuca de espertos demais
+     <b>E7</b>                <b>A</b>
+Deu mole e o bicho pegou
+                           <b>Bm7</b>
+Quando os home da lei grampeiam
+      <b>E7</b>             <b>A</b>
+O coro come a toda hora
+        <b>F#7</b>               <b>Bm7</b>           <b>E7</b> 
+É por isso que eu vou apertar, mas não vou 
+          <b>A</b>
+acender agora
+
+<b>A</b>        <b>Bm7</b>           <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+            <b>Bm7</b>         <b>E7</b>            <b>A</b>
+Vou apertar, mas não vou acender agora
+           <b>Bm7</b>              <b>E7</b>             
+Se segura malandro, pra fazer a cabeça tem 
+    <b>A</b>
+hora
+           <b>Bm7</b>             <b>E7</b>              
+Se segura malandro, pra fazer a cabeça tem 
+  <b>A</b>
+hora
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bezerra-da-silva-malandragem-da-um-tempo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bezerra-da-silva-malandragem-da-um-tempo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

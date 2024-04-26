@@ -1,0 +1,136 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sem Abuso</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>Am11</b>                                   <b>Dm</b>
+Um Dia, você diz pra mim que ama, me adora
+                <b>G7</b>                  <b>C7+</b>
+Que não se interessa por ninguém la fora
+<b>F7+</b>              <b>Bº</b>       <b>E7</b>              <b>Am</b>
+Pura armação pressão da cabeça de quem um dia
+                           <b>Dm</b>
+Bagdá chorando e você na calçada
+            <b>G7</b>                    <b>C7+</b> <b>F7+</b>
+Eu no meu orgulho e você não diz nada
+       <b>Bº</b>                   <b>E7</b>
+Tanta gente no veneno e eu sem você
+         <b>Am11</b>      <b>Am/G#</b>      <b>Gm</b>
+Senta aqui, pensa bem, pode crê
+         <b>C7</b>             <b>F7M</b>
+Que o amor é maior que tudo
+       <b>Bº</b>                <b>E7</b>
+Do que eu e você, você e eu
+<b>Am11</b>                   <b>Gm</b>      <b>C7(9)</b>
+Sem abuso, Sem Abuso, Sem Abuso
+<b>F7M</b>                              <b>Bº</b>
+Se eu tô com você, não sou de niguém
+   <b>E7</b>         <b>Am</b>
+Eu sou o seu bem  2X
+
+<b>Am11</b>                                   <b>Dm</b>
+Um Dia, você diz pra mim que ama, me adora
+                <b>G7</b>                  <b>C7+</b>
+Que não se interessa por ninguém la fora
+<b>F7+</b>              <b>Bº</b>       <b>E7</b>              
+Pura armação pressão da cabeça de quem um 
+<b>Am11</b>
+dia
+                           <b>Dm</b>
+Bagdá chorando e você na calçada</pre><pre class="col2">            <b>G7</b>                    <b>C7+</b> <b>F7+</b>
+Eu no meu orgulho e você não diz nada
+       <b>Bº</b>                   <b>E7</b>
+Tanta gente no veneno e eu sem você
+         <b>Am</b>        <b>Am/G#</b>      <b>Gm</b>
+Senta aqui, pensa bem, pode crê
+         <b>C7</b>             <b>F7M</b>  <b>F6</b>
+Que o amor é maior que tudo
+       <b>Bº</b>                <b>E7</b>
+Do que eu e você, você e eu
+
+<b>Bm11</b>                   <b>Am</b>      <b>D7(9)</b>
+Sem abuso, Sem Abuso, Sem Abuso
+<b>G7M</b>                              <b>C#º</b>
+Se eu tô com você, não sou de niguém
+   <b>F#7</b>         <b>Bm</b>
+Eu sou o seu bem
+
+<b>Em</b>             <b>F#7</b>        <b>Bm11</b>
+Tanta gente no veneno do mundo
+               <b>C#º</b>
+Quem a gente escolhe
+<b>F#7</b>
+Nao e' feliz aqui
+
+<b>Bm11</b>       <b>Bm/Bb</b>             <b>Am</b>
+Senta aqui, pensa bem, pode crê
+        <b>D7</b>           <b>G7M</b>
+Que o amor é maior que tudo
+       <b>C#º</b>                <b>F#7</b>
+Do que eu e você, você e eu
+
+Volta para o Refrão
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-sem-abuso.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-sem-abuso.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,190 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Todo Mundo Vai Sofrer</h1><h2 class="t3"><a href="/marilia-mendonca/">Marília Mendonça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro]
+
+[Primeira Parte]
+
+[Parte 1 De 2]
+
+[Parte 2 De 2]
+
+      <b>D</b>
+A garrafa precisa do copo
+   <b>A</b>
+O copo precisa da mesa
+   <b>Em7</b>
+A mesa precisa de mim
+  <b>G</b>
+E eu preciso da cerveja
+
+[primeira parte - segunda estrofe]
+
+                  <b>D</b>             <b>A9</b>
+Igual eu preciso dele na minha vida
+            <b>Em7</b>
+Mas quanto mais eu vou atrás
+          <b>G</b>
+Mais ele pisa
+                  <b>D</b>
+Então já que é assim
+                         <b>A9</b>
+Se por ele eu sofro sem pausa
+                 <b>Em7</b>
+Quem quiser me amar
+ <b>G</b>      <b>D/F#</b>   <b>Em7</b>    <b>D</b>    <b>A9</b>
+Também vai sofrer nessa bagaça
+
+[Refrão]
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+      <b>G</b>
+Todo mundo vai sofrer
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+<b>G</b>
+  Todo mundo vai sofrer
+
+( <b>D</b>  <b>A9</b>  <b>Em7</b>  <b>G</b>  <b>D</b>  <b>A9</b> )
+
+[Solo]
+
+[Parte 1 De 2]
+
+[Parte 2 De 2]
+</pre><pre class="col2">[primeira parte - segunda estrofe]
+
+                  <b>D</b>             <b>A9</b>
+Igual eu preciso dele na minha vida
+            <b>Em7</b>
+Mas quanto mais eu vou atrás
+          <b>G</b>
+Mais ele pisa
+                  <b>D</b>
+Então já que é assim
+                         <b>A9</b>
+Se por ele eu sofro sem pausa
+                 <b>Em7</b>
+Quem quiser me amar
+ <b>G</b>      <b>D/F#</b>   <b>Em7</b>    <b>D</b>    <b>A9</b>
+Também vai sofrer nessa bagaça
+
+[Refrão Final]
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+      <b>G</b>
+Todo mundo vai sofrer
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+<b>G</b>                    <b>D</b>  <b>A9</b>
+  Todo mundo vai sofrer
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+      <b>G</b>
+Todo mundo vai sofrer
+
+         <b>D</b>
+Quem eu quero, não me quer
+         <b>A9</b>
+Quem me quer, não vou querer
+         <b>Em7</b>
+Ninguém vai sofrer sozinho
+<b>G</b>                    <b>D</b>  <b>A9</b>
+  Todo mundo vai sofrer
+         <b>Em7</b>               <b>G</b>
+Ninguém vai sofrer sozinho
+<b>D</b>  <b>A9</b>           <b>Em7</b>
+       Ninguém vai sofrer sozinho
+<b>G</b>                    <b>D</b>
+  Todo mundo vai sofrer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/marilia-mendonca-todo-mundo-vai-sofrer.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-marilia-mendonca-todo-mundo-vai-sofrer.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

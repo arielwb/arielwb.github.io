@@ -1,0 +1,162 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">O Mar Serenou</h1><h2 class="t3"><a href="/clara-nunes/">Clara Nunes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>    <b>A7</b>
+Quem samba na beira do mar, é sereia
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+
+<b>A7</b>                 <b>D</b>
+O pescador não tem medo
+             <b>B7</b>
+É segredo se volta ou se fica
+   <b>Em</b>                              <b>A7</b>
+No fundo do mar, ao ver a morena bonita
+                                   <b>D</b>         
+Sambando se explica que não vai pescar, deixa
+           <b>A7</b>
+ o mar serenar
+
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+
+  <b>A7</b>              <b>D</b>
+A lua brilhava vaidosa
+          <b>B7</b>
+De si orgulhosa e prosa
+        <b>Em</b>                            
+Com que deus lhe deu, ao ver a morena 
+   <b>A7</b>
+sambando
+                                 <b>D</b>          
+Foi-se acabrunhando, então adormeceu, o sol 
+     <b>A7</b>
+apareceu
+
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia</pre><pre class="col2">     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+
+   <b>A7</b>
+Um frio danado
+             <b>D</b>       <b>B7</b>
+Que vinha de lado, gelado
+               <b>Em</b>                            
+Que o povo até se intimidou, morena aceitou o
+     <b>A7</b>
+ desafio
+                              <b>D</b>              
+Sambou e o frio, sentiu seu calor, e o samba 
+         <b>A7</b>
+se esquentou
+
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+
+    <b>A7</b>                    <b>D</b>
+A estrela que estava escondida
+              <b>B7</b>
+Sentiu-se atraída
+             <b>Em</b>                      
+Depois então apareceu, mas ficou tão 
+       <b>A7</b>
+enternecida
+                                 <b>D</b>         
+Ingadou a si mesma, a estrela afinal, será 
+           <b>A7</b>
+ela ou sou eu?
+
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+          <b>D</b>                 <b>B7</b>       <b>Em</b>
+O mar serenou, quando ela pisou, na areia
+     <b>A7</b>                          <b>D</b>   <b>A7</b>
+Quem samba na beira do mar, é sereia
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clara-nunes-o-mar-serenou.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clara-nunes-o-mar-serenou.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

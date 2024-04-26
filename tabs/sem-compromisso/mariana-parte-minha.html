@@ -1,0 +1,120 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Mariana Parte Minha</h1><h2 class="t3"><a href="/sem-compromisso/">Sem Compromisso</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1">[Intro] <b>G7</b>  <b>Cm</b>  <b>F7</b>  <b>Bb7M</b>
+ <b>Gm7</b>  <b>Am7(5-)</b>  <b>D7</b>  <b>Gm7</b>
+
+ <b>D7</b>                  <b>Gm7</b>
+Se eu beijar a sua boca
+     <b>G7</b>                   <b>Cm</b>
+Na hora em que me despedir
+                       <b>F7</b>
+Sei que vou deixar saudades
+                            <b>Bb7M</b>
+Em todos que vem me assistir
+    <b>D7</b>                   <b>Gm7</b>
+A minha vida é palco e show
+    <b>G7</b>               <b>Cm</b>
+Fantástico é você aqui
+                   <b>Eb7</b>
+Uma luz que nos conduz
+      <b>D7</b>               <b>Gm7</b>
+Um cenário feito pra mim
+ <b>D7</b>                <b>Gm7</b>
+Antes do show acabar
+               <b>G7</b>
+A cortina fechar
+   <b>Cm</b>
+Adeus
+                     <b>Am7(5-)</b>
+Como é lindo seu olhar</pre><pre class="col2">          <b>D7</b>
+Te admirar
+   <b>Gm7</b>
+Adeus
+<b>D7</b>                <b>Gm7</b>
+Antes do show acabar
+               <b>G7</b>
+A cortina fechar
+   <b>Cm</b>
+Adeus
+                     <b>Am7(5-)</b>
+Como é lindo seu olhar
+          <b>D7</b>
+Te adimirar
+   <b>Gm7</b>
+Adeus
+
+    <b>D7</b>       <b>Gm7</b>
+Mariana te dou
+    <b>G7</b>      <b>Cm</b>
+Mariana calor
+                 <b>Eb7</b>
+Mariana parte minha
+    <b>D7</b>           <b>Gm7</b>
+Mariana é minha flor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sem-compromisso-mariana-parte-minha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sem-compromisso-mariana-parte-minha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

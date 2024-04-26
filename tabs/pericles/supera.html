@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Supera</h1><h2 class="t3"><a href="/pericles/">Péricles</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bm</a> </span><pre class="col1"> <b>Bm7</b>
+De repente você chega
+
+Revirando a minha vida
+              <b>Bm7/E</b>  <b>C#m7</b>
+Cheia de amor pra dar
+<b>Bm7</b>
+Pra falar de um sentimento
+                <b>Bm7/E</b>
+Que até bem pouco tempo
+
+Você quis me bagunçar
+<b>A7M</b>                     <b>E/G#</b>
+Quando eu penso estar curado
+               <b>C#m7(5-)</b>
+Eu te vejo do meu lado
+               <b>F#7(4)</b>  <b>F#7(9-)</b>
+Louca pra me dominar
+<b>Bm7</b>
+Pra fugir dos teus encantos
+
+Procurei outros carinhos
+                 <b>Bm7/E</b>  <b>C#m7</b>
+Vou tentando me encontrar
+<b>Bm7</b>
+Eu já fiz até promessas
+</pre><pre class="col2">Já tentei todas as rezas
+                 <b>Bm7/E</b>  <b>Db/E</b>
+Peço a Deus pra me ajudar
+<b>A7M</b>                    <b>E/G#</b>
+Num remédio pro meu peito
+                    <b>C#m7(5-)</b>
+Que consiga dar um jeito
+               <b>F#7(4)</b>  <b>F#7(9-)</b>
+De você me libertar
+         <b>A/D</b>         <b>E/D</b>
+Eu não consigo te esquecer
+         <b>A/D</b>         <b>E/D</b>
+Eu tenho medo de voltar
+       <b>F#7(4)</b>      <b>F#7</b>     <b>Em7(9)</b>  <b>A7(13)</b>
+Mas a vontade de te ver supera
+         <b>A/D</b>         <b>E/D</b>
+Eu não aceito te querer
+         <b>A/D</b>         <b>E/D</b>
+Não tenho forças pra lutar
+       <b>F#7(4)</b>      <b>F#7</b>     <b>Em7(9)</b>  <b>A7(13)</b>
+Mas a vontade de te ver supera
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/pericles-supera.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-pericles-supera.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

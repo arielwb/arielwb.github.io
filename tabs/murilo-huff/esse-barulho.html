@@ -1,0 +1,134 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Esse Barulho</h1><h2 class="t3"><a href="/murilo-huff/">Murilo Huff</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">[Intro] <b>D9</b>  <b>E7</b>  <b>G</b>
+
+[Primeira Parte]
+
+<b>D9</b>              <b>E7</b>
+   Em casa não dá
+       <b>G</b>                                     
+Eu preciso ouvir uma porta de ferro subindo e
+                    <b>D9</b>
+ umas cadeira arrastar
+           <b>E7</b>
+Pra me acalmar
+      <b>G</b>                                   
+O garçom me servindo a cerveja, caindo no 
+        <b>G</b>   <b>A9</b>  <b>Bm</b>
+copo até derramar
+
+[Pré-Refrão]
+
+           <b>A</b>                    <b>G</b>
+Isso tem som de felicidade pra mim
+                                      <b>A</b>
+É o som de eu te esquecendo pouquim em 
+pouquim
+
+[Refrão]
+
+<b>D9</b>                      <b>A9</b>
+Esse barulho, tá me ajudando a esquecer você
+<b>Em</b>                             <b>G</b>           
+Esse barulho, me ajuda a não ouvir a 
+           <b>A9</b>
+saudade falar de você
+<b>D9</b>                      <b>A9</b>
+Esse barulho, tá me ajudando a esquecer você</pre><pre class="col2"><b>Em</b>                             <b>G</b>           
+Esse barulho, me ajuda a não ouvir a 
+           <b>A9</b>
+saudade falar de você
+
+( <b>D</b>  <b>A</b>  <b>Em</b>  <b>G</b> )
+
+[Pré-Refrão]
+
+<b>A</b> <b>Bm</b>          <b>A</b>                      <b>G</b>
+     Isso tem som de felicidade pra mim
+                                    <b>A</b>
+É o som de eu te esquecendo pouquim em 
+pouquim
+
+[Refrão]
+
+<b>D9</b>                      <b>A9</b>
+Esse barulho, tá me ajudando a esquecer você
+<b>Em</b>                             <b>G</b>           
+Esse barulho, me ajuda a não ouvir a 
+           <b>A9</b>
+saudade falar de você
+<b>D9</b>                      <b>A9</b>
+Esse barulho, tá me ajudando a esquecer você
+<b>Em</b>                             <b>G</b>           
+Esse barulho, me ajuda a não ouvir a 
+           <b>A9</b>
+saudade falar de você
+<b>D9</b>            <b>A</b>  <b>D9</b>
+Esse barulho, oh oh
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/murilo-huff-esse-barulho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-murilo-huff-esse-barulho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

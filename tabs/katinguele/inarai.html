@@ -1,0 +1,108 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Inaraí</h1><h2 class="t3"><a href="/katinguele/">Katinguelê</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">(intro) <b>E7</b>  <b>A7+</b>
+
+<b>A7+</b>                                  <b>Bm7</b>
+Seu corpo é o mar por onde quero navegar
+<b>E7</b>                 <b>A7+</b>
+E no meu colo te ninar
+                <b>C#m7</b>         <b>Cm7</b>        <b>Bm7</b>
+Sua boca tem um beijo tão gostoso de provar
+<b>E7</b>                     <b>A7+</b>
+Cada vez mais quero beijar
+                 <b>F#m7</b>                     <b>Bm7</b>
+No seu cabelo um cheiro bom que fica pelo ar
+                <b>E7</b>             <b>A7+</b>
+Tão doce é o perfume de você Inara
+                <b>F#m7</b>                      <b>Bm7</b>
+Inara é a minha vida, meu sorriso, meu sonhar
+  <b>E7</b>               <b>A7+</b>
+Inara meu véu de luar
+                <b>C#m7</b>         <b>Cm7</b>          <b>Bm7</b>
+Eu gosto quando vejo o seu olhar no meu olhar
+   <b>E7</b>                    <b>A7+</b>
+Dizendo pra mim vem me amar</pre><pre class="col2">                <b>F#m7</b>                  <b>Bm7</b>
+Inara é a minha gueixa que me faz um bem
+                 <b>E7</b>                 <b>A7+</b>
+Não troco minha amada Inara por ninguém
+                         <b>Bm7</b>
+Inara, Inara, Inara, Inaraí
+          <b>E7</b>             <b>A7+</b>
+Inara, Inara, Inara, Inaraí
+              <b>C#m7</b>       <b>Cm7</b>     <b>Bm7</b>
+Inara, Inara,      Inara     Inaraí
+             <b>E7</b>            <b>Em7</b>       <b>A7</b>
+Inara, Inara   Inara, Inaraí... Inaraí
+<b>D</b>          <b>G7</b>       <b>C#m7</b>
+Cura para minha dor
+                    <b>F#m7</b>
+Meu mel, meu tudo, minha flor
+<b>D</b>     <b>C#m7</b>         <b>Bm7</b>        <b>E7</b>     <b>A7+</b>
+Se é pra falar de amor eu falarei Inara ...
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/katinguele-inarai.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-katinguele-inarai.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

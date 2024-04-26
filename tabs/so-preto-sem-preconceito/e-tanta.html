@@ -1,0 +1,94 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">É tanta</h1><h2 class="t3"><a href="/so-preto-sem-preconceito/">Só Preto Sem Preconceito</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">Intro: <b>Dm</b>  <b>Dm7</b>  <b>F°</b>  <b>E7</b>  <b>Am</b>  <b>Am</b>  <b>F7+</b>  <b>E7</b>
+
+  <b>Am</b>                   <b>Dm</b>
+É tanta, emoção que eu sinto
+                   <b>G7</b>              <b>C</b>
+Toda vez que minto, tentando esconder
+          <b>B7</b>                   <b>E7</b>
+Ela já não me ama, ela já não vê
+Como me viu um dia
+  <b>Am</b>                  <b>Dm</b>
+A moça, resolveu ir embora
+         <b>G7</b>                  <b>C</b>
+Meu Deus e agora o que faço eu
+            <b>B7</b>                        <b>E7</b>
+Falo que não foi nada, digo que não doeu</pre><pre class="col2">              <b>Am</b>  <b>Am</b>  <b>Ab7</b>  <b>G7</b>
+Pra tentar ocultar
+                                <b>C</b>     <b>E7</b>
+A vontade que sinto de saber, amor
+O seu novo endereço
+      <b>A7</b>                      <b>Dm</b>
+E te escrever dizendo assim, amor
+   <b>F</b>                  <b>F°</b>           <b>E7</b>
+Volte logo que a vontade, de te ver
+     <b>Am</b>
+(É tanta)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/so-preto-sem-preconceito-e-tanta.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-so-preto-sem-preconceito-e-tanta.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

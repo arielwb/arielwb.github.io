@@ -1,0 +1,103 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Mas Quem Disse Que Eu Te Esqueço</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">Introdução: <b>G</b> : <b>E7</b> : <b>A7</b> : % : <b>Am</b> : <b>D7</b> : <b>G</b>  <b>E7</b> : <b>Am</b>  <b>D7</b> 
+
+: <b>G</b> : <b>E7</b> : <b>A7</b> : % : <b>Am</b> : <b>D7</b> : <b>G</b> : <b>D7</b> :...
+
+    <b>G</b>                      <b>E7</b>       <b>A7</b>
+Tristeza rolou nos meus olhos do jeito que eu
+ não queria
+ <b>Am</b>           <b>D7</b>           <b>G</b>            <b>D7</b>
+E manchou meu coração, que tamanha covardia
+   <b>G</b>             <b>Em</b>        <b>A7</b>
+Afivelaram meu peito pra eu deixar de te amar
+   <b>Am</b>           <b>D7</b>              <b>G</b>         
+Acinzentaram minh'alma, mas não secaram o 
+     <b>D7</b>
+olhar
+ <b>G</b>           <b>E7</b>      <b>A7</b>
+Saudade amor, que saudade
+                 <b>Am</b>          <b>D7</b>         <b>G</b>    
+Que me vira pelo avesso, e revira meu avesso
+  <b>D7</b>
+</pre><pre class="col2">   <b>G</b>            <b>E7</b>        <b>A7</b>
+Puseram a faca em meu peito
+                            <b>Am</b>
+Mas quem disse que eu te esqueço
+    <b>D7</b>                   <b>G</b>     <b>D7</b>
+Mas quem disse que eu mereço
+  <b>G</b>                <b>E7</b>                       
+Láiá... Lá laiá... Lalaiá... Lá laiá ... Lá 
+ <b>A7</b>
+laiá...   Lá laiá
+                      <b>Am</b>
+Lá... Lá laiá... Lá laiá...  Lá laiá
+<b>D7</b>          <b>G</b> <b>E7</b>   <b>Am</b> <b>D7</b>
+Lá lalaiá... Laiá...     ...Lá
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-mas-quem-disse-que-eu-te-esqueco.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-mas-quem-disse-que-eu-te-esqueco.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,118 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Engraçadinha</h1><h2 class="t3"><a href="/katinguele/">Katinguelê</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">B</a> </span><pre class="col1">[Intro] <b>C#7M</b>  <b>C#m</b>  <b>B7M</b>  <b>G#m</b>  <b>C#m</b>  <b>F#7(11)</b>
+
+         <b>B7M</b>
+Linda de viver
+<b>G#m</b>                 <b>C#m</b>       <b>C#m7M</b>
+   Que gracinha minha tentação
+         <b>C#m7</b>
+Conhecer você
+               <b>F#7</b>         <b>B7M</b>
+Trouxe vida a minha inspiração
+             <b>B7M</b>    <b>G#m</b>
+Pra te decantar
+           <b>C#m</b>    <b>C#m7M</b>
+Dizer nessa canção
+                 <b>C#m7</b>    <b>F#7</b>
+Que eu me apaixonei
+                  <b>B7M</b>     <b>B7(11)</b>
+Me entreguei de paixão
+              <b>E7M</b>  <b>F#7</b>
+Vivo a te olhar
+                 <b>Ebm</b>    <b>G#m7</b>
+Pra chamar sua atenção
+             <b>C#m7</b>                    
+Mas minha timidez não me deixou coragem de 
+<b>F#7(13)</b>  <b>B7M</b>     <b>B7(9)</b>
+chegar</pre><pre class="col2">           <b>E7M</b>
+Pra te declarar
+<b>F#7</b>         <b>Ebm7(5-)</b>  <b>A7</b>  <b>G#7</b>
+  Todo o meu amo_______or
+                   <b>C#m</b>               
+Mas hei de conquistar um cantinho no seu 
+<b>F#7(13)</b>   <b>B7M</b>  <b>A7M</b>  <b>G#m7</b>
+coração
+      <b>C#m7</b>
+Engraçadinha
+<b>F#7(13)</b>     <b>Ebm</b>    <b>G#m</b>
+       Tão linda
+        <b>C#m7</b>            <b>F#7(13)</b>
+Me amarrou, me enfeitiçou
+        <b>B7M</b>   <b>G#m7</b>
+És minha vida
+      <b>C#m7</b>
+Engraçadinha
+<b>F#7(13)</b>     <b>Ebm</b>    <b>G#m</b>
+       Tão linda
+        <b>C#m7</b>            <b>F#7(13)</b>
+Me amarrou, me enfeitiçou
+        <b>B7M</b>     <b>A7</b>    <b>C#m</b>  <b>F#7(11)</b>
+És minha vida  vamos dançar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/katinguele-engracadinha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-katinguele-engracadinha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

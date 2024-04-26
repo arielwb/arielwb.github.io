@@ -1,0 +1,118 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Bodas de Ouro</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bb</a> </span><pre class="col1"><b>Gm</b>   <b>Cm</b> <b>F7</b>  <b>Bb7M</b>       <b>Gm7</b>    <b>Eb7M</b>   <b>F7</b>  
+La Laia laia laia laia Laia laia laia 
+<b>Bb7M</b>  <b>D7</b>
+laia Laia laia
+<b>Gm</b>   <b>Cm</b> <b>F7</b>  <b>Bb7M</b>           <b>Gm7</b>    <b>Eb7</b>      
+La Laia laia laia laia Laia laia laia laia 
+<b>D7</b>     <b>Gm</b>      <b>D7</b>
+Laia laia
+
+    <b>Gm</b>                      <b>Cm</b>
+Com o samba eu casei tanto tempo faz
+    <b>D7</b>                 <b>Gm</b>      <b>D7</b>
+Com ele eu vivi minha vida em paz
+    <b>Gm</b>           <b>A7</b>  <b>Dm</b>
+Do samba eu guardei só momentos bons
+       <b>Bb7</b>     <b>A7</b>  <b>Am7/b5</b>   <b>D7</b>
+Nossos corações não separam mais
+ <b>Gm</b>                <b>Cm</b>
+O samba pra mim me caiu do céu
+   <b>D7</b>            <b>Dm7/b5</b>  <b>G7</b>
+A ele jurei sempre ser fiel
+<b>Cm</b>           <b>D7/b9</b>   <b>Gm</b>           <b>Bb7</b>
+E tudo que aprendi o samba me ensinou
+              <b>A7</b>       <b>D7</b>        <b>G</b>  <b>E7</b>  <b>Am7</b>  
+Sempre foi o samba o meu grande amor
+<b>D7</b>
+
+</pre><pre class="col2"> <b>G</b>          <b>Bbº</b>       <b>Am</b>
+O samba me deu muito mais do que eu quis
+   <b>D7</b>             <b>G</b>          <b>Am7</b>  <b>D7</b>
+O samba me fez bastante feliz
+  <b>G</b>          <b>Bbº</b>       <b>A7</b>
+Até bodas de ouro com o samba eu já fiz
+<b>D7/9</b>              <b>G</b>  <b>E7</b>  <b>Am7</b>  <b>D7</b>
+Canto pra comemorar
+  <b>G</b>          <b>Bbº</b>       <b>A7</b>
+E vou dizer mais se eu pudesse voltar
+<b>D7/9</b>                 <b>Bm7/b5</b>  <b>E7</b>
+Casava outra vez com o samba
+<b>Am7</b>                   <b>Cm7</b>
+E sei que um amor sem fim
+  <b>G</b>                  <b>E7</b>   <b>Am7</b>                
+A Deus quero agradecer o tempo que o samba me
+ <b>D7</b>   <b>Dm</b>   <b>G7/13</b>
+ da prazer
+ <b>C</b>               <b>Cm7</b>      <b>G</b>                
+E se depender de mim, do samba e desse bem 
+    <b>E7</b>    <b>A7</b>                 <b>D7</b>    <b>Gm</b>  <b>D7</b>
+querer a gente tão cedo não vai morrer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-bodas-de-ouro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-bodas-de-ouro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

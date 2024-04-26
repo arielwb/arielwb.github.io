@@ -1,0 +1,128 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Conto de Areia</h1><h2 class="t3"><a href="/clara-nunes/">Clara Nunes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1"><b>D#</b>                    <b>G#</b>       <b>A#</b>      
+É água no mar, é maré cheia ô, mareia ô 
+<b>D#</b>             <b>A#</b>
+mareia, é água no mar
+<b>D#</b>                  <b>G#</b>       <b>A#</b>      <b>D#</b>
+É água no mar é maré cheia ô mareia ô mareia
+                    <b>C7</b>                <b>Fm</b>
+Contam que toda tristeza que tem na Bahia
+   <b>A#</b>                                  <b>D#</b>
+Nasceu de uns olhos morenos molhados de mar
+                       <b>C7</b>                <b>Fm</b>
+Não sei se é conto de areia ou se é fantasia
+      <b>A#</b>                                <b>D#</b>
+Que a luz da candeia alumia pra gente contar
+                     <b>C7</b>              <b>Fm</b>
+Um dia a morena enfeitada de rosas e rendas
+  <b>A#</b>                                    <b>D#</b>
+Abriu seu sorriso de moça e pediu pra dançar
+                      <b>C7</b>                 
+A noite emprestou as estrelas bordadas de 
+<b>Fm</b>
+prata
+                   <b>A#</b>                  <b>D#</b>
+E as águas de Amaralina eram gotas de luar
+<b>D#</b>              <b>C7</b>           <b>Fm</b>
+Era um peito só cheio de promessa era só
+             <b>A#</b>           <b>D#</b>
+Era um peito só cheio de promessa era só
+        <b>C7</b>      <b>Fm</b>           <b>A#</b>            
+Quem foi que mandou o seu amor se fazer de 
+   <b>D#</b>
+canoeiro</pre><pre class="col2">             <b>C7</b>        <b>Fm</b>  <b>A#</b>          <b>D#</b>
+O vento que rola nas palmas arrasta o veleiro
+            <b>C7</b>      <b>Fm</b>  <b>A#</b>       <b>D#</b>
+E leva pro meio das águas de Iemanjá
+             <b>C7</b>        <b>Fm</b>               <b>A#</b>   
+E o mestre valente vagueia olhando pra areia 
+            <b>D#</b>
+sem poder chegar
+      <b>A#</b>   <b>D#</b> <b>C7</b>    <b>Fm</b>              <b>A#</b>   
+Adeus amor, adeus meu amor não me espere 
+                 <b>D#</b>
+porque eu já vou me embora
+              <b>C7</b>           <b>Fm</b>    <b>A#</b>        
+Pro reino que esconde os tesouros de minha 
+  <b>D#</b>
+senhora
+       <b>C7</b>         <b>Fm</b>     <b>A#</b>          <b>D#</b>
+Desfia colares de conchas pra vida passar
+           <b>C7</b>          <b>Fm</b>
+E deixa de olhar pro veleiro
+            <b>A#</b>                   <b>D#</b>
+Adeus meu amor eu não vou mais voltar
+          <b>Fm</b> <b>A#</b>         <b>D#</b>            <b>C7</b>
+Foi beira-mar, foi beira-mar quem chamou
+          <b>Fm</b>   <b>A#</b>         <b>D#</b>
+Foi beira-mar ê, foi beira-mar
+          <b>A#</b>
+É água no mar...(Refrão)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clara-nunes-conto-de-areia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clara-nunes-conto-de-areia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

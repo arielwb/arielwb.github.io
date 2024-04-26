@@ -1,0 +1,112 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Decisao</h1><h2 class="t3"><a href="/karametade/">Karametade</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1">[Intro]  <b>Gm7</b>  <b>C7/9</b>  <b>Fm7</b>  <b>Db7+</b>  <b>Bbm</b>  <b>Bbm7</b>  <b>Gm7</b>
+
+  <b>C7/9</b>  <b>Fm7/9</b>
+
+                   <b>Fm</b>       <b>Bbm</b>
+Há tanto tempo queria te falar
+                           <b>Eb7</b>
+Mas tinha medo de te magoar
+
+O meu amor chegou ao fim,
+  <b>Ab</b>                  <b>Gm7/5-</b>  <b>C7</b>  <b>Fm</b>
+É duro eu sei, mas é melhor assim
+                            <b>Bbm</b>
+Difícil foi TOMAR esta decisão
+                            <b>Eb7</b>
+Não deu pra evitar a separação
+                                    <b>Cm7/5-</b>  
+Eu nem sei bem ao certo o que aconteceu
+<b>F7</b>
+
+     <b>Bbm</b>                <b>Eb7</b>                <b>Ab</b>
+Cansei, preciso de um tempo pra cuidar de mim
+                <b>Fm</b>                   <b>Gm7/5-</b>
+Tirar da minha vida as marcas do passado</pre><pre class="col2">                <b>C7</b>                   
+Lamento mas não deu pra ficar ao teu 
+<b>Cm7/5-</b>  <b>F7</b>
+la......do
+      <b>Bbm</b>                  <b>Eb7</b>           <b>Ab</b>
+Não sei, talvez um dia eu possa me arrepender
+                  <b>Fm</b>         <b>Gm7/5-</b>
+Mas sinto que a minha vida sem você
+          <b>C7</b>             <b>F</b>     <b>F°</b>
+Está a um passo da felicidade
+<b>Gm</b>      <b>C7</b>    <b>F</b>            <b>Dm</b>     <b>Gm</b>     <b>Gm7+</b>
+  Agora vou viver sem ter medo de ser feliz
+                 <b>Gm7</b>  <b>C7</b>             <b>F</b>    <b>F6</b>
+O que passou passou, como o ditado diz
+                  <b>Cm</b>      <b>F7</b>               
+Vou seguir meu caminho, sozinho, não volto 
+   <b>Bb</b>  <b>B°</b>
+atrás
+    <b>F</b>      <b>Dm</b>     <b>Gm</b>      <b>C7</b>      <b>F</b>
+Só sei que teu amor, não quero mais
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/karametade-decisao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-karametade-decisao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

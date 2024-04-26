@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Dependente</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro]  <b>F9</b>  <b>G</b>  <b>Am7</b>  <b>G/B</b>  <b>G</b>
+
+[Primeira Parte]
+
+ <b>C9</b>                              <b>F</b>
+    Para de mandar mensagem carinhosa no meio
+ da noite só pra provocar
+ <b>C9</b>                                <b>F</b>
+    Para de falar de mim pros seus amigos, 
+inventando assuntos pra me elogiar
+ <b>C9</b>                                  
+    Para de se preocupar com os meus 
+         <b>F</b>
+problemas, sua vida é corrida, tem do que 
+cuidar
+ <b>C9</b>                                    <b>F</b>
+    Para de beijar do jeito que eu adoro que 
+eu não tô podendo me apaixonar
+
+ <b>C9</b>             <b>F</b>           <b>Dm</b>              <b>G</b>
+    E se eu gostar, e ai? Você me aceita pra 
+vida inteira?
+ <b>C9</b>           <b>F</b>             <b>Dm7</b>              
+    Já imaginei aqui       nosso apartamento 
+     <b>G</b>
+e os filhos crescendo
+</pre><pre class="col2">  <b>F</b>                          <b>G</b>            
+    Eu acho que a gente se apaixonou, e o 
+                <b>Am</b>
+beijo da gente me viciou
+                               <b>G</b>             
+    Parece que a gente já tá dependente um do
+    <b>F</b>
+ outro, isso é amor
+ <b>F</b>                           <b>G</b>               
+    Você me sorriu e a vida mudou, e a nossa 
+               <b>Am</b>
+história só começou
+                                  <b>G</b>          
+    Parece que a gente já tá dependente um do
+        <b>F</b>
+  outro, isso é amor
+
+<b>F</b>       <b>G</b>      <b>Am</b>        <b>G</b>                 <b>C</b>
+    Uooh,  uooh,   uoh, uooh     isso é amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-dependente.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-dependente.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

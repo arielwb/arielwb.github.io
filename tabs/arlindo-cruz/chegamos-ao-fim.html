@@ -1,0 +1,117 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Chegamos Ao Fim</h1><h2 class="t3"><a href="/arlindo-cruz/">Arlindo Cruz</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>A7M</b>              <b>Am7(9)</b>
+Olhe prá dentro de nós
+       <b>Dm7</b>
+Nosso amor terminou num deserto
+                <b>G7(4)</b>
+Você vem me condenar
+<b>G7</b>   <b>C7M</b>           <b>G7</b>
+Mas sabe que errou também
+<b>A7M</b>                 <b>Am7(9)</b>
+Olhe prá dentro de nós
+      <b>Dm7</b>
+No jardim já morreram as flores
+                          <b>G7(4)</b>
+Nossas fotos perderam as cores
+<b>G7</b>                    <b>C7M</b>
+Nossa cama está tão vazia
+<b>F7M</b>
+Chego a ter calafrio no corpo
+      <b>Em7</b>               <b>Am</b>           <b>Dm</b>
+A tristeza invade o meu rosto quando lembro
+                     <b>F7M</b>
+Teu cheiro, teu gosto
+<b>G7</b>                      <b>C</b>     <b>C7</b>
+E a farra que a gente fazia
+                 <b>F7M</b>
+Onde foi nossa magia?</pre><pre class="col2"><b>A7/13-</b>                 <b>Dm</b>
+Nosso mundo encantado
+<b>Em7</b>                       <b>F7M</b>
+Foi sofrendo lado a lado
+   <b>G7</b>                 <b>C</b>
+Que o amor se acabou
+        <b>Dm7</b>               <b>Em7</b>
+Chegamos ao fim tá doendo sim
+             <b>G7</b>       <b>C</b>
+Eu chego a perder a voz
+          <b>Dm7</b>              <b>Em7</b>
+Só resta chorar e se lamentar
+          <b>G7</b>         <b>C</b>
+Pelo que restou de nós
+
+       <b>Dm7</b>               <b>Em7</b>
+Chegamos ao fim tá doendo sim
+             <b>G7</b>       <b>C</b>
+Eu chego a perder a voz
+          <b>Dm7</b>              <b>Em7</b>
+Só resta chorar e se lamentar
+          <b>G7</b>         <b>C</b>
+Pelo que restou de nós
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/arlindo-cruz-chegamos-ao-fim.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-arlindo-cruz-chegamos-ao-fim.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

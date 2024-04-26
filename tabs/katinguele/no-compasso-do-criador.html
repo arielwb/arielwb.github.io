@@ -1,0 +1,124 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">No Compasso do Criador</h1><h2 class="t3"><a href="/katinguele/">Katinguelê</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro:] <b>E7M</b> <b>E6</b> <b>F#m7(9)</b> <b>F#m6(9)</b> <b>E7M</b> <b>E6</b> 
+
+<b>F#m7(9)</b> <b>Abm7</b> <b>A7M</b> <b>Ebº</b> <b>E7M</b>
+
+<b>B7(4)(9)</b>          <b>E7M</b> <b>E6</b> <b>E7M</b>
+Ao teu lado sou criança
+<b>E6</b>                  <b>Abm7(b5)</b> <b>E7</b> <b>Bb7(b5)</b>
+Nosso amor é feito um rio
+    <b>A7M</b>    <b>B/A</b>
+E a gente navegando nele
+ <b>Ab7(b9)</b>                     <b>C#m7</b>
+Deságua dentro da paixão
+      <b>F#m7(9)</b>  <b>Abm7</b>    <b>A7M</b>  <b>Am6</b>   <b>C7M</b> <b>F7M</b> 
+Nossos barcos são as nossas e...moções
+<b>F#m7</b>
+
+
+<b>B7(b9)</b>                <b>E7M</b> <b>E6</b> <b>E7M</b>
+Nosso amor é feito um vinho
+     <b>E6</b>   <b>Abm7(b5)</b> <b>E7</b> <b>Bb7(b5)</b>
+Destilando nos corações
+  <b>A7M</b>     <b>B/A</b>
+O nosso amor é infinito
+ <b>Ab7(b9)</b>                        <b>C#m7</b>
+É tudo o que a gente quiser
+    <b>F#m7(9)</b>     <b>Abm7</b> <b>A7M</b>
+Basta eu ser o seu homem
+    <b>Am6</b> <b>Em7(9)</b>    <b>Bm7</b> <b>Bb7(b13)</b>
+E você  minha mulher
+</pre><pre class="col2"><b>A7M</b> <b>B/A</b>  <b>Abm7(b5)</b>             <b>E7</b> <b>Bm7</b> <b>Bb7</b>
+Meu  amor te chamo, na minha canção
+<b>A7M</b>  <b>B/A</b>   <b>Abm7(b5)</b>             <b>E7</b> <b>Bm7</b> <b>Bb7</b>
+Vem me beija, vamos viver essa emoção
+<b>A7M</b> <b>B/A</b>      <b>A7M</b>     <b>Am6</b>    <b>E7M</b> <b>Bm7</b> <b>Bb7(b5)</b>
+Chuva cai e abençoa essa nossa união
+<b>A7M</b> <b>B/A</b>  <b>Abm7(b5)</b>             <b>E7</b> <b>Bm7</b> <b>Bb7</b>
+Meu  amor te chamo, na minha canção
+<b>A7M</b>  <b>B/A</b>   <b>Abm7(b5)</b>             <b>E7</b> <b>Bm7</b> <b>Bb7</b>
+Vem me beija, vamos viver essa emoção
+<b>A7M</b> <b>B/A</b>      <b>A7M</b>     <b>Am6</b>  <b>E7M/Ab</b> <b>Gº</b> <b>F#m7</b> 
+Chuva cai e abençoa essa nossa união
+<b>B7(b9)</b> <b>E7M</b>
+
+
+Devagar a gente chega
+No compasso do criador
+A gente chega nas estrelas
+Chega onde a gente quiser
+Só não chega se acabar
+A nossa fé
+
+<b>A7M</b> <b>B/A</b>      <b>A7M</b>     <b>Am6</b>    <b>C7M</b> <b>F7M</b> <b>F#m7</b> 
+Chuva cai e abençoa essa nossa união
+<b>B7(b9)</b> <b>C7M</b> <b>F7M</b> <b>E7M</b>
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/katinguele-no-compasso-do-criador.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-katinguele-no-compasso-do-criador.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,106 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tenho Medo</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro]  <b>G</b>  <b>C9</b>  <b>G9</b>  <b>C9</b>  <b>D7/4</b>
+
+ <b>G7+</b>                             <b>C9</b>       
+Será, que é melhor eu agora ser sincero e 
+   <b>D4</b>
+falar
+    <b>G7+</b>         <b>Em7</b>                 <b>C7+</b>      
+Ou será, que é melhor guardar esse segredo e 
+ <b>G/B</b>      <b>Am7</b>
+não arriscar
+ <b>C7+/9</b>                     <b>D4</b>        <b>G</b>
+Porque se você se afastar de mim eu vou 
+sofrer
+ <b>F#m7/4+</b>     <b>B7</b>       <b>Em7</b>
+Perder a sua amizade não vai ser legal
+       <b>C7+</b>                 <b>G/B</b>
+Tenho medo de estar confundindo
+                  <b>Am7/9</b>   <b>Am7/G</b>   <b>F7+</b>  <b>D4</b>
+Mais o que estou sentindo é especial
+</pre><pre class="col2">             <b>G7+</b>
+Você conhece os meus problemas
+     <b>D/F#</b>     <b>Em7</b>         <b>Dm7</b>  <b>G7/9</b>
+Meu relacionamento complicado
+      <b>C7+</b>                          <b>G/B</b>
+Sabe tudo o que penso e o que eu quero
+             <b>F7+</b>                  <b>Am7</b>  <b>D7</b>
+Que Deus me perdoe se isso for errado
+                     <b>G7+</b>
+Se estou com ela eu te desejo
+    <b>D/F#</b>         <b>Em7</b>        <b>Dm7</b>  <b>G7/9</b>
+Eu sonho em cometer esse pecado
+        <b>C7+</b>              <b>G/B</b>
+Se eu criei coragem pra falar
+                 <b>A7/9</b>  <b>Am7</b>  <b>Dsus</b>
+Pode crer que o meu coração está
+       <b>C9</b>  <b>D4</b>
+Apaixonado
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-tenho-medo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-tenho-medo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

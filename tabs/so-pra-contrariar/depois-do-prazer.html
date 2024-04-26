@@ -1,0 +1,130 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Depois do Prazer</h1><h2 class="t3"><a href="/so-pra-contrariar/">Só Pra Contrariar (SPC)</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>Bm7</b> <b>Bm7</b> <b>A</b> <b>A</b> <b>Bm7</b> <b>Bm7</b> <b>A</b> <b>A</b>
+
+SoloIntro
+
+<b>A</b>                              <b>F#m7</b>
+   Tô fazendo amor com outra pessoa
+              <b>Bm</b>              <b>E/G#</b>   <b>D/F#</b> <b>E7</b>
+Mas meu coração vai ser pra sempre teu
+<b>A</b>                            <b>F#m7</b>
+   O que o corpo faz a alma perdoa
+           <b>Bm</b> <b>Bm/A</b>         <b>E/G#</b>  <b>D/F#</b> <b>E7</b>
+Tanta solidão   quase me enlouqueceu
+
+[Parte 2]
+                  <b>A</b>
+Vou falar que é amor
+                   <b>E/G#</b>
+Vou jurar que é paixão
+     <b>E/G</b>                                <b>F#7</b>
+E dizer o que sinto com todo carinho pensando
+ em você
+       <b>Bm</b>
+Vou fazer o que for
+          <b>Bm7+</b>
+E com toda emoção
+     <b>Bm7</b>                                     
+A verdade é que eu minto que vivo sozinho não
+ <b>E7</b>
+ sei te esquecer
+
+     <b>A</b>
+E depois acabou</pre><pre class="col2">   <b>E/G#</b>
+Ilusão que eu criei
+   <b>E/G</b>                                  <b>F#7</b>
+Emoção foi embora e a gente só pede pro tempo
+ correr
+       <b>Bm</b>
+Já não sei quem me amou
+       <b>Bm7+</b>
+Que será que eu falei
+       <b>Bm7</b>                                
+Da pra ver nessa hora que amor só se mede 
+  <b>E7</b>
+depois do prazer
+
+[Refrão]
+<b>A</b>                                    <b>F#m7</b>
+Fica dentro do meu peito sempre uma saudade
+ <b>Bm</b>                <b>D</b>                  <b>E7</b>
+Só pensando no teu jeito eu amo de verdade
+<b>A</b>                                     <b>F#m7</b>
+E quando o desejo vem é teu nome que eu chamo
+<b>Bm</b>                      <b>D</b>                  
+Posso até gostar de alguém mas é você que 
+  <b>E7</b>
+eu amo
+
+[Base Solo] <b>A</b> <b>A</b> <b>F#m7</b> <b>Bm</b> <b>Bm/A</b> <b>E/G#</b> <b>E/F#</b> <b>E7</b>
+
+[Repete Parte 2]
+[Repete Refrão]
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/so-pra-contrariar-depois-do-prazer.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-so-pra-contrariar-depois-do-prazer.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

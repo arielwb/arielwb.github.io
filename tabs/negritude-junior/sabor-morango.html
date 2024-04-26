@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sabor Morango</h1><h2 class="t3"><a href="/negritude-junior/">Negritude Junior</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>G#6</b> <b>A6</b>                 <b>A6</b>
+      Morena da cor de jambo
+G#6 A6   Co             Bm7   Go Bm7
+      Queria mais um beijinho
+                 <b>Bm</b>
+Sua boca sabor morango
+   <b>F#5+</b>         <b>Bm7</b>
+Me deixou apaixonado
+  <b>E7</b>              <b>A7+</b>  <b>E5+</b> <b>A6</b>
+Fiquei logo amarradinho
+
+   <b>Bm7</b>           <b>A6</b>    <b>G#6</b> <b>A6</b>
+Morena da cor de jambo
+   Co             Bm7   Go Bm7
+Queria mais um beijinho
+                 <b>Bm</b>
+Sua boca sabor morango
+   <b>F#5+</b>         <b>Bm7</b>
+Me deixou apaixonado
+  <b>E7</b>              <b>A7+</b>  <b>A6</b>
+Fiquei logo amarradinho
+
+<b>Em7</b>  <b>A7</b>            <b>D#m7</b> <b>Dm6</b>
+   É tudo que eu sonhei
+               <b>C#m7</b> <b>F#7/4</b>
+Menina da zona sul</pre><pre class="col2">    <b>F#7</b>             <b>B7/4</b>
+Vem pra completar o meu visual
+    <b>B7</b>            <b>Bm7</b>
+Que no sapatinho abalou geral
+   <b>E7</b>           <b>A6</b>
+No fundo do coração
+
+(Ela é tudo que eu sonhei)
+
+                  <b>Dm</b>
+Eu te dei até meu tel
+    <b>G7/9</b>            <b>Am</b>
+Pra quando quiser ligar
+                <b>Dm</b> <b>F7/9</b> <b>E7/9</b>     <b>A7+</b>
+Eu espero por você,          morena
+  <b>A7</b>             <b>D#m7/5-</b>
+E quando você surgir
+     <b>Dm</b>          <b>C#m7</b>
+Deus vai nos abençoar
+      <b>F#m7</b>        <b>B7/9</b> <b>E7</b> <b>A</b>   <b>A</b>
+Pra você morar na minha   vida
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/negritude-junior-sabor-morango.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-negritude-junior-sabor-morango.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Marinheiro Só</h1><h2 class="t3"><a href="/clementina-de-jesus/">Clementina de Jesus</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">               <b>D</b>
+Eu não sou daqui
+           <b>E7</b>
+Marinheiro só
+              <b>A</b>
+Eu não tenho amor
+           <b>F#7</b>
+Marinheiro só
+            <b>Bm</b>
+Eu sou da Bahia
+           <b>E7</b>
+Marinheiro só
+             <b>A</b>
+De São Salvador
+            <b>A</b>
+Marinheiro só
+
+                    <b>E7</b>
+Ô, marinheiro marinheiro
+
+Marinheiro só
+                       <b>A</b>
+Ô, quem te ensinou a nadar
+Marinheiro só
+                     <b>E7</b>
+Ou foi o tombo do navio</pre><pre class="col2">Marinheiro só
+                     <b>A</b>
+Ou foi o balanço do mar
+Marinheiro só
+
+    <b>A7</b>       <b>D</b>
+Lá vem, lá vem
+           <b>E7</b>
+Marinheiro só
+                <b>A</b>
+Como ele vem faceiro
+           <b>F#7</b>
+Marinheiro só
+              <b>Bm</b>
+Vem todo de branco
+           <b>E7</b>
+Marinheiro só
+               <b>A</b>
+Com o seu bonezinho
+           <b>A7</b>
+Marinheiro só
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clementina-de-jesus-marinheiro-so.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clementina-de-jesus-marinheiro-so.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tô te filmando, sorria</h1><h2 class="t3"><a href="/os-travessos/">Os Travessos</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>D7M</b>  <b>Bm7</b>  <b>G7M</b>  <b>G/A</b>
+
+<b>D7M</b>                       <b>F#m7</b>  <b>Bm7</b>
+    Toda vez que eu vejo você
+                      <b>G/A</b>  <b>F/A</b>  <b>G/A</b>  <b>Eb7M</b>
+Sinto uma coisa diferente
+
+<b>D7M</b>                           <b>F#m7</b>  <b>G7M</b>
+    Toda vez que eu penso em você
+                              <b>G/A</b>   <b>A#°</b>
+Te vejo nos meus sonhos tão carente
+
+<b>Bm7</b>                              <b>F#m7</b>
+    Por que você não cola do meu lado
+                              <b>G7M</b>
+Esquece os grilos todos do passado
+       <b>Em</b>       <b>Em/D</b>         <b>C</b>  <b>G/A</b>  <b>B7</b>
+Vem comigo e tenta ser feliz
+
+<b>Em7</b>                          <b>F#m7</b>
+    Pare de dizer: tá tudo errado
+                          <b>G7M</b>
+Deixe eu logo ser teu namorado</pre><pre class="col2">             <b>G/A</b>          <b>D7M</b>  <b>D7</b>
+O resto o destino é quem diz
+
+<b>G7M</b>                            <b>F#m7</b>
+    Sorria que eu estou te filmando
+              <b>B7</b>       <b>Em7</b>
+Sorria, o coração tá gravando
+             <b>G/A</b>           <b>D7M</b>
+O seu nome aqui dentro de mim
+  <b>Em7</b>  <b>F#m7</b>  <b>G7M</b>
+Ô ôooooooôoooô
+                            <b>F#m7</b>
+Sorria que o prazer já vem vindo
+                <b>B7</b>       <b>Em7</b>
+Sorria, nosso amor tá tão lindo
+              <b>G/A</b>                <b>D7M</b>  <b>Em7</b>  
+Não quero ver você tão triste assim
+<b>F#m7</b>
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-travessos-to-te-filmando-sorria.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-travessos-to-te-filmando-sorria.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,136 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Zé Do Caroço</h1><h2 class="t3"><a href="/leci-brandao/">Leci Brandão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Am</a> </span><pre class="col1"><b>Am7</b>    <b>Dm7</b>                <b>Am7</b>
+Lelelelê Lelelelelelelelelê
+       <b>Dm7</b>                <b>Am7</b>
+Lelelelê Lelelelelelelelelê
+
+<b>Am7</b>                    <b>Dm7</b>
+No serviço de auto-falante
+                       <b>Am7</b>
+No morro do pau da bandeira
+                        <b>F7</b>
+Quem avisa é o Zé do Caroço
+                      <b>Dm7</b>
+Amanhã vai fazer alvoroço
+                      <b>E7</b>
+Alertando a favela inteira
+
+                             <b>F7</b>
+Ai como eu queria que fosse mangueira
+                           <b>Am7</b>
+Que existisse outro Zé do Caroço
+                               <b>Dm7</b>
+Pra falar de uma vez pra esse moço
+                       <b>F7</b>
+Carnaval não é esse colosso
+                         <b>E7</b>
+Nossa escola é raiz é madeira
+
+                          <b>F7</b>
+Mas é morro do pau da bandeira
+                       <b>Am7</b>
+De uma vila Isabel verdadeira
+                     <b>Dm7</b>
+Que o Zé do Caroço trabalha
+                    <b>F7</b>
+Que o Zé do Caroço batalha</pre><pre class="col2">                        <b>E7</b>
+E que malha o preço da feira
+
+                                <b>F7</b>    <b>Em7</b>  
+E na hora que a televisão brasileira
+<b>Dm7</b>
+
+                                <b>Am7</b>
+Destrói toda a gente com a sua novela
+                           <b>Dm7</b>
+É que o Zé bota a boca no mundo
+                      <b>F7</b>
+Ele faz um discurso profundo
+                         <b>E7</b>
+Ele quer ver o bem da favela
+
+                       <b>F7</b>     <b>Em7</b>  <b>Dm7</b>
+Está nascendo um novo líder
+                    <b>Am7</b>
+No Morro do Pau da Bandeira
+                       <b>F7</b>    <b>Em7</b>  <b>Dm7</b>
+Está nascendo um novo líder
+                    <b>Am7</b>
+No morro do Pau da Bandeira
+                       <b>F7</b>
+No morro do pau da bandeira
+                       <b>Am7</b>
+No morro do pau da bandeira
+
+<b>Am7</b>    <b>Dm7</b>                <b>Am7</b>
+Lelelelê Lelelelelelelelelê
+       <b>Dm7</b>                <b>Am7</b>
+Lelelelê Lelelelelelelelelê
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/leci-brandao-ze-do-caroco.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-leci-brandao-ze-do-caroco.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

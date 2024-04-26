@@ -1,0 +1,118 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Eu e Ela</h1><h2 class="t3"><a href="/alexandre-pires/">Alexandre Pires</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C7M</b>  <b>Am7(9)</b>  <b>Dm7(9)</b>  <b>G4(7/9)</b>
+        <b>C7M</b>  <b>Am7(9)</b>  <b>Bb7M(9)</b>  <b>G4(7/9)</b>
+
+<b>C7M</b>       <b>Em7</b>   <b>Am7(9)</b>  <b>Dm7(9)</b>  <b>G4(7/9)</b>
+Um grande amor começa agora
+<b>C7M</b>       <b>Em7</b>   <b>Am7(9)</b>    <b>Gm7</b>  <b>Bb/C</b>
+Tudo é um sonho lindo pra mim
+<b>F7M</b>    <b>G4(7/9)</b>    <b>G#º</b>      <b>Am7</b>   <b>Am7M</b>
+Você entrou na minha história
+                     <b>D4(7/9)</b>  <b>D7(9)</b>
+O amor não escolhe a hora
+                      <b>G4(7/9)</b>  <b>Bb4(7/9)</b>  
+Pega a gente e deixa assim
+<b>Ab4(7/9)</b>  <b>G4(7/9)</b>
+
+
+<b>C7M</b>   <b>Em7</b>    <b>Am7(9)</b>      <b>Dm7(9)</b>  <b>G4(7/9)</b>
+As emoções estão nessa estrada
+<b>C7M</b>      <b>Em7</b>    <b>Am7(9)</b>  <b>Gm7</b>    <b>Bb/C</b>
+Para se viver a todo momento
+<b>F7M</b>      <b>G4(7/9)</b>  <b>G#º</b>  <b>Am7</b>  <b>Am7M</b>
+E quando vem a madrugada
+                    <b>D4(7/9)</b>  <b>D7(9)</b>
+Coisas lindas são faladas
+<b>G4(7/9)</b>   <b>G7(9)</b>        <b>C7M</b>   <b>Gm7(9)</b>  <b>C7</b>  <b>F7M</b>
+Nosso amor é mesmo assim
+</pre><pre class="col2">     <b>F7M</b>   <b>G4(7/9)</b>  <b>G/F</b>
+Eu e ela
+     <b>Em7</b>   <b>Am7</b>
+Eu e ela
+      <b>Dm7</b>
+Somos dois apaixonados
+     <b>G4(7/9)</b>         <b>G7</b>          <b>C7M</b>         
+Caminhamos lado a lado nesse amor sem fim
+ <b>Gm7</b>  <b>C7</b>
+
+     <b>F7M</b>   <b>G4(7/9)</b>  <b>G/F</b>
+Eu e ela
+     <b>Em7</b>   <b>Am7</b>
+Eu e ela
+     <b>Dm7</b>
+Somos mais que dois amantes
+     <b>G4(7/9)</b>         <b>G7</b>           <b>C7M</b>
+Cada dia mais que antes nesse amor
+
+( <b>Fm7(9)</b>  <b>Bb7(9)</b>  <b>Em7(9)</b>  <b>Am7(9)</b> )
+( <b>D7</b>  <b>Dm7</b>  <b>G4(7/9)</b>  <b>C7M</b>  <b>Bb7(9)</b> )
+( <b>Am7(9)</b>  <b>D7</b>  <b>Dm7</b>  <b>G4(7/9)</b>  <b>C7M</b> )
+( <b>G4(7/9)</b>  <b>C7M</b> )
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/alexandre-pires-eu-e-ela.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-alexandre-pires-eu-e-ela.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sorriso de Criança</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>E</b>         <b>F#m7</b>               <b>G#m7</b>  <b>C#7</b>
+Sorria mais criança pra não sofrer
+        <b>F#m</b>         <b>B7</b>           <b>E</b>
+Eu vi você, criança,  no alvorecer
+            <b>B7</b>           <b>A7</b>          <b>G#7</b>  <b>C#7</b>
+O sol se abrindo aos encantos de uma flor
+     <b>F#7</b>          <b>B7</b>                 <b>E</b> <b>C#7</b>
+Realizado o sonho....de um grande amor
+        <b>F#m</b> <b>B7</b>        <b>G#m</b>  <b>C#7</b>
+Eu embalei....eu embalei
+            <b>F#m</b>         <b>B7</b>         <b>E</b>  <b>C#7</b>
+Nos braços meus criança...eu embalei
+        <b>F#m</b> <b>B7</b>        <b>E</b>   <b>C#7</b>
+Eu embalei....eu embalei
+            <b>F#m</b>         <b>B7</b>         <b>E</b>  <b>B7</b>
+Nos braços meus criança...eu embalei
+
+      <b>E</b>                          
+E aprenda lutar pela vida pra se 
+      <b>A7</b>    <b>G#7</b>
+preveni.....ir
+    <b>C#m</b>                   <b>Bm7</b>         <b>E7</b>
+Conheça todas as maldades pra não se iludir</pre><pre class="col2">   <b>A</b>                   <b>Am6</b>
+Espalhe amor por onde for
+     <b>G#m</b>                  <b>C#7</b>
+Quem sabe amar destrói a dor
+<b>F#7</b>               <b>B7</b>
+Que Seja todo seu viver
+   <b>Bm</b>                <b>E7</b>
+Um mundo cheio de prazer
+   <b>A</b>                   <b>Am</b>
+Espalhe amor por onde for
+     <b>G#m</b>                  <b>C#7</b>
+Quem sabe amar destrói a dor
+<b>F#7</b>               <b>B7</b>
+Que Seja todo seu viver
+    <b>E</b>                 <b>C#7</b>
+Um mundo cheio de prazer
+       <b>F#m</b>
+Eu embalei....
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-sorriso-de-crianca.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-sorriso-de-crianca.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

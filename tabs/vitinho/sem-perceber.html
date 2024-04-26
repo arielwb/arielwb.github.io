@@ -1,0 +1,122 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sem Perceber</h1><h2 class="t3"><a href="/vitinho/">Vitinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>E7M</b>  <b>B/D#</b>  <b>C#m7</b>  <b>C#m7</b>  <b>B/D#</b>
+        <b>E7M</b>  <b>B7M/D#</b>  <b>C#m7</b>  <b>F#4</b>
+
+<b>B9</b>                                      
+Me peguei juntando as partes da nossa 
+<b>G#m7(11)</b>
+união
+<b>E7M</b>             <b>C#m7(9)</b>         <b>F#4</b>
+Que se quebrou, por falta de compreensão
+<b>B9</b>                          <b>G#m7(11)</b>
+Mesmo sabendo que era um falso amor
+<b>E7M</b>             <b>C#m7(9)</b>      <b>F#4</b>
+Eu me dediquei e você nem notou!
+<b>C#m7(9)</b>       <b>F#4</b>              <b>B9</b>  <b>B7M</b>
+Eu sei que fui um fraco em te querer!
+<b>C#m7(9)</b>       <b>F#4</b>                   <b>B9</b>  <b>B7M</b>
+Me apego muito fácil, mas eu sou assim
+<b>C#m7(9)</b>       <b>F#4</b>                    <b>B9</b>  <b>B7M</b>
+E sei também que um dia eu hei de aprender
+<b>E7M</b>            <b>B/D#</b>     <b>C#m7(9)</b>  <b>F#4</b>
+Gostar de quem gosta de mim
+<b>B9</b>                          <b>F#/A#</b>
+Sem perceber eu me envolvi
+<b>C#m7(9)</b>  <b>F#4</b>
+Por inteiro nesse amor
+<b>B9</b>                       <b>F#/A#</b>
+E esse amor sem perceber
+<b>C#m7(9)</b>      <b>F#4</b>
+Me deixou na solidão</pre><pre class="col2"><b>B9</b>                         <b>F#/A#</b>
+E a solidão quer machucar
+<b>C#m7(9)</b>        <b>F#4</b>
+Meu pobre coração
+<b>B9</b>                    <b>F#/A#</b>
+Eu me envolvi sem perceber
+<b>C#m7(9)</b> <b>F#4</b>  <b>B/D#</b>
+E agora meu amor?
+<b>E7M</b>             <b>B7M/D#</b>   <b>C#m7</b>
+Eu me envolvi sem perceber
+<b>F#4</b>              <b>B9</b>
+E agora meu amor?
+  <b>C#m7(9)</b>            <b>F#4</b>
+(Eu sei que um fraco)
+
+<b>E7M</b>             <b>B7M/D#</b>    <b>C#m7</b>
+Eu me envolvi sem perceber
+<b>F#4</b>              <b>B/D#</b>
+E agora meu amor?
+<b>E7M</b>             <b>B7M/D#</b>      <b>C#m7</b>
+Eu me envolvi sem perceber
+<b>F#4</b>
+E agora meu amor?
+
+[Final] <b>B9</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/vitinho-sem-perceber.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-vitinho-sem-perceber.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

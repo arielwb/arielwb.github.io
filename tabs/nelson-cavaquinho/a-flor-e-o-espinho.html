@@ -1,0 +1,135 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Flor e o Espinho</h1><h2 class="t3"><a href="/nelson-cavaquinho/">Nelson Cavaquinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Intro] <b>Cm</b>  <b>Ebº</b>  <b>Gm7</b>  <b>C7(9)</b>
+        <b>Dm</b>  <b>Bº</b>  <b>A7</b>  <b>Dm</b>  <b>A7</b>
+
+<b>Dm</b>            <b>Dm/C</b>      <b>Gm6</b>
+Tire o seu sorriso do caminho
+<b>A7</b>                               <b>Dm</b>
+ Que eu quero passar com a minha dor
+<b>F#º</b>        <b>Ebº</b>         <b>Gm7M</b>  <b>Gm7</b>
+Hoje pra você eu sou espiiiii-nho
+<b>C7</b>                        <b>Bb7</b>   <b>A7</b>
+  Espinho não machuca a flooooo-or
+<b>Gm7</b>        <b>A7(b9)</b>        <b>Dm</b>              <b>Dm/C</b>
+   Eu só errei quando juntei minh'alma à sua
+  <b>Gm6/Bb</b>           <b>A7</b>           <b>Dm</b>    <b>A7</b>
+O  sol  não  pode  viver perto da lua
+
+<b>Dm</b>            <b>Dm7M</b>    <b>Gm/Bb</b>
+Tire o seu sorriso do caminho
+<b>A7</b>                               <b>Dm</b>
+ Que eu quero passar com a minha dor
+<b>F#º</b>        <b>Aº</b>         <b>G7M(9)</b>  <b>Gm7</b>
+Hoje pra você eu sou espiiiii-nho
+<b>C7(9)</b>                      <b>Bb7</b>  <b>A7</b>
+   Espinho não machuca a floooo-or
+<b>Gm7</b>         <b>A7</b>           <b>Dm</b>              <b>Dm/C</b>
+   Eu só errei quando juntei minh'alma à sua
+  <b>Bº</b>             <b>A7/C#</b>        <b>Dm</b>
+O sol não pode viver perto da lua
+
+<b>Dbº</b>      <b>A7</b>          <b>Dm/F</b>         <b>Dm</b>
+  É no espelho que eu vejo a minha mágoa
+<b>Ebº</b>       <b>D7</b>            <b>Gm/D</b>          <b>Gm/Bb</b>
+E minha dor e os meus olhos rasos d'água
+<b>C7</b>        <b>C/Bb</b>
+ Eu na sua vida</pre><pre class="col2"><b>F/A</b>         <b>Dm/F</b>
+Lá  fui uma flor
+<b>Bº</b>                       <b>A7</b>
+Hoje sou espinho em seu amor
+
+<b>Dm</b>            <b>Dm(7M)</b>    <b>Gm/Bb</b>
+Tire o seu sorriso do caminho
+<b>A7</b>                               <b>Dm</b>
+ Que eu quero passar com a minha dor
+<b>F#º</b>        <b>Aº</b>         <b>G7M(9)</b>  <b>Gm7</b>
+Hoje pra você eu sou espiiiii-nho
+<b>C7(9)</b>                      <b>Bb7</b>  <b>A7</b>
+   Espinho não machuca a floooo-or
+<b>Gm7</b>         <b>A7</b>           <b>Dm</b>              <b>Dm/C</b>
+   Eu só errei quando juntei minh'alma à sua
+  <b>Bb7</b>             <b>A7</b>           <b>Dm</b>
+O sol não pode viver perto da lua
+<b>Gm</b>          <b>A7</b>           <b>Dm</b>              <b>Dm/C</b>
+   Eu só errei quando juntei minh'alma à sua
+  <b>Bb7</b>            <b>A7</b>           <b>Dm</b>   <b>D7</b>
+O sol não pode viver perto da lua
+<b>Gm</b>          <b>A7</b>           <b>Dm</b>              <b>Dm/C</b>
+   Eu só errei quando juntei minh'alma à sua
+  <b>Bb7</b>            <b>A7</b>           <b>Dm</b>
+O sol não pode viver perto da lua
+
+  <b>Bb7</b>             <b>A7</b>           <b>Dm</b>  <b>Dm/C</b>
+O sol não pode viver perto da lua
+  <b>Bb7</b>             <b>A7</b>
+O sol não pode viver
+         <b>Dm7M</b> <b>Dm</b>
+Perto da lua
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/nelson-cavaquinho-a-flor-e-o-espinho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-nelson-cavaquinho-a-flor-e-o-espinho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

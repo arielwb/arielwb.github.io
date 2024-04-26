@@ -1,0 +1,130 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Bicho Feroz</h1><h2 class="t3"><a href="/bezerra-da-silva/">Bezerra da Silva</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>G</b>                       <b>D7</b>                <b>G</b>
+Você com um revólver na mão é um bicho 
+     <b>G#°</b>
+feroz, feroz
+    <b>Am</b>            <b>D7</b>                <b>G</b>
+Sem ele anda rebolando até muda de voz
+                  <b>D7</b>
+Isso aqui cá pra nós
+<b>G</b>                       <b>D7</b>                <b>G</b>
+Você com um revólver na mão é um bicho 
+     <b>G#°</b>
+feroz, é sim
+    <b>Am</b>            <b>D7</b>                <b>G</b>
+Sem ele anda rebolando até muda de voz  
+{Refrão}
+
+              <b>E7</b>      <b>Am</b>
+É que a rapaziada não sabe
+         <b>D7</b>           <b>G</b>
+Quando você entrou em cana
+          <b>G7</b>              <b>Dm</b>
+Lavava a roupa da malandragem
+      <b>G7</b>             <b>C</b>
+E dormia no canto da cama
+                  <b>Cm</b>
+Hoje está em liberdade
+          <b>D7</b>                 <b>G</b>
+E anda trepado com marra de cão
+                  <b>E7</b>        <b>Am</b>
+Eu conheço seu passado na cadeia
+                <b>D7</b>                <b>G</b>
+Seu negócio é somente pagar sugestão</pre><pre class="col2">                  <b>E7</b>        <b>Am</b>
+Eu conheço seu passado na cadeia
+                <b>D7</b>                <b>G</b>
+Seu negócio é somente pagar sugestão
+             <b>D7</b>
+Olha aí vacilão
+
+Refrão...
+<b>G</b>                  <b>E7</b>         <b>Am</b>
+Simplesmente estou dando esse alô
+                 <b>D7</b>           <b>G</b>
+Porque sei que você não é de nada
+       <b>G7</b>                     <b>Dm</b>
+Quando leva um arrocho dos homens
+             <b>G7</b>               <b>C</b>
+De bandeja entrega toda rapaziada
+                      <b>Cm</b>
+Acha bonito ser bicho solto
+         <b>D7</b>         <b>G</b>
+Mas não tem disposição
+                 <b>E7</b>       <b>Am</b>
+Quando entrar em cana novamente
+                  <b>D7</b>                   <b>G</b>
+Vai passar lua-de-mel outra vez na prisão
+                 <b>E7</b>       <b>Am</b>
+Quando entrar em cana novamente
+                  <b>D7</b>                   <b>G</b>
+Vai passar lua-de-mel outra vez na prisão
+             <b>D7</b>
+Olha aí safadão
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bezerra-da-silva-bicho-feroz.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bezerra-da-silva-bicho-feroz.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

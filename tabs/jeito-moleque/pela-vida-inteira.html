@@ -1,0 +1,125 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Pela vida inteira</h1><h2 class="t3"><a href="/jeito-moleque/">Jeito Moleque</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">
+<b>C6/9</b>        <b>F6/9</b>
+   Quero ter você
+        <b>C6/9</b>
+Custe o que custar
+       <b>D7/9/11+</b>
+Pela vida inteira
+      <b>F7+</b>
+Sonho com você
+ <b>Em7</b>     <b>F7+</b>  <b>G7/9-</b>
+Dona do meu lar
+       <b>C6/9</b>
+Minha companheira
+       <b>F6/9</b>
+Vou te prometer
+      <b>C6/9</b>
+Posso até jurar
+       <b>D7/9/11+</b>
+Na felicidade
+      <b>F7+</b>
+Você vai viver
+<b>Em7</b>        <b>F7+</b>
+  Você vai gozar
+<b>G7</b>      <b>C7+</b>
+  Meu amor de verdade
+    <b>Gm7</b>     <b>C7/9</b>    <b>F7+</b>
+E as estrelas lá do céu
+ <b>Fm6</b>    <b>C7+</b>
+Eu vou buscar
+  <b>Gm7</b>    <b>C7/9</b>    <b>F7+</b>
+Beijos com sabor de mel</pre><pre class="col2"> <b>Fm6</b>     <b>C7+</b>
+Eu vou te dar
+   <b>Gm7</b>   <b>C7/9</b>  <b>F7+</b>
+E pra nossa união
+<b>Fm6</b>    <b>C</b>  <b>G/B</b>
+Eternizar
+    <b>Am</b>    <b>Am/G</b>    <b>D7/9</b>
+Peço ao Pai em ora .. ção
+ <b>G7</b> <b>C7+</b>
+Abençoar
+    <b>Gm7</b>     <b>C7/9</b>    <b>F7+</b>
+E as estrelas lá do céu
+ <b>Fm6</b>    <b>C7+</b>
+Eu vou buscar
+    <b>Gm7</b>   <b>C7/9</b>    <b>F7+</b>
+Beijos com sabor de mel
+ <b>Fm6</b>    <b>C7+</b>
+Eu vou te dar
+   <b>Gm7</b>   <b>C7/9</b>  <b>F7+</b>
+E pra nossa união
+ <b>Fm6</b>   <b>C</b>   <b>G/B</b>
+eternizar
+    <b>Am</b>    <b>Am/G</b>    <b>D7/9</b>
+Peço ao Pai em ora .. ção
+ <b>G7</b>  <b>C7+</b>
+abençoar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jeito-moleque-pela-vida-inteira.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jeito-moleque-pela-vida-inteira.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,146 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Timidez</h1><h2 class="t3"><a href="/negritude-junior/">Negritude Junior</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>Am</b>    <b>Am/G</b> <b>Bm5-/7</b>
+Timidez
+     <b>E7/9-</b>
+É minha covardia
+<b>Am</b>     <b>Dm</b>
+Outra vez
+      <b>G7/13</b>
+É dia de agonia
+<b>Dm</b>
+Sem você
+ <b>G/F</b>     <b>C/E</b>
+Noite fria
+Solidão
+<b>Am</b>      <b>Dm</b>
+Minha ira
+         <b>E5+</b>
+Sem dizer pra você
+<b>Am</b>      <b>Am/G</b> <b>Bm5-/7</b>
+  Timidez
+     <b>E5+</b>
+Esconde o meu desejo
+<b>Am</b>
+Só me fez chorar
+          <b>G7/13</b>  <b>Dm</b>
+Sorriso que não vejo
+Com você
+<b>G/F</b>     <b>C/E</b>
+Nem um beijo
+E outra vez
+   <b>Am</b>   <b>Dm</b>
+Te desejo
+         <b>E5+</b>
+Sem dizer pra você
+  <b>G/A</b>     <b>G/A</b> <b>A7</b> <b>Dm</b>
+Te a.a.a.amo
+Com você
+  <b>G/F</b>
+Nem um beijo
+     <b>C/E</b>
+E outra vez</pre><pre class="col2"> <b>Am</b>     <b>Dm</b>
+Te desejo
+       <b>E5+</b>
+Sem dizer pra você
+  <b>A</b> <b>F#m7</b> <b>Bm</b>
+Te amo
+  <b>E4/7</b>      <b>A7+</b>  <b>A6</b>
+Não danço a nossa dança
+    <b>Aº</b>      <b>Cº</b>
+O amor é meu segredo
+        <b>A7+</b>  <b>A6</b>
+Nos olhos esperança
+      <b>G#5-/7</b>   <b>C#7</b>
+Mas tenho mee.e.e.edo
+ <b>F#m7</b>
+O meu coração
+ <b>Fº</b>  <b>Dº</b>
+Bateu emoção
+  <b>C#m</b>
+Já é tentação
+ <b>F#7/13</b>    <b>F#7/13-</b>
+Uma forte paixão
+     <b>Bm</b>      <b>E4/7</b>
+Falta coragem pra dizer
+  <b>A7+</b> <b>A6</b>
+Te amo
+     <b>Em7</b>      <b>A#7+</b>
+Falta coragem pra dizer
+   <b>D7+</b>   <b>D6</b>
+Que eu amo você
+     <b>F7+</b>     <b>E7/9-</b>
+Falta coragem pra dizer
+<b>A7+</b>   <b>A6</b> <b>Em7</b>     <b>A#7+</b>
+láia, que eu amo você
+   <b>D7+</b>   <b>D6</b>
+Que eu amo você
+     <b>F7+</b>     <b>E7/9-</b>
+Falta coragem pra dizer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/negritude-junior-timidez.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-negritude-junior-timidez.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

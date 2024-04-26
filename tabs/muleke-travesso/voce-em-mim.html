@@ -1,0 +1,107 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Você Em Mim</h1><h2 class="t3"><a href="/muleke-travesso/">Muleke Travesso</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro] <b>E7+</b>  <b>A7+</b>  <b>A6</b>  <b>E7+</b>  <b>A7+</b>  <b>A6</b>  <b>B7</b>
+
+ <b>E7+</b>         <b>G#m7</b>                  
+Hoje me encontro na solidão dos seus 
+<b>A7+</b>    <b>A6</b>
+mistérios
+<b>E7+</b>           <b>G#m7</b>     <b>A7+</b>            <b>B7</b>  
+Louco pra te ver, tocar sua mão falando 
+<b>G#m7</b>  <b>C#m</b>
+sério
+     <b>G#m7</b>            <b>A7+</b>
+Quero confessar o seu valor
+ <b>B7</b>  <b>G#7</b>  <b>C#m</b>
+E todo o meu sofrer
+       <b>G#m7</b>          <b>A7+</b>           <b>A7+</b>  <b>B7</b>
+Pra te conquistar eu faço qualquer coisa
+
+<b>E6/9</b>         <b>G#m7</b>         <b>A7+</b>
+Tá certo que caí numa real
+<b>A7+</b>          <b>B7</b>        <b>E6/9</b>     <b>G#m7</b>
+Que fui um tolo, tolo porque sinto</pre><pre class="col2"><b>A7+</b>      <b>B7</b>         <b>G#m7</b>     <b>C#m</b>
+Voce em mim quando desejo
+
+           <b>G#m7</b>             <b>A7+</b>
+Sonho em te beijar em te abraçar
+  <b>B7</b>       <b>G#m7</b>       <b>C#m</b>
+Nós dois fazendo amor
+        <b>G#m7</b>
+Não dá pra esconder
+        <b>A7+</b>        <b>A6</b>
+Porque te amo demais, te adoro demais
+      <b>B7</b>
+Que longe de voce não dá
+
+    <b>E7+</b>             <b>G#m7</b>
+Não dá pra viver não dá
+      <b>A7+</b>           <b>B7</b>
+Que longe de voce não dá
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/muleke-travesso-voce-em-mim.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-muleke-travesso-voce-em-mim.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

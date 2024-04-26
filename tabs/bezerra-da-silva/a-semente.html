@@ -1,0 +1,121 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Semente</h1><h2 class="t3"><a href="/bezerra-da-silva/">Bezerra da Silva</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Gm</b>  <b>A7</b>  <b>Dm</b>
+        <b>Gm</b>  <b>A7</b>  <b>Dm</b>
+
+[Solo]
+
+        <b>Gm</b>         <b>A7</b>                <b>Dm</b>
+Meu vizinho jogou uma semente no seu quintal
+            <b>Gm</b>         <b>A7</b>         <b>Dm</b>
+De repente brotou um tremendo matagal
+
+                        <b>Gm</b>              <b>A7</b>   
+Quando alguem lhe perguntava que mato é esse 
+              <b>Dm</b>
+que eu nunca vi
+              <b>Gm</b>                <b>A7</b>        
+Ele só respondia não sei não conheço isso 
+        <b>Dm</b>
+nasceu ai (2x)
+
+                    <b>Gm</b>               <b>A7</b>  
+Mas foi pintando sujeira o patamo estava 
+             <b>Dm</b>
+sempre na jogada
+                    <b>Gm</b>                  <b>A7</b>  
+Porque o cheiro era bom e ali sempre estava 
+           <b>Dm</b>
+uma rapaziada
+                 <b>Gm</b>                 <b>A7</b>     
+Os homens desconfiaram ao ver todo dia uma 
+         <b>Dm</b>
+aglomeração</pre><pre class="col2">                   <b>Gm</b>                   <b>A7</b>   
+E deram o bote perfeito e levaram todos eles 
+               <b>Dm</b>
+para averiguação, i dae...
+   <b>Gm</b>                <b>A7</b>              <b>Dm</b>
+Na hora do sapeca aiaá o safado contou...
+                 <b>Gm</b>                    <b>A7</b>  
+Não precisa me bater que eu dou de bandeja 
+             <b>Dm</b>
+tudo pro senhor
+                          <b>Gm</b>            
+Olha aí eu conheço aquele mato chefia e 
+    <b>A7</b>               <b>Dm</b>
+também sei quem plantou
+                <b>Gm</b>                   <b>A7</b>   
+Quando os federais grampearam e levaram o 
+              <b>Dm</b>
+vizinho inocente
+                                <b>Gm</b>    
+Na delegacia ele disse doutor não sou 
+              <b>A7</b>                 <b>Dm</b>
+agricultor desconheço a semente
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bezerra-da-silva-a-semente.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bezerra-da-silva-a-semente.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

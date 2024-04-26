@@ -1,0 +1,162 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tapão Na Raba</h1><h2 class="t3"><a href="/rai-saia-rodada/">Raí Saia Rodada</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ebm</a> </span><pre class="col1">[Intro] <b>D#m</b>  <b>G#</b>  <b>D#m</b>  <b>G#</b>
+
+[Primeira Parte]
+
+    <b>D#m</b>
+Oh baby
+                  <b>G#</b>
+Teu cheiro tá grudado no meu cobertor
+                  <b>D#m</b>
+Tu não me sai da mente, não
+                      <b>G#</b>
+Brota aqui no meu barraco
+
+Pra a gente fazer amor
+
+[Pré-Refrão]
+
+       <b>D#m</b>
+Tu sentando gostoso
+
+Com o olhar bandido
+   <b>C#</b>
+Dizendo não para, não para
+      <b>D#m</b>
+Tu gemendo com o olhar manhoso
+             <b>C#</b>
+Pedindo pra mim dá tapa na tua cara
+
+[Refrão]
+
+Eu tô com saudade de te deixar louca
+               <b>C#</b>
+De beijar sua boca e chamar de safada
+         <b>D#m</b>
+No espelhado, nós dois suados
+              <b>C#</b>
+É puxão de cabelo é tapão na raba
+              <b>D#m</b>
+Eu tô com saudade de te deixar louca
+               <b>C#</b>
+De beijar sua boca e chamar de safada
+         <b>D#m</b>
+No espelhado, nós dois suados
+              <b>C#</b>
+É puxão de cabelo é tapão na raba
+
+( <b>D#m</b>  <b>C#</b>  <b>D#m</b>  <b>C#</b> )
+</pre><pre class="col2">[Primeira Parte]
+
+    <b>D#m</b>
+Oh baby
+                  <b>G#</b>
+Teu cheiro tá grudado no meu cobertor
+                  <b>D#m</b>
+Tu não me sai da mente, não
+                      <b>G#</b>
+Brota aqui no meu barraco
+
+Pra a gente fazer amor
+
+[Pré-Refrão]
+
+       <b>D#m</b>
+Tu sentando gostoso
+
+Com o olhar bandido
+   <b>C#</b>
+Dizendo não para, não para
+      <b>D#m</b>
+Tu gemendo com o olhar manhoso
+             <b>C#</b>
+Pedindo pra mim dá tapa na tua cara
+
+[Refrão]
+
+              <b>D#m</b>
+Eu tô com saudade de te deixar louca
+               <b>C#</b>
+De beijar sua boca e chamar de safada
+         <b>D#m</b>
+No espelhado, nós dois suados
+              <b>C#</b>
+É puxão de cabelo é tapão na raba
+              <b>D#m</b>
+Eu tô com saudade de te deixar louca
+               <b>C#</b>
+De beijar sua boca e chamar de safada
+         <b>D#m</b>
+No espelhado, nós dois suados
+              <b>C#</b>
+É puxão de cabelo é tapa na cara
+
+[Final] <b>D#m</b>  <b>C#</b>  <b>D#m</b>  <b>C#</b>  <b>D#m</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/rai-saia-rodada-tapao-na-raba.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-rai-saia-rodada-tapao-na-raba.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,127 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Retrato Cantado de Um Amor</h1><h2 class="t3"><a href="/reinaldo/">Reinaldo</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Intro] <b>Dm</b>  <b>Gm7</b>  <b>C7</b>  <b>F7M</b>
+        <b>A7</b>  <b>Dm7</b>  <b>Dm7/C</b>  <b>Em7(5-)</b>  <b>A7</b>
+
+<b>Dm</b>                         <b>Gm7</b> <b>Gm7/F</b>
+Veja bem, nosso amor é perfeito
+        <b>Em7(5-)</b>       <b>A7</b>
+Pois até nos defeitos
+    <b>D6(9)</b>           <b>A7</b>
+Sabemos nos superar
+<b>Dm</b>        <b>Dm7/C</b>               <b>Gm7</b> <b>Gm/F</b>
+Lembro sim, maus momentos passamos
+           <b>Em7(5-)</b>   <b>A7</b>           <b>D6(9)D7/F#</b>
+Mesmo assim suplantamos por confiar
+
+<b>Gm7</b>     <b>C7</b>
+Toda vez   que converso
+             <b>F7M</b>                <b>A7</b>
+Com meu coração,      vejo a luz
+<b>Dm</b>                   <b>A#7</b>
+  Me sinto como um pecador
+          <b>A7</b>         <b>D6(9)</b>   <b>A7</b>
+Aos pés da cruz a confessar
+<b>Gm7</b>       <b>C7</b>    <b>A7</b>
+Este amor frutifica
+        <b>F7M</b>          <b>A7</b>
+A cada instante em mim
+<b>Dm</b>                    <b>A#7</b>
+   Me dando a certeza constante
+        <b>A7</b>            <b>D6(9)</b>   <b>A7</b>
+Que não vai chegar ao fim
+</pre><pre class="col2"><b>D6(9)</b>             <b>F#m</b>             <b>Am</b>
+É que o teu calor tem grande fulgor
+   <b>D7</b>           <b>G7M</b>    <b>G6</b>
+Que excita o meu corpo
+<b>Gm7</b>      <b>A7</b>      <b>Dm</b>
+Tem lampejos de inspiração
+              <b>A#7</b>             <b>A7</b>
+Me conduz ao espaço, seduzindo a razão
+<b>D6(9)</b>           <b>F#m</b>            <b>Am</b>
+E além do mais, me julgo incapaz
+  <b>D7</b>           <b>G7M</b>   <b>G6</b>
+De viver um desamor
+
+<b>Gm6</b>                             <b>D</b>    <b>C7</b>  <b>B7</b>
+Pra finalizar, resumindo essa história
+                   <b>A#7</b>
+Este é o retrato cantado
+            <b>A7</b>            <b>D</b>  <b>D5+</b> <b>D6</b>
+Que vem ratificar um grande amor
+<b>Am</b>         <b>D7</b>
+Um grande amor
+
+ <b>G7M</b>          <b>G#°</b>                 <b>D</b>    <b>C7</b>  <b>B7</b>
+Pra finalizar, resumindo essa história
+                   <b>A#7</b>
+Este é o retrato cantado
+            <b>A7</b>            <b>D6(9)</b>  <b>A7(13-)</b>  <b>Dm7</b>
+Que vem ratificar um grande amor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/reinaldo-retrato-cantado-de-um-amor.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-reinaldo-retrato-cantado-de-um-amor.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

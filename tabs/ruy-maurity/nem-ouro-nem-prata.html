@@ -1,0 +1,117 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Nem Ouro, Nem Prata</h1><h2 class="t3"><a href="/ruy-maurity/">Ruy Maurity</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">Intro: <b>Am7</b>  <b>Em</b>  <b>Em/G</b>  <b>F</b>  <b>B7</b>  <b>Em</b>  <b>B7</b>
+
+         <b>Em</b>            <b>B7</b>   <b>Em</b>
+Eu vi chover, eu vi relampear
+             <b>E7</b>                <b>Am7</b>
+Mas mesmo assim o céu estava azul
+                            <b>Em</b>
+Samborê, pemba, folha de Jurema
+  <b>Em/G</b>  <b>F#m7(b5)</b> <b>B7</b>      <b>Em</b> <b>B7</b>
+Oxóssi reina de norte a sul
+         <b>Em</b>            <b>B7</b>   <b>Em</b>
+Eu vi chover, eu vi relampear
+             <b>E7</b>                <b>Am7</b>
+Mas mesmo assim o céu estava azul
+                            <b>Em</b>
+Samborê, pemba, folha de Jurema
+  <b>Em/G</b>  <b>F#m7(b5)</b> <b>B7</b>      <b>Em</b> <b>B7</b>
+Oxóssi reina de norte a sul
+
+<b>Em</b>                 <b>E7</b>               <b>Am7</b>
+Sou brasileira, faceira, mestiça mulata
+                    <b>F#m7(b5)</b>        <b>B7</b>       
+Não tem ouro, nem prata  samba que sangra do 
+         <b>Em</b> <b>B7</b>
+meu coração
+<b>Em</b>             <b>E7</b>  <b>Am7</b>
+Tua menina de cor Pedaço de bom carinho</pre><pre class="col2">               <b>F#m7(b5)</b>           <b>B7</b>        
+entrei no teu passo Malandra não sou Como a 
+           <b>Em</b> <b>B7</b>
+tal Conceição
+<b>Em</b>                  <b>E7</b>                 <b>Am7</b>
+Chega de tanto exaltar essa tal de saudade
+               <b>F#m7(b5)</b>         <b>B7</b>           
+Meu caboclo moreno, mulato, amuleto do nosso 
+    <b>Em</b> <b>E7</b>
+Brasil
+<b>Am7</b>                                  <b>Em</b>
+Olha, meu preto bonito Te quero, prometo
+                                 <b>F</b>
+Te gosto pra sempre do samba-canção
+              <b>B7</b>         <b>Em</b>   <b>E7</b>
+ao primeiro apito do ano 2000
+<b>Am7</b>                                  <b>Em</b>
+Olha, meu preto bonito Te quero, prometo
+                                 <b>F</b>
+Te gosto pra sempre do samba-canção
+              <b>B7</b>         <b>Em</b>   <b>B7</b>
+ao primeiro apito do ano 2000
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ruy-maurity-nem-ouro-nem-prata.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ruy-maurity-nem-ouro-nem-prata.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

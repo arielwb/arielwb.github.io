@@ -1,0 +1,106 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Identidade</h1><h2 class="t3"><a href="/jorge-aragao/">Jorge Aragão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1">[Intro] <b>Dm</b>  <b>A7</b>  <b>Dm</b>  <b>A7</b>
+
+<b>Dm</b>          <b>Am</b>             <b>Dm</b>
+Elevador é quase um templo
+              <b>Bb</b>           <b>F</b>
+Exemplo pra minar teu sono
+                <b>G</b>
+Sai desse compromisso
+                 <b>Gm</b>
+Não vai no de serviço
+                <b>Dm</b>   <b>Am</b>     <b>Dm</b>
+Se o social tem dono não vai
+                    <b>Am</b>          <b>Dm</b>
+Quem cede a vez não quer vitória
+              <b>Bb</b>        <b>F</b>
+Somos herança da memória
+               <b>G</b>
+Temos a cor da noite
+                <b>Gm</b>
+Filhos de todo açoite</pre><pre class="col2">             <b>Dm</b>       <b>Am</b>   <b>Dm</b>
+Fato real da nossa história
+
+( <b>Dm</b>  <b>C</b>  <b>Dm</b>  <b>C</b>  <b>Dm</b>  <b>C</b> )
+( <b>Dm</b>  <b>C</b>  <b>Dm</b>  <b>C</b>  <b>Dm</b> )
+
+<b>Dm</b>                       <b>Bb</b>     <b>F</b>
+Se preto de alma branca pra você
+                 <b>G</b>   <b>Bb</b>  <b>Dm</b>
+É o exemplo da dignidade
+                      <b>Bb</b>        <b>F</b>
+Não nos ajuda só nos faz sofrer
+                    <b>G</b>    <b>Bb</b>  <b>Dm</b>
+Nem resgata nossa identidade
+
+[Final] <b>Dm</b>  <b>C</b>  <b>Dm</b>
+        <b>C</b>  <b>Dm</b>  <b>C</b>
+        <b>Dm</b>  <b>C</b>  <b>Dm</b>  <b>C</b>  <b>Dm</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jorge-aragao-identidade.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jorge-aragao-identidade.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

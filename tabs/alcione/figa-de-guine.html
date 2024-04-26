@@ -1,0 +1,147 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Figa de Guiné</h1><h2 class="t3"><a href="/alcione/">Alcione</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>Dm</b>                  <b>Dm7</b>                <b>Gm</b>
+Quem me vinga da mandinga é a figa de guiné
+                  <b>Bb°</b>                <b>Dm11</b>
+Mas o de fé do meu axé não vou dizer quem é
+
+     <b>Dm</b>            <b>Gm</b>
+Sou da fé, cabeça feita
+ <b>Bb9</b>   <b>A7</b>
+Axê, axé
+  <b>Bb°</b>          <b>Dm</b>
+No peji do candomblé
+<b>A5+</b>     <b>Dm</b>
+Axê ,, axé
+         <b>Dm</b>          <b>Gm</b>
+Tenho o meu corpo fechado
+<b>D#7</b>   <b>A7</b>
+Axê, axé
+    <b>Gm</b>        <b>Dm</b>
+Da cabeça até o pé
+
+<b>Dm</b>                <b>Dm7</b>                <b>Gm</b>
+Quem me vinga da mandinga é a figa de guiné
+                  <b>Bb°</b>                <b>Dm11</b>
+Mas o de fé do meu axé não vou dizer quem é
+
+       <b>Dm</b>          <b>Gm</b>
+Vai com calma te segura
+ <b>Bb9</b>   <b>A7</b>
+Axê, axé
+     <b>Bb°</b>        <b>Dm</b>
+Quem avisa, amigo é
+<b>A5+</b>    <b>Dm</b>
+Axê, axé
+       <b>Dm</b>           <b>Gm</b>
+Quem não pode com mandinga
+<b>D#7</b>    <b>A7</b>
+Axê, axé
+      <b>Gm</b>        <b>Dm</b>
+Não batuca opanijé
+
+<b>Dm</b>                 <b>Dm7</b>                 <b>Gm</b>
+Quem me vinga da mandinga é a figa de guiné</pre><pre class="col2">                 <b>Bb°</b>                  <b>Dm11</b>
+Mas o de fé do meu axé não vou dizer quem é
+
+       <b>Dm</b>          <b>Gm</b>
+Onda forte não derruba
+ <b>Bb9</b>   <b>A7</b>
+Axê, axé
+     <b>Bb°</b>        <b>Dm</b>
+Nem machuca quem tem fé
+<b>A5+</b>    <b>Dm</b>
+Axê, axé
+       <b>Dm</b>           <b>Gm</b>
+Vou nas águas do meu santo
+<b>D#7</b>    <b>A7</b>
+Axê, axé
+      <b>Gm</b>        <b>Dm</b>
+Na enchente da maré
+
+<b>Dm</b>                 <b>Dm7</b>                 <b>Gm</b>
+Quem me vinga da mandinga é a figa de guiné
+                 <b>Bb°</b>                  <b>Dm11</b>
+Mas o de fé do meu axé não vou dizer quem é
+
+     <b>Dm</b>         <b>Gm</b>
+Da Bahia me mandaram
+<b>Bb9</b>    <b>A7</b>
+Axê, axé
+      <b>Bb°</b>      <b>Dm</b>
+Minha figa de guiné
+<b>D#7</b>   <b>A7</b>
+Axê, axé
+      <b>Dm</b>            <b>Gm</b>
+Com as bençãos  de Caymmi
+<b>D#7</b>    <b>A7</b>
+Axê, axé
+<b>Gm</b>             <b>Dm</b>
+Jorge Amado e Caribé
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/alcione-figa-de-guine.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-alcione-figa-de-guine.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

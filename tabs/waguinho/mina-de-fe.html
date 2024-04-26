@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Mina de Fé</h1><h2 class="t3"><a href="/waguinho/">Waguinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Gm</a> </span><pre class="col1">  <b>Gm</b>             <b>F</b>  <b>Eb</b>
+Eu era feliz sem saber
+<b>Cm</b>      <b>D7</b>
+Isso me revolta
+  <b>Gm</b>
+Tudo que eu fiz
+<b>F</b>
+Foi sem querer
+<b>Eb</b>    <b>D7</b>
+Será que tem volta?
+<b>Gm</b>
+Eu não dei valor, não me dediquei
+<b>Dm</b>
+Ao meu grande amor
+        <b>Eb</b>
+Como eu vacilei
+<b>Cm</b>        <b>D7</b>
+Tô doente de saudade
+<b>Gm</b>
+Tanta curtição, tanta liberdade
+<b>Dm</b>
+Quanta azaração, quanta falsidade
+<b>Eb</b>        <b>D7</b>
+Tô doente de saudade
+<b>Gm</b>  <b>F</b>                     <b>Eb</b>
+Eu aprendi, não vale nada</pre><pre class="col2"><b>Cm</b>                      <b>D7</b>
+Noite, farra, madrugada
+<b>Gm</b>    <b>F</b>              <b>Eb</b>
+Eu prometi não te magoar
+<b>Cm</b>      <b>F7</b>
+Pode confiar
+ <b>Bb</b>
+
+Foi preciso perder
+<b>F</b>                        <b>Gm</b>  <b>Dm</b>
+Pra aprender a valorizar
+     <b>Eb</b>                  <b>Cm</b>  <b>F7</b>
+A mina de fé, a mina de fé
+<b>Bb</b>                  <b>F</b>
+Eu preciso entender
+            <b>Gm</b>        <b>Dm</b>
+Não se deve largar jamais
+<b>Eb</b>           <b>Cm</b>  <b>F7</b>
+A mina de fé
+
+A mina de fé
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/waguinho-mina-de-fe.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-waguinho-mina-de-fe.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

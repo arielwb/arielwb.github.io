@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Coração em desalinho</h1><h2 class="t3"><a href="/zeca-pagodinho/">Zeca Pagodinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C</b>  <b>Dm7</b>  <b>Em7</b>  <b>A7</b>  <b>Dm7</b>  <b>G7</b>  <b>C</b>  <b>G7</b>
+
+ <b>C</b>           <b>C5+</b>   <b>C6</b>     <b>C5+</b>
+Numa estrada dessa vida
+<b>C</b>      <b>A7</b>          <b>Dm</b>  <b>A7</b>
+Eu te conheci oh! flor
+ <b>Dm</b>        <b>A7</b>  <b>Dm</b>    <b>A7</b>      <b>Dm</b>
+Vinhas tão desiludida, mal sucedida
+       <b>G7</b>     <b>C</b>       <b>G7</b>
+Por um falso amor,dei afeto,
+ <b>C</b>     <b>C5+</b> <b>C6</b>   <b>C5+</b>
+Dei afeto e carinho
+<b>C</b>      <b>C7</b>     <b>F</b>
+Como retribuição
+<b>F#m7(b5)</b>     <b>B7</b>    <b>Em</b>
+Procuraste um outro ninho
+         <b>B/D#</b>              <b>Dm</b>
+Em desalinho ficou meu coração
+<b>A/C#</b>                <b>Dm</b> <b>G7</b>  <b>Em</b>
+Meu peito agora é só paixão
+<b>A7</b>                <b>Dm</b> <b>G7</b>  <b>C</b>   <b>Em</b>  <b>D#m</b>
+Meu peito agora é só paixão
+<b>Dm</b>         <b>G7</b>
+Tamanha desilusão
+<b>C</b>
+me deste oh! flor</pre><pre class="col2">      <b>Bm7(b5)</b>  <b>E7</b>       <b>A#6</b>   <b>A7</b>
+Me enganei..... redondamente
+<b>Dm</b>         <b>G7</b>   <b>G°</b>      <b>Am</b>
+Pensando em te fazer um bem
+            <b>D7</b>
+Eu me apaixonei
+<b>Dm7</b>        <b>G7</b>         <b>C</b>    <b>G7</b>
+Foi........meu........mal (e agora)
+
+[Refrão]
+<b>C</b>   <b>F#m7(b5)</b>         <b>B7</b>           <b>Em</b>
+Agora, uma enorme paixão me devora
+<b>Em7(b5)</b>         <b>A7</b>    <b>A6</b>  <b>A7</b>
+Alegria partiu foi embora
+<b>Dm</b>       <b>G7</b>  <b>Em</b>      <b>A7</b>
+Não sei viver sem teu amor
+<b>D7</b>               <b>G7</b>     <b>C</b>  <b>G7</b>
+Sozinho, curto a minha dor
+
+[Final ]
+<b>D7</b>               <b>G7</b>     <b>C</b>  <b>G7</b> <b>A7</b>
+Sozinho, curto a minha dor
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/zeca-pagodinho-coracao-em-desalinho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-zeca-pagodinho-coracao-em-desalinho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,153 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Casa de Bamba</h1><h2 class="t3"><a href="/martinho-da-vila/">Martinho da Vila</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Refrão]
+
+<b>G6</b>                            <b>Am7</b>
+Na minha casa todo mundo é bamba
+            <b>D7</b>               <b>G6</b>
+Todo mundo bebe todo mundo samba
+
+<b>G6</b>                            <b>Am7</b>
+Na minha casa todo mundo é bamba
+            <b>D7</b>               <b>G6</b>
+Todo mundo bebe todo mundo samba
+
+<b>G6</b>                     <b>E7</b>        <b>Am7</b>
+Na minha casa não tem bola pra vizinha
+                 <b>D7</b>                    
+Não se fala do alheio, nem se liga pra 
+   <b>G</b>
+Candinha
+
+[Refrão]
+
+<b>G6</b>                     <b>E7</b>        <b>Am7</b>
+Na minha casa ninguém liga pra intriga
+             <b>D7</b>                <b>G6</b>
+Todo mundo xinga, todo mundo briga
+<b>G6</b>                 <b>Am7</b>
+Macumba lá minha casa
+             <b>D7</b>                 <b>G6</b>
+Tem galinha preta, azeite de dendê
+<b>G6</b>                      <b>Am7</b>
+Mas ladainha lá minha casa
+              <b>D7</b>                      <b>G6</b>
+Tem reza bonitinha e canjiquinha pra comer
+
+<b>G6</b>               <b>Am7</b>
+Se tem alguém aflito
+            <b>D7</b>                <b>G6</b>
+Todo mundo chora, todo mundo sofre
+<b>G6</b>                        <b>Am7</b>
+Mas logo reza pra São Benedito
+              <b>D7</b>                <b>G6</b>
+Pra Nossa Senhora e pra Santo Onofre
+
+<b>G6</b>              <b>Am7</b>
+Mas se tem alguém cantando</pre><pre class="col2">            <b>D7</b>                 <b>G6</b>
+Todo mundo canta, todo mundo dança
+            <b>E7</b>                 <b>Am7</b>
+Todo mundo samba e ninguém se cansa
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+
+<b>G6</b>                 <b>Am7</b>
+Macumba lá minha casa
+             <b>D7</b>                 <b>G6</b>
+Tem galinha preta, azeite de dendê
+<b>G6</b>                      <b>Am7</b>
+Mas ladainha lá minha casa
+              <b>D7</b>                      <b>G6</b>
+Tem reza bonitinha e canjiquinha pra comer
+<b>G6</b>               <b>Am7</b>
+Se tem alguém aflito
+            <b>D7</b>                <b>G6</b>
+Todo mundo chora, todo mundo sofre
+<b>G6</b>                        <b>Am7</b>
+Mas logo reza pra São Benedito
+              <b>D7</b>                <b>G6</b>
+Pra Nossa Senhora e pra Santo Onofre
+
+<b>G6</b>              <b>Am7</b>
+Mas se tem alguém cantando
+            <b>D7</b>                 <b>G6</b>
+Todo mundo canta, todo mundo dança
+            <b>E7</b>                 <b>Am7</b>
+Todo mundo samba e ninguém se cansa
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+            <b>D7</b>              <b>G6</b>
+Pois minha casa é casa de bamba
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/martinho-da-vila-casa-de-bamba.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-martinho-da-vila-casa-de-bamba.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

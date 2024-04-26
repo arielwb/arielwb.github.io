@@ -1,0 +1,104 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Adorei</h1><h2 class="t3"><a href="/grupo-menos-e-mais/">Grupo Menos É Mais</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>C9</b>
+Adorei
+                <b>Am7</b>
+Não tenha medo, não vou te julgar
+<b>G</b>    <b>F7M</b>            <b>C9</b>
+Se deu vontade da primeira vez
+                <b>F7M</b>        <b>F7M</b>   <b>G7(4)</b>
+Não tem porque você se preocupar
+
+Não tá errada
+<b>C9</b>
+Adorei
+                           <b>Am7</b>
+Se 'tá pensando que eu não vou ligar
+<b>G</b>     <b>F7M</b>             <b>C9</b>
+Depois de tudo que a gente fez
+                 <b>F7M</b>
+É impossível não te procurar
+<b>Bb9</b>   <b>G7(4)</b>
+cê 'tá ferrada</pre><pre class="col2"><b>Cm7</b>
+Viciei
+                      <b>Bb9</b>
+Foi bem melhor do que imaginei
+                       <b>G</b>
+Agora quero ver para desgrudar
+                      <b>G7(4)</b>
+Já 'to pensando na segunda vez
+            <b>C9</b>
+Pode ser na minha ou na sua casa
+             <b>F7M</b>                 <b>Fm7/9</b>
+Vai me dar canseira, te deixar cansada
+           <b>C9</b>
+Dormir de conchinha pela madrugada
+        <b>F7M</b>                <b>Ab7M</b>   <b>G7(4)</b>
+Minha companhia, não é só balada
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-menos-e-mais-adorei.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-menos-e-mais-adorei.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

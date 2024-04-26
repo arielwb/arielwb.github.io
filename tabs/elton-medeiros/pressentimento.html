@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Pressentimento</h1><h2 class="t3"><a href="/elton-medeiros/">Elton Medeiros</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>Am</b>  <b>Am7M</b>  <b>Am7</b>  <b>Am6</b>
+        <b>Dm</b>  <b>E7</b>  <b>Am</b>  <b>E7</b>
+        <b>Am</b>  <b>Am7M</b>  <b>Am7</b>  <b>Am6</b>
+        <b>Dm</b>  <b>E7</b>  <b>Am</b>  <b>E7</b>
+
+<b>Am</b>   <b>E7</b>          <b>Am</b>
+Ai, ardido peito
+<b>Dm</b>            <b>G7</b>           <b>C</b>     <b>C7</b>
+Quem irá entender o teu segredo?
+<b>Dm</b>          <b>F</b>              <b>Am</b>
+Quem irá pousar em  teu destino?
+<b>F</b>           <b>F#°</b>      <b>E7</b>
+E depois morrer de teu amor
+
+<b>Am</b> <b>E7</b>         <b>Am</b>
+A mas quem virá
+<b>Dm</b>    <b>G7</b>             <b>C</b>   <b>C7(9)</b>
+Me pergunto  a toda hora
+<b>F</b>      <b>Bm7(b5)</b>   <b>E7</b>    <b>Am</b>     <b>Am/G</b> <b>B7</b>
+E a resposta é um silêncio
+        <b>E7</b>           <b>Am</b>    <b>E7</b>
+Que atravessa a madrugada
+
+<b>A</b>   <b>F#m</b>       <b>C#m</b>
+Vem meu novo amor</pre><pre class="col2"><b>D</b>      <b>E7(9)</b>        <b>A</b>   <b>A7</b>
+Vou deixar a casa aberta
+<b>Bm</b>    <b>F7</b>  <b>E7</b>      <b>Am</b>
+Ja escuto os teus passos
+<b>B7</b>                   <b>E7</b>  <b>G7</b>
+Procurando o meu abrigo
+
+<b>C</b>                 <b>G</b>
+Vem que o sol raiou
+<b>F</b>      <b>G7</b>           <b>C</b>
+Os jardins estao floridos
+<b>Dm</b>    <b>Bm7(b5)</b>   <b>E7</b>   <b>Am</b>
+Tudo faz  pressentimento
+         <b>Dm</b>        <b>Am</b>
+Este é o tempo ansiado
+      <b>B7</b>    <b>E7</b>  <b>Am</b>   <b>E7</b>
+De se ter felicidade
+
+<b>Am</b>  <b>Am7M</b>  <b>Am7</b>  <b>Am6</b>        <b>Dm</b>     <b>E7</b>   <b>Am</b>  <b>E7</b>
+La  ra    ra       Laia laia Laraia laia
+<b>Am</b>  <b>Am7M</b>  <b>Am7</b>  <b>Am6</b>        <b>Dm</b>     <b>E7</b>   <b>Am</b>  <b>E7</b>
+La  ra    ra       Laia laia Laraia laia
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/elton-medeiros-pressentimento.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-elton-medeiros-pressentimento.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

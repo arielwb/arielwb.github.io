@@ -1,0 +1,144 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Deixa Pra Lá</h1><h2 class="t3"><a href="/leci-brandao/">Leci Brandão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ab</a> </span><pre class="col1">Intro 2x: <b>Fm7</b>  <b>F7</b>  <b>C#7</b>  <b>C7</b>
+
+Verso 1:
+                 <b>F7</b>                       
+Se teu amor falou que não vai mais voltar
+<b>Bbm7</b>
+
+<b>C7</b>           <b>Fm7</b>
+Deixa pra lá
+        <b>F7</b>                    <b>Bbm7</b>
+Se você ficou em último lugar
+<b>C7</b>           <b>Fm7</b>
+Deixa pra lá
+           <b>F7</b>                    <b>Bbm7</b>
+Se tudo começou na hora de acabar
+<b>C7</b>           <b>Fm7</b>
+Deixa pra lá
+            <b>F7</b>                      <b>Bbm7</b>
+Se você não passou nesse vestibular
+<b>C7</b>           <b>G#7M</b>
+Deixa pra lá
+
+Refrão:
+                <b>Am7(5b)</b>      <b>Bbm7</b>
+Deixa, que essa vida um dia muda
+<b>D#7(9)</b>                  <b>G#7M</b>
+você tem que se assumir
+               <b class="aco">B7(5b)      Bbm7
+E se o próprio amigo o acusa
+     <b>F#/G#</b>  <b>F/G</b>  <b>Fm7</b>
+Você tem    que  resistir
+
+Verso:
+Se não tem viola pra te acompanhar
+Deixa pra lá
+Se nesse ano a escola não vai desfilar
+Deixa pra lá
+Se você pediu tanto e ninguém quis lhe dar
+Deixa pra lá</b></pre><pre class="col2">Se também fez um canto pra ninguém cantar
+Deixa pra lá
+
+Refrão:
+Deixa que essa fase é passageira
+Amanhã será melhor
+E você vai ver que a cidade inteira
+Seu samba sabe de cor
+
+Verso:
+Se você quer seresta e já não tem luar
+Deixa pra lá
+Se você foi à festa e não pode dançar
+Deixa pra lá
+Se a sua companheira já não quer lhe dar
+Deixa pra lá
+Aquele amor antigo que só faz vibrar
+Deixa pra lá
+
+Refrão:
+Deixa, não perturbe a sua vida,
+Carnaval já vem aí
+Vou brincar com o povo na avenida
+Descobrindo o que não vi
+
+Verso:
+Se você tem idéia e não pode falar
+Deixa pra lá
+Se cantou pra platéia e ninguém quis ligar
+Deixa pra lá
+Se você foi à feira e não pode comprar
+Deixa pra lá
+Porque o dinheiro é curto pra poder gastar
+Deixa pra lá
+
+Refrão:
+Deixa que essa vida um dia muda...
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/leci-brandao-deixa-pra-la.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-leci-brandao-deixa-pra-la.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

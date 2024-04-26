@@ -1,0 +1,121 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Disritmia</h1><h2 class="t3"><a href="/martinho-da-vila/">Martinho da Vila</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>Gm7</b>  <b>C7(9)</b>
+
+[Primeira Parte]
+
+<b>Gm7</b>       <b>C7(9)</b>  <b>Gm7</b>
+Eu quero me esconder debaixo
+<b>C7(9)</b>     <b>Gm7</b>       <b>C7(9)</b>     <b>Gm7</b>
+Dessa tua saia prá fugir do mundo
+<b>Dm7(b5)</b>            <b>G7</b>  <b>Dm7(b5)</b>
+Pretendo também me embrenhar
+<b>G7</b>        <b>Dm7(b5)</b>     <b>G7</b>    <b>Cm</b>
+No emaranhado desses teus cabelos
+   <b>Cm</b>         <b>Eb/Bb</b>     <b>Cm/A</b>  <b>Cm/G</b>
+Preciso transfundir teu sangue
+        <b>D/F#</b>                 <b>Gm</b>
+Pro meu coração que é tão vagabundo
+
+[Refrão]
+
+     <b>Cm</b>      <b>F7/A</b>      <b>Bb6</b>
+Me deixa te trazer um dengo
+        <b>Eb7</b>     <b>Am7(b5)</b>   <b>D7</b>  <b>G7sus4</b>  <b>G7</b>
+Prá num cafuné fazer os meus apelos
+   <b>Cm</b>       <b>F7/A</b>      <b>Bb6</b>
+Me deixa te trazer um dengo
+         <b>Eb7</b>    <b>Am7(b5)</b>  <b>D7</b>    <b>Gm</b>
+Prá num cafuné fazer os meus apelos
+</pre><pre class="col2">[Segunda Parte]
+
+   <b>Gm7</b>     <b>C7(9)</b>    <b>Gm7</b>
+Eu quero ser exorcizado
+    <b>C7(9)</b>  <b>Gm7</b>         <b>C7(9)</b>   <b>Gm7</b>
+Pela água benta desse olhar infindo
+<b>Dm7(b5)</b>              <b>G7</b>
+Que bom é ser fotografado
+<b>Dm7(b5)</b>   <b>G7</b>     <b>Dm7(b5)</b>  <b>G7</b>    <b>Cm</b>
+Mas pelas retinas desses olhos lindos
+  <b>Cm</b>     <b>Eb/Bb</b>
+Me deixe hipnotizado
+<b>Cm/A</b>  <b>Cm/G</b>    <b>D7/F#</b>              <b>Gm</b>
+Prá acabar de vez com essa disritmia
+
+[Refrão]
+
+    <b>Cm</b>        <b>F7/A</b>      <b>Bb6</b>
+Vem logo, vem curar teu nego
+       <b>Eb7</b>    <b>Am7(b5)</b>     <b>D7</b>  <b>G7sus4</b>  <b>G7</b>
+Que chegou de porre lá da boêmia
+    <b>Cm</b>        <b>F7/A</b>      <b>Bb6</b>
+Vem logo, vem curar teu nêgo
+      <b>Eb7</b>     <b>Am7(b5)</b>     <b>D7</b>  <b>Gm</b>
+Que chegou de porre lá da boêmia
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/martinho-da-vila-disritmia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-martinho-da-vila-disritmia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

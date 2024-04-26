@@ -1,0 +1,152 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Família</h1><h2 class="t3"><a href="/molejo/">Molejo</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">Introdução: <b>D</b> <b>G</b>
+
+ <b>D</b>               <b>G</b>                    <b>D</b>
+Padas, Padas, Padas, Padas, Padas, Padas, 
+Padas,
+         <b>D</b>                    <b>G</b>
+Padas, Padas, Padas, Padas, Padas,
+<b>D</b>               <b>G</b>                    <b>D</b>
+Padas, Padas, Padas, Padas, Padas, Padas, 
+Padas,
+         <b>D</b>                    <b>G</b>
+Padas, Padas, Padas, Padas, Padas...
+   <b>A</b>
+Família, família
+  <b>D</b>             <b>G</b>
+Papai, mamãe, titia
+   <b>A</b>
+Família, família
+  <b>D</b>           <b>G</b>
+Almoça junto todo dia
+ <b>D</b>            <b>G</b>
+Nunca perde essa mania
+     <b>D</b>                            <b>G</b>
+Mas quando a filha quer fugir de casa
+   <b>D</b>                      <b>G</b>
+Precisa descolar um ganha-pão
+<b>D</b>                        <b>G</b>
+Filha de família não se casa
+   <b>D</b>                          <b>G</b>
+Papai, mamãe, não dão nenhum tostão
+   <b>A</b>
+Família ê
+   <b>G</b>
+Família á
+  <b>D</b>    <b>G</b>
+Família
+  <b>A</b>
+Família, família
+   <b>D</b>              <b>G</b>
+Vovô, vovó, sobrinha
+      <b>A</b>
+Família, família
+<b>D</b>            <b>G</b>
+Janta junto todo dia</pre><pre class="col2"><b>D</b>              <b>G</b>
+Nunca perde essa mania
+<b>D</b>                        <b>G</b>
+Mas quando o nenê fica doente
+    <b>D</b>                     <b>G</b>
+Procura uma farmácia de plantão
+    <b>D</b>              <b>G</b>
+O choro do nenê estridente
+   <b>D</b>                      <b>G</b>
+Assim não dá pra ver televisão
+  <b>A</b>
+Família ê
+  <b>G</b>
+Família á
+  <b>D</b>     <b>G</b>
+Família
+  <b>A</b>
+Família, família
+   <b>D</b>               <b>G</b>
+Cachorro, gato, galinha
+   <b>A</b>
+Família, família
+   <b>D</b>        <b>G</b>
+Vive junto todo dia
+<b>D</b>              <b>G</b>
+Nunca perde essa mania
+  <b>D</b>                     <b>G</b>
+A mãe morre de medo de barata
+  <b>D</b>                     <b>G</b>
+O pai vive com medo de ladrão
+ <b>D</b>                       <b>G</b>
+Jogaram inseticida pela casa
+  <b>D</b>                     <b>G</b>
+Botaram um cadeado no portão
+  <b>A</b>
+Família ê
+   <b>G</b>
+Família á
+   <b>D</b>    <b>G</b>
+Família
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/molejo-familia.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-molejo-familia.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

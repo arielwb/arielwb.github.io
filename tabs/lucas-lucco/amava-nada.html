@@ -1,0 +1,202 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Amava Nada (part. Marília Mendonça)</h1><h2 class="t3"><a href="/lucas-lucco/">Lucas Lucco</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bm</a> </span><pre class="col1">[Intro] <b>Bm</b>  <b>F#m</b> <b>Em</b>  <b>F#7</b>
+
+[Primeira Parte]
+
+                   <b>Bm</b>
+Se a sua vida for com ele
+
+Só me avisa pra eu
+                    <b>F#m</b>
+Cancelar nossos planos
+
+E parar de sonhar
+                        <b>Em</b>
+Com os nossos meninos brincando
+
+Imagina a bagunça
+                      <b>F#7</b>
+Que a gente faria na casa dos sonhos
+
+                   <b>Bm</b>
+Se a sua vida for com ela
+
+Sem crise, eu aguento
+              <b>F#m</b>
+O tranco de boa, vai lá
+
+Quem sou eu pra pedir
+                       <b>Em</b>
+Pro seu coração se explicar
+
+Tem adeus que a gente
+                         <b>F#7</b>
+Não fala e não quer escutar
+
+[Refrão]
+
+                   <b>Bm</b>
+Se a sua vida for com ele
+                        <b>A</b>
+Não aceita menos do que eu te dei
+
+O que ele tem
+            <b>Em</b>
+Que eu não tenho, não sei
+
+Mas eu tenho uma coisa
+               <b>Bm</b>
+É vergonha na cara
+             <b>F#7</b>
+Quer ver me larga
+
+                   <b>Bm</b>
+Se a sua vida for com ela
+                        <b>A</b>
+Não aceita menos do que eu te dei
+
+O que ela tem
+            <b>Em</b>
+Que eu não tenho, não sei
+
+Cê falava te amo
+            <b>Bm</b>          <b>F#7</b>
+E eu acreditava, amava nada
+
+( <b>Bm</b>  <b>A</b>  <b>G</b>  <b>Em</b>  <b>Bm</b>  <b>F#7</b> )
+
+[Primeira Parte]
+</pre><pre class="col2">                      <b>Bm</b>
+Se a sua vida for com ela
+
+Só me avisa pra eu
+                  <b>F#m</b>
+Cancelar nossos planos
+
+E parar de sonhar
+                        <b>Em</b>
+Com os nossos meninos brincando
+
+Imagina a bagunça
+                      <b>F#7</b>
+Que a gente faria na casa dos sonhos
+
+                   <b>Bm</b>
+Se a sua vida for com ele
+
+Sem crise, eu aguento
+                <b>F#m</b>
+O tranco de boa,   vai lá
+
+Quem sou eu pra pedir
+                       <b>Em</b>
+Pro seu coração se explicar
+
+Tem adeus que a gente
+                    <b>F#7</b>
+Não fala e não quer    escutar
+
+[Refrão]
+
+                   <b>Bm</b>
+Se a sua vida for com ela
+                        <b>A</b>
+Não aceita menos do que eu te dei
+
+O que ela tem
+            <b>Em</b>
+Que eu não tenho, não sei
+
+Mas eu tenho uma coisa
+               <b>Bm</b>
+É vergonha na cara
+             <b>F#7</b>
+Quer ver me larga
+
+                   <b>Bm</b>
+Se a sua vida for com ele
+                        <b>A</b>
+Não aceita menos do que eu te dei
+
+O que ele tem
+            <b>Em</b>
+Que eu não tenho, não sei
+
+Cê falava te amo
+            <b>Bm</b>          <b>F#7</b>
+E eu acreditava, amava nada
+
+<b>Bm</b>                         <b>A</b>
+   Se a sua vida for com ele
+                        <b>Em</b>
+Se a sua vida for com ela
+<b>Bm</b>        <b>F#7</b> <b>Bm</b>
+   Amava nada
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/lucas-lucco-amava-nada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-lucas-lucco-amava-nada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

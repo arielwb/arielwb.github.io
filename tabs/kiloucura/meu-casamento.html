@@ -1,0 +1,144 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Meu Casamento</h1><h2 class="t3"><a href="/kiloucura/">Kiloucura</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Ab</a> </span><pre class="col1">Solo1(Intro):20 32 20 31 20 44 20 42 41 42 44
+ 31 32
+22 20 22 32 22 31 22 44 43 44 31 32 20
+14 11 20 32 32 31 44
+42 42 42 31 31 31 20 20 20 12 12 12 [solo p 
+cavaquinho]
+
+[Pode ser feito também no violão]
+Fica assim:
+17 15 17 14 17 27 17 25 24 25 27 14 15 
+[explicação: corda 1, casa 7]
+19 17 19  15 19 29 19 27 26 27 29 15 
+15-(17)[Arraste de 15 para 17]
+114 110 212 210 [explic. corda 1, na casa 14]
+210 29  27
+25 25 25 24 24 24 22 22 22 34 34 34
+
+<b>E</b>
+Introdução :  <b>E</b> <b>A</b> <b>F#m7</b> <b>B7</b> <b>E</b> <b>B/D#</b> <b>C#m7</b> <b>B7</b>
+
+<b>A#m7/5-</b>       <b>D#7</b>         <b>G#m7</b>
+    Você dividiu meu  coração
+        <b>G#7/9-</b>     <b>A7+</b>
+Sinceramente me perdi
+           <b>B/A</b>          <b>G#m7</b>
+Ou então achei meu talismã
+         <b>C#7/9-</b>     <b>F#m7/9</b>
+Eu não devia estar aqui
+        <b>G#7/5+</b>     <b>C#m</b>
+Meu casamento é amanhã
+       <b>C#m7+</b>         <b>C#m7</b>
+E hoje vim me apaixonar
+         <b>C#m6</b>     <b>F#m7</b>        <b>B7</b>         <b>E7+</b>
+Eu só queria festejar e vem você me possuir
+       <b>G#7/5+</b>      <b>C#m7</b>
+Me ensinar que o amor
+              <b>E/D</b>        <b>A/C#</b>
+Não escolhe a hora de chegar
+   <b>B/A</b>     <b>G#m7</b>      <b>C#7/9-</b>  <b>F#m7/9</b>   
+Preciso    ir     me recom...por,  me 
+   <b>D#°</b>   <b>C#m7</b>  <b>Cm7</b>
+preparar</pre><pre class="col2">     <b>Bm7</b>        <b>E7</b>  <b>A7+</b>    <b>A/B</b>     <b>G#m7</b>
+Pois amanhã vou decidir a  dire...ção
+    <b>C#7/9-</b>       <b>F#m7/9</b>       <b>B7/9-</b>  <b>E</b>  <b>Bbm7</b> 
+Que vai       seguir    meu coração
+ <b>Eb7</b>
+
+
+<b>Ab7+</b>                          <b>Eb/G</b>
+É se você promete que vai me amar
+                             <b>Ebm/Gb</b>
+O meu compromisso posso cancelar
+         <b>F7</b>              <b>Bbm7</b>
+Esse casamento ia dar em nada
+      <b>Eb7</b>         <b>Ab7+</b>
+Nada, nada, nada, é        Solo2(Refrão):15 
+13 15 12 15 23 15 35
+13 11 13 10 13 21 13 33 [solo cavaquinho]
+
+                           <b>Eb/G</b>
+Como uma noite cheia de prazer
+                            <b>Ebm/Gb</b>
+Como uma vida inteira com você
+           <b>F7</b>                <b>Bbm7</b>
+Eu faço de tudo pra ficar contigo
+ <b>Eb7</b>          <b>Ab7+</b>      <b>Eb7</b>
+Fica comigo amor, meu amor
+              <b>B7</b>
+(na 2ª vez : Ooo...) Solo3(Fim do 1o 
+Refrão):19 17 19 16 19 27 19 39
+REPETE INÍCIO AO FIM
+
+Obs.: É preciso ter muita atenção para não 
+omitir alguns acordes que aparecem somente em
+determinados locais.
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/kiloucura-meu-casamento.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-kiloucura-meu-casamento.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

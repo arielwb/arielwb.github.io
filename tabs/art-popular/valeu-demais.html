@@ -1,0 +1,98 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Valeu Demais</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>Gm</b> <b>Gm7+</b> <b>Gm</b> <b>Gm6</b> <b>Cm7</b> <b>D7</b> <b>Cm7</b> <b>Dm7</b> <b>Eb7+</b>
+
+<b>G7+</b>   <b>Cm7</b>   <b>D7</b>    <b>G7+</b>     <b>Cm7</b>    <b>D7</b>
+Ah valeu, valeu demais, valeu demais
+
+<b>G7+</b>
+Tudo o que a gente passou
+<b>Cm7</b>                     <b>D7</b>
+Tudo, tudo que a gente criou
+     <b>G7+</b>                  <b>Cm7</b>       <b>D7</b>
+Foi maravilhoso, inesquecível, demais
+
+<b>G7+</b>
+Tudo o que a gente brigou
+ <b>Cm7</b>                <b>D7</b>
+Todas que a gente dançou</pre><pre class="col2">     <b>G7+</b>                  <b>Cm7</b>       <b>D7</b>
+Foi maravilhoso, inesquecível, demais
+
+<b>Gm</b>       <b>Gm7+</b>          <b>Gm7</b>
+Mas, você não está aqui
+         <b>Gm6</b>                  <b>Cm7</b>
+Mas, por que que isso aconteceu
+        <b>F7</b>           <b>Bb7+</b>
+Mas, eu quero dizer agora
+    <b>Eb7+</b>       <b>Am5-/7</b>   <b>D7</b>
+Sem onda, sem hora, porque
+
+  <b>G7+</b>     <b>Cm7</b>   <b>D7</b>
+Valeu, valeu demais
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-valeu-demais.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-valeu-demais.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

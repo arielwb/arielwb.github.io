@@ -1,0 +1,146 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A fumaça já subiu pra cuca</h1><h2 class="t3"><a href="/bezerra-da-silva/">Bezerra da Silva</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">Introdução: <b>Dm</b> <b>Gm</b> <b>A</b>
+
+Malandro é malandro
+Mane é mane
+Aí doutor esse malandro é de verdade
+Não sobrou nem a piaba
+
+        <b>Gm</b>                   <b>A7</b>            
+Não tem flagrante porque a fumaça já subiu 
+    <b>Dm</b>
+pra cuca
+        <b>Gm</b>                   <b>A7</b>            
+Não tem flagrante porque a fumaça já subiu 
+    <b>Dm</b>
+pra cuca
+
+                             <b>Gm</b>
+Deixando os tiras na maior sinuca
+         <b>A7</b>                <b>Dm</b>
+E a malandragem sem nada entender
+   <b>D7</b>                     <b>Gm</b>
+Os federais queriam o bagulho
+            <b>A7</b>          <b>Dm</b>
+E sentou a mamona na rapaziada
+                              <b>Gm</b>
+Só porque o safado de antena ligada
+       <b>A7</b>         <b>Dm</b>
+Ligou 190 para aparecer
+         <b>Gm</b>            <b>A7</b>                    
+Já era amizade, quem apertou, queimou já está
+ <b>Dm</b>
+ feito
+                           <b>Gm</b>
+Se não tiver a prova do flagrante
+                <b>A7</b>              <b>Dm</b>
+Nos altos do inquérito fica sem efeito
+         <b>Gm</b>            <b>A7</b>                    
+Já era amizade, quem apertou, queimou já está
+ <b>Dm</b>
+ feito</pre><pre class="col2">                            <b>Gm</b>
+Se não tiver a prova do flagrante
+                <b>A7</b>              <b>Dm</b>
+Nos altos do inquérito fica sem efeito
+
+                                       <b>Gm</b>
+Olha ai quem pergunta quer sempre a resposta
+             <b>A7</b>                <b>Dm</b>
+E quem tem boca responde o que quer
+                                 <b>Gm</b>
+Não é só pau e folha que solta fumaça
+           <b>A7</b>              <b>Dm</b>
+Nariz de malandro não é chaminé
+                            <b>Gm</b>
+Tem nego que dança até de careta
+         <b>A7</b>              <b>Dm</b>
+Porque fica marcando bobeira
+                           <b>Gm</b>
+Quando a malandragem é perfeita
+                <b>A7</b>              <b>Dm</b>
+Ela queima o bagulho e sacode poeira
+
+                       <b>Gm</b>
+Se quiser me levar eu vou,
+         <b>A7</b>              <b>Dm</b>
+Nesse flagrante forjado eu vou
+                                <b>Gm</b>
+Mas, na frente do homem da capa preta
+                    <b>A7</b>                <b>Dm</b>
+É que a gente vai saber quem foi que errou
+                     <b>Gm</b>
+Se quiser me levar eu vou,
+         <b>A7</b>              <b>Dm</b>
+Nesse flagrante forjado eu vou
+                                      <b>Gm</b>
+Mas, na frente do homem que bate o martelo
+                    <b>A7</b>              <b>Dm</b>
+É que a gente vai saber quem foi que errou
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/bezerra-da-silva-a-fumaca-ja-subiu-pra-cuca.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-bezerra-da-silva-a-fumaca-ja-subiu-pra-cuca.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

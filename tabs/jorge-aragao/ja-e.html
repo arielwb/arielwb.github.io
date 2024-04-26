@@ -1,0 +1,124 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ja é</h1><h2 class="t3"><a href="/jorge-aragao/">Jorge Aragão</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">[Intro] <b>D6(9)</b>
+
+<b>G7M</b>
+Não sei como aconteceu
+<b>A/G</b>
+Dava tudo pra saber
+<b>F#m7</b>
+Onde você se escondeu
+<b>Am7</b>               <b>D7</b>
+Tô pensando em te escrever
+<b>G7M</b>
+Uma carta de amor
+<b>A/G</b>
+Em forma de um coração
+<b>F#m7</b>
+Ou quem sabe lhe dizer
+<b>Am7</b>         <b>D7</b>
+Que a nossa união
+    <b>G7M</b>           <b>A/G</b>                    
+Foi linda ... pra gente acabar assim ... 
+ <b>F#m7</b>
+ainda
+   <b>Am7</b>           <b>D7</b>   <b>G7M</b>          <b>A/G</b>
+Se dependesse de mim linda ... pra gente
+              <b>F#m7</b>  <b>Am7(9)</b>  <b>D7(9)</b>
+Acabar assim ainda
+
+               <b>G7M</b>
+Pra onde você for</pre><pre class="col2">              <b>A/G</b>
+Lá pra mim já é
+ <b>F#m7(b5)</b>
+Irei
+           <b>B7</b>
+Se você quiser
+            <b>Em7</b>  <b>F#m7</b>
+A saudade é dor
+           <b>G7M</b>
+Volta meu amor
+  <b>A7/4/9</b>             <b>Am7</b>  <b>D7</b>
+Assim que você puder
+
+              <b>G7M</b>
+Pra onde você for
+              <b>A/G</b>
+Lá pra mim já é
+ <b>F#m7(b5)</b>
+Irei
+           <b>B7</b>
+Se você quiser
+            <b>Em7</b>  <b>F#m7</b>
+A saudade é dor
+           <b>G7M</b>
+Volta meu amor
+  <b>A4(7/9)</b>          <b>D6(9)</b>
+Assim que você puder
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jorge-aragao-ja-e.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jorge-aragao-ja-e.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

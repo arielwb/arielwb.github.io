@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Um dia pra nós dois</h1><h2 class="t3"><a href="/os-travessos/">Os Travessos</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>C7M</b>  <b>G#7M</b>  <b>Bb4</b>  <b>Bb</b>  <b>C7M</b>
+
+<b>C</b>                        <b>Em7</b>
+.....Preciso te ver.....saber se você vai
+  <b>F7M</b>              <b>Dm</b>
+Me olhar daquele jeito
+  <b>G4</b>                    <b>G7</b>
+De quem quer sempre mais e mais
+<b>C</b>                         <b>Em7</b>
+.....Eu preciso Ter.....um dia pra nós dois
+ <b>F7M</b>               <b>Dm</b>
+Ficar de bem com o coração
+   <b>G4</b>          <b>G7</b>
+Deixar rolar essa paixão
+<b>C</b>                   <b>Em7</b>
+.....Nada vai tirar você, de mim
+ <b>F7M</b>           <b>Em7</b>      <b>Dm</b>
+Quem sabe meu bem esse dia vem
+ <b>G4</b>                   <b>G7</b>
+E aí não vai Ter pra ninguém
+    <b>C</b>                     <b>Em7</b>
+Então vem.....me faz amar você
+          <b>A7</b>            <b>Dm</b>
+Que eu tô louco pra dizer
+         <b>G7</b>             <b>Gm7</b>
+Que não vou mais te deixar</pre><pre class="col2">     <b>C7(9)</b>          <b>F7M</b>
+Eu não quero mais viver
+ <b>G7</b>            <b>Em7</b>
+Sozinho, sem você
+  <b>A7</b>          <b>Dm</b>
+Nada fica pra depois
+  <b>G4</b>           <b>G7</b>          <b>C</b>
+.....Quero um dia pra nós dois
+             <b>Em7</b>
+Me faz amar você
+      <b>A7</b>             <b>Dm</b>
+Eu tô louco pra dizer
+        <b>G7</b>              <b>Gm7</b>
+Que não vou mais te deixar
+     <b>C7(9)</b>         <b>F7M</b>
+Eu não quero mais viver
+ <b>G7</b>           <b>Em7</b>
+Sozinho, sem você
+  <b>A7</b>            <b>Dm</b>
+Nada fica pra depois
+<b>G4</b>            <b>G7</b>           <b>C</b>
+.....Quero um dia pra nós dois
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/os-travessos-um-dia-pra-nos-dois.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-os-travessos-um-dia-pra-nos-dois.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

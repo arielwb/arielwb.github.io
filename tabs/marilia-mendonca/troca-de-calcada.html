@@ -1,0 +1,215 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Troca de Calçada</h1><h2 class="t3"><a href="/marilia-mendonca/">Marília Mendonça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro] <b>F#m7</b>  <b>E/G#</b>  <b>A2</b>  <b>B2</b>
+
+[Primeira Parte]
+
+       <b>C#m7</b>
+Se alguém passar por ela
+            <b>F#m7</b>
+Fique em silêncio, não aponte o dedo
+                <b>A2</b>
+Não julgue tão cedo
+
+Ela tem motivos
+
+Pra estar desse jeito
+<b>C#m7</b>
+      Isso é preconceito
+
+Viveu tanto desprezo
+                <b>F#m7</b>
+Que até Deus duvida
+
+E chora lá de cima
+              <b>A2</b>
+Era só uma menina
+
+Que dedicou a vida
+                 <b>C#m7</b>
+A amores de quinta
+
+[Pré-Refrão]
+
+                       <b>F#m7</b>
+É claro que ela já sonhou
+
+Em se casar um dia
+                 <b>C#m7</b>
+Não estava nos planos
+
+Ser vergonha pra família
+                <b>F#m7</b>
+Cada um que passou
+
+Levou um pouco da sua vida
+                  <b>A2</b>
+E o resto que sobrou
+
+Ela vende na esquina
+
+[Refrão]
+
+                  <b>E</b>
+Pra ter o corpo quente
+
+Eu congelei meu coração
+             <b>B2/D#</b>      <b>B2</b>
+Pra esconder a     tristeza
+
+Maquiagem a prova da d'água
+                   <b>F#m7</b>
+Hoje você me vê assim
+
+E troca de calçada
+                       <b>Am7</b>
+Só que amar dói muito mais
+
+Do que o nojo na sua cara
+                  <b>E</b>
+Pra ter o corpo quente
+
+Eu congelei meu coração
+             <b>B2/D#</b>      <b>B2</b>
+Pra esconder a     tristeza
+
+Salto 15 e mini-saia
+                   <b>F#m7</b>
+Hoje você me vê assim
+</pre><pre class="col2">E troca de calçada
+                    <b>A2</b>
+Mas se soubesse um terço da história
+                            <b>E</b>
+Me abraçava e não me apedrejava
+
+[Intro] <b>F#m7</b>  <b>E/G#</b>  <b>A2</b>  <b>B2</b>
+
+[Pré-Refrão]
+
+                       <b>F#m7</b>
+É claro que ela já sonhou
+
+Em se casar um dia
+                 <b>C#m7</b>
+Não estava nos planos
+
+Ser vergonha pra família
+                <b>F#m7</b>
+Cada um que passou
+
+Levou um pouco da sua vida
+                  <b>A2</b>
+E o resto que sobrou
+                 <b>Am7</b>
+Ela vende na esquina
+
+[Refrão]
+
+                  <b>E</b>
+Pra ter o corpo quente
+
+Eu congelei meu coração
+             <b>B2/D#</b>      <b>B2</b>
+Pra esconder a     tristeza
+
+Maquiagem a prova da d'água
+                   <b>F#m7</b>
+Hoje você me vê assim
+
+E troca de calçada
+                       <b>Am7</b>
+Só que amar dói muito mais
+
+Do que o nojo na sua cara
+                  <b>E</b>
+Pra ter o corpo quente
+
+Eu congelei meu coração
+             <b>B2/D#</b>      <b>B2</b>
+Pra esconder a     tristeza
+
+Salto 15 e mini-saia
+                   <b>F#m7</b>
+Hoje você me vê assim
+
+E troca de calçada
+                    <b>A2</b>
+Mas se soubesse um terço da história
+                            <b>E</b>    <b>B2</b>
+Me abraçava e não me apedrejava
+
+                   <b>F#m7</b>
+Hoje você me vê assim
+
+E troca de calçada
+                    <b>A2</b>
+Mas se soubesse um terço da história
+        <b>Am7</b>                 <b>E</b>
+Me abraçava e não me apedrejava
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/marilia-mendonca-troca-de-calcada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-marilia-mendonca-troca-de-calcada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

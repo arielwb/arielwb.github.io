@@ -1,0 +1,172 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Canta Canta, Minha Gente</h1><h2 class="t3"><a href="/martinho-da-vila/">Martinho da Vila</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>A</b>
+Canta, canta minha gente
+            <b>F#7</b>       <b>Bm7</b>
+Deixa a tristeza pra lá
+                     <b>E7</b>
+Canta forte, canta alto
+                     <b>A7M</b>
+Que a vida vai melhorar
+                     <b>E7</b>
+Que a vida vai melhorar
+                     <b>A7M</b>
+Que a vida vai melhorar
+                     <b>E7</b>
+Que a vida vai melhorar
+                     <b>A</b>
+Que a vida vai melhorar
+
+<b>A</b>
+ Cantem o samba de roda
+            <b>F#7</b>              <b>Bm7</b>
+O samba-canção e o samba rasgado
+                    <b>E7</b>
+Cantem o samba de breque
+                               <b>A</b>
+O samba moderno e o samba quadrado
+
+Cantem ciranda e frevo
+                   <b>F#7</b>     <b>Bm7</b>
+O coco, maxixe, baião e xaxado
+                            <b>E7</b>
+Mas não cantem essa moça bonita
+                                 <b>A</b>
+Porque ela está com o marido do lado
+
+<b>A</b>
+ Canta, canta minha gente
+            <b>F#7</b>       <b>Bm7</b>
+Deixa a tristeza pra lá
+                    <b>E7</b>
+Canta forte, canta alto
+                     <b>A</b>
+Que a vida vai melhorar
+
+<b>A</b>
+ Canta, canta minha gente
+            <b>F#7</b>       <b>Bm7</b>
+Deixa a tristeza pra lá
+                    <b>E7</b>
+Canta forte, canta alto
+                     <b>A</b>
+Que a vida vai melhorar
+
+                     <b>E</b>
+Que a vida vai melhorar</pre><pre class="col2">                     <b>A7M</b>
+Que a vida vai melhorar
+                     <b>E7</b>
+Que a vida vai melhorar
+                     <b>A</b>
+Que a vida vai melhorar
+
+<b>A</b>
+ Quem canta seus males espanta
+                          <b>F#7</b>         <b>Bm7</b>
+Lá em cima do morro ou sambando no asfalto
+                    <b>E7</b>
+Eu canto o samba-enredo
+                                 <b>A</b>
+Um sambinha lento ou um partido alto
+
+Há muito tempo não ouço
+          <b>F#7</b>       <b>Bm7</b>
+O tal do samba sincopado
+                      <b>E7</b>
+Só não dá pra cantar mesmo
+                          <b>A</b>
+É vendo o sol nascer quadrado
+
+<b>A</b>
+ Canta, canta minha gente
+            <b>F#7</b>       <b>Bm7</b>
+Deixa a tristeza pra lá
+                    <b>E7</b>
+Canta forte, canta alto
+                     <b>A</b>
+Que a vida vai melhorar
+
+<b>A</b>
+ Canta, canta minha gente
+            <b>F#7</b>       <b>Bm7</b>
+Deixa a tristeza pra lá
+                    <b>E7</b>
+Canta forte, canta alto
+                     <b>A</b>
+Que a vida vai melhorar
+
+                     <b>E7</b>
+Que a vida vai melhorar
+                     <b>A7M</b>
+Que a vida vai melhorar
+                     <b>E7</b>
+Que a vida vai melhorar
+                     <b>A</b>
+Que a vida vai melhorar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/martinho-da-vila-canta-canta-minha-gente.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-martinho-da-vila-canta-canta-minha-gente.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

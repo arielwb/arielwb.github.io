@@ -1,0 +1,161 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Ainda Gosto de Você</h1><h2 class="t3"><a href="/sorriso-maroto/">Sorriso Maroto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>G7M</b>             <b>Em7</b>
+    Bateu saudade lembrei do tempo que a 
+gente se amou
+<b>Am7</b>                 <b>C/D</b>
+    Era verdade     eu nunca percebi não dei 
+valor
+<b>G7M</b>             <b>Em7</b>
+    Agora entendo  por que você não quer 
+voltar atrás
+<b>Am7</b>              <b>C/D</b>
+    Eu tô sofrendo   o mesmo que você e muito
+ mais
+<b>G7M</b>             <b>Bm7</b>                     <b>Em7</b>
+    Eu não sei te esquecer volta logo pra mim
+           <b>Am7</b>           <b>C/D</b>
+Já me arrependi de tudo dá um fim
+<b>G7M</b>               <b>Em7</b>
+   Ainda gosto de você eu não escondo de 
+ninguém
+<b>Em7</b>                                      <b>Am7</b>
+Ainda gosto de você o teu amor me faz tão bem
+    <b>Am7M</b>              <b>Am7</b>       <b>D/F#</b>       
+Eu não encontro uma saída de você me 
+<b>F7M</b>
+libertar
+                      <b>Am7</b>      <b>C/D</b>      
+E a solução pra minha vida é a gente se 
+    <b>G7M</b>
+acertar
+
+<b>G7M</b>               <b>Em7</b>                  
+   Ainda gosto de você eu não escondo de 
+        <b>G7M</b>
+ninguém
+                   <b>Em7</b>                       
+Ainda gosto de você o teu amor me faz tão bem
+<b>Am7</b>
+
+    <b>Am7M</b>              <b>Am7</b>       <b>D/F#</b>       
+Eu não encontro uma saída de você me 
+<b>F7M</b>
+libertar
+                      <b>Am7</b>      <b>C/D</b>      
+E a solução pra minha vida é a gente se 
+    <b>G7M</b>
+acertar
+
+<b>G7M</b>             <b>Em7</b>
+    Bateu saudade lembrei do tempo que a 
+gente se amou</pre><pre class="col2"><b>Am7</b>                 <b>C/D</b>
+    Era verdade     eu nunca percebi não dei 
+valor
+<b>G7M</b>             <b>Em7</b>
+    Agora entendo  por que você não quer 
+voltar atrás
+<b>Am7</b>              <b>C/D</b>
+    Eu tô sofrendo   o mesmo que você e muito
+ mais
+<b>G7M</b>             <b>Bm7</b>                     <b>Em7</b>
+    Eu não sei te esquecer volta logo pra mim
+           <b>Am7</b>           <b>C/D</b>
+Já me arrependi de tudo dá um fim
+<b>G7M</b>               <b>Em7</b>                  
+   Ainda gosto de você eu não escondo de 
+       <b>G7M</b>
+ninguém
+                <b>Em7</b>                         
+Ainda gosto de você o teu amor me faz tão 
+<b>Am7</b>
+bem
+    <b>Am7M</b>              <b>Am7</b>       <b>D/F#</b>       
+Eu não encontro uma saída de você me 
+<b>F7M</b>
+libertar
+                      <b>Am7</b>      <b>C/D</b>      
+E a solução pra minha vida é a gente se 
+    <b>G7M</b>
+acertar
+
+<b>G7M</b>               <b>Em7</b>
+   Ainda gosto de você eu não escondo de 
+ninguém
+<b>Em7</b>                                      <b>Am7</b>
+Ainda gosto de você o teu amor me faz tão bem
+    <b>Am7M</b>              <b>Am7</b>       <b>D/F#</b>       
+Eu não encontro uma saída de você me 
+<b>F7M</b>
+libertar
+                      <b>Am7</b>      <b>C/D</b>      
+E a solução pra minha vida é a gente se 
+    <b>G7M</b>
+acertar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sorriso-maroto-ainda-gosto-de-voce.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sorriso-maroto-ainda-gosto-de-voce.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

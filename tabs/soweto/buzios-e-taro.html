@@ -1,0 +1,111 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Búzios e Tarô</h1><h2 class="t3"><a href="/soweto/">Soweto</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1"><b>F7M</b>    <b>C/F</b>              <b>Dm7(9)</b>
+   Olha,  olha nos meus olhos, tem um
+     <b>Bb7M</b>            <b>Gm7(9)</b>  <b>Bb/C</b>  <b>Gb7M</b>
+Sentimento uma eternidade
+
+<b>F7M</b>    <b>C/F</b>            <b>Dm7(9)</b>
+    Lua   cheia de feitiço  amei um
+<b>Bb7M</b>                 <b>Gm7(9)</b>  <b>Bb/C</b>
+Anjo lindo que felicidade
+
+ <b>E7</b>          <b>Am7</b>             <b>Bb7M</b>
+Amor você nasceu pra mim o tarô
+                    <b>Am7</b>
+Revelou e búzios disseram, que não
+       <b>Bb7M</b>                 <b>C/Bb</b>
+Tem mistério nosso amor nas pétala
+        <b>Gm7</b>           <b>Bb7M</b>
+De flor não dá mal me quer só bem
+   <b>Gm7</b>         <b>Bb/C</b>  21 23 11
+Me quer no coração
+
+   <b>F7M</b>  <b>Dm7</b>                  <b>Bb7M</b>
+O amor  tudo era vazio mas você</pre><pre class="col2">      <b>Bb/C</b>       <b>F7M</b>      <b>Dm7</b>
+Chegou    com paixão você manda e
+         <b>Em7(9)</b>        <b>A7(#5)</b>
+Desmanda no    meu coração   e eu
+    <b>Dm7</b>                  <b>Dm(7M)</b>
+Não posso mais não posso te    perder
+          <b>Cm7</b>     <b>Eb/F</b>          <b>Bb7M</b>
+Pensar em te esquecer meu sonho se
+                    <b>Am7</b>
+Desfaz quem sabe um dia eu te prenda
+       <b>Dm7</b>                     <b>Gm7</b>
+No meu peito curto tanto o seu jeito
+      <b>C7(b9)</b>  <b>F7M</b>     <b>Bb/C</b>
+Gosto tanto   de  você
+
+      <b>C7(b9)</b>  <b>D7M</b>     <b>G6/9</b>  <b>C7(13)</b>
+Gosto tanto   de  você
+
+<b>F7M</b>    <b>C/F</b>
+   Olha...
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/soweto-buzios-e-taro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-soweto-buzios-e-taro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

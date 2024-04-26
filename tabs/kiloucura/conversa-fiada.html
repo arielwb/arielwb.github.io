@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Conversa Fiada</h1><h2 class="t3"><a href="/kiloucura/">Kiloucura</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1"><b>Em7/9</b>                    <b>Em7</b>
+Quando a gente ama de verdade
+       <b>Am7/9</b>   <b>Am7</b>
+É puro senti...mento
+<b>Em7/9</b>                     <b>Em7</b>
+No meu coração não tem maldade
+      <b>Am7</b>    <b>C/Bb</b>
+Só te quero bem
+<b>F#m7/5b</b>             <b>Dm7/G</b>
+Deixa quem quiser falar
+<b>Bm7/E</b>             <b>Am7/9</b>
+Só quero ficar contigo
+<b>Gm7/9</b>              <b>C7/13</b>
+Estão querendo separar você de mim
+<b>E7/9+</b>  <b>E7(b13/b9)</b>
+Nun....ca
+<b>Em7/9</b>                <b>Em7</b>       <b>Am7/9</b>   <b>Am7</b>
+vou deixar nossa relação se acabar à   toa
+<b>Em7/9</b>                     <b>Em7</b>         <b>Am7</b>  
+Eu não sei viver nenhum segundo longe de 
+<b>C/Bb</b>
+você
+<b>F#m7/5b</b>         <b>Dm7/G</b>
+Nada vai nos abalar</pre><pre class="col2"><b>Bm7/E</b>             <b>Am7/9</b>
+Esse é o nosso destino
+<b>Gm7/9</b>                       <b>C7/13</b> 
+O nosso amor é capaz de superar     
+  <b>Dm7/9/G</b>    <b>Dm7/G</b>  <b>F#7/13</b>
+tu.........do
+<b>F7+</b>
+Tanta conversa fiada
+      <b>C7+</b>    <b>Gm7</b> <b>C7</b>
+Não valeu de nada
+<b>F7+</b>
+Eu te quero minha amada
+      <b>C7+</b>    <b>Gm7</b> <b>C7</b>
+Não valeu de nada
+<b>F7+</b>
+Tanta conversa fiada
+      <b>C7+</b>    <b>F#7/11</b>
+Não valeu de nada
+      <b>F7+</b>    <b>Dm7/G</b>
+Não valeu de nada
+      <b>C7+</b>    <b>Gm7</b>  <b>F#7(11)</b>  <b>Bm</b>
+Não valeu de nada
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/kiloucura-conversa-fiada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-kiloucura-conversa-fiada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

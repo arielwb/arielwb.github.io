@@ -1,0 +1,172 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tiro ao Álvaro</h1><h2 class="t3"><a href="/elis-regina/">Elis Regina</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F#m</a> </span><pre class="col1">   <b>A</b>    <b>F#7</b>
+De tanto levar
+  <b>Bm</b>
+Frechada do teu olhar
+
+[Primeira Parte]
+
+<b>A</b>           <b>F#7</b>
+   De tanto levar
+  <b>Bm</b>
+Frechada  do teu olhar
+  <b>E7</b>
+Meu peito até
+ <b>A</b>
+Parece sabe o que
+ <b>D</b>
+Táubua
+  <b>Dm</b>      <b>A</b>    <b>F#7</b>
+De tiro ao  alvaro
+     <b>Bm</b>
+Não tem mais
+ <b>E7</b>   <b>A</b>           <b>E</b>
+Onde furar, não tem mais
+
+   <b>A</b>   <b>F#7</b>
+De tanto levar
+   <b>Bm</b>
+Frechada do teu olhar
+   <b>E7</b>
+Meu peito até
+ <b>A</b>      <b>A7</b>
+Parece sabe o que
+ <b>D</b>
+Táubua
+  <b>Dm</b>   <b>A</b>      <b>F#7</b>
+De tiro ao alvaro
+          <b>Bm</b>
+Não tem mais
+  <b>E7</b>    <b>A</b>
+Onde furar, não tem mais
+
+[Refrão]
+
+      <b>D</b>
+Teu olhar mata mais
+      <b>E7</b>         <b>A</b>
+Que bala de carabina
+       <b>F#m</b>         <b>Bm</b>
+Que veneno estricnina
+        <b>E7</b>         <b>A</b>  <b>A7</b>
+Que peixeira de baiano
+      <b>D</b>
+Teu olhar</pre><pre class="col2">     <b>Dm</b>                <b>A</b>
+Mata mais que atropelamento
+          <b>F#7</b>
+De  automóver
+       <b>Bm</b>
+Mata mais
+      <b>E7</b>         <b>A</b>
+Que bala de  revórver
+
+[Segunda Parte]
+
+<b>A</b>           <b>F#7</b>
+   De tanto levar
+  <b>Bm</b>
+Frechada  do teu olhar
+  <b>E7</b>
+Meu peito até
+ <b>A</b>
+Parece sabe o que
+ <b>D</b>
+Táubua
+  <b>Dm</b>      <b>A</b>    <b>F#7</b>
+De tiro ao  alvaro
+     <b>Bm</b>
+Não tem mais
+ <b>E7</b>   <b>A</b>           <b>E</b>
+Onde furar, não tem mais
+
+[Refrão]
+
+      <b>D</b>
+Teu olhar mata mais
+      <b>E7</b>         <b>A</b>
+Que bala de carabina
+       <b>F#m</b>         <b>Bm</b>
+Que veneno estricnina
+        <b>E7</b>         <b>A</b>  <b>A7</b>
+Que peixeira de baiano
+      <b>D</b>
+Teu olhar
+     <b>Dm</b>                <b>A</b>
+Mata mais que atropelamento
+          <b>F#7</b>
+De  automóver
+       <b>Bm</b>
+Mata mais
+      <b>E7</b>         <b>A</b>
+Que bala de  revórver
+
+[Final] <b>D</b>  <b>Dm</b>  <b>A</b>  <b>F#7</b>
+        <b>Bm</b>  <b>E7</b>  <b>A</b>  <b>A7</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/elis-regina-tiro-ao-alvaro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-elis-regina-tiro-ao-alvaro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

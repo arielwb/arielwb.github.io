@@ -1,0 +1,108 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">O Império Tocou Reunir</h1><h2 class="t3"><a href="/dona-ivone-lara/">Dona Ivone Lara</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Em</a> </span><pre class="col1"><b>Em</b>
+Vem, vem ouvir
+             <b>B7</b>       <b>Em</b> <b>B7</b>
+O império tocou reunir
+<b>Em</b>
+Vem, vem ouvir
+             <b>B7</b>       <b>Em</b> <b>B7</b>
+O império tocou reunir
+<b>Em</b>
+Não fique assim desanimada
+                 <b>E7</b>
+Seu amor vai dizer
+                             <b>Am</b>
+Que você é uma louca apaixonada
+
+Não se deixe dominar
+              <b>D7</b>
+O amor é ilusão
+                <b>G</b>
+Que não vale nada
+<b>Em</b>                    <b>Am7</b>
+Ao invés de você chorar</pre><pre class="col2">                 <b>D7</b>            <b>G</b>
+Vem cantar até chegar a madrugada
+<b>B7</b>                  <b>Em7</b>
+Eu quero lhe ver cantando
+
+Sorrindo e sambando
+         <b>Am</b>
+Pra esquecer esta paixão
+         <b>D7</b>           <b>G</b>
+Que domina seu coração
+<b>B7</b>               <b>Em7</b>
+É triste você sentir uma dor
+           <b>B7</b>
+Quando alguém
+                   <b>Em</b>
+Vem sorrir do seu amor
+          <b>B7</b>
+Mas vem ouvir
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/dona-ivone-lara-o-imperio-tocou-reunir.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-dona-ivone-lara-o-imperio-tocou-reunir.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

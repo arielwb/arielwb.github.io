@@ -1,0 +1,173 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Baby Me Atende (part. Dilsinho)</h1><h2 class="t3"><a href="/matheus-fernandes/">Matheus Fernandes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C#m</a> </span><pre class="col1">[Intro] <b>C#m</b>  <b>F#m</b>  <b>A</b>  <b>G#m</b>
+
+[Primeira Parte]
+
+<b>C#m</b>                                <b>F#m</b>
+    Abandonado dentro de um apartamento
+                           <b>A</b>
+Ansiedade, coração desesperado
+              <b>G#m</b>
+É só bebida quente
+                           <b>C#m</b>
+Por causa de um coração gelado
+                            <b>F#m</b>
+Amor e raiva, andam lado a lado
+                                   <b>A</b>
+Porta retratos e quadros tudo quebrado
+            <b>G#m</b>
+É o que tá tendo!
+                           <b>C#m</b>
+Pedaço de ex amor pra todo     lado
+     <b>F#m</b>          <b>A</b>
+Tá doendo, tô sofrendo
+                     <b>G#m</b>
+E ela não tá me atendendo
+
+[Refrão]
+
+     <b>C#m</b>       <b>F#m</b>
+Oh, baby, me atende
+           <b>A</b>                              <b>G#</b>
+Ai que vontade de jogar meu celular na parede
+     <b>C#m</b>       <b>F#m</b>
+Oh, baby, me atende
+           <b>A</b>                              <b>G#</b>
+Ai que vontade de jogar meu celular na parede
+
+[Ponte]
+
+<b>C#m</b>                           <b>F#m</b>
+    Após o sinal deixe seu recado
+                          <b>A</b>
+Após o sinal deixe seu recado
+              <b>G#</b>
+É o que eu escuto quando ligo pra ela
+
+<b>C#m</b>                           <b>F#m</b>
+    Após o sinal deixe seu recado
+                          <b>A</b>
+Após o sinal deixe seu recado
+              <b>G#</b>
+É o que eu escuto quando ligo pra ela
+
+( <b>C#m</b>  <b>F#m</b>  <b>A</b>  <b>G#</b> )
+</pre><pre class="col2">[Primeira Parte]
+
+<b>C#m</b>                                <b>F#m</b>
+    Abandonado dentro de um apartamento
+                           <b>A</b>
+Ansiedade, coração desesperado
+              <b>G#m</b>
+É só bebida quente
+                           <b>C#m</b>
+Por causa de um coração gelado
+                            <b>F#m</b>
+Amor e raiva, andam lado a lado
+                                   <b>A</b>
+Porta retratos e quadros tudo quebrado
+            <b>G#m</b>
+É o que tá tendo!
+                           <b>C#m</b>
+Pedaço de ex amor pra todo     lado
+     <b>F#m</b>          <b>A</b>
+Tá doendo, tô sofrendo
+                     <b>G#</b>
+E ela não tá me atendendo
+
+[Refrão]
+
+     <b>C#m</b>       <b>F#m</b>
+Oh, baby, me atende
+           <b>A</b>                              <b>G#</b>
+Ai que vontade de jogar meu celular na parede
+     <b>C#m</b>       <b>F#m</b>
+Oh, baby, me atende
+           <b>A</b>                              <b>G#</b>
+Ai que vontade de jogar meu celular na parede
+
+[Ponte]
+
+<b>C#m</b>                           <b>F#m</b>
+    Após o sinal deixe seu recado
+                          <b>A</b>
+Após o sinal deixe seu recado
+              <b>G#m</b>
+É o que eu escuto quando ligo pra ela
+
+<b>C#m</b>                           <b>F#m</b>
+    Após o sinal deixe seu recado
+                          <b>A</b>
+Após o sinal deixe seu recado
+              <b>G#m</b>
+É o que eu escuto quando ligo pra ela
+
+[Final] <b>C#m</b>  <b>F#m</b>  <b>A</b>  <b>G#m</b>  <b>C#m</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/matheus-fernandes-baby-me-atende.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-matheus-fernandes-baby-me-atende.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,112 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Diz que fui por Aí</h1><h2 class="t3"><a href="/ze-keti/">Zé Keti</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1"><b>C7M</b>                      <b>Bm7/5-</b>
+Se alguém perguntar por mim
+                 <b>E7(13-)</b>    <b>Am7(9)</b>
+Diz que fui por aí
+            <b>D7(13)</b>                 <b>Gm7</b>  <b>C7/9</b> 
+Levando um violão   Debaixo do braço
+ <b>C7/9-</b>
+
+<b>F#m7(5-)</b>         <b>B7/9-</b>  <b>Em</b>
+Em qualquer esquina eu paro
+                 <b>A7</b>     <b>Dm7</b>
+Em qualquer botequim eu entro
+               <b>F/G</b>  <b>G7(9-)</b>
+E se houver motivo
+<b>Em7(b5)</b>                <b>A7(b13)</b>    <b>Dm7</b>
+É mais um samba que eu faço
+              <b>G7(13)</b>          <b>C7M</b>           
+Se quiserem saber  Se volto diga que sim
+<b>A7</b>
+
+
+         <b>Dm7</b>            <b>F/G</b>  <b>G7(9-)</b>        
+Mas só depois que a saudade se afastar de 
+<b>Em7(b5)</b>     <b>A7(b13)</b>
+mim</pre><pre class="col2">      <b>Dm7</b>          <b>G7</b>          <b>C7+</b>      <b>C#°</b>  
+Só depois que a saudade se afastar de mim
+ <b>Dm7</b>
+
+
+          <b>G7</b>                        <b>C7M</b>
+Tenho um violão     P'ra me acompanhar
+             <b>Em7</b>             <b>Eb°</b>         <b>Dm7</b>
+Tenho muitos amigos      Eu sou popular
+             <b>G7</b>                      <b>Em7(b5)</b>
+Tenho a madrugada         Como companhei. . 
+   <b>A7(b13)</b>  <b>Dm7</b>
+.ra
+            <b>G7</b>                       <b>C7M</b>
+A saudade me dói     em meu peito me rói
+             <b>A7(b13)</b>                     <b>Dm7</b>
+Eu estou na cidade    Eu estou na favela
+            <b>G7</b>                        <b>C7M/9</b>
+Eu estou por aí    Sempre pensando nela
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/ze-keti-diz-que-fui-por-ai.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-ze-keti-diz-que-fui-por-ai.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

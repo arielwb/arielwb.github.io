@@ -1,0 +1,80 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tatuagem</h1><h2 class="t3"><a href="/nelson-cavaquinho/">Nelson Cavaquinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Dm</a> </span><pre class="col1"> <b>Dm</b>   <b>D7</b>       <b>Gm</b>
+O meu único fracasso
+ <b>A7</b>                     <b>Dm</b>
+Está na tatuagem do meu braço
+  <b>D7</b>                   <b>Gm7</b>
+É feliz quem já viveu aflito
+ <b>C7</b>                    <b>F7M</b>
+E hoje leva a vida sossegado</pre><pre class="col2">    <b>Gm</b>            <b>A7</b>         <b>Dm</b>
+Muita gente tem o corpo tão bonito
+          <b>Dm/C</b>    <b>Bb7</b>  <b>A7</b>   <b>Dm</b>
+Mas tem a alma toda ta   tuada
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/nelson-cavaquinho-tatuagem.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-nelson-cavaquinho-tatuagem.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

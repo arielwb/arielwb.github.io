@@ -1,0 +1,125 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Saideira</h1><h2 class="t3"><a href="/atitude-67/">Atitude 67</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1"><b>C7</b>                            <b>C7(9)</b>        
+Outra vez vacilei mas você já sabia que eu 
+          <b>F7M</b>
+ia errar
+                              <b>F/G</b>        
+Quem mandou colocar horário certo pra eu 
+                <b>C7</b>
+voltar do bar?
+                                 <b>C7(9)</b>     
+Me falou pra eu chegar às oito e meia e eu 
+                <b>F#m7(5-)</b>
+falei "aham"
+              <b>F/G</b>
+E cheguei às oito e meia da manhã
+
+<b>C7</b>                                <b>C7(9)</b>    
+Eu não quero conflito mas é que eu sei que 
+                     <b>F7M</b>
+esse conceito é falho
+                               <b>F/G</b>
+Afinal saideira não tá definida nem no 
+dicionário
+<b>C7M</b>         <b>C7(9)</b>                 <b>F#m7(5-)</b>
+Tudo bem eu sei meu dicionário é velho
+              <b>F/G</b>
+E se tiver no novo eu vou ligar pro Aurélio
+
+<b>C7M</b>                <b>C7(9)</b>                   
+Se a saideira é saideira por que é que eu 
+      <b>F7M</b>
+tô no bar?</pre><pre class="col2">                     <b>F/G</b>
+Se a saideira é saideira pede pro samba parar
+<b>C7M</b>               <b>C7(9)</b>               
+Foram doze saideiras só que eu consegui 
+           <b>F#m7(5-)</b>
+contar
+                  <b>F/G</b>                  
+Traz mais uma saideira que é pra gente 
+         <b>C7M</b>
+terminar
+
+( <b>C7M</b>   <b>C7(9)</b>   <b>F7M</b>   <b>F/G</b> )
+
+<b>C7M</b>             <b>C7(9)</b>             <b>F7M</b>
+Tô sem você mas tô cheio de lalaiá
+                <b>F/G</b>              <b>C7M</b>
+Tô sem você mas tô cheio de lalaiá
+                 <b>C7(9)</b>          <b>F#m7(5-)</b>     
+Tô sem você mas tô cheio de lalaiá laiá laiá 
+  <b>F/G</b>          <b>C7M</b>
+laiá laiá
+
+                   <b>C7(9)</b>                    
+Se a saideira é saideira por que é que eu tô
+<b>F#m7(5-)</b>      <b>F/G</b>
+ no bar?
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/atitude-67-saideira.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-atitude-67-saideira.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

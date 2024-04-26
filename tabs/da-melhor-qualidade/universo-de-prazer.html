@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Universo de Prazer</h1><h2 class="t3"><a href="/da-melhor-qualidade/">Da Melhor Qualidade</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">E</a> </span><pre class="col1">[Intro] <b>B7+</b>  <b>C#/B</b>  <b>A7+</b>  <b>B/A</b>  <b>G7+</b>  <b>C7+</b>
+
+  <b>B7+</b>              <b>C#/B</b>
+Pode ser que isso dure
+ <b>B7+</b>               <b>C#/B</b>          <b>Fm5-/7</b>   
+Ou quem sabe nem tanto
+<b>A#7/9-</b>
+
+<b>Fm5-/7</b>  <b>A#7/9-</b>  <b>Ebm7+</b>  <b>Ebm7</b>  <b>Fm5-/7</b>  
+Pode ser que o desejo,    nos liberte do 
+<b>A#7/9-</b>  <b>Ebm7+</b>  <b>Ebm7</b>
+encanto
+<b>C#m7</b>        <b>F#7/9</b>    <b>B7+</b>
+E alimente o nosso amor
+                   <b>C#/B</b>
+Pode até ser pra sempre
+<b>B7+</b>    <b>C#/B</b>      <b>F#m7</b>
+Que nos faça viver
+<b>B7/9</b>        <b>E7+</b>         <b>A7/9</b>   <b>Ebm7</b>
+Uma nova aventura só deixar acontecer
+            <b>G#7</b>
+Vai trazer felicidade
+ <b>C#m7/9</b>     <b>F#7/13</b>     <b>F#m7</b>
+E alegrar nosso viver
+<b>B7/13</b>
+Universo de prazer</pre><pre class="col2"> <b>Fm5-/7</b>    <b>Em6</b>      <b>D#m7</b>
+To doidinho pra te dar
+               <b>G#m7</b>
+Você é meu bem querer
+ <b>C#m7/9</b>    <b>F#7/13</b>     <b>F#m7</b>  <b>B7/13</b>
+Eu nasci pra te amar
+                   <b>E7+</b>
+Vem me beijar meu bem
+                  <b>D#m7</b>  <b>D°</b>
+Quero teu calor neném
+     <b>C#m7</b>             <b>F#7/13</b>       <b>F#m7</b>   
+Sou teu de mais ninguém meu amor, meu amor
+<b>B7/13</b>
+
+                   <b>E7</b>
+Vem me beijar meu bem
+                  <b>D#m7</b>  <b>D°</b>
+Quero teu calor neném
+    <b>C#m7</b>             <b>F#7/13</b>            <b>G7+</b>  
+Sou teu de mais ninguém meu amor, meu amor
+<b>C7+</b>  <b>B7+</b>
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/da-melhor-qualidade-universo-de-prazer.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-da-melhor-qualidade-universo-de-prazer.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

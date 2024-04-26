@@ -1,0 +1,129 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Dança da Solidão</h1><h2 class="t3"><a href="/paulinho-da-viola/">Paulinho da Viola</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>Am</b>
+
+              <b>A7</b>          <b>Dm</b>
+Solidão é lava que cobre tudo
+     <b>E7</b>            <b>Am</b>       <b>B7</b>               
+Amargura em minha boca, sorri seus dentes de 
+  <b>E7</b>
+chumbo
+           <b>Am</b>   <b>A7</b>             <b>Dm</b>
+Solidão palavra cavada no coração
+             <b>Am</b>         <b>E7</b>             <b>Am</b>
+Resignado e mudo no compasso da desilusão
+
+       <b>Dm</b> <b>E7</b>      <b>A7</b>
+Desilusão, desilusão
+                  <b>Dm</b>
+Danço eu dança você
+             <b>E7</b>  <b>Am</b>
+Na dança da solidão
+
+                 <b>E7</b>                   <b>Am</b>
+Caméllia ficou viúva, Joana se apaixonou
+                <b>A7</b>                       <b>Dm</b>
+Maria tentou a morte, por causa do seu amor
+                   <b>Bm7(5-)</b>    <b>E7</b>        
+Meu pai sempre me dizia, meu filho tome 
+    <b>Am</b>
+cuidado
+                      <b>E7</b>                     
+Quando eu penso no futuro, não esqueço o meu 
+    <b>Am</b>
+passado
+</pre><pre class="col2">       <b>Dm</b> <b>E7</b>      <b>A7</b>
+Desilusão, desilusão
+                  <b>Dm</b>
+Danço eu dança você
+             <b>E7</b>  <b>Am</b>
+Na dança da solidão
+
+                  <b>E7</b>                   
+Quando vem a madrugada, meu pensamento 
+   <b>Am</b>
+vagueia
+                   <b>A7</b>                       
+Corro os dedos na viola, contemplando a lua 
+<b>Dm</b>
+cheia
+                <b>Bm7(5-)</b>     <b>E7</b>            <b>Am</b>
+Apesar de tudo existe, uma fonte de água pura
+                   <b>E7</b>                  
+Quem beber daquela água, não terá mais 
+    <b>Am</b>
+amargura
+
+       <b>Dm</b> <b>E7</b>      <b>A7</b>
+Desilusão, desilusão
+                  <b>Dm</b>
+Danço eu dança você
+             <b>E7</b>  <b>Am</b>
+Na dança da solidão
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/paulinho-da-viola-danca-da-solidao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-paulinho-da-viola-danca-da-solidao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

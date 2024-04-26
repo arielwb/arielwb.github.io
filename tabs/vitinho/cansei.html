@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Cansei</h1><h2 class="t3"><a href="/vitinho/">Vitinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G#m</a> </span><pre class="col1"><b>G#m7(11)</b>
+          Olha, eu não queria te encontrar
+<b>Cm</b>                                      
+       Nessa hora é melhor evitar, me cansei 
+<b>E6(9)</b>
+de tanto te avisar
+ <b>C#m6</b>     <b>D#7</b>     <b>G#m7(11)</b>
+Parei, pensei,        fiz as malas pus no 
+corredor
+<b>Cm</b>
+   Pus as chaves sobre o aparador
+<b>E6(9)</b>                                  
+      Meus arquivos do computador, tirei 
+<b>C#m6</b>      <b>D#7</b>
+cansei
+           <b>E</b>     <b>F#7(4)</b>            <b>B7M</b>    
+Levo meus CDs, o violão, levo tão vazio o 
+   <b>E9</b>
+coração
+    <b>C#m6</b>            <b>D#7</b>        <b>G#7M</b>
+No acorde triste da canção, chorei
+             <b>E</b>        <b>F#7(4)</b>             <b>B7M</b> 
+Levo o medo de recomeçar, levo algumas fotos 
+       <b>E9</b>
+pra lembrar</pre><pre class="col2">          <b>C#m6</b>               <b>D#7</b>      
+Eu tanto lutei que o amor não aguentou
+<b>G#m7(11)</b>
+
+<b>F#m7</b>  <b>B7(4)</b>  <b>E9</b>         <b>F#7(4)</b>           <b>B9</b>
+       Acabou por briga, insegurança demais
+              <b>A</b>              <b>E7M(9)</b>
+Tanto que eu tentei viver em paz
+     <b>F#7(4)</b>                <b>G#m7(11)</b>
+As soluções ficaram pra traz
+<b>F#m7</b>  <b>B7(4)</b>  <b>G#m7</b>        <b>F#7(4)</b>           <b>B9</b>
+       Acabou, solta a porta deixa eu passar
+             <b>F#m7</b>  <b>B7(4)</b>  <b>E7M(9)</b>
+Pra que me arranhar e me agarrar
+           <b>C#m6</b>  <b>D#7</b>      <b>G#m7(11)</b>
+Não volto atrás, Adeus, já vou
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/vitinho-cansei.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-vitinho-cansei.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

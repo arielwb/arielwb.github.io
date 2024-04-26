@@ -1,0 +1,153 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Gaiola</h1><h2 class="t3"><a href="/henrique-e-juliano/">Henrique e Juliano</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>Bm7</b>  <b>G6</b>  <b>D2</b>  <b>A/C#</b>
+        <b>Bm7</b>  <b>G6</b>  <b>D2</b>
+
+[Primeira Parte]
+
+ <b>Bm7</b>  <b>G6</b>            <b>D2</b>
+Tá,     já tô despedindo
+           <b>Bm7</b>                 <b>G6</b>
+Só não precisa ligar mais 100 vezes
+            <b>D2</b>
+Já tô quase indo
+ <b>Bm7</b>      <b>G6</b>                   <b>D2</b>
+Será que dá pro cê falar mais baixo?
+ <b>A/C#</b>   <b>Bm7</b>                 <b>G5</b>
+Tô apertando o celular na orelha
+                  <b>D2</b>
+E tão te ouvindo alto
+
+[Pré-Refrão]
+
+        <b>Am</b>
+É esse tipo de atitude
+        <b>G5</b>               <b>D2</b>
+Que me faz desanimar da gente
+        <b>Am</b>                  <b>G5</b>
+Desconfiança e ciúme desse tanto
+               <b>D2</b>
+Deixa o amor doente
+
+[Refrão]
+
+                  <b>C</b>            <b>G</b>         <b>D2</b>
+Se for pra ser assim vou terminar com você
+                 <b>C</b>           <b>G</b>         <b>D2</b>
+Eu não sou passarinho pra você me prender
+                  <b>C</b>           <b>G</b>        <b>D2</b>
+Se for pra ser assim é melhor eu ir embora
+                 <b>C</b>           <b>G</b>      <b>D2</b>
+Você não tem um coração, tem uma gaiola
+
+                  <b>C</b>            <b>G</b>         <b>D2</b>
+Se for pra ser assim vou terminar com você
+                 <b>C</b>           <b>G</b>         <b>D2</b>
+Eu não sou passarinho pra você me prender</pre><pre class="col2">                  <b>C</b>           <b>G</b>        <b>D2</b>
+Se for pra ser assim é melhor eu ir embora
+                 <b>C</b>           <b>G</b>      <b>D2</b>
+Você não tem um coração, tem uma gaiola
+
+( <b>Bm7</b>  <b>G</b>  <b>D2</b> )
+( <b>C</b>  <b>G</b>  <b>D2</b> )
+
+[Pré-Refrão]
+
+        <b>Am</b>
+É esse tipo de atitude
+        <b>G5</b>               <b>D2</b>
+Que me faz desanimar da gente
+        <b>Am</b>                  <b>G5</b>
+Desconfiança e ciúme desse tanto
+               <b>D2</b>
+Deixa o amor doente
+
+[Refrão]
+
+                  <b>C</b>            <b>G</b>         <b>D2</b>
+Se for pra ser assim vou terminar com você
+                 <b>C</b>           <b>G</b>         <b>D2</b>
+Eu não sou passarinho pra você me prender
+                  <b>C</b>           <b>G</b>        <b>D2</b>
+Se for pra ser assim é melhor eu ir embora
+                 <b>C</b>           <b>G</b>      <b>D2</b>
+Você não tem um coração, tem uma gaiola
+
+                  <b>C</b>            <b>G</b>         <b>D2</b>
+Se for pra ser assim vou terminar com você
+                 <b>C</b>           <b>G</b>         <b>D2</b>
+Eu não sou passarinho pra você me prender
+                  <b>C</b>           <b>G</b>        <b>D2</b>
+Se for pra ser assim é melhor eu ir embora
+                 <b>C</b>           <b>G</b>      <b>D2</b>
+Você não tem um coração, tem uma gaiola
+
+                 <b>C</b>           <b>D</b>      <b>G</b>
+Você não tem um coração, tem uma gaiola
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/henrique-e-juliano-gaiola.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-henrique-e-juliano-gaiola.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

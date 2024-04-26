@@ -1,0 +1,94 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Duas horas da manhã</h1><h2 class="t3"><a href="/paulinho-da-viola/">Paulinho da Viola</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1"><b>F#m7</b>             <b>Bº</b>
+Duas horas da manhã,
+<b>F#m/C#</b>        <b>F#m</b>   <b>A</b>     <b>G#º</b> <b>C#m7(b5)</b> <b>G</b> <b>F#</b>
+Contrariado espero pelo meu amor
+         <b>Eº</b>          <b>Bm</b>       <b>Bm7(b5)</b> <b>E</b>
+Vou subindo o morro sem alegria,
+<b>E/G#</b>              <b>A</b>        <b>G#º</b>  <b>G</b>
+Esperando que amanheça o dia
+<b>F#m7</b> <b>A</b>         <b>G#º</b>  <b>Fm6</b>
+Qual será o paradeiro
+<b>F#m7</b>        <b>A</b>         <b>G#º</b>   <b>C#7(b9)</b> 
+daquela que até agora não voltou?
+<b>C#m7(b5)</b> <b>G</b> <b>F#</b>
+</pre><pre class="col2"><b>Bbº</b>               <b>Bm7</b>
+Eu não sei se voltará,
+               <b>Ebº</b> <b>C#7</b>  <b>F#m7</b> <b>A</b>
+ou se ela me abandonou
+  <b>Bm7</b>                        <b>A</b>
+A minha esperança está morrendo
+              <b>G#º</b>             <b>C#7(b9)</b>
+E a saudade no meu peito vai crescendo
+             <b>Bm7</b>       <b>G#º</b>    <b>A</b>
+Parece até que o coração me diz
+               <b>Eb</b>    <b>C#7</b> <b>F#m7</b>
+Sem ela, eu não serei feliz...
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/paulinho-da-viola-duas-horas-da-manha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-paulinho-da-viola-duas-horas-da-manha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

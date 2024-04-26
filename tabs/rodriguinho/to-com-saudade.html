@@ -1,0 +1,94 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Tô Com Saudade</h1><h2 class="t3"><a href="/rodriguinho/">Rodriguinho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1"><b>A7+</b>
+Tô com saudade de você
+<b>D7+</b>
+Vê se liga vem quero te ver
+<b>A7+</b>
+Sei que também quer me encontrar
+<b>D7+</b>
+Não entra nessa de tentar
+  <b>C#m7</b>
+Se não vai resolver              (bis)
+ <b>Bm7</b>
+Saindo com outra pessoa
+        <b>C#m7</b>        <b>C#m7</b> <b>Cm7</b>
+Pois o nosso prazer</pre><pre class="col2">   <b>Bm7</b>                <b>Bm7/E</b>
+É quando estamos numa boa
+
+<b>A7+</b>                              <b>D7+</b>
+   Esse lance de brigar não faz sentido
+<b>D7+</b> <b>C#m7</b> <b>Bm7</b>                           
+          É melhor você ficar de bem 
+<b>Bm7/E</b>  <b>E7/13</b>
+comigo
+<b>A7+</b>                                  <b>D7+</b>
+   O meu mundo se destrói sem teus carinhos
+<b>D7</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/rodriguinho-to-com-saudade.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-rodriguinho-to-com-saudade.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

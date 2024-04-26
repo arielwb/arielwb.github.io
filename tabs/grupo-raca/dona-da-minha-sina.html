@@ -1,0 +1,145 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Dona da Minha Sina</h1><h2 class="t3"><a href="/grupo-raca/">Grupo Raça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G</b>  <b>Am7</b>  <b>Bm7</b>  <b>E7</b>
+        <b>Am7</b>  <b>D7</b>  <b>G</b>  <b>D7</b>  <b>G</b>
+
+                <b>G</b>      <b>Am7</b>              <b>Bm7</b> 
+Não me lembro mais do rosto daquela mina
+<b>E7</b>
+
+               <b>Am7</b>   <b>D7</b>                <b>G</b>   
+Não me lembro mais.....não me lembro mais, 
+   <b>D7</b>
+não
+        <b>G</b>     <b>Am7</b>           <b>Bm7</b> <b>E7</b>
+Ela ia ser a dona da minha sina
+          <b>Am7</b>       <b>D7</b>           <b>G</b>    <b>D7</b>
+Onde andará...meu Deus aquela menina
+
+             <b>G</b>                 <b>E7</b>         
+Uma vaga lembrança, que usava trança e um 
+         <b>Am7</b>       <b>E7</b>     <b>Am7</b>     <b>E7</b>
+laço de fita....aaa...aaaa...aaaa
+             <b>Am7</b>               <b>D7</b>           
+Jeitinho dengoso, beijinho gostoso que dava 
+     <b>G</b>  <b>D7</b>
+saudade
+            <b>G</b>                 <b>E7</b>         
+Uma princesa com muita certeza no dia do 
+<b>Am7</b>   <b>E7</b>      <b>Am7</b>        <b>E7</b>
+amanhã ... aããã .... ãããã ...ããã
+                <b>Am7</b>                    <b>D7</b>
+Não lembro seu rosto, tão pouco seus olhos
+          <b>G</b>  <b>D7</b>
+Pro meu desgosto
+
+               <b>G</b>       <b>Am7</b>              <b>Bm7</b> 
+Não me lembro mais do rosto daquela mina
+<b>E7</b>
+
+               <b>Am7</b>   <b>D7</b>                <b>G</b>   
+Não me lembro mais.....não me lembro mais, 
+   <b>D7</b>
+não</pre><pre class="col2">        <b>G</b>     <b>Am7</b>           <b>Bm7</b> <b>E7</b>
+Ela ia ser a dona da minha sina
+          <b>Am7</b>       <b>D7</b>           <b>G</b>    <b>D7</b>
+Onde andará...meu Deus aquela menina
+
+             <b>G</b>
+Simpatia, promessa
+             <b>E7</b>                 <b>Am7</b>  
+Oferendas a beça e um monte de juras 
+<b>E7</b>     <b>Am7</b>     <b>E7</b>
+....aaa...aaaa...aaaa
+              <b>Am7</b>           <b>D7</b>              
+Soubesse do preço, tomava endereço para não 
+    <b>G</b>  <b>D7</b>
+sofrer
+               <b>G</b>              <b>E7</b>            
+Na força do tempo do meu pensamento, também 
+   <b>Am7</b>       <b>E7</b>     <b>Am7</b>     <b>E7</b>
+do amor. oooo....oooo..ooooor
+               <b>Am7</b>                <b>D7</b>         
+Tenho a esperança que minha lembrança devolva
+     <b>G</b>
+ seu rosto
+
+               <b>G</b>       <b>Am7</b>              <b>Bm7</b> 
+Não me lembro mais do rosto daquela mina
+<b>E7</b>
+
+               <b>Am7</b>   <b>D7</b>                <b>G</b>   
+Não me lembro mais.....não me lembro mais, 
+   <b>D7</b>
+não
+        <b>G</b>     <b>Am7</b>           <b>Bm7</b> <b>E7</b>
+Ela ia ser a dona da minha sina
+          <b>Am7</b>       <b>D7</b>           <b>G</b>    <b>D7</b>
+Onde andará...meu Deus aquela menina
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-raca-dona-da-minha-sina.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-raca-dona-da-minha-sina.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

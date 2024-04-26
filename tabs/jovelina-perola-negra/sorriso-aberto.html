@@ -1,0 +1,145 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sorriso Aberto</h1><h2 class="t3"><a href="/jovelina-perola-negra/">Jovelina Pérola Negra</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Em7(5-)</b>  <b>A7</b>  <b>Dm</b>
+        <b>Dm/C</b>  <b>E7</b>  <b>A7</b>
+
+<b>Dm</b>         <b>C</b>
+Lá laiá laiá laiá
+       <b>Bb7</b>
+Laiá laiá laiá
+       <b>A7</b>
+Laiá laiá laiá
+<b>Dm</b>             <b>C</b>
+Lá laiá laiá laiá laiá laiá
+       <b>Bb7</b>
+Laiá laiá laiá
+       <b>A7</b>
+Laiá laiá laiá
+<b>Gm</b>        <b>A7</b>        <b>Dm</b>                     
+Lá laiá laiá laiá laiá  samba aqui,samba 
+           <b>Em7(5-)</b>   <b>A7</b>
+ali, samba la
+<b>Dm</b>        <b>Gm</b>     <b>Dm</b>    <b>A/C#</b>
+Lá laiá laiá laiá laiá
+<b>Dm</b>        <b>A7</b>       <b>Dm</b>   <b>A7</b>
+Lá laiá laiá laiá laiá, pois é
+<b>Dm</b>              <b>C</b>
+É, foi ruim a bessa
+              <b>Bb7</b>
+Mas pensei depressa
+         <b>Em7(5-)</b>          <b>A7</b>             <b>Dm</b>
+Numa solução para a depressão, fui ao violão
+            <b>C</b>
+Fiz alguns acordes
+            <b>Bb7</b>
+Mas pela desordem
+         <b>Em7(5-)</b>              <b>A7</b>
+Do meu coração, não foi mole não
+<b>Em7(5-)</b>      <b>A7</b>       <b>Dm</b>    <b>Dm/C</b>
+Quase que sofri desilusão
+<b>Bb7</b>          <b>C7</b>         <b>F</b>
+Quase que sofri desilusão
+    <b>C7</b>
+Tristeza</pre><pre class="col2"><b>F</b>
+Tristeza foi assim
+          <b>C</b>                  <b>C#º</b>
+Se aproveitando pra tentar
+      <b>Dm</b>             <b>Gm</b>
+Se aproximar, ai de mim
+                  <b>Em7(5-)</b>       <b>A7</b>    
+Se não fosse o pandeiro e o ganzá e o 
+ <b>Dm</b>
+tamborim
+                <b>Gm</b>  <b>A7</b>   <b>Dm</b>
+Pra ajudar a marcar, meu tamborim
+                <b>Gm</b> <b>A7</b>
+Pra ajudar a marcar
+<b>Dm</b>                  <b>C</b>
+Logo, eu com meu sorriso aberto
+        <b>Bb7</b>                  <b>Em7(5-)</b>  <b>A7</b>
+E o paraíso perto, pra vida melhorar
+    <b>Dm</b>                    <b>C</b>
+Malandro desse tipo que balança mas não cai
+             <b>Bb7</b>
+De qualquer jeito vai
+           <b>Em7(5-)</b>  <b>A7</b>
+Ficar bem mais legal
+    <b>Bb7</b>        <b>A7</b>              <b>Dm</b>     (<b>Bb7</b> 
+Pra nivelar a vida em alto astral
+<b>A7</b>)
+
+
+    <b>Bb7</b>      <b>A7</b>                <b>Dm</b>    <b>A7</b>
+Pra nivelar a vida em alto astral
+     <b>Bb7</b>       <b>A7</b>              <b>Dm</b>
+Pra nivelar a vida em alto astral
+
+                             <b>A7</b>
+Samba aqui, samba ali, samba la
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jovelina-perola-negra-sorriso-aberto.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jovelina-perola-negra-sorriso-aberto.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

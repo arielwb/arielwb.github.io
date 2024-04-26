@@ -1,0 +1,126 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Primeiro Beijo</h1><h2 class="t3"><a href="/art-popular/">Art Popular</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">Introdução:  <b>G</b> <b>F</b> <b>Em</b> <b>F</b> <b>G</b> <b>F</b> <b>Em</b> <b>F</b>
+
+  <b>G7+</b>                              <b>Am</b>     <b>D7</b>
+Pára de tanta bobagem só pra me esquecer
+    <b>G7+</b>                                    
+Seus olhos dizem várias coisas que você não 
+<b>Am</b>     <b>B7</b>
+vê, não
+    <b>Em</b>
+Não dá pra entender
+         <b>Bm</b>
+Quanta vaidade há em você
+           <b>C</b>
+O orgulho mata
+   <b>Am</b>               <b>D7</b>
+O sonho que nos faz viver
+ <b>G7+</b>                                <b>Am</b>    <b>D7</b>
+Hoje acordei tão cedo pensando em você
+     <b>G7+</b>                             
+Ensaiei aquelas velhas frases pra te 
+       <b>Am</b>  <b>B7</b>
+convencer, não
+      <b>Em</b>
+Não dá pra entender
+            <b>Bm</b>
+Você mente mesmo pra você
+           <b>C</b>
+O orgulho mata
+   <b>Am</b>                 <b>D7</b>   <b>Am</b> <b>B7</b>
+O sonho que nos faz viver</pre><pre class="col2">      <b>Em</b>
+Eu olho pra você
+    <b>Bm</b>
+Você não me quer mais
+  <b>Em</b>
+Eu pego em suas mãos
+   <b>Bm</b>
+Você não quer tentar
+<b>C</b>      <b>Em</b>             <b>Am</b>               
+Tentar recomeçar do abraço e do primeiro 
+        <b>D</b>   <b>C</b>   <b>D7</b>
+beijo
+           <b>G</b>
+Não vou desistir
+    <b>B7</b>
+Nem desanimar
+                <b>C</b>
+Sei que a vida passa
+     <b>Am</b>              <b>D7</b>
+Se a gente pára de lutar
+           <b>G</b>
+Não vou desistir
+    <b>B7</b>
+Nem desanimar
+                <b>C</b>
+Sei que a vida passa
+     <b>Am</b>              <b>D7</b>
+Se a gente pára de lutar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/art-popular-primeiro-beijo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-art-popular-primeiro-beijo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

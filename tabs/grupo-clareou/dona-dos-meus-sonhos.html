@@ -1,0 +1,111 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Dona Dos Meus Sonhos</h1><h2 class="t3"><a href="/grupo-clareou/">Grupo Clareou</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1">Intro:  <b>Cm7</b>  <b>G7</b> <b>Cm7</b>  <b>G7</b> <b>Cm7</b>
+
+<b>Cm7(9)</b>
+Eu já chorei e não vou mais chorar
+                              <b>Gm7</b>
+O que eu passei já não quero passar
+                          <b>Dm7/b5</b>
+Eu já errei, to querendo acertar
+              <b>G7</b>              <b>Cm7(9)</b>
+Perco o que for pra poder te ganhar.
+
+Se eu não fiz hoje eu quero fazer
+                       <b>Gm7</b>
+Recomeçando o que não acabou
+                                  <b>Dm7/b5</b>
+O que eu não disse hoje eu vou te dizer
+          <b>G7</b>                    <b>Cm</b>    <b>A#m</b> <b>D#7</b>
+Pra ser feliz tá faltando esse amor.
+
+      <b>G#7+</b>            <b>G7</b>                <b>Cm</b>
+Que domina o meu pensamento e me faz respirar
+            <b>D#7(9)</b>              <b>G#7+</b>         
+Comanda as batidas do meu coração, tirando o 
+        <b>G7</b>
+meu sono e</pre><pre class="col2">         <b>Cm</b>     <b>A#m</b> <b>D#7</b>
+Me faz delirar.
+
+        <b>G#7+</b>                  <b>G7</b>
+Eu não quero, não devo e não posso
+             <b>Cm</b>               <b>D#7(9)</b>      
+E não vou desistir, amor de verdade nunca 
+             <b>G#7+</b>
+chega ao fim
+        <b>G7</b>                 <b>Cm</b>
+A tua doçura foi feita pra mim.
+
+           <b>A#m</b>           <b>D#7</b>         <b>G#7+</b>
+É você, a mulher, a dona dos meus sonhos.
+     <b>G#6</b>           <b>Dm7/b5</b>
+Vem amar quem te quer
+     <b>G7</b>          <b>Cm</b>
+Me livra desse abandono.
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/grupo-clareou-dona-dos-meus-sonhos.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-grupo-clareou-dona-dos-meus-sonhos.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  
