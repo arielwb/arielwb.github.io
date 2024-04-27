@@ -1,0 +1,131 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Gamei</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">  <b>Cm7</b>      <b>F7(9)</b>
+Quando eu vi
+        <b>Bb7(9)</b>  <b>Bb7(9-)</b>
+Me amarrei
+                <b>Eb7M</b>
+No teu sorriso sonhei
+<b>Dm7(5-)</b>            <b>G7(13-)</b>
+Eu sonhava que o sol
+ <b>Cm7</b>         <b>Cm7/Bb</b>
+Namorava o luar
+ <b>Aº</b>
+Que as nuvens do céu
+
+ <b>Dm7(5-)</b>             <b>G7(13-)</b>
+Beijavam o azul do mar
+
+ <b>Cm7</b>  <b>F7(9)</b>
+Meu amor
+         <b>Bb7(9)</b>  <b>Bb7(9-)</b>
+Meu prazer
+                <b>Eb7M</b>
+Minha paixão é você
+ <b>Dm7(5-)</b>          <b>G7(13-)</b>
+Deusa linda do amor
+ <b>Cm7</b>           <b>Cm7/Bb</b>
+Toma conta de mim
+<b>Aº</b>
+O destino traçou
+  <b>Dm7/5</b>             <b>G7(13-)</b>
+Pra nunca mais ter fim
+
+ <b>Fm7(9)</b>            <b>Bb7(9)</b>
+Te amo e não tem jeito</pre><pre class="col2"> <b>Fm7(9)</b>        <b>Bb7(9)</b>
+Você é minha sina
+ <b>Fm7(9)</b>            <b>Bb7(9)</b>  <b>Cm7</b>  <b>C7</b>
+Te amo meu amor, menina
+
+ <b>Fm7(9)</b>            <b>Bb7(9)</b>
+Te amo e não tem jeito
+ <b>Fm7(9)</b>        <b>Bb7(9)</b>
+Você me alucina
+ <b>Fm7(9)</b>           <b>Bb7(9)</b>     <b>Cm7</b>  <b>C7</b>
+Te amar é bom demais, menina
+
+ <b>F7M</b>              <b>F6</b>
+Gamei, no corpo bronzeado
+ <b>Bbm7</b>
+Ganhei, um beijo assanhado
+ <b>Am7</b>            <b>D7(9)-</b>
+Fiquei, todinho arrepiado
+ <b>Gm7</b>            <b>C7(9)</b>
+Parei, surpreso e acanhado
+ <b>F7M</b>              <b>F6</b>
+Dancei, de rostinho colado
+<b>Bbm7</b>
+Olhei, bumbum arrebitado
+ <b>Am7</b>            <b>D7(9)-</b>
+Gostei, perfume importado
+<b>Gm7</b>               <b>C7(9)</b>
+Amei, já sou teu namorado
+ <b>F7M</b>  <b>Dm7(5-)</b>  <b>G7(13-)</b>  <b>Cm7</b>
+Gamei
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-gamei.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-gamei.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

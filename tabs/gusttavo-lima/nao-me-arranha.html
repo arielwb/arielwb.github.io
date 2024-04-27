@@ -1,0 +1,186 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Não Me Arranha</h1><h2 class="t3"><a href="/gusttavo-lima/">Gusttavo Lima</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F#m</a> </span><pre class="col1">[Intro] <b>F#m</b>  <b>D</b>  <b>A</b>  <b>E</b>
+
+<b>F#m</b>
+    Vou descontar na sua cama
+                <b>Bm</b>  <b>E</b>
+A raiva que eu tô
+
+<b>F#m</b>
+    Aproveitar que cê me quer
+             <b>Bm</b>  <b>E</b>
+E ela me deixou
+
+ <b>C#m</b>
+Já que ela disse que eu não presto
+                     <b>F#m</b>
+Hoje eu não vou prestar
+
+                  <b>D</b>
+Pelo menos até a raiva passar
+                   <b>E</b>
+Ela me perdoar e queira voltar
+
+[Tab - Refrão]
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+           <b>A</b>
+Meu corpo tá solteiro
+             <b>E</b>
+Mas meu coração tem namorada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+         <b>A</b>
+Ela não pode nem sonhar
+             <b>E</b>
+Que a minha boca foi usada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+           <b>A</b>
+Meu corpo tá solteiro
+             <b>E</b>
+Mas meu coração tem namorada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+         <b>A</b>
+Ela não pode nem sonhar
+             <b>E</b>
+Que a minha boca foi usada
+                          <b>F#m</b>
+O término tem volta confirmada
+</pre><pre class="col2">( <b>D</b>  <b>A</b>  <b>E</b> )
+( <b>F#m</b>  <b>D</b>  <b>A</b>  <b>E</b> )
+
+<b>C#m</b>
+    Já que ela disse que eu não presto
+                     <b>F#m</b>
+Hoje eu não vou prestar
+
+                  <b>D</b>
+Pelo menos até a raiva passar
+                   <b>E</b>
+Ela me perdoar e queira voltar
+
+[Refrão]
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+           <b>A</b>
+Meu corpo tá solteiro
+             <b>E</b>
+Mas meu coração tem namorada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+         <b>A</b>
+Ela não pode nem sonhar
+             <b>E</b>
+Que a minha boca foi usada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+           <b>A</b>
+Meu corpo tá solteiro
+             <b>E</b>
+Mas meu coração tem namorada
+
+          <b>F#m</b>
+Não me arranha
+        <b>D</b>
+Não me marca
+         <b>A</b>
+Ela não pode nem sonhar
+             <b>E</b>
+Que a minha boca foi usada
+                          <b>F#m</b>
+O término tem volta confirmada
+
+[Final] <b>D</b>  <b>A</b>  <b>E</b>  <b>F#m</b>
+
+
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/gusttavo-lima-nao-me-arranha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-gusttavo-lima-nao-me-arranha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

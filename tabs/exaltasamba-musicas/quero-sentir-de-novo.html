@@ -1,0 +1,140 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Quero Sentir de Novo</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>G7M</b>  <b>G6</b>  <b>D7(4)</b>  <b>D7</b>
+
+        <b>G7M</b>         <b>G6</b>
+Quero sentir de novo
+  <b>F#m7(5-)</b>              <b>B7</b>
+Aquela antiga emoção
+      <b>Em</b>           <b>A7</b>
+De te ver chegando
+      <b>Dm7</b>               <b>G7</b>
+Pra alegrar meu coração
+
+ <b>Cm7</b>         <b>F7(9)</b>        <b>Bm7</b>
+Vem para aliviar o meu interior
+            <b>Bb7M</b>         <b>Am7(5-)</b>
+Só o meu bom Deus é sabedor
+            <b>D7</b>
+  Do quanto eu
+
+     <b>G7M</b>          <b>G6</b>
+Preciso de carinho
+  <b>F#m7(5-)</b>               <b>B7</b>
+A sua ausência fez a paz renunciar
+<b>Em</b>             <b>A7</b>
+  O nosso ninho
+<b>Dm7</b>                         <b>G7</b>
+  E rumou pra outros caminhos
+
+<b>Cm7</b>               <b>F7(9)</b>       <b>Bm7</b>
+E me deixou perdido na escuridão
+   <b>Bb7M</b>             <b>Am7(5-)</b>
+Profundo abismo da paixão
+               <b>D7</b>        <b>Dm9</b>  <b>G7</b>
+Diz que eu não sou merecedor
+
+<b>Cm7</b>           <b>F7(9)</b>            <b>Bm7</b>
+Causando um reboliço no meu coração
+           <b>Bb7M</b>       <b>Am7(5-)</b>
+Só meu bom Deus é sabedor</pre><pre class="col2">           <b>D7(9-)</b>
+Do quanto eu
+
+   <b>Gm</b>
+Sofri com a separação
+<b>Cm</b>
+Sei que você também sofreu
+ <b>Am7(5-)</b>                  <b>D7</b>             <b>Gm</b>
+Destino transformaste a sorte do meu dia a 
+     <b>Am</b>  <b>Bb</b>   <b>D7</b>
+dia
+
+     <b>Gm</b>
+Não dá
+         <b>Cm</b>
+Pra explicar a tentação
+   <b>Am7(5-)</b>                  <b>D7</b>              
+De atar nossos laços de amor como já foi um 
+    <b>G</b>   <b>Bm7</b>  <b>Am7</b>  <b>D7</b>
+dia
+
+        <b>G7M</b>         <b>Am7</b>
+Fazer o sol brilhar
+        <b>Bm7</b>
+Ressuscitar o amor
+    <b>Dm</b>          <b>G7</b>
+Iluminar meu céu
+             <b>C7M</b>
+Trazer-me teu calor
+
+<b>Cm7</b>              <b>F7(9)</b>                  <b>Bm7</b>
+Vem receber o amor que eu tenho pra te dar
+<b>Bb7M</b>                 <b>Am7(5-)</b>       <b>D7</b>
+Você não pode imaginar o quanto eu
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-quero-sentir-de-novo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-quero-sentir-de-novo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

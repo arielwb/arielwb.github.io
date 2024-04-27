@@ -1,0 +1,115 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Batucada dos Nossos Tantãs</h1><h2 class="t3"><a href="/fundo-de-quintal/">Fundo de Quintal</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Bb7M</b>  <b>Bbm6</b>  <b>Am7</b>  <b>D7(9)</b>  <b>G7(9)</b>  <b>C7</b>  <b>F</b> 
+
+ <b>C7</b>
+
+<b>F</b>                                     <b>Am7</b>
+Samba, a gente não perde o prazer de cantar
+                      <b>Cm</b>       <b>F</b>
+E fazem de tudo pra silenciar
+   <b>F7</b>                  <b>Bb7M</b>
+A batucada dos nossos tantãs
+<b>Bbm6</b>              <b>Am7</b>     <b>D7(9)</b>
+No seu ecoar, o samba se refez
+<b>G7(9)</b>
+Seu canto se faz reluzir
+<b>Gm7</b>                  <b>C7</b>
+Podemos sorrir outra vez
+
+<b>F</b>                           <b>Am7</b>
+Samba, eterno delírio do compositor
+                                  <b>Cm</b>  <b>F</b>
+Que nasce da alma, sem pele, sem cor
+        <b>F7</b>                    <b>Bb7M</b>
+Com simplicidade, não sendo vulgar
+<b>Bbm6</b>                            <b>A7(13)</b>    
+Fazendo da nossa alegria, seu habitat 
+<b>D7(9)</b>
+natural</pre><pre class="col2"><b>Gm7(9)</b>                  <b>C7</b>                <b>F</b>
+O samba floresce do fundo do nosso quintal
+
+<b>D7</b>               <b>Gm7</b>
+Este samba é pra você
+             <b>C7</b>          <b>F6</b>
+Que vive a falar, a criticar
+           <b>D7</b>                <b>Gm7</b>
+Querendo esnobar, querendo acabar
+               <b>C7</b>
+Com a nossa cultura popular
+
+<b>F</b>    <b>D7</b>        <b>Gm7</b>
+É bonito de se ver
+          <b>C7</b>                <b>F6</b>
+O samba correr, pro lado de lá
+              <b>D7</b>             <b>Gm7</b>
+Fronteira não há, pra nos impedir
+           <b>C7</b>                   <b>F</b>    <b>C7</b>
+Você não samba, mas tem que aplaudir
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/fundo-de-quintal-a-batucada-dos-nossos-tantas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-fundo-de-quintal-a-batucada-dos-nossos-tantas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

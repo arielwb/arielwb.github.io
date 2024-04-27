@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Nem Pensar</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">Introdução:   dueto :25-16-25-16-21-12
+Solo: 
+20-21-20-32-20-21-20-21-32-20-21-20-32(12- 
+tremulo)
+20-21-20-32-20-21-20-32-20-21-20-32(32-tremulo)20-21-20-32-20-21-20-32-20-21-20-32-40-32-14-14-10
+
+<b>A7+</b>   <b>E/G#</b>   <b>F#m7</b>  <b>F7+</b> <b>E7</b>
+laiaia laialaia laia
+<b>A7+</b>                              <b>E/G#</b>      
+Se é pra falar de amor me deixa começar sou
+  <b>F#m7</b>
+ louco por você
+                 <b>E7</b>     <b>A7+</b>                  
+só não sei demonstrar se é pra falar de amor 
+        <b>E/G#</b>
+meus olhos vão
+          <b>F#m7</b>                         <b>E7</b>    
+mostrar em mim nada mudou você sempre será a 
+ <b>F#m7</b>  <b>F#m</b>
+luz que ilumina
+            <b>D7+</b>                    <b>Em7</b>      
+meu céu um cantinho bom de voltar é a canção
+<b>F#m7</b>   <b>G7+</b>
+ que eu mais</pre><pre class="col2"> <b>A7</b>     <b>E7/9</b> <b>F7(#5)</b> <b>Ebdim/A</b> <b>A7</b>
+gosto é o meu lugar
+
+refrão
+
+<b>F7+</b>                <b>G7</b>     <b>A7+</b>              
+não me deixa nem pensar eu faço o que for 
+   <b>F#m7</b>
+mas não pode
+        <b>F7+</b>             <b>G7</b>      <b>F#m7</b>      <b>Bm</b> 
+acabar não me deixa nem pensar és a luz minha
+     <b>F#m7</b>
+ luz que não
+      <b>A7</b>
+pode apagar
+
+solo:20-21-20-32-20-21-20-32-20-21-20-32-40-32-14-14-10
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-nem-pensar.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-nem-pensar.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

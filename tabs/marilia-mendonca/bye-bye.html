@@ -1,0 +1,176 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Bye Bye</h1><h2 class="t3"><a href="/marilia-mendonca/">Marília Mendonça</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">[Intro] <b>C</b>  <b>Am7</b>  <b>F</b>  <b>Fm</b>
+
+[Primeira Parte]
+
+ <b>C</b>                <b>Am7</b>
+Já memorizei o seu   corpo todo
+<b>F</b>                                 <b>Fm</b>
+ Pro caso da gente não se ver de novo
+ <b>C</b>                      <b>Am7</b>
+Doa a quem doer, essa é a verdade
+<b>F</b>                            <b>Fm</b>
+ Entre nós dois não cabe saudade
+
+[Pré-Refrão]
+
+       <b>Am7</b>              <b>Em</b>
+Pra você, sou só mais uma carona
+              <b>F</b>                       <b>Fm</b>
+No final de uma balada, me envolvi sabendo
+       <b>Am7</b>                      <b>Em</b>
+Somos dois estranhos numa cama temporária
+          <b>F</b>                          <b>Fm</b>
+Fazendo amor, consciente que é só momento
+
+O quarto é grande, mas não cabe sentimento
+
+[Refrão]
+
+            <b>C</b>
+Vai doer demais
+           <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>
+Adeus pro seu corpo nu
+
+            <b>C</b>
+Vai doer demais
+               <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>                   <b>C</b>
+Saber que seu corpo nunca mais vai ser meu
+
+[Solo] <b>Am7</b>  <b>F</b>  <b>Fm</b>
+       <b>C</b>  <b>Am7</b>  <b>F</b>  <b>Fm</b>
+
+[Pré-Refrão]
+
+       <b>Am7</b>              <b>Em</b>
+Pra você, sou só mais uma carona
+              <b>F</b>                       <b>Fm</b>
+No final de uma balada, me envolvi sabendo</pre><pre class="col2">   <b>G</b>   <b>Am7</b>                      <b>Em</b>
+Somos dois estranhos numa cama temporária
+          <b>F</b>                          <b>Fm</b>
+Fazendo amor, consciente que é só momento
+
+O quarto é grande, mas não cabe sentimento
+
+[Refrão]
+
+            <b>C</b>
+Vai doer demais
+           <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>
+Adeus pro seu corpo nu
+
+            <b>C</b>
+Vai doer demais
+               <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>                   <b>C</b>
+Saber que seu corpo nunca mais vai ser meu
+
+[Solo] <b>Am7</b>  <b>F</b>  <b>Fm</b>
+
+[Refrão]
+
+            <b>C</b>
+Vai doer demais
+           <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>
+Adeus pro seu corpo nu
+
+            <b>C</b>
+Vai doer demais
+               <b>Am7</b>
+Escutar o seu bye bye
+             <b>F</b>
+Depois do I love you
+               <b>Fm</b>                   <b>C</b>
+Saber que seu corpo nunca mais vai ser meu
+
+[Solo] <b>Am7</b>  <b>F</b>
+
+               <b>Fm</b>                       <b>C</b>
+Saber que seu corpo nunca mais vai ser meu
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/marilia-mendonca-bye-bye.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-marilia-mendonca-bye-bye.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

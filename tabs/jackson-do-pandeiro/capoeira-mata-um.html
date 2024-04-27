@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Capoeira Mata Um</h1><h2 class="t3"><a href="/jackson-do-pandeiro/">Jackson do Pandeiro</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Am</a> </span><pre class="col1"> <b>Am7</b> <b>D7</b>
+
+<b>Am7</b>         <b>D7</b>
+   Zum zum zum
+         <b>Am7</b>
+Zum zum zum
+   <b>F7</b>    <b>E7</b>   <b>Am7</b>
+Capoeira mata um
+        <b>D7</b>
+Zum zum zum
+         <b>Am7</b>
+Zum zum zum
+   <b>F7</b>    <b>E7</b>   <b>Am7</b>
+Capoeira mata um
+
+<b>D7</b>                 <b>Am7</b>
+Samba que balança é bom
+<b>F7</b>         <b>E7</b>         <b>Am7</b>
+Samba que balança não cai
+<b>D7</b>                <b>Am7</b>
+O meu samba tem que ser no tom
+   <b>F7</b>    <b>E7</b>     <b>Am7</b>
+A pedido do meu pai
+</pre><pre class="col2"><b>D7</b>             <b>Am7</b>
+Salve a Bahia iô iô
+<b>F7</b>        <b>E7</b>      <b>Am7</b>
+Salve a Bahia ai ai
+        <b>D7</b>             <b>Am7</b>
+Quem não sabe jogar capoeira
+      <b>F7</b>     <b>E7</b>       <b>Am7</b>
+Berimbau vai lhe ensinar
+
+         <b>D7</b>                <b>Am7</b>
+Valha-me Deus o Senhor São Bento
+        <b>F7</b>       <b>E7</b>        <b>Am7</b>
+Buraco velho tem cobra dentro
+         <b>D7</b>                <b>Am7</b>
+Valha-me Deus o Senhor São Bento
+        <b>F7</b>       <b>E7</b>        <b>Am7</b>
+Buraco velho tem cobra dentro
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/jackson-do-pandeiro-capoeira-mata-um.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-jackson-do-pandeiro-capoeira-mata-um.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

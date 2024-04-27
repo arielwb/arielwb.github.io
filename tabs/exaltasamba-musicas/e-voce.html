@@ -1,0 +1,110 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">É Você</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">[Intro] <b>D7M</b>  <b>D6</b>  <b>D5+</b>  <b>D7M</b>  <b>D6</b>  <b>A7</b>
+
+   <b>D7M</b>
+É você
+ <b>D6</b>    <b>E/D</b>                  <b>A7M</b>  <b>A6</b>
+Meu desejo mais gostoso de viver
+     <b>C#m7(5-)</b> <b>F#7</b>          <b>Bm</b>
+Você é o meu segredo meu prazer
+    <b>G#m7(11)</b>   <b>C#7</b>        <b>F#m7M</b>   <b>F#m7</b>
+A maior felicidade que encontrei
+     <b>Am6</b>         <b>B7</b>            <b>Em</b>
+Um amor que na verdade acreditei
+        <b>A7(4)</b>       <b>A7(13-)</b>          <b>D7M</b>  <b>Bb</b> 
+É quem faz bater feliz meu coração
+ <b>Em</b>
+
+
+     <b>A7</b>
+Pra você
+<b>D7M</b>    <b>E/D</b>                 <b>A7M</b>  <b>A6</b>
+Eu entrego minha vida em suas  mãos
+        <b>C#m7(5-)</b>     <b>F#7</b>         <b>Bm</b>  <b>D5+</b>
+Faz de mim um prisioneiro da paixão</pre><pre class="col2">   <b>G#m7(11)</b>         <b>C#7</b>       <b>F#m7M</b>  <b>F#m7</b>
+Só eu sei como eu preciso de você
+        <b>Am6</b>           <b>B7</b>           <b>Em</b>
+Eu não posso nem pensar em te perder
+<b>A7(4)</b>              <b>A7</b>         <b>D</b>
+Eu confesso que te amo, meu amor
+
+      <b>D5+</b>
+Olha nos meus olhos
+ <b>D6</b>           <b>D7</b>    <b>G7M</b>
+Sem você não sei viver
+       <b>C7(9)</b>         <b>F#m7</b>
+Jamais pensei amar assim
+        <b>B7</b>           <b>E7(9)</b>             <b>F</b>  <b>F#</b> 
+Não tenho mais palavras pra dizer meu bem
+ <b>G</b>
+
+         <b>A7</b>      <b>D</b>
+Você nasceu pra mim
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-e-voce.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-e-voce.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,128 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Olho Por Olho</h1><h2 class="t3"><a href="/beth-carvalho/">Beth Carvalho</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Eb</a> </span><pre class="col1">Introdução: <b>Eb</b> <b>Fm</b> <b>Bb7</b> <b>Eb</b> <b>Cm</b> <b>Fm</b> <b>Bb7</b> <b>Eb</b> <b>Bb7</b>
+
+<b>Eb</b>        <b>Cm</b>
+A justiça dos homens
+<b>Fm</b>
+Condena a bigamia
+                             <b>Bb7</b>
+Nenhuma mulher pode ter dois Josés
+                      <b>Eb</b>
+Nenhum homem ter duas Marias (por isso)
+<b>Bb7</b>          <b>Eb</b>
+Dente por dente
+ <b>Cm</b>      <b>Fm</b>
+Olho por olho
+                 <b>Bb7</b>
+Se tentar me enganar
+     <b>Eb</b>
+Bota a barba de molho (eu falei)
+<b>Cm</b>                <b>Fm</b>
+Você que se diz malandro
+  <b>Bb7</b>        <b>Eb</b>
+Malandro você não é
+<b>Cm</b>           <b>Fm</b>           <b>Bb7</b>        <b>Eb</b>
+Porque não existe homem malandro pra mulher
+  <b>Cm</b>             <b>Fm</b>
+Você já fez a primeira
+<b>Bb7</b>             <b>Eb</b>
+  Mas a segunda não faz
+<b>Cm</b>            <b>Fm</b>         <b>Bb7</b>           <b>Eb</b>
+A partir de hoje os direitos são iguais (eu 
+falei)</pre><pre class="col2"><b>Bb7</b>          <b>Eb</b>
+Dente por dente
+ <b>Cm</b>      <b>Fm</b>
+Olho por olho
+                 <b>Bb7</b>
+Se tentar me enganar
+     <b>Eb</b>
+Bota a barba de molho (eu falei)
+<b>Cm</b>             <b>Fm</b>
+Diz o velho ditado
+      <b>Bb7</b>          <b>Eb</b>
+Com muita sabedoria
+<b>Cm</b>          <b>Fm</b>       <b>Bb7</b>            <b>Eb</b>
+Gato escaldado sente medo de água fria
+     <b>Cm</b>           <b>Fm</b>
+Meu amor vê se manera
+      <b>Bb7</b>        <b>Eb</b>
+Não é hora de brigar
+       <b>Cm</b>          <b>Fm</b>         <b>Bb7</b>         <b>Eb</b>
+Dançou fora do compasso eu pra lá você pra cá
+ (e por isso)
+<b>Bb7</b>          <b>Eb</b>
+Dente por dente
+ <b>Cm</b>      <b>Fm</b>
+Olho por olho
+                 <b>Bb7</b>
+Se tentar me enganar
+     <b>Eb</b>
+Bota a barba de molho (eu falei)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/beth-carvalho-olho-por-olho.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-beth-carvalho-olho-por-olho.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,123 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Demorô</h1><h2 class="t3"><a href="/sensacao/">Sensação</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">C</a> </span><pre class="col1">Intro:  D6/9 F7 Bb7 A7 (x2)
+
+    <b>D6/9</b>                        <b>E7</b>
+Demoro demoro mas chegou pra valer
+                             <b>Em7</b>
+Pra valer até quando eu não sei
+     <b>A7</b>                     <b>D6/9</b>
+E lá do pé do morro gritou demoro
+ <b>A7</b>           <b>D6/9</b>                        <b>E7</b>
+Mas chegou .......e arregou o dia do Gerente
+                       <b>Em7</b>
+O vapor sorriu todo contente
+        <b>A7</b>             <b>D6/9</b>      <b>A7/11</b>
+Quando o dono do morro voltou (Demoro)
+<b>Bm7</b> <b>Bbm7</b>   <b>Am7</b>
+      Demo...ro, mas chegou
+                    <b>D6/9</b>               
+E pegou o ferro d'um menor que tava de 
+   <b>D7/13</b> <b>D7</b>
+bobeira
+  <b>G7+</b>                                
+Demoro pra dar um monte de tapa numa 
+    <b>Gm6</b>  <b>A7</b>
+faladeira
+  <b>D6/9</b>                <b>B7</b>
+Demoro , Demoro pra rever seu amor
+      <b>E7/9</b>             <b>A7</b>        <b>D6/9</b>
+Quem tava na escola já vai dar meia volta
+         <b>B7</b>
+Se não demoro pra cair</pre><pre class="col2"> <b>E7/9</b>                   <b>A7</b>            <b>D6/9</b>
+Vala não é um bom lugar pra ..... dorm...ir
+
+(Introdução + Refrão)
+
+<b>Bm7</b> <b>Bbm7</b>  <b>Am7</b>
+     Demo...ro pra pensar
+                       <b>D6/9</b>                
+E na hora não tem muito tempo pra fugir do 
+ <b>D7/13</b> <b>D7</b>
+bote
+    <b>G7+</b>                                  <b>Gm6</b> 
+Demoro quando pintou sujeira não teve pinote
+<b>A7</b>
+
+   <b>D6/9</b>                <b>B7</b>
+Demoro, camburão é dinheiro na mão
+     <b>E7/9</b>              <b>A7</b>           <b>D6/9</b>
+E na hora do acerto não pode ter vacilação
+              <b>B7</b>
+Pois se não demoro pra voltar
+ <b>E7/9</b>            <b>A7</b>          <b>D6/9</b>
+Sabe que lá nunca foi seu luga...ar
+
+(Introdução)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sensacao-demoro.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sensacao-demoro.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

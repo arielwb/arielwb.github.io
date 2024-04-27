@@ -1,0 +1,109 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Velho Amor</h1><h2 class="t3"><a href="/sensacao/">Sensação</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">  <b>A7+</b>    <b>E/G#</b>   <b>F#m7</b>
+Oque aconteceu
+           <b>C#m7</b>        <b>D7+</b>
+Com aquele velho amor
+              <b>Bm7/D</b>
+Será que se perdeu
+         <b>E7</b>
+Ou se modificou
+<b>A7+</b>       <b>E/G#</b>       <b>F#m7</b>
+Mas pelo amor de Deus
+        <b>C#m7</b>
+Me diz o que restou
+<b>D7+</b>           <b>Esus4</b> <b>E7</b>
+Da nossa união
+            <b>A7</b>
+Será que acabou
+   <b>D7+</b>
+O amor
+Que fez nosso sol despertar
+    <b>C#m7</b>
+Pro amor
+              <b>A7/9</b>                <b>D7+</b>
+E a gente não quer mais falar (no amor)
+</pre><pre class="col2">Do brilho que enche o luar
+   <b>C#m7</b>
+De amor
+           <b>A7</b>
+A gente precisa voltar
+ <b>Bm7</b>                 <b>E7</b>   <b>A7</b>
+Pro nosso sonho continuar
+ <b>F7+</b>              <b>A7+</b>  <b>F#m7</b>
+Essa saudade de você
+        <b>Bm7/11</b> <b>Bb(b5)</b>
+Não é legal
+         <b>A9</b>   <b>A7+</b>
+me faz sofrer
+<b>F7+</b>     <b>F/G</b>   <b>A7+</b>    <b>F#m7</b>
+E tudo pode acontecer
+          <b>F7</b>   <b>E7(b9)</b> <b>E7</b>     <b>A7</b>
+Não vou deixar de     te querer
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sensacao-velho-amor.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sensacao-velho-amor.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

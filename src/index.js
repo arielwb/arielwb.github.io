@@ -74,24 +74,36 @@ checkbox.addEventListener('change', removeCols);
   `;
 };
 
-const downloadTab = async (artist, song, page) => {
-  const outputPath = `tabs/${artist}`;
-  const fileName = `${outputPath}/${song}.html`;
+const failedUrls = fs.existsSync("./failed.json")
+  ? JSON.parse(fs.readFileSync("./failed.json"))
+  : [];
+const failedSearchUrls = fs.existsSync("./failedSearch.json")
+  ? JSON.parse(fs.readFileSync("./failedSearch.json"))
+  : [];
+const sucessUrls = {};
 
-  if (existsSync(fileName)) return;
+const downloadTab = async (artist, song, page, fileName) => {
+  if (
+    page.url() ===
+      "https://www.cifraclub.com.br/#instrument=cavaco&tabs=false&columns=true" ||
+    page.url() ===
+      `https://www.cifraclub.com.br/${artist}/#instrument=cavaco&tabs=false&columns=true`
+  ) {
+    throw new Error(`url not found: ${artist} ${song}`);
+  }
 
-  const url = `https://www.cifraclub.com.br/${artist}/${song}/#instrument=cavaco&tabs=false&columns=true`;
-  await page.goto(url);
+  // mais um check pra ver se eh  so a letra
 
   try {
-    await page.waitForSelector("#side-exibir", { timeout: 500 });
+    await page.waitForSelector("#side-exibir", { timeout: 100 });
     await page.click("#side-exibir");
     const twoCol = 'label[for="exib1"]';
     await page.waitForSelector(twoCol);
     await page.click(twoCol);
   } catch (error) {
-    console.log(`failed ${url}`);
-    return;
+    throw new Error(
+      `failed download: ${artist} ${song} ${page.url()}, Error: ${error}`
+    );
   }
 
   let content = "";
@@ -131,6 +143,31 @@ const downloadTab = async (artist, song, page) => {
   }
 
   fs.writeFileSync(fileName, builtTabPage(content, artist, song));
+
+  if (sucessUrls[artist]) {
+    sucessUrls[artist].songs.push(song);
+  } else {
+    sucessUrls[artist] = {
+      artist,
+      songs: [song],
+    };
+  }
+};
+
+const searchTab = async (artist, song, page) => {
+  const pattern = new RegExp("-", "g");
+  const value = `${artist.replace(pattern, " ")} ${song.replace(pattern, " ")}`;
+  try {
+    await page.$eval("#js-h-search", (el, value) => (el.value = value), value);
+
+    await page.click('button[type="submit"]');
+    await page.waitForSelector(".gsc-webResult.gsc-result");
+    await page.click(".gsc-webResult.gsc-result:first-child a");
+  } catch (error) {
+    throw new Error(
+      `failed search: ${artist} ${song} ${page.url()}, Error: ${error}`
+    );
+  }
 };
 
 const buildIndex = (tabList) => {
@@ -168,76 +205,83 @@ const buildIndex = (tabList) => {
   fs.writeFileSync(`index.html`, index);
 };
 
-// const tabs2 = [
-//   {
-//     artist: "molejo",
-//     songs: [
-//       "cilada",
-//       "danca-da-vassoura",
-//       "brincadeira-de-crianca",
-//       "paparico",
-//     ],
-//   },
-//   {
-//     artist: "so-pra-contrariar",
-//     songs: [
-//       "essa-tal-liberdade",
-//       "a-barata",
-//       "que-se-chama-amor",
-//       "mineirinho",
-//       "sai-da-minha-aba",
-//     ],
-//   },
-//   {
-//     artist: "zeca-pagodinho",
-//     songs: ["deixa-vida-me-levar", "vai-vadiar", "maneiras", "vacilao"],
-//   },
-// ];
+const remainingSong = songList.filter(
+  (song) =>
+    !(
+      failedUrls.find(
+        (s) => s.artist === song.artist && song.songs.includes(s.song)
+      ) ||
+      failedSearchUrls.find(
+        (s) => s.artist === song.artist && song.songs.includes(s.song)
+      )
+    )
+);
+(async () => {
+  // Launch the browser and open a new blank page
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath:
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    args: [
+      "--user-data-dir=/Users/arielflor/Library/Application Support/Google/Chrome/Default",
+      "--no-sandbox",
+    ],
+  });
+  const page = await browser.newPage();
 
-// const tabs = songList.map(song => {
-//   const artist = replaceAccents(song.artist)
-//   const songs = song.songs.map(replaceAccents)
-//   return {
-//     artist, songs
-//   }
-// })
+  await page.setViewport({ width: 1080, height: 1024 });
+  // const url = `https://www.cifraclub.com.br`;
+  // await page.goto(url);
 
-// console.log(tabs)
+  for await (const tab of remainingSong) {
+    for await (const song of tab.songs) {
+      console.log(`start ${tab.artist} ${song}`);
 
-// (async () => {
-//   // Launch the browser and open a new blank page
-//   const browser = await puppeteer.launch({
-//     headless: true,
-//     executablePath:
-//       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-//     args: [
-//       "--user-data-dir=/Users/arielflor/Library/Application Support/Google/Chrome/Default",
-//     ],
-//   });
-//   const page = await browser.newPage();
+      const outputPath = `tabs/${tab.artist}`;
+      const fileName = `${outputPath}/${song}.html`;
 
-//   await page.setViewport({ width: 1080, height: 1024 });
+      if (existsSync(fileName)) {
+        console.log(`skiping, file ${fileName} exists...`);
+        continue;
+      }
+      const url = `https://www.cifraclub.com.br/${tab.artist}/${song}/#instrument=cavaco&tabs=false&columns=true`;
+      try {
+        await page.goto(url);
+      } catch (error) {
+        console.log(`error navigating to ${url} retrying...`);
+        try {
+          await page.goto(url);
+        } catch (error) {
+          console.log(`failed navigating to ${url}`);
+          failedUrls.push({ artist: tab.artist, song });
+          continue;
+        }
+      }
 
-//   // page.on("response", (response) => {
-//   //   const status = response.status();
-//   //   if (status >= 300 && status <= 399) {
-//   //     console.log(
-//   //       "Redirect from",
-//   //       response.url(),
-//   //       "to",
-//   //       response.headers()["location"]
-//   //     );
-//   //   }
-//   // });
+      try {
+        await downloadTab(tab.artist, song, page, fileName);
+      } catch (error) {
+        console.log(`error downloading ${url} trying search...`);
+        try {
+          await searchTab(tab.artist, song, page);
+        } catch (error) {
+          console.log(`error searching ${tab.artist} ${song}} ${error}`);
+          failedSearchUrls.push({ artist: tab.artist, song });
+          try {
+            await downloadTab(tab.artist, song, page, fileName);
+            console.log(`success ${tab.artist} ${song}`);
+          } catch (error) {
+            console.log(`error downloading ${tab.artist} ${song} ${error}`);
+            failedUrls.push({ artist: tab.artist, song });
+          }
+        }
+      }
 
-//   for await (const tab of songList) {
-//     for await (const song of tab.songs) {
-//       await downloadTab(tab.artist, song, page);
-//     }
-//   }
+      fs.writeFileSync(`./failed.json`, JSON.stringify(failedUrls));
+      fs.writeFileSync(`./failedSearch.json`, JSON.stringify(failedSearchUrls));
+      buildIndex(sucessUrls);
+    }
+  }
 
-  
-//   await browser.close();
-// })();
-
-buildIndex(songList);
+  await browser.close();
+})();

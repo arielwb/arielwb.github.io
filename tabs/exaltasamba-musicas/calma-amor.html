@@ -1,0 +1,142 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Calma Amor</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">(intro) <b>Em7</b> <b>G7/13</b> <b>C#m7/5-</b> <b>C7</b> <b>B7</b>
+
+<b>Em7</b>                           <b>G7/13</b>
+Calma amor, por favor você tem o meu amor
+<b>C7+</b>                                  <b>B7</b>
+Quando eu saio de rolê com a rapa é sempre 
+esse terror
+<b>Em7</b>
+Com quem vou, com quem tô,
+<b>G7/13</b>                        <b>C7+</b>           
+Você tem que confiar, você sabe muito bem o
+       <b>B7</b>
+ seu valor
+<b>Em7</b>                          <b>G7/13</b>
+Calma amor, por favor você tem o meu amor
+ <b>C7+</b>                                 <b>B7</b>
+Quando eu saio de rolê com a rapa é sempre 
+esse terror
+<b>Em7</b>
+Com quem vou, com quem tô,
+<b>G7/13</b>                    <b>C7+</b>              
+Você tem que confiar,daqui a pouco eu tô em 
+<b>B7</b>
+casa
+<b>Em7</b>                                      
+Relaxa, eu sou teu, não sou de mais 
+<b>G7/13</b>
+ninguém
+<b>Am</b>                                <b>B7</b>
+E tudo que todas querem ter só você tem
+<b>Em7</b>                        <b>G7/13</b>
+Ficar comigo tem um preço, e você sabe
+<b>C#m7/5-</b>              <b>B7</b>
+Não é difícil, é só você não ver maldade
+
+(refrão 2x)
+<b>Em7</b>   <b>G7/13</b>       <b>C7+</b>        <b>D9</b>
+Calma amor, por favor é melhor ficar de boa</pre><pre class="col2"><b>Em7</b>   <b>G7/13</b>       <b>C7+</b>              <b>D9</b>
+Calma amor, por favor eu não quero outra 
+pessoa
+<b>Em7</b>   <b>G7/13</b>       <b>C7+</b>               <b>D9</b>
+Calma amor, por favor mais um pouco me magoa
+<b>Em7</b>     <b>G7/13</b>     <b>C#m7/5-</b>
+Um pouquinho de ciúme é bom, mas muito não, 
+não, não
+
+(repete tudo - sem refrão)
+
+<b>Em7</b>                                      
+Relaxa é melhor pra mim e pra você
+<b>G7/13</b>
+
+<b>Am</b>                                <b>B7</b>
+Não tenho bola de cristal, mas eu posso 
+prever
+<b>Em7</b>                        <b>G7/13</b>
+Se assim continuar, o fim tá perto
+<b>F#m7/5-</b>              <b>B7</b>
+Se você não tranquilizar não vai dá certo
+
+(refrão 2x)
+<b>Em7</b>   <b>G7/13</b>       <b>C7+</b>        <b>D9</b>
+Calma amor, por favor é melhor ficar de boa
+<b>Em7</b>   <b>G7/13</b>       <b>C7+</b>              <b>D9</b>
+Calma amor, por favor eu não quero outra 
+pessoa
+<b>Em7</b>   <b>G7/13</b>       <b>C7+</b>               <b>D9</b>
+Calma amor, por favor mais um pouco me magoa
+<b>Em7</b>     <b>G7/13</b>     <b>C#m7/5-</b>
+Um pouquinho de ciúme é bom, mas muito não, 
+não, não
+
+(repete tudo)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-calma-amor.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-calma-amor.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

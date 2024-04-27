@@ -1,0 +1,126 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">A Deusa dos Orixás</h1><h2 class="t3"><a href="/clara-nunes/">Clara Nunes</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">             <b>A</b>
+Iansã cadê Ogum?
+         <b>Bm7</b>
+Foi pro mar
+                <b>E7</b>
+Mas iansã cadê Ogum?
+         <b>A</b>
+Foi pro mar.
+
+         <b>A</b>
+Iansã penteia
+                 <b>Bm7</b>
+os seus cabelos macios,
+                  <b>E7</b>
+qdo a luz da lua cheia
+                     <b>A</b>
+clareia as aguas do rio.
+                             <b>Bm7</b>
+Ogum sonhava com a filha de Nanã
+                    <b>E7</b>                     
+e pensava que as estrelas eram os olhos de 
+   <b>A</b>
+iansã
+
+             <b>A</b>
+Iansã cadê Ogum?
+         <b>Bm7</b>
+Foi pro mar
+                <b>E7</b>
+Mas Iansã cadê Ogum?</pre><pre class="col2">         <b>A</b>
+Foi pro mar.
+
+                <b>A</b>
+Na terra dos orixás
+            <b>Bm7</b>
+o amor se dividia
+                          <b>E7</b>
+entre um deus que era de paz
+                        <b>A</b>
+e o outro deus que combatia
+
+como a luta só termina
+                    <b>Bm7</b>
+quando existe um vencedor,
+                <b>E7</b>
+iansã virou rainha
+                <b>A</b>
+da coroa de xangô
+
+                <b>E7</b>
+Mas Iansã cadê Ogum?
+         <b>A</b>
+Foi pro mar.
+             <b>A</b>
+Iansã cade ogum?
+         <b>Bm7</b>
+Foi pro mar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/clara-nunes-a-deusa-dos-orixas.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-clara-nunes-a-deusa-dos-orixas.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,185 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Prazer da Serrinha</h1><h2 class="t3"><a href="/fundo-de-quintal/">Fundo de Quintal</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">Introdução : <b>A</b> <b>E7</b>
+
+<b>A</b>    <b>F#7</b>   <b>B7</b> <b>F#7</b> <b>Bm</b>                       
+Qualquer Criança!                          
+     :
+     :
+                                <b>F7</b>      <b>E7</b>   
+Toca um pandeiro, um surdo e um cavaquinho   
+   :
+   :
+<b>A</b>                       <b>G7</b>    <b>F#7</b>  <b>Bm</b>      
+Acompanha o canto de um passarinho         
+     :
+     :
+       <b>E7</b>       <b>A</b>    <b>E7/9</b>                    
+Sem errar o compasso                         
+   :
+   :
+<b>A</b>              <b>Em</b>                          
+Quem não acreditar            :            
+     :
+     :REFRÃO
+    <b>A7</b>            <b>D</b>           :                
+Poderemos até provar,         :              
+ :
+   :
+              <b>F</b>               :                
+Pode crer, porque             :  2X          
+ :
+   :
+                     <b>C#m</b>      :                
+Nós não somos de enganar,     :              
+ :
+   :
+    <b>F#7</b>      <b>Bm</b> <b>E7</b>            :                
+melodia mora lá               :              
+ :
+   :
+                 <b>A</b>            :                
+No prazer da serrinha!        :              
+ :
+   :
+     <b>F#m</b>          <b>Bm</b>
+Se você for na serrinha,
+           <b>E7/9</b>                 <b>A</b>
+Na segunda-feira deve estar por lá
+                         <b>Em</b>
+Estarei cantando o meu pagode
+          <b>A7</b>                   <b>D</b>
+E lá você pode se a turma encontrar
+                               <b>Dm</b>
+Curtindo a serrinha na segunda-feira
+                      <b>C#m</b>
+Enchi minha cara de cachaça
+        <b>F#7</b>        <b>B7</b>
+Mas fiquei contrariado, cumpadre
+          <b>E7</b>                <b>A</b>
+Não encontrei o restante da massa
+             <b>E7/9</b>
+(qualquer criança)</pre><pre class="col2">(REFRÃO)
+<b>F#m</b>              <b>Bm</b>
+Lá no morro da serrinha
+<b>E7/9</b>            <b>A</b>
+Onde nasceu o Império
+                   <b>Em</b>
+Saiba lá tem gente bamba
+             <b>A7</b>              <b>D</b>
+que cantando samba é um caso sério
+                 <b>Dm</b>
+Lá no morro da serrinha, cumpadre
+                        <b>C#m</b>
+Colocaram uma estátua de bronze
+    <b>F#7</b>              <b>B7</b>
+Porque já faz quinze dias
+                 <b>E7</b>               <b>A</b>
+que eu dei no valente lá da praça onze
+             <b>E7/9</b>
+(qualquer criança)
+(REFRÃO)
+<b>F#m</b>                  <b>Bm</b>
+Trago uma grande lembrança
+              <b>E7/9</b>               <b>A</b>
+de quando em criança eu bem criancinha
+                   <b>Em</b>
+Guardo na minha memória
+            <b>A7</b>                <b>D</b>
+a fama e a glória da velha serrinha
+                          <b>Dm</b>
+Tira o mestre fuleiro da frente
+                             <b>C#m</b>
+imediatamente que eu quero passar
+    <b>F#7</b>              <b>B7</b>
+Eu quero avistar a serrinha
+            <b>E7</b>              <b>A</b>
+numa noite linda cheia de luar
+             <b>E7/9</b>
+(qualquer criança)
+(REFRÃO)
+     <b>F#m</b>           <b>Bm</b>
+Se você for na serrinha
+     <b>E7/9</b>             <b>A</b>
+por favor não leve a mal
+                  <b>Em</b>
+Vê se respeite as cores
+     <b>A7</b>        <b>D</b>
+da coroa imperial
+                      <b>Dm</b>
+Ontem eu fui lá na serrinha
+              <b>C#m</b>
+Serrinha tamarineira
+ <b>F#7</b>                <b>B7</b>
+Fui relembrar dona Ivone
+       <b>E7</b>           <b>A</b>
+Mestre Silas de Oliveira
+             <b>E7/9</b>
+(Qualquer Criança)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/fundo-de-quintal-prazer-da-serrinha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-fundo-de-quintal-prazer-da-serrinha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

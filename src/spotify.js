@@ -14,7 +14,7 @@ const replaceAccents = (s) => {
   r = r.replace(new RegExp("[ìíî]", "g"), "i");
   r = r.replace(new RegExp("[òóôõ]", "g"), "o");
   r = r.replace(new RegExp("[ùúûü]", "g"), "u");
-  r = r.replace(new RegExp("[()+,]", "g"), "");
+  r = r.replace(new RegExp("[()+,.?!]", "g"), "");
   r = r.replace(new RegExp("grupo", "g"), "");
   r = r.replace(new RegExp("exaltasamba", "g"), "exaltasamba musicas");
   

@@ -1,0 +1,114 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Me Apaixonei Pela Pessoa Errada</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">[Primeira Parte]
+
+             <b>D7M</b>
+Eu não tenho culpa de estar te amando
+            <b>F#m7</b>
+De ficar pensando em você; toda hora
+      <b>Em7</b>                  <b>Em/D</b>
+Não entendo por que deixei acontecer
+<b>A/C#</b>                <b>G/B</b> <b>A7</b>
+Isso tudo me apavora
+
+             <b>D7M</b>
+Você não tem culpa se eu estou sofrendo
+        <b>F#m7</b>
+Se fantasiei de verde esta história
+     <b>Em7</b>                <b>Em/D</b>
+Você tem namorado posso até estar errado
+    <b>C#m7(5-)</b>               <b>F#4</b> <b>F#7</b>
+Mas tenho que ganhar você
+
+<b>Bm7</b>                            <b>F#m7</b>
+  É mais do que desejo é muito mais do amor
+      <b>Em</b>            <b>E/D</b>
+Eu te vejo nos meus sonhos</pre><pre class="col2">               <b>G7M</b>            <b>A7</b>
+E isso aumenta mais a minha dor
+
+[Refrão]
+
+            <b>D</b>
+Eu me apaixonei pela pessoa errada
+               <b>Bm7</b>                    <b>Bm/A</b>
+Ninguém sabe o quanto que estou sofrendo
+              <b>G7M</b>             <b>Em</b>
+Sempre que eu vejo ele do seu lado
+           <b>A7</b>                     <b>A4</b>  <b>A7</b>
+Morro de ciúme estou enlouquecendo
+
+ <b>D7M</b>       <b>F#m7</b>                   <b>Em</b>
+    Fica comigo amor, me deixa ao menos te 
+tocar
+                   <b>Em7</b>              <b>A4</b> <b>A7</b>
+Entenda que ao meu lado  é seu lugar
+
+[Final] <b>D7M</b>  <b>Bm</b>  <b>Em</b>
+        <b>D7M</b>  <b>E</b>  <b>A4</b>  <b>A7</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-me-apaixonei-pela-pessoa-errada.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-me-apaixonei-pela-pessoa-errada.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

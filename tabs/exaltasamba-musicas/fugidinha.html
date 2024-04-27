@@ -1,0 +1,118 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Fugidinha</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1">[Intro] <b>D6(9)</b>  <b>A2</b>  <b>A7</b>
+
+[Primeira Parte]
+
+<b>D6(9)</b>
+Tô bem na parada ninguém consegue entender
+<b>Bm7</b>
+Chego na balada todos param pra me ver
+<b>A2</b>
+Tudo dando certo, mas eu tô esperto
+<b>Em/G</b>
+Não posso botar tudo a perder
+
+<b>D6(9)</b>
+Sempre tem aquela pessoa especial
+<b>Bm7</b>
+Que fica na dela, sabe seu potencial
+<b>A2</b>
+E mexe comigo, isso é um perigo
+<b>Em/G</b>
+Logo agora que eu fiquei legal
+
+<b>Dm7(9)</b>                       <b>Em7</b>
+Tô morrendo de vontade de te agarrar
+        <b>F7M</b>          <b>D/E</b>                <b>A7M</b>
+Não sei quanto tempo mais vou suportar</pre><pre class="col2">  <b>Dm7(9)</b>                           <b>Em7</b>
+Mas pra gente se encontrar ninguém pode saber
+      <b>F</b>           <b>G/F</b>       <b>D/A</b>  <b>A2</b>
+Já pensei e sei o que devo fazer
+
+[Refrão]
+
+        <b>D6(9)</b>
+(O jeito é) Dar uma fugidinha com você
+       <b>C#m7</b>                <b>F#m7</b>
+(O jeito é) Dar uma fugida com você
+            <b>Bm7</b>                     <b>C#m7</b>
+(Se você quer) Saber o que vai acontecer
+ <b>Em7</b>                            <b>A7(9/11)</b>
+Primeiro a gente foge, depois a gente vê
+
+<b>D7M</b>
+Foge (Foge)
+<b>C#m7</b>
+Foge (Foge)
+<b>Em7</b>                             <b>A7</b>
+Foge comigo, depois a gente vê
+<b>D7M</b>          <b>G7(13)</b>  <b>F#7(11)</b>  <b>A6(9)</b>
+Tô bem na parada
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-fugidinha.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-fugidinha.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

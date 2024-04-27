@@ -1,0 +1,121 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Louca Paixão</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">G</a> </span><pre class="col1">[Intro] <b>G7M</b>  <b>C</b>  <b>D7(9)</b>  <b>G7M</b>
+        <b>C</b>  <b>Bm</b>  <b>Am</b>  <b>G7M</b>
+
+<b>G7M</b>                  <b>C</b>
+Vem a noite e eu tão só
+   <b>D7(9)</b>        <b>G7M</b>
+Doidinho pra te ver
+                 <b>C</b>
+No meu quarto na pior
+  <b>D7(9)</b>        <b>G7M</b>
+Querendo só você
+
+                <b>C</b>
+Nem a lua nem o sol
+  <b>D7(9)</b>       <b>G7M</b>
+Acendem um coração
+                   <b>C</b>
+É tão triste adormecer
+   <b>D7(9)</b>         <b>G7M</b>
+E acordar na solidão
+
+                     <b>C</b>    <b>D7(9)</b>    <b>Bm</b>
+Passa o dia, o tempo passa (ôh, ôh, ôh)
+       <b>Em</b>            <b>Am</b>   <b>D7(9)</b>  <b>G7M</b>
+E a saudade me maltrata ( êh, laia )
+                   <b>C</b>            <b>Bm</b>
+Tô carente, tô sozinho (ôh, ôh, ôh)
+       <b>Em</b>           <b>Am</b>
+Sinto falta do amorzinho</pre><pre class="col2">      <b>D7(9)</b>        <b>G7M</b>   <b>B7</b>
+Que você sabe dar
+
+             <b>Em</b>
+Ficar sem te ver
+               <b>Bm</b>
+Só vai machucar
+<b>Em</b>         <b>Am</b>
+Louca Paixão
+<b>D7(9)</b>           <b>G7M</b>
+Deixa eu te amar
+<b>Em</b>         <b>Am</b>
+Louca Paixão
+<b>D7(9)</b>           <b>G7M</b>
+Deixa eu te amar
+
+   <b>Em</b>     <b>Am</b>
+Ôh ôh, ôh ôh
+<b>D7(9)</b>           <b>G7M</b>
+Deixa eu te amar
+   <b>Em</b>     <b>Am</b>
+Ôh ôh, ôh ôh
+
+[Final] <b>D7(9)</b>  <b>Em</b>  <b>C</b>  <b>G7M</b>
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-louca-paixao.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-louca-paixao.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,121 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Oposto do Meu Ser</h1><h2 class="t3"><a href="/exaltasamba-musicas/">Exaltasamba</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F#m</a> </span><pre class="col1">[Intro] <b>Bm7</b>  <b>E7</b>  <b>C#m7</b>  <b>C°</b>  <b>Bm7</b>  <b>C#m7</b>
+
+ <b>Bm7</b>  <b>Bm</b>  <b>Db7+</b>
+<b>A7+</b>        <b>A6</b>
+Você é meu tudo
+   <b>G#m7</b>           <b>C#7/9</b>
+Eu sou o seu.....nada
+ <b>F#m</b>       <b>F5+</b>          <b>C#7/4</b>
+Você é o oposto do meu ser
+ <b>C#7</b>      <b>F#m</b>             <b>F5+</b>
+Há....á pode ser que o querer
+  <b>F#m7</b>           <b>B7</b>
+Conjumine com você
+<b>Bm7</b>   <b>C#m7</b>  <b>Bm7</b>          <b>D7+</b>  <b>E7/9</b>
+......Vou dizer......com meus ais
+   <b>A7+</b>             <b>A6</b>
+Que o temporal passou
+<b>G#m7</b>           <b>C#7/9</b>
+É tempo de bonança
+  <b>F#m</b>        <b>F5+</b>          <b>C#7/4</b>        <b>C#7</b>
+E restaurar as trevas numa luz de esperança
+    <b>F#m</b>         <b>F5+</b>
+Eu sofri, eu chorei
+    <b>F#m7</b>           <b>B7</b>
+Me perdi te encontrei
+ <b>F7+</b>       <b>G7/13</b>       <b>C7+</b>              
+Você falsificou  o que era meu e hoje é 
+<b>Bm5-/7</b>  <b>F°</b>
+seu</pre><pre class="col2">  <b>Am</b>         <b>E5+</b>
+Você, meu oceano
+  <b>Am7</b>            <b>Am6</b>
+Futuro dos meus planos
+   <b>Dm7</b>           <b>G7/13</b>
+Em parte tu me interas
+   <b>Am</b>              <b>Gm</b>  <b>A7</b>
+És minha de outras   eras
+  <b>F7+</b>          <b>Db7+</b>
+Verão na primavera
+  <b>C7+</b>        <b>A7/13</b>  <b>A7/13-</b>
+Sacia meu prazer
+ <b>Dm7</b>     <b>Em7</b>    <b>Dm7</b>    <b>G7/13</b>    <b>Gm</b>
+Melhor que te querer é   ter   você
+  <b>C7</b>
+Você.......ê
+  <b>F7+</b>         <b>Db7+</b>
+Verão na primavera
+  <b>C7+</b>         <b>A7/13</b>  <b>A7/13-</b>
+Sacia meu prazer
+ <b>Dm7</b>            <b>G7/13</b>    <b>E7</b>
+Melhor que te querer é   ter
+<b>A7+</b>          <b>A6</b>
+(Você é meu tudo......)
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/exaltasamba-musicas-oposto-do-meu-ser.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-exaltasamba-musicas-oposto-do-meu-ser.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,116 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Preciso Desse Mel</h1><h2 class="t3"><a href="/sensacao/">Sensação</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">D</a> </span><pre class="col1"><b>D7M</b>            <b>B7(4)</b>  <b>B7</b>
+Quando a sua beleza pisou
+<b>E7(9)</b>                   <b>A7(13)</b>
+    Na passarela desse meu coração
+<b>D7M</b>                  <b>F#m</b>    <b>F°</b>
+E tudo em mim com certeza   mudou
+<b>Em7</b>                        <b>C#m7(5-)</b>  <b>F#7(5-)</b>
+   Luz que chegou pra iluminar o   meu chão
+<b>Bm7</b>                 <b>E7</b>
+   Onde quer que eu vá   você me acompanha
+<b>Bm7</b>                        <b>E7</b>
+   Se eu ligo o rádio você é a canção
+<b>Em7(9)</b>        <b>A7(13)</b>   <b>Gm7</b>     <b>C7</b>      <b>C#°</b>
+     É o meu mundo   cheio   de   paixão
+<b>D7M</b>         <b>F#m7</b>   <b>B7</b>  <b>Em7</b>            
+Você é a poesia em mim     piano, jazz, 
+     <b>A7</b>
+tamborim, violão
+<b>D7M</b>                <b>F#m</b>   <b>F°</b>
+Estrela guia desse azul  sem  fim
+<b>Em7(9)</b>                        <b>C#m7(5-)</b>  
+     Luz que chegou pra iluminar o    
+<b>F#7(13-)</b>
+meu chão
+<b>Bm7</b>                    <b>E7</b>
+   Onde quer que eu vá     és o meu caminho</pre><pre class="col2"><b>Bm7</b>                       <b>E7</b>
+   Tens um carinho que me leva pro céu
+<b>G7M</b>                  <b>D/F#</b>
+   Me faz sorrir, me faz sonhar
+<b>Em</b>      <b>C#m7(5-)</b>   <b>F#7(13-)</b>
+Preciso desse     mel
+<b>Bm7</b>                         <b>E7</b>
+   Me da um beijo que eu te dou meu calor
+<b>Bm7</b>                        <b>E7</b>
+   Me da quentinho embaixo do cobertor
+<b>G7M</b>                  <b>D/F#</b>
+   Me faz sorrir, me faz sonhar
+<b>Em7</b>     <b>A7(4)</b>
+Preciso desse amor
+<b>Bm7</b>                    <b>E7</b>
+   Eu quero tudo que você tem pra dar
+<b>Bm7</b>                      <b>E7</b>
+   Seu corpo todo, seu sabor, seu olhar
+<b>G7M</b>                  <b>D/F#</b>
+   Me faz sorrir, me faz sonhar
+<b>Em7</b>     <b>A7(4)</b>   <b>A7</b>
+Preciso te amar
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sensacao-preciso-desse-mel.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sensacao-preciso-desse-mel.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

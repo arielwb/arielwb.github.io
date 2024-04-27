@@ -1,0 +1,99 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Te Gosto</h1><h2 class="t3"><a href="/fundo-de-quintal/">Fundo de Quintal</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">F</a> </span><pre class="col1">[Intro] <b>Dm</b>  <b>E</b>  <b>Eb</b>
+
+    <b>Dm</b>                 <b>Gm</b>  <b>Gm/F</b>
+Não sei se tu falas verdade
+         <b>Em7(5-)</b>  <b>A7</b>
+Ou se é falsidade
+                    <b>Dm</b>  <b>E</b>   <b>Eb</b>
+Quando estás junto a mim
+   <b>Dm</b>                 <b>Gm</b>   <b>Gm/F</b>
+Só sei que te gosto criança
+             <b>Em7(5-)</b>  <b>A7</b>
+Essa vida é uma dança
+                 <b>Dm</b>         <b>C7</b>
+Do princípio ao fim (Sou feliz)
+   <b>F</b>          <b>A7</b>             <b>Am7(5-)</b>
+Sou feliz quando estou nos braços teus
+    <b>D7</b>                   <b>G7</b>
+Só Deus sabe a minha alegria</pre><pre class="col2"> <b>C7</b>   <b>C#°</b>  <b>Dm</b>                <b>Gm</b> <b>Gm/F</b>
+Vejo  em   ti  tudo que eu queria
+            <b>C7</b>             <b>F</b>
+A tua companhia me faz sentir
+     <b>A7</b>    <b>Dm</b>               <b>Gm</b>  <b>Gm/F</b>
+Um amor assim mesmo sem esperança
+               <b>C7</b>                <b>F</b>  <b>A7</b>
+O teu jeito criança faz bem pra mim
+
+     <b>A7</b>  <b>Dm</b>            <b>Gm</b>  <b>Gm/F</b>
+Lalaiá Laiá  Lalaiá Lalaialá
+           <b>C7</b>  <b>C#º</b>  <b>Dm</b>          <b>A7</b>
+Lalaiá Lalaiá  Lá...iá Lalaiá Laiá
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/fundo-de-quintal-te-gosto.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-fundo-de-quintal-te-gosto.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  

@@ -1,0 +1,119 @@
+
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+</head>
+<style>
+  body {
+    overflow-x: scroll;
+    min-width: max-content;
+  }
+
+  .col1, .col2 {
+    width: 50%;
+    float: left;
+  }
+  
+  #cifra_tom {
+    display: block;
+  }
+
+  b {
+    color: blueviolet;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+
+  div {
+    clear: both;
+  }
+
+</style>
+<body>
+<label>
+<input type="checkbox" name="cols" id="cols"/>
+duas colunas
+</label>
+<h1 class="t1">Sabor do Teu Beijo</h1><h2 class="t3"><a href="/sensacao/">Sensação</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">A</a> </span><pre class="col1">Intro 2x: <b>A7+</b>  <b>G7+</b>  <b>F7+</b>  <b>E7</b>
+
+Solo 2x: 42 32 20  42 32 20  42 32 20  42 32 
+20
+
+  <b>A7+</b>                      <b>Em7</b>
+Bateu...uma saudade do meu amor
+         <b>A7/13</b>               <b>D7+</b>
+Minha tristeza se encheu de flor
+          <b>D7+</b>  
+E fez da vida um 
+<b>A/C#</b>    <b>G#m7(5-)</b>            <b>G7(5-)</b>
+pa......raí.................so
+  <b>F#m7</b>                            <b>Dm/F</b>
+Fiquei...na esperança de te encontrar
+         <b>E7/9/11</b>           <b>A7+</b>
+Vivo a lembrança do teu olhar
+     <b>F#5+/7</b>          <b>Bm7</b>     <b>E7/9/11</b>
+E a doçura do teu sorri.......so
+    <b>A7+</b>                           <b>Em7</b>
+Eu sei...que fui culpado por te perder
+        <b>A7/13</b>           <b>D7+</b>  <b>A/C#</b>
+Eu não queria me arrepender
+ <b>Bm</b>         <b>Bm/A</b>         <b>G#m5-/7</b>       <b>C#7</b>
+...Mas estou mais que arrependi.........do
+   <b>F#m7</b>                                  
+Quero de volta pra mim ,  o sabor do teu 
+<b>Dm6</b>
+beijo</pre><pre class="col2"> <b>C#m7</b>                         <b>G7/13</b>    
+Ainda sinto que sou o desejo do seu,   
+   <b>F#7</b>
+coração
+<b>Bm7</b>
+A minha felicidade
+ <b>E7/9/11</b>           <b>E7/9-</b>       <b>A7+/5+</b>
+Vai.....depender do seu......perdão
+<b>F#m7</b>  <b>Fm7</b>  <b>Em7</b>       <b>A7/13</b>
+            Volta coração
+   <b>D7+</b>                                   
+Quero de volta pra mim ,  o sabor do teu 
+<b>Dm6</b>
+beijo
+ <b>C#m7</b>                          <b>G7/13</b>   
+Ainda sinto que sou o desejo do seu,   
+    <b>F#7</b>
+coração
+<b>Bm7</b>
+A minha felicidade
+ <b>E7/9/11</b>                       <b>A7+</b>
+Vai.....depender do seu......perdão
+</pre>
+<div>
+<b>Cavaco</b>
+<img src="../../static/sensacao-sabor-do-teu-beijo.png" />
+</div>
+<div>
+<b>Ukulele</b>
+<img src="../../static/ukulele-sensacao-sabor-do-teu-beijo.png" />
+</div>
+</body>
+<script>
+const checkbox = document.getElementById("cols");
+
+const removeCols = () => {
+  const pre = document.querySelectorAll("pre");
+  if (!checkbox.checked) {
+    pre.forEach((el) => el.removeAttribute("class"));
+  } else {
+    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
+  }
+}
+
+removeCols()
+  
+checkbox.addEventListener('change', removeCols);
+</script>
+</html>
+  
