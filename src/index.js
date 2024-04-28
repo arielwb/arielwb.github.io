@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import fs, { existsSync, mkdirSync } from "fs";
+import path from "path";
 import { songList } from "./song-list.js";
 
 const builtTabPage = (tab, artist, song) => {
@@ -216,6 +217,23 @@ const remainingSong = songList.filter(
       )
     )
 );
+
+const buildIndexFromTabs = (dir, result = []) => {
+  fs.readdirSync(dir).forEach((artistFolder) => {
+    const fullPath = path.resolve(dir, artistFolder);
+
+    const tabInfo = { artist: artistFolder, songs: [] };
+
+    fs.readdirSync(fullPath).forEach((tab) => {
+      console.log({ tab });
+      tabInfo.songs.push(tab.replace(".html", ""));
+    });
+
+    result.push(tabInfo);
+  });
+  return result;
+};
+
 (async () => {
   // Launch the browser and open a new blank page
   const browser = await puppeteer.launch({
@@ -279,9 +297,11 @@ const remainingSong = songList.filter(
 
       fs.writeFileSync(`./failed.json`, JSON.stringify(failedUrls));
       fs.writeFileSync(`./failedSearch.json`, JSON.stringify(failedSearchUrls));
-      buildIndex(sucessUrls);
     }
   }
 
   await browser.close();
 })();
+
+const tabData = buildIndexFromTabs(path.resolve("./tabs"));
+buildIndex(tabData);
