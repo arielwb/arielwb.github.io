@@ -1,0 +1,38 @@
+body {
+  overflow-x: scroll;
+  min-width: max-content;
+  font-size: 7px;
+  margin: 0;
+  padding: 5px;
+}
+
+.col1,
+.col2 {
+  /* width: 50%; */
+  float: left;
+}
+
+.col1 {
+  margin-right: 5px;
+}
+
+#cifra_tom {
+  display: block;
+}
+
+b {
+  color: blueviolet;
+  /* font-size: 1.2em; */
+}
+
+img {
+  display: block;
+}
+
+div {
+  clear: both;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+

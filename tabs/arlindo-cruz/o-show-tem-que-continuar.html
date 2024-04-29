@@ -5,35 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabs</title>
 </head>
-<style>
-  body {
-    overflow-x: scroll;
-    min-width: max-content;
-  }
-
-  .col1, .col2 {
-    width: 50%;
-    float: left;
-  }
-  
-  #cifra_tom {
-    display: block;
-  }
-
-  b {
-    color: blueviolet;
-    font-size: 16px;
-  }
-
-  img {
-    display: block;
-  }
-
-  div {
-    clear: both;
-  }
-
-</style>
+<link rel="stylesheet" href="/src/tabs.css">
 <body>
 <label>
 <input type="checkbox" name="cols" id="cols"/>
@@ -159,21 +131,6 @@ Nosso amor vai conti____nu__ar
 <img src="../../static/ukulele-arlindo-cruz-o-show-tem-que-continuar.png" />
 </div>
 </body>
-<script>
-const checkbox = document.getElementById("cols");
-
-const removeCols = () => {
-  const pre = document.querySelectorAll("pre");
-  if (!checkbox.checked) {
-    pre.forEach((el) => el.removeAttribute("class"));
-  } else {
-    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
-  }
-}
-
-removeCols()
-  
-checkbox.addEventListener('change', removeCols);
-</script>
+<script src="/src/tabs.js" type="module"></script>
 </html>
   

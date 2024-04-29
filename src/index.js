@@ -9,37 +9,9 @@ const builtTabPage = (tab, artist, song) => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/tabs.css">
   <title>Tabs</title>
 </head>
-<style>
-  body {
-    overflow-x: scroll;
-    min-width: max-content;
-  }
-
-  .col1, .col2 {
-    width: 50%;
-    float: left;
-  }
-  
-  #cifra_tom {
-    display: block;
-  }
-
-  b {
-    color: blueviolet;
-    font-size: 16px;
-  }
-
-  img {
-    display: block;
-  }
-
-  div {
-    clear: both;
-  }
-
-</style>
 <body>
 <label>
 <input type="checkbox" name="cols" id="cols"/>
@@ -55,22 +27,7 @@ ${tab}
 <img src="../../static/ukulele-${artist}-${song}.png" />
 </div>
 </body>
-<script>
-const checkbox = document.getElementById("cols");
-
-const removeCols = () => {
-  const pre = document.querySelectorAll("pre");
-  if (!checkbox.checked) {
-    pre.forEach((el) => el.removeAttribute("class"));
-  } else {
-    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
-  }
-}
-
-removeCols()
-  
-checkbox.addEventListener('change', removeCols);
-</script>
+<script src="/src/tabs.js" type="module"></script>
 </html>
   `;
 };
@@ -225,13 +182,33 @@ const buildIndexFromTabs = (dir, result = []) => {
     const tabInfo = { artist: artistFolder, songs: [] };
 
     fs.readdirSync(fullPath).forEach((tab) => {
-      console.log({ tab });
       tabInfo.songs.push(tab.replace(".html", ""));
     });
 
     result.push(tabInfo);
   });
   return result;
+};
+
+const replaceTabContent = (dir, result = []) => {
+  fs.readdirSync(dir).forEach((artistFolder) => {
+    const fullPath = path.resolve(dir, artistFolder);
+    fs.readdirSync(fullPath).forEach((tab) => {
+      const tabPath = path.resolve(fullPath, tab);
+      const tabContent = fs.readFileSync(tabPath).toString();
+
+      const scriptPattern = new RegExp("<script(?:\n|.)*</script>", "gi");
+      const stylesPattern = new RegExp("<style(?:\n|.)*</style>", "gi");
+      const replaced = tabContent
+        .replace(
+          scriptPattern,
+          '<script src="/src/tabs.js" type="module"></script>'
+        )
+        .replace(stylesPattern, '<link rel="stylesheet" href="/src/tabs.css">');
+
+      fs.writeFileSync(tabPath, replaced);
+    });
+  });
 };
 
 (async () => {
@@ -305,3 +282,5 @@ const buildIndexFromTabs = (dir, result = []) => {
 
 const tabData = buildIndexFromTabs(path.resolve("./tabs"));
 buildIndex(tabData);
+
+// replaceTabContent(path.resolve("./tabs"));

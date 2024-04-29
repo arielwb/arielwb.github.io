@@ -1,45 +1,21 @@
+<html lang="en">
 
-  <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabs</title>
 </head>
-<style>
-  body {
-    overflow-x: scroll;
-    min-width: max-content;
-  }
 
-  .col1, .col2 {
-    width: 50%;
-    float: left;
-  }
-  
-  #cifra_tom {
-    display: block;
-  }
-
-  b {
-    color: blueviolet;
-    font-size: 16px;
-  }
-
-  img {
-    display: block;
-  }
-
-  div {
-    clear: both;
-  }
-
-</style>
 <body>
-<label>
-<input type="checkbox" name="cols" id="cols"/>
-duas colunas
-</label>
-<h1 class="t1">Iracema</h1><h2 class="t3"><a href="/adoniran-barbosa/">Adoniran Barbosa</a></h2><span id="cifra_tom">Tom: <a class="js-modal-trigger" href="#" title="alterar o tom">Bm</a> </span><pre class="col1"><b>Bm</b>      <b>F#7</b>             <b>Bm</b>
+  <link rel="stylesheet" href="/src/tabs.css">
+  <label>
+    <input type="checkbox" name="cols" id="cols" />
+    duas colunas
+  </label>
+  <h1 class="t1">Iracema</h1>
+  <h2 class="t3"><a href="/adoniran-barbosa/">Adoniran Barbosa</a></h2><span id="cifra_tom">Tom: <a
+      class="js-modal-trigger" href="#" title="alterar o tom">Bm</a> </span>
+  <pre class="col1"><b>Bm</b>      <b>F#7</b>             <b>Bm</b>
 Iracema, eu nunca mais eu te vi
   <b>B7</b>                           <b>Em</b>
 Iracema meu grande amor foi embora
@@ -60,7 +36,8 @@ E hoje ela vive la no céu
       <b>F#7</b>                       <b>F#m7(5-)</b>  <b>B7</b>
 E ela vive bem juntinho de nosso senhor
       <b>Em</b>      <b>A</b>         <b>D</b>
-De lembrança guardo somente</pre><pre class="col2">                    <b>Bm</b>
+De lembrança guardo somente</pre>
+  <pre class="col2">                    <b>Bm</b>
 Suas meias e seu sapato
    <b>G7</b>       <b>F#7</b>           <b>Bm</b>
 Iracema eu perdi o seu retrato
@@ -81,30 +58,15 @@ Iracema eu perdi o seu retrato
 
 [Final] <b>Em</b>  <b>Bm</b>  <b>F#7</b>  <b>Bm</b>  <b>B7</b>
 </pre>
-<div>
-<b>Cavaco</b>
-<img src="../../static/adoniran-barbosa-iracema.png" />
-</div>
-<div>
-<b>Ukulele</b>
-<img src="../../static/ukulele-adoniran-barbosa-iracema.png" />
-</div>
+  <div>
+    <b>Cavaco</b>
+    <img src="../../static/adoniran-barbosa-iracema.png" />
+  </div>
+  <div>
+    <b>Ukulele</b>
+    <img src="../../static/ukulele-adoniran-barbosa-iracema.png" />
+  </div>
 </body>
-<script>
-const checkbox = document.getElementById("cols");
+<script src="/src/tabs.js" type="module"></script>
 
-const removeCols = () => {
-  const pre = document.querySelectorAll("pre");
-  if (!checkbox.checked) {
-    pre.forEach((el) => el.removeAttribute("class"));
-  } else {
-    pre.forEach((el, index) => el.setAttribute("class", "col"+(index+1)));
-  }
-}
-
-removeCols()
-  
-checkbox.addEventListener('change', removeCols);
-</script>
 </html>
-  
