@@ -1,19 +1,22 @@
 body {
-  overflow-x: scroll;
-  min-width: max-content;
-  font-size: 7px;
   margin: 0;
   padding: 5px;
+  font-family: 'Helvetica', 'Gill Sans', sans-serif;
 }
 
-.col1,
-.col2 {
-  /* width: 50%; */
-  float: left;
+.tab-container {
+  font-size: 1.7vw;
+  display: flex;
+  gap: 5px;
 }
 
-.col1 {
-  margin-right: 5px;
+.tab-container.one-col {
+  flex-direction: column;
+  font-size: 3.5vw;
+}
+
+pre {
+  margin: 0
 }
 
 #cifra_tom {
@@ -22,17 +25,32 @@ body {
 
 b {
   color: blueviolet;
-  /* font-size: 1.2em; */
+}
+
+h1,
+h2 {
+  margin: 5px 0;
+}
+
+#cifra_tom {
+  font-size: 0.7em;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
 }
 
 img {
   display: block;
 }
 
-div {
-  clear: both;
-  width: 100vw;
-  max-width: 100%;
+div:not(.tab-container) {
+  width: calc(100vw - 25px);
   overflow-x: scroll;
+  max-width: 100%;
 }
-

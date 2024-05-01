@@ -1,22 +1,34 @@
+const wrapTabs = () => {
+  const col1 = document.getElementsByClassName("col1")[0];
+  const col2 = document.getElementsByClassName("col2")[0];
+
+  const container = document.createElement("div");
+  container.classList.add("tab-container");
+  container.appendChild(col1);
+  container.appendChild(col2);
+
+  const sibling = document.getElementById("cifra_tom");
+  sibling.insertAdjacentElement("afterend", container);
+};
+
 const checkbox = document.getElementById("cols");
 
-const removeCols = () => {
-  const pre = document.querySelectorAll("pre");
+const updateCols = () => {
+  const container = document.getElementsByClassName("tab-container")[0];
   if (!checkbox.checked) {
-    pre.forEach((el) => el.removeAttribute("class"));
+    container.classList.add("one-col");
   } else {
-    pre.forEach((el, index) => el.setAttribute("class", "col" + (index + 1)));
+    container.classList.remove("one-col");
   }
   localStorage.setItem("cols", checkbox.checked);
 };
 
 const colsSetting = localStorage.getItem("cols");
 
-if (!colsSetting) {
-  removeCols();
-} else {
-  checkbox.checked = true;
-}
+checkbox.checked = !!colsSetting;
+wrapTabs();
+updateCols();
 
-checkbox.addEventListener("change", removeCols);
+document.getElementsByTagName('a')[0].removeAttribute('href')
 
+checkbox.addEventListener("change", updateCols);
