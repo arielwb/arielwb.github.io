@@ -8,7 +8,7 @@
     "build": "node build/build.js",
     "dev": "node build/dev-server.js",
     "start": "node --harmony src/index.js",
-    "build-songs": "http-server src",
+    "build-songs": "http-server src --port 8080",
     "serve-tabs": "http-server . -c-1"
   },
   "repository": {

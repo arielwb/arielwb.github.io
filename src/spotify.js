@@ -17,7 +17,7 @@ const replaceAccents = (s) => {
   r = r.replace(new RegExp("[()+,.?!]", "g"), "");
   r = r.replace(new RegExp("grupo", "g"), "");
   r = r.replace(new RegExp("exaltasamba", "g"), "exaltasamba musicas");
-  
+
   r = r.replace(new RegExp("\\s\\s", "g"), "");
   r = r.trim();
 
@@ -29,13 +29,21 @@ if (!code) {
   redirectToAuthCodeFlow(clientId);
 } else {
   const accessToken = await getAccessToken(clientId, code);
+  // const playlists = [
+  //   "37i9dQZF1DXchBFvKSUooB",
+  //   "37i9dQZF1DWWWv7yywepel",
+  //   "37i9dQZF1DXcIuKvbG2Dm8",
+  //   "37i9dQZF1DXb1oSegSL8id",
+  //   "37i9dQZF1DZ06evO42FdPq",
+  //   "37i9dQZF1DWX4CmhTadwuL",
+  // ];
   const playlists = [
-    "37i9dQZF1DXchBFvKSUooB",
-    "37i9dQZF1DWWWv7yywepel",
-    "37i9dQZF1DXcIuKvbG2Dm8",
-    "37i9dQZF1DXb1oSegSL8id",
-    "37i9dQZF1DZ06evO42FdPq",
-    "37i9dQZF1DWX4CmhTadwuL",
+    "5QCHq78zJU7zLyjoncJUDc",
+    "3mmvJoW387Q0z83BOEF2e4",
+    "27v7ovdpGqT9B9qGMq7951",
+    "37i9dQZF1DWWSIYQoXSnX4",
+    "3GKOHql8c2oMZGuSutxjUm",
+    "1oiJ0DE2L9BktY9BpmYelT",
   ];
 
   let allSongs = [];

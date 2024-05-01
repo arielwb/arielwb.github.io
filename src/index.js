@@ -95,9 +95,12 @@ const downloadTab = async (artist, song, page, fileName) => {
     path: `static/ukulele-${artist}-${song}.png`,
     type: "png",
   });
+  let outputFolder = fileName.split("/");
+  outputFolder.pop();
+  outputFolder = outputFolder.join("/");
 
-  if (!existsSync(outputPath)) {
-    mkdirSync(outputPath);
+  if (!existsSync(outputFolder)) {
+    mkdirSync(outputFolder);
   }
 
   fs.writeFileSync(fileName, builtTabPage(content, artist, song));
@@ -115,8 +118,10 @@ const downloadTab = async (artist, song, page, fileName) => {
 const searchTab = async (artist, song, page) => {
   const pattern = new RegExp("-", "g");
   const value = `${artist.replace(pattern, " ")} ${song.replace(pattern, " ")}`;
+  console.log(value);
   try {
     await page.$eval("#js-h-search", (el, value) => (el.value = value), value);
+    console.log("eval");
 
     await page.click('button[type="submit"]');
     await page.waitForSelector(".gsc-webResult.gsc-result");
@@ -126,6 +131,8 @@ const searchTab = async (artist, song, page) => {
       `failed search: ${artist} ${song} ${page.url()}, Error: ${error}`
     );
   }
+
+  console.log("end");
 };
 
 const buildIndex = (tabList) => {
@@ -233,7 +240,7 @@ const replaceTabContent = (dir, result = []) => {
       console.log(`start ${tab.artist} ${song}`);
 
       const outputPath = `tabs/${tab.artist}`;
-      const fileName = `${outputPath}/${song}.html`;
+      const fileName = path.resolve(`${outputPath}/${song}.html`);
 
       if (existsSync(fileName)) {
         console.log(`skiping, file ${fileName} exists...`);
@@ -256,19 +263,13 @@ const replaceTabContent = (dir, result = []) => {
       try {
         await downloadTab(tab.artist, song, page, fileName);
       } catch (error) {
-        console.log(`error downloading ${url} trying search...`);
+        console.log(`error downloading ${url} ${error} trying search...`);
         try {
           await searchTab(tab.artist, song, page);
+          await downloadTab(tab.artist, song, page, fileName);
         } catch (error) {
           console.log(`error searching ${tab.artist} ${song}} ${error}`);
-          failedSearchUrls.push({ artist: tab.artist, song });
-          try {
-            await downloadTab(tab.artist, song, page, fileName);
-            console.log(`success ${tab.artist} ${song}`);
-          } catch (error) {
-            console.log(`error downloading ${tab.artist} ${song} ${error}`);
-            failedUrls.push({ artist: tab.artist, song });
-          }
+          failedSearchUrls.push({ artist: tab.artist, song }); 
         }
       }
 
