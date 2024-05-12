@@ -7,6 +7,7 @@ const replaceAccents = (s) => {
   r = r.split("-")[0].trim();
   r = r.split("/")[0].trim();
   r = r.replace(new RegExp("ao vivo", "g"), "");
+  r = r.replace(new RegExp("(Acústico)", "g"), "");
   r = r.replace(new RegExp("pout pourri:", "g"), "");
   r = r.replace(new RegExp("[àáâã]", "g"), "a");
   r = r.replace(new RegExp("ç", "g"), "c");
@@ -37,13 +38,25 @@ if (!code) {
   //   "37i9dQZF1DZ06evO42FdPq",
   //   "37i9dQZF1DWX4CmhTadwuL",
   // ];
+  // const playlists = [
+  //   "5QCHq78zJU7zLyjoncJUDc",
+  //   "3mmvJoW387Q0z83BOEF2e4",
+  //   "27v7ovdpGqT9B9qGMq7951",
+  //   "37i9dQZF1DWWSIYQoXSnX4",
+  //   "3GKOHql8c2oMZGuSutxjUm",
+  //   "1oiJ0DE2L9BktY9BpmYelT",
+  // ];
   const playlists = [
-    "5QCHq78zJU7zLyjoncJUDc",
-    "3mmvJoW387Q0z83BOEF2e4",
-    "27v7ovdpGqT9B9qGMq7951",
-    "37i9dQZF1DWWSIYQoXSnX4",
-    "3GKOHql8c2oMZGuSutxjUm",
-    "1oiJ0DE2L9BktY9BpmYelT",
+    "0n3ydoZmAIehk3Vu3NWLRa",
+    "0RvunrF2dq968pugeMSWoc",
+    "37i9dQZF1DWWD6GaE8Tjoa",
+    "37i9dQZF1E4yKaJWO9rdfw",
+    "37i9dQZF1DXb1oSegSL8id",
+    "37i9dQZF1DZ06evO2JmwMc",
+    "37i9dQZF1DZ06evO4a0SWQ",
+    "3QiDGpm6MmWJYItyKDlD9H",
+    "4OmjUgDYYFAO70D0dBLRXm",
+    "6Uq9HS1D7yWXavhcfunSZm",
   ];
 
   let allSongs = [];
